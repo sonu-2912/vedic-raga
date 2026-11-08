@@ -1,0 +1,21 @@
+.venv/
+.bootstrap/
+.python/
+**/node_modules/
+**/__pycache__/
+.pytest_cache/
+data/*.sqlite*
+data/fer2013/
+data/private/
+frontend/dist/
+
+# Local chart snapshots and generated experiment artifacts
+.chart-data-*/
+reports/
+output/
+
+# Private datasets, archives, and binary model/cache files
+*.zip
+*.pt
+*.pth
+*.onnx

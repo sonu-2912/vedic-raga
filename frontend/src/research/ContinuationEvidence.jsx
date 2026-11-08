@@ -1,0 +1,5 @@
+import React from 'react';
+export default function ContinuationEvidence({report}){
+ if(!report)return null;
+ return <><h3>{report.comparison_kind==='pure_baseline'?'Active pure FusDenseNet versus its earlier pure baseline':`Active model versus its previous ${(100*report.metrics.accuracy.baseline).toFixed(2)}% classifier`}</h3><p>Exactly the same {report.n.toLocaleString()} retained test records, all seven classes included. These are unfiltered model results, not accuracy after withholding predictions.</p><table style={{width:'100%'}}><thead><tr><th>Metric</th><th>Previous model</th><th>New model</th><th>Change</th></tr></thead><tbody>{Object.entries(report.metrics).map(([name,m])=>{const percent=name==='accuracy'||name==='disgust_recall';const f=v=>percent?(100*v).toFixed(2)+'%':v.toFixed(4);return <tr key={name}><td>{name.replaceAll('_',' ')}</td><td>{f(m.baseline)}</td><td>{f(m.colab)}</td><td>{f(m.difference)}</td></tr>})}</tbody></table><p className="fine">{report.limitation} The implementation ran on Windows CPU; reusable training/export scripts retain their Colab filenames.</p></>
+}

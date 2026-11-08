@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Local Files
+*.local
+
+# Environment files
+.env
+
+# Node
+node_modules/
+
+# Build files
+dist/
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store

@@ -1,0 +1,9 @@
+# Training/evaluation only. Keep Colab's preinstalled CUDA torch + torchvision.
+# Ranges avoid replacing a compatible Colab numerical stack unnecessarily.
+numpy>=1.26,<3
+pandas>=2.2,<3
+scipy>=1.14,<2
+scikit-learn>=1.6,<2
+opencv-python-headless>=4.10,<5
+Pillow>=11,<13
+matplotlib>=3.9,<4

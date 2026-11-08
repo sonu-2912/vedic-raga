@@ -1,0 +1,36 @@
+"""Conditional TRAIN-population BatchNorm repair; at most one new test candidate."""
+import json,subprocess,sys,time,shutil,copy
+from pathlib import Path
+import torch
+from torch.utils.data import DataLoader
+from scripts.colab_common import digest,write_json,save_checkpoint,fixed_split,predictions,metrics,check_manifest
+from scripts.compact_fusdense import model_from
+from scripts.recalibrate_pure_batchnorm import reestimate_batchnorm
+from scripts.recall_recovery_common import eligible,objective
+ROOT=Path(__file__).resolve().parents[1];RUN=ROOT/'reports/pure_capacity_bn_20261108';PARENT=ROOT/'reports/pure_capacity_20261108'
+def read(p):return json.loads(p.read_text(encoding='utf-8'))
+def main():
+ deadline=time.monotonic()+160*60
+ while not (PARENT/'deployment_decision.json').exists():
+  if time.monotonic()>deadline:raise TimeoutError('Parent incomplete; no alternate candidate')
+  time.sleep(10)
+ prior=read(PARENT/'deployment_decision.json')
+ if prior['test_evaluated'] or prior['eligible']:
+  write_json(RUN/'skipped.json',{'reason':'Parent already tested or qualified; no alternate test search.'});write_json(RUN/'completion.json',{'skipped':True});return
+ assert all(digest(ROOT/name)==sha for name,sha in read(RUN/'protected_artifacts.json').items())
+ torch.set_num_threads(4);torch.set_num_interop_threads(1);protocol=read(RUN/'protocol.json');torch.manual_seed(protocol['seed']);manifest=read(PARENT/'fer_training_manifest.json');check_manifest(manifest);write_json(RUN/'fer_training_manifest.json',manifest);train=fixed_split(ROOT/'data/private/fer2013-v1.zip',manifest,'train');val=fixed_split(ROOT/'data/private/fer2013-v1.zip',manifest,'val');current=read(RUN/'current_validation.json');earlier=read(RUN/'earlier_validation.json');initial=torch.load(RUN/'initial.pt',map_location='cpu',weights_only=True);warm=torch.load(PARENT/'warm_start.pt',map_location='cpu',weights_only=True);latest=torch.load(PARENT/'full_latest.pt',map_location='cpu',weights_only=True);full=read(PARENT/'full_history.json');head=read(PARENT/'head_history.json');warm_recipe=read(PARENT/'warm_recipe.json');offset=max(r['epoch'] for r in read(PARENT/'initial_history.json'));ancestor_head=[r for r in head if r['recipe']==warm_recipe['name'] and r['epoch']<=warm['epoch']];settings={**protocol,'dataset_sha256':digest(ROOT/'data/private/fer2013-v1.zip'),'manifest_sha256':digest(ROOT/'reports/fer_training_manifest.json'),'device':'cpu','threads':4};write_json(RUN/'settings.json',settings)
+ sources=[('deployed_pure_baseline',initial,read(RUN/'initial_history.json'),'initial.pt',digest(RUN/'initial.pt'))]
+ for kind,key in [('student','state_dict'),('EMA','ema_state')]:sources.append((f'final_compact_{kind}',{**warm,'state_dict':latest[key],'epoch':full[-1]['epoch'],'head_refinement':False,'training_stage':'pure_capacity_full_network'},ancestor_head+full,'parent/full_latest.pt:'+key,digest(PARENT/'full_latest.pt')))
+ outcomes=[];options=[]
+ for name,ck,history,source_file,source_hash in sources:
+  folder=RUN/name;folder.mkdir(exist_ok=False);network=model_from(ck,torch.device('cpu'));generator=torch.Generator().manual_seed(protocol['seed']);loader=DataLoader(train,batch_size=128,shuffle=True,generator=generator,num_workers=0);start=time.perf_counter();audit=reestimate_batchnorm(network,loader);audit.update(source_file=source_file,source_sha256=source_hash,train_source_images=len(train),completed_population_passes=1,seconds=time.perf_counter()-start);write_json(folder/'buffer_audit.json',audit);logits,y=predictions(network,val,torch.device('cpu'));r=metrics(logits,y);write_json(folder/'validation.json',r);ok=eligible(r,current,earlier);arch=ck['architecture'];base={k:v for k,v in ck.items() if k not in ['state_dict','inference','calibration','colab_settings']};candidate={**base,'state_dict':network.state_dict(),'inference':{},'colab_settings':{**settings,'architecture':arch,'candidate':name},'training_stage':'pure_batchnorm_recalibration','source_training_stage':ck.get('training_stage'),'bn_recalibration':audit,'head_refinement':False,'colab_improved':ok,'selection_metric':protocol['selection']};save_checkpoint(folder/'candidate.pt',candidate);write_json(folder/'source_history.json',history);entry={'candidate':name,'eligible':ok,'accuracy':r['accuracy'],'macro_f1':r['classification_report']['macro avg']['f1-score'],'disgust_precision':r['classification_report']['disgust']['precision'],'disgust_recall':r['classification_report']['disgust']['recall'],'disgust_f1':r['classification_report']['disgust']['f1-score'],'parameters_unchanged':audit['all_learned_parameters_bit_identical'],'architecture':arch};outcomes.append(entry);write_json(RUN/'validation_comparisons.json',outcomes);print(json.dumps(entry),flush=True)
+  if ok:options.append((objective(r),name,r,history))
+  del network,candidate
+ if not options:
+  write_json(RUN/'deployment_decision.json',{'eligible':False,'test_evaluated':False,'installed':False,'reason':'None of three TRAIN-only BN-recalibrated pure models passed every unchanged class and aggregate validation gate. App/PPT unchanged.'});return
+ _,name,r,history=max(options,key=lambda x:x[0]);shutil.copy2(RUN/name/'candidate.pt',RUN/'best.pt');write_json(RUN/'best_validation.json',r);write_json(RUN/'training_history.json',history);ck=torch.load(RUN/'best.pt',map_location='cpu',weights_only=True);fresh_logits,y=predictions(model_from(ck,torch.device('cpu')),val,torch.device('cpu'));fresh=metrics(fresh_logits,y);write_json(RUN/'fresh_validation_preflight.json',fresh);assert eligible(fresh,current,earlier)
+ write_json(RUN/'candidate_frozen.json',{'best_sha256':digest(RUN/'best.pt'),'selected_candidate':name,'single_view_only':True,'test_accessed_at_freeze':False,'test_gate':protocol['test_gate']})
+ cmd=[sys.executable,'-u','-m','scripts.evaluate_compact_capacity','--data','data/private/fer2013-v1.zip','--run-dir',str(RUN.relative_to(ROOT)),'--device','cpu','--threads','4','--single-view','--strict-all-metrics','--allow-equal-disgust-f1','--baseline-report',str(RUN.relative_to(ROOT)/'current_test.json'),'--baseline-manifest',str(RUN.relative_to(ROOT)/'current_test_manifest.json')]
+ with (RUN/'test_evaluation.log').open('w',encoding='utf-8') as stream:subprocess.run(cmd,cwd=ROOT,stdout=stream,stderr=subprocess.STDOUT,check=True)
+ result=read(RUN/'deployment/reports/emotion_evaluation.json');current_test=read(RUN/'current_test.json');earlier_test=read(RUN/'earlier_test.json');passed=eligible(result,current_test,earlier_test);comparison=read(RUN/'deployment/reports/colab_comparison.json');assert not passed or comparison['recommended_for_integration'];write_json(RUN/'deployment_decision.json',{'eligible':passed,'test_evaluated':True,'installed':False,'selected_candidate':name,'checkpoint_sha256':result['checkpoint_sha256'],'reason':'All prospective pure-model test recovery and retention conditions passed' if passed else 'One frozen pure candidate failed at least one full-test condition; no alternate test, app/PPT unchanged.','comparison':comparison,'class_recall':{n:{'current':current_test['classification_report'][n]['recall'],'earlier':earlier_test['classification_report'][n]['recall'],'candidate':result['classification_report'][n]['recall']} for n in ['happy','surprise','neutral','disgust']}})
+if __name__=='__main__':main()

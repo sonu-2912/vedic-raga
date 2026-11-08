@@ -1,0 +1,20 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
+torchvision==0.20.1+cpu
+fastapi==0.115.6
+uvicorn==0.34.0
+python-multipart==0.0.20
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+scikit-learn==1.6.0
+opencv-python-headless==4.10.0.84
+Pillow==11.1.0
+matplotlib==3.9.4
+mne==1.9.0
+neurokit2==0.2.10
+pytest==8.3.4
+httpx==0.28.1
+pymupdf==1.25.1
+requests==2.28.1
+h5py==3.12.1
