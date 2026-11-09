@@ -17,3 +17,6 @@ frontend/dist/
 *.pt
 *.pth
 *.onnx
+
+# Embedded packaging checkout
+output/github/RagaMoodSync/
