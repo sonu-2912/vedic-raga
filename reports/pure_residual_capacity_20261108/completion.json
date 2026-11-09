@@ -1,0 +1,11 @@
+{
+  "reported": true,
+  "performance_goal_achieved": false,
+  "app_model_ppt_unchanged": true,
+  "decision": {
+    "eligible": false,
+    "test_evaluated": false,
+    "installed": false,
+    "reason": "No native residual compact validation checkpoint recovered all requested classes while retaining disgust and aggregate metrics. App/PPT unchanged."
+  }
+}

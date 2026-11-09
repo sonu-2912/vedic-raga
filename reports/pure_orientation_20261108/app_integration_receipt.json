@@ -1,0 +1,15 @@
+{
+  "installed": true,
+  "checkpoint_sha256": "f0082aff0511c40d8dff89fc03bbea965b416db55a0f771701efaa38f490c548",
+  "tests": 85,
+  "test_seconds": 118.56,
+  "frontend_build": "pass",
+  "ppt_pending": false,
+  "github_published": true,
+  "presentation": "output/RagaMoodSync_Research_Pure_Orientation_Repair_Reviewed_v3.pptx",
+  "presentation_sha256": "ab70551273d5cf0c4df21abab2c2805ca8fe7d6a0a95cc4b9d6a157774615cdb",
+  "all_slides_reviewed": true,
+  "all_class_tradeoffs_reported": true,
+  "github_commit": "6d4a2cedec7ee763900485ed4407fbaf2f83688d",
+  "portable_checkpoint_sha256": "4c9c8f2a9127493b2295637421923876bd6e64e91bb8b43ec486c018eb3334c7"
+}

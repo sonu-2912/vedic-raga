@@ -1,0 +1,7 @@
+{
+  "declared_utc": "2026-11-08T13:38:53.301500+00:00",
+  "before_full_training_and_test": true,
+  "change": "Full-network stage protects both correct TRAIN disgust positives and correct non-disgust references with binary KL. Deterministic classifier logits share the same backbone/features/MLP weights, bypassing TRAIN dropout only for retention. CE remains stochastic. No extra inference model or predictor mixture.",
+  "reason": "Positive-only teacher retention can fail to control disgust false positives; preserving the binary boundary addresses precision as well as recall. Comparison is an exploratory joint repair, not isolated causal attribution.",
+  "test_gates_unchanged": true
+}

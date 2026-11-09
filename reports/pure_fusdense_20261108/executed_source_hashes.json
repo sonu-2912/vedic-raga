@@ -1,0 +1,5 @@
+{
+  "scripts/train_pure_fusdense.py": "27f9998d47ec9e02b7ec11f0ceede756944e296695ba0ca2edeca12ee0d8ea8a",
+  "backend/models.py": "607cc1d90bbd87acf70c6ad99a777dcd3ce6d39387cc86b9fd582d02938e2b72",
+  "scripts/colab_common.py": "811170a47fae0122f4a204b31b3fa9d21586ba65bc05d8e85ec478aee89973b3"
+}

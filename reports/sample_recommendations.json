@@ -1,0 +1,2155 @@
+[
+  {
+    "synthetic_feedback": true,
+    "before": {
+      "emotion": "sad",
+      "target_bhava": "shoka",
+      "ranking_mode": "IKS + feedback cold-start heuristic (FDCF not trained for this user)",
+      "feedback_observations": 0,
+      "recommendations": [
+        {
+          "raga_name": "Asavari",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Shama"
+          ],
+          "prahara": [
+            2,
+            3
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=8y6BAtq8jr4",
+              "https://www.youtube.com/watch?v=U3ynws08vk0",
+              "https://www.youtube.com/watch?v=xPhLGhqXDxQ",
+              "https://www.youtube.com/watch?v=QxuDG00m3-Y",
+              "https://www.youtube.com/watch?v=iFkYBk_I-0o",
+              "https://www.youtube.com/watch?v=akqMlG-gA14"
+            ],
+            "instrumental": [
+              "https://youtu.be/XJLEyCSGzU4",
+              "https://youtu.be/A3H0gdUs7cQ"
+            ]
+          },
+          "id": 22,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.5,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 0."
+        },
+        {
+          "raga_name": "Bhairav",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Shama",
+            "Vismaya"
+          ],
+          "prahara": [
+            1,
+            8
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=eetewueCwOk",
+              "https://www.youtube.com/watch?v=NMHoLg5PxRM",
+              "https://www.youtube.com/watch?v=VgfdKCX-38A",
+              "https://www.youtube.com/watch?v=G0V0q_yA49U",
+              "https://www.youtube.com/watch?v=jG21qUpkfUI"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=tLXNNejKhJs",
+              "https://www.youtube.com/watch?v=QVgy60Epxlk",
+              "https://www.youtube.com/watch?v=lOWlToiC2QA"
+            ]
+          },
+          "id": 0,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.5,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 0."
+        },
+        {
+          "raga_name": "Bhairavi",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Rati",
+            "Shama"
+          ],
+          "prahara": [
+            1,
+            2,
+            8
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=OX6Da7jmYP8",
+              "https://www.youtube.com/watch?v=VgfdKCX-38A",
+              "https://www.youtube.com/watch?v=tUWEYT8nRIw",
+              "https://www.youtube.com/watch?v=RLpJCLxacUc"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=tLXNNejKhJs",
+              "https://www.youtube.com/watch?v=vbmLtmO3wj0",
+              "https://www.youtube.com/watch?v=q29ZfPmopLE",
+              "https://www.youtube.com/watch?v=bttszaG-fZU"
+            ]
+          },
+          "id": 8,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.5,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 0."
+        },
+        {
+          "raga_name": "Bilaskhani Todi",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Bhaya"
+          ],
+          "prahara": [
+            1,
+            2
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=3c5_Sff7JVE",
+              "https://www.youtube.com/watch?v=joH2guQCEoE"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=3ej5u0B1cp0",
+              "https://www.youtube.com/watch?v=1JxVGSTdI_0",
+              "https://www.youtube.com/watch?v=tigDVKPtp40",
+              "https://www.youtube.com/watch?v=Ael8iSX673I",
+              "https://www.youtube.com/watch?v=ZdWhrCHGt3I",
+              "https://www.youtube.com/watch?v=I9JdqQ0zDD0"
+            ]
+          },
+          "id": 10,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.5,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 0."
+        },
+        {
+          "raga_name": "Darbari Kanada",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Vismaya",
+            "Shama"
+          ],
+          "prahara": [
+            6,
+            7
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://youtu.be/MDh9HvgN88k",
+              "https://youtu.be/AROV6CQ2W9Y"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=xV0mwpAGBbQ",
+              "https://www.youtube.com/watch?v=4XluDP8Ob54",
+              "https://www.youtube.com/watch?v=eGpqTbPUIwc",
+              "https://www.youtube.com/watch?v=nuHwES5bNOk",
+              "https://www.youtube.com/watch?v=sNBGV3o3DDE",
+              "https://www.youtube.com/watch?v=vMPamW94QF8"
+            ]
+          },
+          "id": 25,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.5,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 0."
+        },
+        {
+          "raga_name": "Gunkali",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Shama"
+          ],
+          "prahara": [
+            1,
+            8
+          ],
+          "ritu": "shishira",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=qPCmS-24aoM",
+              "https://www.youtube.com/watch?v=ab-PVReB-hQ",
+              "https://www.youtube.com/watch?v=66bUlgBWwHg",
+              "https://www.youtube.com/watch?v=Fr0W4OZCk1o"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=liSRdqpMJQE",
+              "https://www.youtube.com/watch?v=bC3U6cUnst0",
+              "https://www.youtube.com/watch?v=248KciYyimo"
+            ]
+          },
+          "id": 4,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.5,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 0."
+        }
+      ],
+      "modalities": {
+        "face_or_manual_emotion": true,
+        "physiology": false,
+        "iks": true,
+        "preferences": false
+      },
+      "disclaimer": "Research prototype. Raga associations and inferred expressions do not establish therapeutic efficacy."
+    },
+    "after": {
+      "emotion": "sad",
+      "target_bhava": "shoka",
+      "ranking_mode": "IKS + feedback cold-start heuristic (FDCF not trained for this user)",
+      "feedback_observations": 1,
+      "recommendations": [
+        {
+          "raga_name": "Asavari",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Shama"
+          ],
+          "prahara": [
+            2,
+            3
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=8y6BAtq8jr4",
+              "https://www.youtube.com/watch?v=U3ynws08vk0",
+              "https://www.youtube.com/watch?v=xPhLGhqXDxQ",
+              "https://www.youtube.com/watch?v=QxuDG00m3-Y",
+              "https://www.youtube.com/watch?v=iFkYBk_I-0o",
+              "https://www.youtube.com/watch?v=akqMlG-gA14"
+            ],
+            "instrumental": [
+              "https://youtu.be/XJLEyCSGzU4",
+              "https://youtu.be/A3H0gdUs7cQ"
+            ]
+          },
+          "id": 22,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.792121,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.5,
+            "long_preference": 0.5,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 1."
+        },
+        {
+          "raga_name": "Bhairav",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Shama",
+            "Vismaya"
+          ],
+          "prahara": [
+            1,
+            8
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=eetewueCwOk",
+              "https://www.youtube.com/watch?v=NMHoLg5PxRM",
+              "https://www.youtube.com/watch?v=VgfdKCX-38A",
+              "https://www.youtube.com/watch?v=G0V0q_yA49U",
+              "https://www.youtube.com/watch?v=jG21qUpkfUI"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=tLXNNejKhJs",
+              "https://www.youtube.com/watch?v=QVgy60Epxlk",
+              "https://www.youtube.com/watch?v=lOWlToiC2QA"
+            ]
+          },
+          "id": 0,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 1."
+        },
+        {
+          "raga_name": "Bhairavi",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Rati",
+            "Shama"
+          ],
+          "prahara": [
+            1,
+            2,
+            8
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=OX6Da7jmYP8",
+              "https://www.youtube.com/watch?v=VgfdKCX-38A",
+              "https://www.youtube.com/watch?v=tUWEYT8nRIw",
+              "https://www.youtube.com/watch?v=RLpJCLxacUc"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=tLXNNejKhJs",
+              "https://www.youtube.com/watch?v=vbmLtmO3wj0",
+              "https://www.youtube.com/watch?v=q29ZfPmopLE",
+              "https://www.youtube.com/watch?v=bttszaG-fZU"
+            ]
+          },
+          "id": 8,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 1."
+        },
+        {
+          "raga_name": "Bilaskhani Todi",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Bhaya"
+          ],
+          "prahara": [
+            1,
+            2
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=3c5_Sff7JVE",
+              "https://www.youtube.com/watch?v=joH2guQCEoE"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=3ej5u0B1cp0",
+              "https://www.youtube.com/watch?v=1JxVGSTdI_0",
+              "https://www.youtube.com/watch?v=tigDVKPtp40",
+              "https://www.youtube.com/watch?v=Ael8iSX673I",
+              "https://www.youtube.com/watch?v=ZdWhrCHGt3I",
+              "https://www.youtube.com/watch?v=I9JdqQ0zDD0"
+            ]
+          },
+          "id": 10,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 1."
+        },
+        {
+          "raga_name": "Darbari Kanada",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Vismaya",
+            "Shama"
+          ],
+          "prahara": [
+            6,
+            7
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://youtu.be/MDh9HvgN88k",
+              "https://youtu.be/AROV6CQ2W9Y"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=xV0mwpAGBbQ",
+              "https://www.youtube.com/watch?v=4XluDP8Ob54",
+              "https://www.youtube.com/watch?v=eGpqTbPUIwc",
+              "https://www.youtube.com/watch?v=nuHwES5bNOk",
+              "https://www.youtube.com/watch?v=sNBGV3o3DDE",
+              "https://www.youtube.com/watch?v=vMPamW94QF8"
+            ]
+          },
+          "id": 25,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 1."
+        },
+        {
+          "raga_name": "Gunkali",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Shama"
+          ],
+          "prahara": [
+            1,
+            8
+          ],
+          "ritu": "shishira",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=qPCmS-24aoM",
+              "https://www.youtube.com/watch?v=ab-PVReB-hQ",
+              "https://www.youtube.com/watch?v=66bUlgBWwHg",
+              "https://www.youtube.com/watch?v=Fr0W4OZCk1o"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=liSRdqpMJQE",
+              "https://www.youtube.com/watch?v=bC3U6cUnst0",
+              "https://www.youtube.com/watch?v=248KciYyimo"
+            ]
+          },
+          "id": 4,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shoka. Metadata is source-supplied. Preference observations: 1."
+        }
+      ],
+      "modalities": {
+        "face_or_manual_emotion": true,
+        "physiology": false,
+        "iks": true,
+        "preferences": true
+      },
+      "disclaimer": "Research prototype. Raga associations and inferred expressions do not establish therapeutic efficacy."
+    }
+  },
+  {
+    "synthetic_feedback": true,
+    "before": {
+      "emotion": "happy",
+      "target_bhava": "hasa",
+      "ranking_mode": "IKS + feedback cold-start heuristic (FDCF not trained for this user)",
+      "feedback_observations": 1,
+      "recommendations": [
+        {
+          "raga_name": "Dhani",
+          "primary_sthayi_bhava": "Hasa",
+          "secondary_sthayi_bhava": [
+            "Utsaha"
+          ],
+          "prahara": [
+            5,
+            6
+          ],
+          "ritu": "vasanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=qZwNtm3F8Uo",
+              "https://www.youtube.com/watch?v=ZRLihUF1a40",
+              "https://www.youtube.com/watch?v=6iqOz2JL9AY",
+              "https://www.youtube.com/watch?v=v5_baUk8jBw",
+              "https://www.youtube.com/watch?v=PKUO-nqbABg"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=E0L02BVBwFI",
+              "https://www.youtube.com/watch?v=tW6RWP54Tsg"
+            ]
+          },
+          "id": 60,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 1."
+        },
+        {
+          "raga_name": "Pahadi",
+          "primary_sthayi_bhava": "Hasa",
+          "secondary_sthayi_bhava": [
+            "Rati"
+          ],
+          "prahara": [
+            4,
+            5,
+            6
+          ],
+          "ritu": "vasanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=jPPr1KaqAhg",
+              "https://www.youtube.com/watch?v=O6MHjworfk8",
+              "https://www.youtube.com/watch?v=Qkue18syfrU"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=Di_6A8wr1b8",
+              "https://www.youtube.com/watch?v=N9RGCFNg3z0",
+              "https://www.youtube.com/watch?v=iLLiQKD-QKc",
+              "https://www.youtube.com/watch?v=EL4_hAoMHd0"
+            ]
+          },
+          "id": 18,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 1."
+        },
+        {
+          "raga_name": "Tilak Kamod",
+          "primary_sthayi_bhava": "Hasa",
+          "secondary_sthayi_bhava": [
+            "Rati"
+          ],
+          "prahara": [
+            5,
+            6
+          ],
+          "ritu": "vasanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=wioUZhifTs4",
+              "https://www.youtube.com/watch?v=ZAU5ytweMAg"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=UNx_fYV81fM",
+              "https://www.youtube.com/watch?v=3Jiv_Q-wny8",
+              "https://www.youtube.com/watch?v=XYWRymdhSGE"
+            ]
+          },
+          "id": 70,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 1."
+        },
+        {
+          "raga_name": "Bilawal",
+          "primary_sthayi_bhava": "Utsaha",
+          "secondary_sthayi_bhava": [
+            "Rati",
+            "Hasa"
+          ],
+          "prahara": [
+            1,
+            2,
+            3
+          ],
+          "ritu": "vasanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=oTg3QBVYFSc",
+              "https://www.youtube.com/watch?v=ZYQITiocNfk",
+              "https://www.youtube.com/watch?v=XWiqBwQrBDE",
+              "https://www.youtube.com/watch?v=dlBg5wWhm6o",
+              "https://www.youtube.com/watch?v=mGobQ9ztOnY"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=CKQqC6iPji4",
+              "https://www.youtube.com/watch?v=o5ZGNgVVZ6U"
+            ]
+          },
+          "id": 13,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.54225,
+          "components": {
+            "iks": 0.565,
+            "bhava": 0.6,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 1."
+        },
+        {
+          "raga_name": "Des",
+          "primary_sthayi_bhava": "Rati",
+          "secondary_sthayi_bhava": [
+            "Hasa",
+            "Utsaha"
+          ],
+          "prahara": [
+            5,
+            6
+          ],
+          "ritu": "varsha",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=FYKkfgFzZc0",
+              "https://www.youtube.com/watch?v=pl5EgDc9N3U"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=GA8PPBn_s_Q",
+              "https://www.youtube.com/watch?v=94sisryenAI",
+              "https://www.youtube.com/watch?v=3utGH37HzCk",
+              "https://www.youtube.com/watch?v=bGXquAfay10"
+            ]
+          },
+          "id": 68,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.54225,
+          "components": {
+            "iks": 0.565,
+            "bhava": 0.6,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 1."
+        },
+        {
+          "raga_name": "Gara",
+          "primary_sthayi_bhava": "Rati",
+          "secondary_sthayi_bhava": [
+            "Hasa"
+          ],
+          "prahara": [
+            5,
+            6
+          ],
+          "ritu": "vasanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=IiDLdTgwTWE",
+              "https://www.youtube.com/watch?v=iDPwWDhCl7c"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=gxUjNkvBAHw",
+              "https://www.youtube.com/watch?v=rvbbWQJnDIg",
+              "https://www.youtube.com/watch?v=FoVutjwXVEQ",
+              "https://www.youtube.com/watch?v=-MwHvdOKZuw",
+              "https://www.youtube.com/watch?v=CW_SipJMI44"
+            ]
+          },
+          "id": 67,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.54225,
+          "components": {
+            "iks": 0.565,
+            "bhava": 0.6,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 1."
+        }
+      ],
+      "modalities": {
+        "face_or_manual_emotion": true,
+        "physiology": false,
+        "iks": true,
+        "preferences": true
+      },
+      "disclaimer": "Research prototype. Raga associations and inferred expressions do not establish therapeutic efficacy."
+    },
+    "after": {
+      "emotion": "happy",
+      "target_bhava": "hasa",
+      "ranking_mode": "IKS + feedback cold-start heuristic (FDCF not trained for this user)",
+      "feedback_observations": 2,
+      "recommendations": [
+        {
+          "raga_name": "Dhani",
+          "primary_sthayi_bhava": "Hasa",
+          "secondary_sthayi_bhava": [
+            "Utsaha"
+          ],
+          "prahara": [
+            5,
+            6
+          ],
+          "ritu": "vasanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=qZwNtm3F8Uo",
+              "https://www.youtube.com/watch?v=ZRLihUF1a40",
+              "https://www.youtube.com/watch?v=6iqOz2JL9AY",
+              "https://www.youtube.com/watch?v=v5_baUk8jBw",
+              "https://www.youtube.com/watch?v=PKUO-nqbABg"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=E0L02BVBwFI",
+              "https://www.youtube.com/watch?v=tW6RWP54Tsg"
+            ]
+          },
+          "id": 60,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.792121,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.5,
+            "long_preference": 0.5,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 2."
+        },
+        {
+          "raga_name": "Pahadi",
+          "primary_sthayi_bhava": "Hasa",
+          "secondary_sthayi_bhava": [
+            "Rati"
+          ],
+          "prahara": [
+            4,
+            5,
+            6
+          ],
+          "ritu": "vasanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=jPPr1KaqAhg",
+              "https://www.youtube.com/watch?v=O6MHjworfk8",
+              "https://www.youtube.com/watch?v=Qkue18syfrU"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=Di_6A8wr1b8",
+              "https://www.youtube.com/watch?v=N9RGCFNg3z0",
+              "https://www.youtube.com/watch?v=iLLiQKD-QKc",
+              "https://www.youtube.com/watch?v=EL4_hAoMHd0"
+            ]
+          },
+          "id": 18,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 2."
+        },
+        {
+          "raga_name": "Tilak Kamod",
+          "primary_sthayi_bhava": "Hasa",
+          "secondary_sthayi_bhava": [
+            "Rati"
+          ],
+          "prahara": [
+            5,
+            6
+          ],
+          "ritu": "vasanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=wioUZhifTs4",
+              "https://www.youtube.com/watch?v=ZAU5ytweMAg"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=UNx_fYV81fM",
+              "https://www.youtube.com/watch?v=3Jiv_Q-wny8",
+              "https://www.youtube.com/watch?v=XYWRymdhSGE"
+            ]
+          },
+          "id": 70,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 2."
+        },
+        {
+          "raga_name": "Bilawal",
+          "primary_sthayi_bhava": "Utsaha",
+          "secondary_sthayi_bhava": [
+            "Rati",
+            "Hasa"
+          ],
+          "prahara": [
+            1,
+            2,
+            3
+          ],
+          "ritu": "vasanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=oTg3QBVYFSc",
+              "https://www.youtube.com/watch?v=ZYQITiocNfk",
+              "https://www.youtube.com/watch?v=XWiqBwQrBDE",
+              "https://www.youtube.com/watch?v=dlBg5wWhm6o",
+              "https://www.youtube.com/watch?v=mGobQ9ztOnY"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=CKQqC6iPji4",
+              "https://www.youtube.com/watch?v=o5ZGNgVVZ6U"
+            ]
+          },
+          "id": 13,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.54225,
+          "components": {
+            "iks": 0.565,
+            "bhava": 0.6,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 2."
+        },
+        {
+          "raga_name": "Des",
+          "primary_sthayi_bhava": "Rati",
+          "secondary_sthayi_bhava": [
+            "Hasa",
+            "Utsaha"
+          ],
+          "prahara": [
+            5,
+            6
+          ],
+          "ritu": "varsha",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=FYKkfgFzZc0",
+              "https://www.youtube.com/watch?v=pl5EgDc9N3U"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=GA8PPBn_s_Q",
+              "https://www.youtube.com/watch?v=94sisryenAI",
+              "https://www.youtube.com/watch?v=3utGH37HzCk",
+              "https://www.youtube.com/watch?v=bGXquAfay10"
+            ]
+          },
+          "id": 68,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.54225,
+          "components": {
+            "iks": 0.565,
+            "bhava": 0.6,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 2."
+        },
+        {
+          "raga_name": "Gara",
+          "primary_sthayi_bhava": "Rati",
+          "secondary_sthayi_bhava": [
+            "Hasa"
+          ],
+          "prahara": [
+            5,
+            6
+          ],
+          "ritu": "vasanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=IiDLdTgwTWE",
+              "https://www.youtube.com/watch?v=iDPwWDhCl7c"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=gxUjNkvBAHw",
+              "https://www.youtube.com/watch?v=rvbbWQJnDIg",
+              "https://www.youtube.com/watch?v=FoVutjwXVEQ",
+              "https://www.youtube.com/watch?v=-MwHvdOKZuw",
+              "https://www.youtube.com/watch?v=CW_SipJMI44"
+            ]
+          },
+          "id": 67,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.54225,
+          "components": {
+            "iks": 0.565,
+            "bhava": 0.6,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: hasa. Metadata is source-supplied. Preference observations: 2."
+        }
+      ],
+      "modalities": {
+        "face_or_manual_emotion": true,
+        "physiology": false,
+        "iks": true,
+        "preferences": true
+      },
+      "disclaimer": "Research prototype. Raga associations and inferred expressions do not establish therapeutic efficacy."
+    }
+  },
+  {
+    "synthetic_feedback": true,
+    "before": {
+      "emotion": "neutral",
+      "target_bhava": "shama",
+      "ranking_mode": "IKS + feedback cold-start heuristic (FDCF not trained for this user)",
+      "feedback_observations": 2,
+      "recommendations": [
+        {
+          "raga_name": "Chandrakauns",
+          "primary_sthayi_bhava": "Shama",
+          "secondary_sthayi_bhava": [
+            "Vismaya"
+          ],
+          "prahara": [
+            6,
+            7
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=g22BWgZ2cCE",
+              "https://www.youtube.com/watch?v=yLa9Y1zECdw",
+              "https://www.youtube.com/watch?v=4FXVl_UApbE"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=BTN61VCCQqo",
+              "https://www.youtube.com/watch?v=16zZBo2OveY",
+              "https://www.youtube.com/watch?v=VdSGGBIpkuw",
+              "https://www.youtube.com/watch?v=lG8XEXrQPh8",
+              "https://www.youtube.com/watch?v=vPib32E1fXs"
+            ]
+          },
+          "id": 12,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 2."
+        },
+        {
+          "raga_name": "Malkauns",
+          "primary_sthayi_bhava": "Shama",
+          "secondary_sthayi_bhava": [
+            "Bhaya",
+            "Vismaya"
+          ],
+          "prahara": [
+            6,
+            7
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=-EtiRwtqL_Y",
+              "https://www.youtube.com/watch?v=4DQZkKgACeA"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=667vd4mz18w",
+              "https://www.youtube.com/watch?v=HTXm4asuA4s",
+              "https://www.youtube.com/watch?v=rg0-JxgiqDk",
+              "https://www.youtube.com/watch?v=pnXval_cSkw"
+            ]
+          },
+          "id": 11,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 2."
+        },
+        {
+          "raga_name": "Shanmukhapriya",
+          "primary_sthayi_bhava": "Shama",
+          "secondary_sthayi_bhava": [
+            "Shoka",
+            "Rati",
+            "Vismaya"
+          ],
+          "prahara": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "ritu": "",
+          "youtube_links": {
+            "vocal": [
+              "https://youtu.be/-MJ06Vu688k",
+              "https://youtu.be/spRQEectgB8"
+            ],
+            "instrumental": [
+              "https://youtu.be/0FwJpXMWtoE",
+              "https://youtu.be/HYAOgON3RZs"
+            ]
+          },
+          "id": 71,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "missing",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 2."
+        },
+        {
+          "raga_name": "Vibhas",
+          "primary_sthayi_bhava": "Shama",
+          "secondary_sthayi_bhava": [
+            "Vismaya"
+          ],
+          "prahara": [
+            1,
+            8
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=9MqDMRx4Szc",
+              "https://www.youtube.com/watch?v=EqTNRii6LRA",
+              "https://www.youtube.com/watch?v=ulXuz1sRLDg",
+              "https://www.youtube.com/watch?v=qINe_MlOKz0",
+              "https://www.youtube.com/watch?v=goTSsBzxGlY",
+              "https://www.youtube.com/watch?v=hNLf7eeC_aY"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=ezKAuISEpls"
+            ]
+          },
+          "id": 3,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 2."
+        },
+        {
+          "raga_name": "Asavari",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Shama"
+          ],
+          "prahara": [
+            2,
+            3
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=8y6BAtq8jr4",
+              "https://www.youtube.com/watch?v=U3ynws08vk0",
+              "https://www.youtube.com/watch?v=xPhLGhqXDxQ",
+              "https://www.youtube.com/watch?v=QxuDG00m3-Y",
+              "https://www.youtube.com/watch?v=iFkYBk_I-0o",
+              "https://www.youtube.com/watch?v=akqMlG-gA14"
+            ],
+            "instrumental": [
+              "https://youtu.be/XJLEyCSGzU4",
+              "https://youtu.be/A3H0gdUs7cQ"
+            ]
+          },
+          "id": 22,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.623121,
+          "components": {
+            "iks": 0.565,
+            "bhava": 0.6,
+            "short_preference": 0.5,
+            "long_preference": 0.5,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 2."
+        },
+        {
+          "raga_name": "Bhairav",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Shama",
+            "Vismaya"
+          ],
+          "prahara": [
+            1,
+            8
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=eetewueCwOk",
+              "https://www.youtube.com/watch?v=NMHoLg5PxRM",
+              "https://www.youtube.com/watch?v=VgfdKCX-38A",
+              "https://www.youtube.com/watch?v=G0V0q_yA49U",
+              "https://www.youtube.com/watch?v=jG21qUpkfUI"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=tLXNNejKhJs",
+              "https://www.youtube.com/watch?v=QVgy60Epxlk",
+              "https://www.youtube.com/watch?v=lOWlToiC2QA"
+            ]
+          },
+          "id": 0,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.54225,
+          "components": {
+            "iks": 0.565,
+            "bhava": 0.6,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 2."
+        }
+      ],
+      "modalities": {
+        "face_or_manual_emotion": true,
+        "physiology": false,
+        "iks": true,
+        "preferences": true
+      },
+      "disclaimer": "Research prototype. Raga associations and inferred expressions do not establish therapeutic efficacy."
+    },
+    "after": {
+      "emotion": "neutral",
+      "target_bhava": "shama",
+      "ranking_mode": "IKS + feedback cold-start heuristic (FDCF not trained for this user)",
+      "feedback_observations": 3,
+      "recommendations": [
+        {
+          "raga_name": "Chandrakauns",
+          "primary_sthayi_bhava": "Shama",
+          "secondary_sthayi_bhava": [
+            "Vismaya"
+          ],
+          "prahara": [
+            6,
+            7
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=g22BWgZ2cCE",
+              "https://www.youtube.com/watch?v=yLa9Y1zECdw",
+              "https://www.youtube.com/watch?v=4FXVl_UApbE"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=BTN61VCCQqo",
+              "https://www.youtube.com/watch?v=16zZBo2OveY",
+              "https://www.youtube.com/watch?v=VdSGGBIpkuw",
+              "https://www.youtube.com/watch?v=lG8XEXrQPh8",
+              "https://www.youtube.com/watch?v=vPib32E1fXs"
+            ]
+          },
+          "id": 12,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.792121,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.5,
+            "long_preference": 0.5,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 3."
+        },
+        {
+          "raga_name": "Malkauns",
+          "primary_sthayi_bhava": "Shama",
+          "secondary_sthayi_bhava": [
+            "Bhaya",
+            "Vismaya"
+          ],
+          "prahara": [
+            6,
+            7
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=-EtiRwtqL_Y",
+              "https://www.youtube.com/watch?v=4DQZkKgACeA"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=667vd4mz18w",
+              "https://www.youtube.com/watch?v=HTXm4asuA4s",
+              "https://www.youtube.com/watch?v=rg0-JxgiqDk",
+              "https://www.youtube.com/watch?v=pnXval_cSkw"
+            ]
+          },
+          "id": 11,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 3."
+        },
+        {
+          "raga_name": "Shanmukhapriya",
+          "primary_sthayi_bhava": "Shama",
+          "secondary_sthayi_bhava": [
+            "Shoka",
+            "Rati",
+            "Vismaya"
+          ],
+          "prahara": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "ritu": "",
+          "youtube_links": {
+            "vocal": [
+              "https://youtu.be/-MJ06Vu688k",
+              "https://youtu.be/spRQEectgB8"
+            ],
+            "instrumental": [
+              "https://youtu.be/0FwJpXMWtoE",
+              "https://youtu.be/HYAOgON3RZs"
+            ]
+          },
+          "id": 71,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "missing",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 3."
+        },
+        {
+          "raga_name": "Vibhas",
+          "primary_sthayi_bhava": "Shama",
+          "secondary_sthayi_bhava": [
+            "Vismaya"
+          ],
+          "prahara": [
+            1,
+            8
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=9MqDMRx4Szc",
+              "https://www.youtube.com/watch?v=EqTNRii6LRA",
+              "https://www.youtube.com/watch?v=ulXuz1sRLDg",
+              "https://www.youtube.com/watch?v=qINe_MlOKz0",
+              "https://www.youtube.com/watch?v=goTSsBzxGlY",
+              "https://www.youtube.com/watch?v=hNLf7eeC_aY"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=ezKAuISEpls"
+            ]
+          },
+          "id": 3,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.71125,
+          "components": {
+            "iks": 0.825,
+            "bhava": 1.0,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 3."
+        },
+        {
+          "raga_name": "Asavari",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Shama"
+          ],
+          "prahara": [
+            2,
+            3
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=8y6BAtq8jr4",
+              "https://www.youtube.com/watch?v=U3ynws08vk0",
+              "https://www.youtube.com/watch?v=xPhLGhqXDxQ",
+              "https://www.youtube.com/watch?v=QxuDG00m3-Y",
+              "https://www.youtube.com/watch?v=iFkYBk_I-0o",
+              "https://www.youtube.com/watch?v=akqMlG-gA14"
+            ],
+            "instrumental": [
+              "https://youtu.be/XJLEyCSGzU4",
+              "https://youtu.be/A3H0gdUs7cQ"
+            ]
+          },
+          "id": 22,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.623121,
+          "components": {
+            "iks": 0.565,
+            "bhava": 0.6,
+            "short_preference": 0.5,
+            "long_preference": 0.5,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 3."
+        },
+        {
+          "raga_name": "Bhairav",
+          "primary_sthayi_bhava": "Shoka",
+          "secondary_sthayi_bhava": [
+            "Shama",
+            "Vismaya"
+          ],
+          "prahara": [
+            1,
+            8
+          ],
+          "ritu": "hemanta",
+          "youtube_links": {
+            "vocal": [
+              "https://www.youtube.com/watch?v=eetewueCwOk",
+              "https://www.youtube.com/watch?v=NMHoLg5PxRM",
+              "https://www.youtube.com/watch?v=VgfdKCX-38A",
+              "https://www.youtube.com/watch?v=G0V0q_yA49U",
+              "https://www.youtube.com/watch?v=jG21qUpkfUI"
+            ],
+            "instrumental": [
+              "https://www.youtube.com/watch?v=tLXNNejKhJs",
+              "https://www.youtube.com/watch?v=QVgy60Epxlk",
+              "https://www.youtube.com/watch?v=lOWlToiC2QA"
+            ]
+          },
+          "id": 0,
+          "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+          "metadata_status": {
+            "raga_name": "source supplied, unverified",
+            "primary_sthayi_bhava": "source supplied, unverified",
+            "secondary_sthayi_bhava": "source supplied, unverified",
+            "prahara": "source supplied, unverified",
+            "ritu": "source supplied, unverified",
+            "youtube_links": "source supplied, unverified",
+            "thaat": "missing",
+            "aaroh": "missing",
+            "avaroh": "missing",
+            "vadi": "missing",
+            "samvadi": "missing"
+          },
+          "thaat": null,
+          "aaroh": null,
+          "avaroh": null,
+          "vadi": null,
+          "samvadi": null,
+          "score": 0.54225,
+          "components": {
+            "iks": 0.565,
+            "bhava": 0.6,
+            "short_preference": 0.0,
+            "long_preference": 0.0,
+            "beta": 0.7,
+            "physiology_adjustment": 0.0,
+            "fdcf": null
+          },
+          "reason": "Target bhava: shama. Metadata is source-supplied. Preference observations: 3."
+        }
+      ],
+      "modalities": {
+        "face_or_manual_emotion": true,
+        "physiology": false,
+        "iks": true,
+        "preferences": true
+      },
+      "disclaimer": "Research prototype. Raga associations and inferred expressions do not establish therapeutic efficacy."
+    }
+  }
+]

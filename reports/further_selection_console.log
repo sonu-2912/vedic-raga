@@ -1,0 +1,12 @@
+{
+  "name": "spatial_head_run",
+  "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\spatial_head_run\\best.pt",
+  "sha256": "8186e685fc29cb2813ca2be2285280e747ed2a52a22fa3b5bddab5b23f53aa97",
+  "accuracy": 0.5355163727959698,
+  "macro_f1": 0.4739888394154386,
+  "disgust_f1": 0.26373626373626374,
+  "disgust_recall": 0.24,
+  "epoch": 78,
+  "eligible": true,
+  "selection_score": 0.4214256954956449
+}

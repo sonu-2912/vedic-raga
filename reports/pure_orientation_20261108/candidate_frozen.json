@@ -1,0 +1,8 @@
+{
+  "best_sha256": "c0a8218d00c03ae8a9983530398604cb964edd5e47e03fac6b0cc9903faa7bef",
+  "test_accessed_at_freeze": false,
+  "single_view_only": true,
+  "external_encoder": false,
+  "teacher": false,
+  "minimum_test_disgust_recall_gain": 0.05
+}

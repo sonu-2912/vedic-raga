@@ -1,0 +1,33 @@
+{
+  "emotion": "fear",
+  "confidence": 0.47407296299934387,
+  "probabilities": {
+    "angry": 0.019217096269130707,
+    "disgust": 0.13788287341594696,
+    "fear": 0.47407296299934387,
+    "happy": 0.2418291699141264,
+    "sad": 0.018513578921556473,
+    "surprise": 0.07368084788322449,
+    "neutral": 0.034803543239831924
+  },
+  "native_probabilities": {
+    "adhbuta": 0.07368084788322449,
+    "bhayanak": 0.47407296299934387,
+    "bhibhatsa": 0.13788287341594696,
+    "hasya": 0.03045772574841976,
+    "karuna": 0.018513578921556473,
+    "raudra": 0.019217096269130707,
+    "shanta": 0.034803543239831924,
+    "shringara": 0.06269150227308273,
+    "veer": 0.1486799418926239
+  },
+  "native_label": "bhayanak",
+  "model": "navrasa",
+  "trained": true,
+  "face_box": null,
+  "low_confidence": true,
+  "label_mapping": "Project heuristic mapping of nine Navrasa labels to seven FER labels; not FER calibration",
+  "validation": "No held-out real facial dataset supplied; performance unverified",
+  "input": "Synthetic random pixels, not a human face. Inference mechanics only.",
+  "seconds": 1.9274372000363655
+}

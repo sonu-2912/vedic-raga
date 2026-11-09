@@ -1,0 +1,8 @@
+{
+  "completed_epochs": 6,
+  "discard_partial_next_epoch": true,
+  "reason": "Conditional budget cap declared after4validation epochs, before test. No candidate qualified after the6epochminimum; allocate remaining CPU to orientation classifier repair.",
+  "saved_checkpoint_epoch": 131,
+  "elapsed_wall_seconds_at_last_completed_epoch": 3847.8298788999964,
+  "test_accessed": false
+}

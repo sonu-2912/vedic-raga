@@ -1,0 +1,22 @@
+[
+  {
+    "file": "reports\\spatial_full_run\\epoch_snapshots\\000-29bf8466b3da.pt",
+    "sha256": "29bf8466b3dad63149010d8780ce3b07306e422c863b4adef490039b8bc64962"
+  },
+  {
+    "file": "reports\\spatial_full_run\\epoch_snapshots\\001-4304785e3d5c.pt",
+    "sha256": "4304785e3d5c09f251912e68f3d98b3adc1ff006393984112b9d2b6b581e717c"
+  },
+  {
+    "file": "reports\\spatial_full_run\\epoch_snapshots\\002-9f68cbeb88b7.pt",
+    "sha256": "9f68cbeb88b7016c47b5cd35eca1e634e2bab664eb28da73e3dd0eda738f9623"
+  },
+  {
+    "file": "reports\\spatial_full_run\\epoch_snapshots\\003-7ce944c6cc93.pt",
+    "sha256": "7ce944c6cc9371fc9542600e3761b2749a749a42d696294f68d20f44e5d2c0f8"
+  },
+  {
+    "file": "reports\\spatial_full_run\\epoch_snapshots\\004-04d9a52f247a.pt",
+    "sha256": "04d9a52f247a4e504b802e25630d25231e235b1c74d99cbdebc58a314c83d672"
+  }
+]

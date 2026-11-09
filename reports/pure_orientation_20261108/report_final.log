@@ -1,0 +1,26 @@
+{
+  "test_available": true,
+  "passed_gate": true,
+  "deployed": true,
+  "new_head_epochs": 72,
+  "prior_failed_full_epochs": 6,
+  "parameters": 1828896,
+  "training_orientation_diagnostic": {
+    "original": {
+      "n_train_disgust": 330,
+      "baseline_correct": 315,
+      "candidate_correct": 330,
+      "baseline_recall": 0.9545454382896423,
+      "candidate_recall": 1.0,
+      "scope": "TRAIN examples used for fitting; diagnostic only, not held-out evidence."
+    },
+    "mirrored": {
+      "n_train_disgust": 330,
+      "baseline_correct": 117,
+      "candidate_correct": 319,
+      "baseline_recall": 0.3545454442501068,
+      "candidate_recall": 0.9666666388511658,
+      "scope": "TRAIN examples used for fitting; diagnostic only, not held-out evidence."
+    }
+  }
+}

@@ -1,0 +1,429 @@
+PAGE 1
+NavrasaNet: Emotional State Recognition via the
+Navarasa Doctrine
+Shivansh Singh1, Tharun Kumar Reddy2, and Arihant Jain3
+1 Indian Institute of Technology Roorkee, Roorkee - 247667, INDIA
+shivansh_s@ma.iitr.ac.in
+2 Indian Institute of Technology Roorkee, Roorkee - 247667, INDIA
+tharun.reddy@ece.iitr.ac.in
+3 Indian Institute of Technology Roorkee, Roorkee - 247667, INDIA
+arihant_j@iks.iitr.ac.in
+Abstract. Prevailing emotion recognition systems operate within the
+categorical boundaries inherited from Western psychological models, of-
+ten unable to account for experiential states central to Indian aesthetic
+traditions. This paper introduces NavrasaNet, a deep learning system
+designed for real time recognition of emotional states organised accord-
+ing to the Navarasa theory of Bharata Muni's Natya Shastra. Built upon
+the Navarasa Facial Expression Corpus (NFEC), a purpose built
+dataset developed in collaboration with classically trained Indian dance
+practitioners, thus ensuring both cultural and technical credibility. A
+critical portion of the dataset's foundational ground truth was provided
+by ICCR empanelled artist Smt. Anita Babu, bringing immense expres-
+sive authenticity to the corpus.Furthermore, to strengthen credibility of
+the dataset, it was veried by the government of India recognised scholar
+and researcher, Dr. Manorama B.N.. To capture subtle facial geome-
+tries while avoiding overtting, we employ an EcientNet B2 architec-
+ture utilizing a two phase ne tuning strategy with dierential learning
+rates, augmented by label smoothing and dropout. Evaluating the model
+under a Leave One Subject Out (LOSO) cross validation scheme to en-
+sure generalization to unseen performers, NavrasaNet achieves a peak
+validation accuracy of 93.43% and a robust test accuracy of 87.32% (with
+a macro averaged F1 score of 87%). Furthermore, the framework demon-
+strates practical utility through a Vedic Raga Recommender application.
+Keywords: Emotion Recognition · Navarasa · EcientNet B2 · Indian
+Knowledge Systems · Deep Learning · Aective Computing.
+1
+Introduction
+Emotion recognition is a well established domain within aective computing and
+articial intelligence. However, the categorical structures that underpin modern
+systems remain largely unchanged since the advent of universalist models and
+dimensional circumplex theories. Originating predominantly from a single cul-
+tural and epistemological tradition, these frameworks create a systemic blind
+
+PAGE 2
+2
+S. Singh, T. K. Reddy, and A. Jain
+spot. Aective states culturally signicant within the Indian context fall almost
+entirely outside the representational capacity of current computational systems.
+The Navarasa framework, formalised in the Natya Shastra and philosophi-
+cally deepened by Abhinavagupta in the Abhinavabharati, identies nine founda-
+tional states: Shringara (love), Hasya (mirth), Karuna (sorrow), Raudra (fury),
+Veer (heroism), Bhayanaka (terror), Bibhatsa (disgust), Adbhuta (wonder), and
+Shanta (serenity). Each state is associated with specic physiognomic markers
+or Sthayi Bhavas, preserved through continuous pedagogical transmission across
+generations of classical performing artists. This unbroken lineage has produced
+practitioners whose expressive output carries the rigour of a structured, super-
+vised training curriculum.
+NavrasaNet seeks to bring this profound knowledge into the computational
+domain. We present a culturally grounded pipeline combining rigorous dataset
+curation with modern deep learning architectures. Specically, we utilize an E-
+cientNet B2 backbone to eectively capture subtle facial micro expressions with-
+out the parameter bloat of traditional deep convolutional networks. Furthermore,
+we demonstrate the real world applicability of this emotion recognition system
+through the development of a Vedic Raga Recommender Raga Ratnakar
+: Where Every Mood Finds a Raga website, which utilizes the user's inferred
+Navarasa state to suggest contextually resonant musical compositions.
+2
+The Navarasa Facial Expression Corpus
+Existing benchmarks for facial aect recognition such as FER2013 or AectNet
+are constructed exclusively around Western emotion categories and contain no
+culturally annotated samples representing Indian aesthetic traditions. To ad-
+dress this gap, we developed the Navarasa Facial Expression Corpus (NFEC) in
+partnership with performing arts institutions and individual practitioners whose
+credentials are recognized at the national level by the Government of India.
+2.1
+Curation and Authenticity
+A foundational portion of the corpus was contributed by Smt. Anita Babu,
+an ICCR empanelled artist trained under Padmashree Guru Gangadhar Prad-
+han and Founder of Odissi Natya Sala, New Delhi. Her command of classical
+expressions brings immense credibility to the project ensuring that the emo-
+tions captured reect the precision demanded by decades of rigorous training.
+Furthermore to ensure authenticity, the dataset's expressive ground truth was
+veried by Dr. Manorama B.N., Director, Researcher, and Author at Noopura
+Bhramari  an accredited Centre of Indian Knowledge System (IKS) under the
+IKS Division, Govt of India. Her extensive background in performing, teaching,
+researching and publishing multimedia literature in the realm of Indian Perform-
+ing Arts establishes a rigorous academic and cultural validation layer. Additional
+contributions from practitioners across multiple classical dance forms (such as
+Ms. Achuta Manasa) provide cross tradition coverage and meaningful varia-
+tion within each category.
+
+PAGE 3
+NavrasaNet: Emotional State Recognition via the Navarasa Doctrine
+3
+2.2
+Dataset Statistics and Split Strategy
+The NFEC consists of exactly 21,752 carefully extracted and annotated frames.
+Traditional frame extraction via OpenCV frequently resulted in temporal cor-
+ruption and early EOF errors. Thus, a custom byte level extraction pipeline
+utilizing FFmpeg was engineered to guarantee the delity of the facial geome-
+tries.
+To rigorously test the generalizability of the model against demographic bi-
+ases, the dataset also utilised Leave One Subject Out (LOSO) cross vali-
+dation paradigm. The data was split into Training (14,805 images), Validation
+(3,635 images), and Testing (3,312 images). The test split contains unseen per-
+formers, ensuring that the network learns the universal geometric structures of
+the Navrasas rather than merely memorizing the identities of the training sub-
+jects.
+3
+Computational Framework
+Initial experiments on our custom dataset highlighted the immense diculty
+of culturally specic emotion recognition. When building a standard convolu-
+tional network entirely from scratch, performance rapidly collapsed to random
+guessing (approximately 14% test accuracy). Conversely, transferring heavy ar-
+chitectures like ResNet 50 resulted in severe catastrophic overtting: while the
+model achieved 98% accuracy on the validation set, it plummeted to a mere 60%
+on the test set, demonstrating a complete failure to generalize across dierent
+performers. To overcome these limitations and optimize the parameter to accu-
+racy ratio for subtle facial feature extraction, NavrasaNet specically employs
+an EcientNet B2 architecture.
+3.1
+Model Architecture
+EcientNet relies on compound scaling, uniformly scaling depth, width and
+resolution to capture ne grained facial geometries (such as the arching of an
+eyebrow in Adbhuta or the aring of nostrils in Raudra) far more eectively than
+older architectures. The pre trained ImageNet classier head was discarded and
+replaced with a densely connected custom head comprising dropout layers and
+a nal 9 class Softmax layer corresponding to the Navarasa states.
+3.2
+Two Phase Training Strategy
+Training deep networks on highly subjective emotional data frequently leads to
+catastrophic forgetting or early plateauing. To mitigate this, a two phase ne
+tuning strategy was implemented:
+1. Phase 1 (Warmup): The EcientNet B2 backbone is frozen and only the
+randomly initialized custom classication head is trained. This isolates the
+backbone's pre learned texture detection capabilities from being destroyed
+by initially large, unstructured error gradients.
+
+PAGE 4
+4
+S. Singh, T. K. Reddy, and A. Jain
+2. Phase 2 (Full Fine Tuning): The entire network is unfrozen. To en-
+sure stable convergence, we employ a Cosine Annealing Learning Rate
+Scheduler paired with dierential learning rates (backbone at 1 × 10−5
+and classication head at 1 × 10−4). The cosine decay smoothly anneals the
+learning rate, allowing the network to traverse the complex loss landscape
+eciently without abrupt magnitude drops, ultimately settling into an op-
+timal local minimum. Additionally, gradient clipping is applied to stabilize
+weight updates during the initial transition into full ne tuning.
+3.3
+Regularization for Subjective Emotion
+Emotion is phenomenologically ambiguous; a practitioner portraying Raudra
+(Anger) may exhibit microscopic, overlapping traces of Veer (Heroism). To ac-
+count for this inherent subjectivity, we employ Label Smoothing (α = 0.1).
+This prevents the network from over calibrating to single class hard assign-
+ments, training the model to respect the continuous spectrum of aective states.
+Furthermore, aggressive spatial augmentations (Random Resized Crops, Color
+Jittering and Rotations) coupled with targeted dropout regularization (p = 0.4
+and p = 0.3 in the dual layer classication head) enforce strict background and
+demographic invariance.
+4
+Experiments and Results
+The model was trained on cloud based GPU instances with custom fault toler-
+ance mechanisms to survive network interruptions. An automatic early stopping
+protocol halted training when validation accuracy plateaued, nalizing optimal
+model weights at Epoch 29.
+4.1
+Quantitative Results
+NavrasaNet achieved a peak validation accuracy of 93.43% and a robust test
+accuracy of 87.32%. The stability of the training process, facilitated by the two
+phase ne tuning and cosine annealing learning rate scheduler is evident in the
+learning curves (Figure 1). Table 1 details the per class precision, recall and F1
+scores on the test set.
+4.2
+Qualitative Analysis and Interpretability
+Analysis of the confusion matrix (Figure 3) reveals strong diagonal separability,
+with robust discrimination for states such as Shanta and Veera that lack direct
+equivalents in Western taxonomies. Inter class confusions are largely biologically
+grounded; for instance, the minor confusion between Raudra and Veer correlates
+directly with shared facial muscle tension proles (e.g. ared nostrils, intense
+gaze).
+
+PAGE 5
+NavrasaNet: Emotional State Recognition via the Navarasa Doctrine
+5
+Fig. 1. Training vs validation curves of accuracy and loss demonstrates stable conver-
+gence without major overtting.
+Fig. 2. Cosine Annealing learning rate schedule (left) and the resulting overtting gap
+over epochs (right), validates the model's resistance towards memorizing training set.
+Fig. 3. Confusion matrix details the test set prediction performance across each Rasa.
+
+PAGE 6
+6
+S. Singh, T. K. Reddy, and A. Jain
+Table 1. Classication Performance across the Navarasa categories on test set.
+Rasa
+Accuracy (%) Precision Recall F1 Score
+Shringara
+90.42%
+0.77
+0.90
+0.83
+Hasya
+88.46%
+0.94
+0.88
+0.91
+Karuna
+83.43%
+0.88
+0.83
+0.85
+Raudra
+92.02%
+0.84
+0.92
+0.88
+Veera
+93.04%
+0.87
+0.93
+0.90
+Bhayanaka
+80.10%
+0.82
+0.80
+0.81
+Bibhatsa
+83.76%
+0.86
+0.84
+0.85
+Adbhuta
+79.54%
+0.93
+0.80
+0.86
+Shanta
+94.13%
+0.98
+0.94
+0.96
+Overall / Macro Avg.
+87.32%
+0.88
+0.87
+0.87
+Fig. 4. Per class performance breakdown bar charts.
+To provide deeper insight into class specic discriminative features, we ex-
+tracted characteristic examples. Figure 5 demonstrates the model's predictive
+breakdown for the Adbhuta (Wonder) class, conrming strong condence alloca-
+tion to the primary class.
+Fig. 5. Detailed analysis illustrating the condence distribution for Adbhuta samples.
+
+PAGE 7
+NavrasaNet: Emotional State Recognition via the Navarasa Doctrine
+7
+To guarantee that the network relies on authentic facial expressions rather
+than background artifacts, Grad CAM visualisations were generated (Figure 6).
+The resulting heatmaps conrm that the EcientNet B2 backbone actively an-
+chors its predictions to eyes, eyebrows and mouth.Furthermore, it illustrates the
+model's robust predictive capabilities in real world scenarios, eectively analyz-
+ing unseen frames to output condent, culturally accurate Navarasa classica-
+tions.
+Fig. 6. Grad CAM heatmap analysis.
+5
+Application: The Vedic Raga Recommender
+The ability to computationally detect these culturally specic states opens con-
+crete avenues for human computer interaction. We have developed a full stack
+
+PAGE 8
+8
+S. Singh, T. K. Reddy, and A. Jain
+web application, Raag Ratnakar, which directly leverages the NavrasaNet
+pipeline in real time. As demonstrated in Figure 9 and 10, by capturing the
+user's current facial expression via a webcam interface, the system infers their
+prevailing Navarasa state and subsequently recommends a contextually appropri-
+ate musical composition (Raga) from the Indian classical tradition. This system
+eectively grounds the digital listening experience in ancient classical correspon-
+dences, oering a personalized, culturally responsive environment that dynami-
+cally adapts to the user's aective state.
+5.1
+System Architecture
+Raag Ratnakar is engineered as a modular, service oriented full stack web appli-
+cation. The backend exposes a RESTful API layer through which the following
+services are orchestrated:
+1. Rasa Predictor Service: The NavrasaNet model is utilised to detect user's
+current mood. Incoming webcam frame is pre processed (Resize to 256, Cen-
+terCrop to 224) and fed through the network to yield a Navarasa classica-
+tion.
+2. Environment Service: Computes the user's temporal and seasonal context
+(detailed in Section 5.2).
+3. Mode Engine: Implements the recommendation strategy (Traditional or
+Therapeutic, detailed in Section 5.3).
+4. Rasa Repository: Maintains an indexed lookup of Raga to Sthayi Bhava
+mappings, enabling ecient retrieval of candidate Ragas by emotional an-
+ity, seasonal association and temporal suitability.
+5. Raga Recommender: Aggregates the outputs of the above services and
+applies a weighted scoring function (Section 5.4) to rank and return the nal
+Raga recommendations.
+6. Authentication Service: Manages user registration and session handling
+via JWT tokens with bcrypt hashed passwords, ensuring secure and persis-
+tent user proles.
+5.2
+Uddipana: Environmental Emotional Triggers
+A central innovation of Raag Ratnakar is its incorporation of Uddipana (exci-
+tants), i.e. environmental stimuli that amplify or modulate the listener's emo-
+tional state. The Natya Shastra recognizes that aesthetic experience is not solely
+a function of an internal emotional disposition but is deeply conditioned by the
+surrounding environment. Two classical dimensions of Uddipana are computa-
+tionally operationalized:
+Prahara (Time of Day): Indian classical music prescribes specic perfor-
+mance times for each Raga, rooted in the concept of Samay (time). The system
+determines the user's current Prahara by rst obtaining the device's GPS coor-
+dinates (latitude, longitude) and computing the exact local sunrise and sunset
+
+PAGE 9
+NavrasaNet: Emotional State Recognition via the Navarasa Doctrine
+9
+times. The resulting daylight and nighttime durations are each divided into four
+equal segments, yielding the eight classical Praharas dynamically calibrated to
+the user's geographic location rather than relying on xed clock hours. This en-
+sures that the temporal context remains astronomically accurate regardless of
+the user's position on the globe.
+Ritu (Season): To capture the seasonal dimension, the system queries the
+Open Meteo weather API using the user's coordinates to retrieve live mete-
+orological data encoded as WMO weather codes. These codes are mapped to
+qualitative weather conditions (e.g. WMO code 80 corresponds to a monsoon
+like rainfall pattern). Simultaneously, the current calendar month is converted
+to the corresponding Indian Ritu (e.g., Varsha, Sharad, Hemanta). A weather
+match score is then computed by cross referencing the API derived weather
+mood against the calendrical Ritu, capturing the degree of alignment between
+the actual atmospheric conditions and the classical seasonal ontology.
+5.3
+Recommendation Modes
+Raag Ratnakar oers two philosophically distinct recommendation strategies,
+each grounded in classical Indian aesthetic theory:
+Traditional Mode (ISO Principle + Sadharanikarana): This mode op-
+erates on the ISO Principle of music therapy, which advocates matching the
+listener's current emotional state before gradually transitioning them. If the
+user is experiencing Krodha (anger), the system rst recommends a Raga whose
+dominant Bhava resonates with anger, meeting the listener where they are emo-
+tionally. The philosophical justication derives from Abhinavagupta's concept
+of Sadharanikarana (universalization of emotion): fully experiencing an emo-
+tion within an aesthetic frame is itself cathartic and healing, enabling a natural
+progression toward equanimity.
+Therapeutic Mode: In contrast, the therapeutic strategy pivots immediately
+to a positive emotion at an equivalent energy level then gradually eases the
+listener toward a state of calm. This mode assigns equal weight (50/50) between
+energy matching and valence correction, prioritizing immediate mood elevation.
+A disclaimer accompanies this mode, clarifying that it is not a substitute for
+professional mental health support and is intended solely as an aesthetic wellness
+tool.
+5.4
+Scoring and Ranking
+Once the Mode Engine determines the target emotion, candidate Ragas from
+the repository are ranked using a composite weighted score:
+
+PAGE 10
+10
+S. Singh, T. K. Reddy, and A. Jain
+• Bhava Match (70%): Quanties the alignment between the Raga's pri-
+mary or secondary Sthayi Bhava and the target emotion generated by the
+Mode Engine.
+• Ritu & Weather Match (20%): Evaluates the correspondence between
+prevailing meteorological conditions and the Raga's traditional seasonal as-
+sociations.
+• Prahara Match (10%): Veries that the user's local time of day falls
+accurately within the Raga's prescribed performance window.
+This weighting ensures that emotional resonance remains the dominant selec-
+tion criterion while environmental and temporal context provide meaningful
+secondary modulation.
+The application additionally provides pre built activity modes for specic use
+cases such as Gym, Study, Sleep, and Meditation, each mapping to a curated set
+of Ragas selected on the basis of peer reviewed neuroscience research (Figures 7
+and 8).
+Fig. 7. Activity mode interfaces: Gym Mode (left) and Sleep Mode (right).
+Fig. 8. Activity mode interfaces: Meditation Mode (left) and Study Mode (right).
+
+PAGE 11
+NavrasaNet: Emotional State Recognition via the Navarasa Doctrine
+11
+
+PAGE 12
+12
+S. Singh, T. K. Reddy, and A. Jain
+Fig. 10. Personalised Raga Recommendations based on users's current mood, prahara
+timing, location and weather.
+6
+Conclusion
+NavrasaNet presents a computationally grounded approach to culturally specic
+emotion recognition, supported by a practitioner validated corpus whose anno-
+tation quality derives from expert consensus within living classical traditions.
+By engineering a custom data pipeline, leveraging the compound scaling of E-
+cientNet B2 and utilising LOSO cross validation, we achieved 87.32% recognition
+accuracy across nine subjective states. Future work aims to expand the frame-
+work into a multimodal system incorporating vocal prosody and gestural cues,
+reecting the holistic nature of Indian aesthetics.
+Acknowledgements
+The authors express their sincere gratitude to Prof. Aparna Mohanty (Vellore
+Institue Of Technology , Vellore, Tamil Nadu, India) for her technical mentorship
+
+PAGE 13
+NavrasaNet: Emotional State Recognition via the Navarasa Doctrine
+13
+and foundational research insights. Deepest gratitude is extended to Smt. Anita
+Babu (ICCR empanelled artist) for providing the artistic ground truth of this
+corpus alongside Dr. Manorama B.N. , Ms. Achuta Manasa and others for their
+scholarly and cultural guidance.
+References
+1. Ekman, P.: Universals and cultural dierences in facial expressions of emotion. In:
+Nebraska Symposium on Motivation, vol. 19, pp. 207283. University of Nebraska
+Press, Lincoln (1971)
+2. Rangacharya, A. (trans.): The Natyashastra: English Translation with Critical
+Notes. Munshiram Manoharlal Publishers, New Delhi (1996)
+3. Gnoli,
+R.
+(trans.):
+The
+Aesthetic
+Experience
+According
+to
+Abhinavagupta.
+Chowkhamba Sanskrit Series, Varanasi (1956)
+4. Li, S., Deng, W.: Deep facial expression recognition: A survey. IEEE Transactions
+on Aective Computing 13(3), 11951215 (2022)
+5. Mohanty, A., Sahay, R. R.: Rasabodha: Understanding Indian classical dance by
+recognizing emotions using deep learning. Multimedia Tools and Applications 79(1),
+121 (2020)

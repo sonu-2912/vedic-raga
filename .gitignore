@@ -11,8 +11,6 @@ frontend/dist/
 
 # Local chart snapshots and generated experiment artifacts
 .chart-data-*/
-reports/
-output/
 
 # Private datasets, archives, and binary model/cache files
 *.zip

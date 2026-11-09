@@ -1,0 +1,26 @@
+{
+  "synthetic_tensors": true,
+  "batch": 64,
+  "threads": 4,
+  "scope": "Throughput only, while training is running; contention/thermal state uncontrolled. No accuracy evidence.",
+  "runs": [
+    {
+      "channels_last": false,
+      "median_forward_backward_seconds": 1.219859600008931,
+      "timed_iterations": [
+        1.219859600008931,
+        1.2352141000446863,
+        1.2024276000447571
+      ]
+    },
+    {
+      "channels_last": true,
+      "median_forward_backward_seconds": 1.17576569999801,
+      "timed_iterations": [
+        1.1702387999976054,
+        1.17576569999801,
+        1.1934186999569647
+      ]
+    }
+  ]
+}

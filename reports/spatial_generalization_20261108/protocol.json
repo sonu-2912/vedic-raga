@@ -1,0 +1,14 @@
+{
+  "initial_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "epochs_max": 8,
+  "patience": 6,
+  "max_minutes": 80,
+  "uniform_sampling_mix": 0.3,
+  "dropout": 0.5,
+  "backbone_lr": 5e-05,
+  "head_lr": 5e-05,
+  "new_refinement_lr": 0.0003,
+  "selection": "Validation accuracy and disgust recall must both strictly exceed raw baseline; macro F1 and disgust F1 cannot decrease; maximize .5accuracy+.3macroF1+.2disgustF1. No test data used.",
+  "method": "v5 zero-initialized residual spatial refinement of60-channel24x24features. Retain all fusion/attention/pooling paths. Training sampling mixture70%natural/30%uniform; exact train-prior correction folded into output bias at export. No teacher, no synthetic face data. Frozen old BN; new branch BN learned.",
+  "test": "At most one frozen validation-qualified candidate; same all6561historically inspected test records. Integration requires accuracy, macro F1 and disgust F1 increase, disgust recall not decrease. Report precision regressions explicitly; seven-floor precision gate not imposed for this prospectively declared recall-priority run. These repeated experiments are exploratory, not fresh confirmatory evidence."
+}

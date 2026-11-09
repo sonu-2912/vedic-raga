@@ -1,0 +1,21 @@
+{
+  "kind": "Actual selective-use evaluation; no model retraining or multimodal accuracy claim",
+  "checkpoint_sha256": "04e2a0e288b071a576422ba5adbf02d8fad604e4f22747064eab6aa7f7e7f53e",
+  "policy_fitted_on": "validation only",
+  "test_n": 6561,
+  "all_image_classifier_accuracy": 0.501295534217345,
+  "offered_suggestions": 1464,
+  "withheld_suggestions": 5097,
+  "coverage": 0.22313671696387746,
+  "accuracy_among_offered_suggestions": 0.8838797814207651,
+  "offered_by_predicted_class": {
+    "angry": 0,
+    "disgust": 0,
+    "fear": 0,
+    "happy": 1193,
+    "sad": 0,
+    "surprise": 271,
+    "neutral": 0
+  },
+  "limitation": "Conditional accuracy covers only the accepted subset, not all seven emotions. Every suggestion still needs user confirmation. The full classifier remains about 50% accurate."
+}

@@ -1,0 +1,12 @@
+{
+  "candidate_runs": [
+    "reports/deep_supervision_20261107",
+    "reports/pruned_head_20261107",
+    "reports/consistency_long_20261107",
+    "reports/sam_head_20261107"
+  ],
+  "selection": "Among validation-qualified candidates only, maximum .35accuracy+.65macroF1 with no lower seven metrics than the same deployed baseline raw validation. If none qualifies, no test access.",
+  "test": "Freeze one selected candidate, evaluate once using strict-all-metrics, never try the other candidate after seeing test.",
+  "declaration": "Added after two deep-supervision validation epochs; exploratory selection on reused validation, not an independent fresh protocol. Third longer self-distillation continuation added after negative auxiliary/capacity/foreign-teacher validation outcomes; before any new test access. Foreign teacher rejected and never used for FusDenseNet training. Fourth/final SAM classifier-only comparison added during the conservative continuation, before test access.",
+  "test_accessed": false
+}

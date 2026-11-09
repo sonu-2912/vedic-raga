@@ -1,0 +1,24 @@
+Prepared metadata sub-mit014
+Prepared metadata sub-mit007
+Prepared metadata sub-mit004
+Prepared metadata sub-mit003
+Prepared metadata sub-mit017
+Prepared metadata sub-mit023
+Prepared metadata sub-mit024
+Prepared metadata sub-mit032
+Prepared metadata sub-mit022
+Prepared metadata sub-mit035
+Prepared metadata sub-mit039
+Prepared metadata sub-mit040
+{"subject": "sub-mit003", "planned_windows_so_far": 10, "full_recording_MB": 355.91952, "verified_event_timing_seconds": 553.104010162592}
+{"subject": "sub-mit004", "planned_windows_so_far": 19, "full_recording_MB": 227.318256, "verified_event_timing_seconds": 340.3039972581864}
+{"subject": "sub-mit007", "reason": "Official header dimensions do not match referenced float32 FDT length", "expected_bytes": 229048512, "reference_bytes": 74643816}
+{"subject": "sub-mit014", "reason": "Official header dimensions do not match referenced float32 FDT length", "expected_bytes": 218988528, "reference_bytes": 74429688}
+{"subject": "sub-mit017", "reason": "Official header dimensions do not match referenced float32 FDT length", "expected_bytes": 214150464, "reference_bytes": 74591272}
+{"subject": "sub-mit022", "reason": "Official header dimensions do not match referenced float32 FDT length", "expected_bytes": 217943088, "reference_bytes": 74397672}
+{"subject": "sub-mit023", "reason": "Official header dimensions do not match referenced float32 FDT length", "expected_bytes": 213766608, "reference_bytes": 96318712}
+{"subject": "sub-mit024", "reason": "Official header dimensions do not match referenced float32 FDT length", "expected_bytes": 229890672, "reference_bytes": 96647144}
+{"subject": "sub-mit032", "reason": "Official header dimensions do not match referenced float32 FDT length", "expected_bytes": 203113680, "reference_bytes": 96188392}
+{"subject": "sub-mit035", "reason": "Official header dimensions do not match referenced float32 FDT length", "expected_bytes": 241848816, "reference_bytes": 96141312}
+{"subject": "sub-mit039", "reason": "Official header dimensions do not match referenced float32 FDT length", "expected_bytes": 189509232, "reference_bytes": 132643928}
+{"subject": "sub-mit040", "reason": "Official header dimensions do not match referenced float32 FDT length", "expected_bytes": 211472976, "reference_bytes": 133003624}

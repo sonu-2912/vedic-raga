@@ -1,0 +1,329 @@
+{
+  "method": "balanced_capacity_search",
+  "completed_epochs": 33,
+  "completed_full_epochs": 13,
+  "completed_head_epochs": 20,
+  "head_run_completion": {
+    "completed_additional_epochs": 10,
+    "validation_improved": false,
+    "best_score": 0.5427376267859443,
+    "test_accessed": false,
+    "synthetic": false,
+    "parameters_trained": "Pruned256-unit classifier only; backbone byte-identical",
+    "inference_architecture_change": "Only classifier width512\u2192256; original FusDenseNet mechanisms retained"
+  },
+  "sam_run_completion": {
+    "completed_additional_epochs": 10,
+    "validation_improved": false,
+    "best_score": 0.5427376267859443,
+    "test_accessed": false,
+    "synthetic": false,
+    "parameters_trained": "Classifier only, SAM/AdamW; backbone frozen and architecture unchanged"
+  },
+  "long_run_completion": {
+    "completed_additional_epochs": 8,
+    "validation_improved": true,
+    "best_score": 0.5468336442961251,
+    "test_accessed": false,
+    "synthetic": false,
+    "parameters_trained": "Full emotion path, not frozen-feature MLP-only training"
+  },
+  "auxiliary_full_epochs": 5,
+  "conservative_full_epochs": 8,
+  "selection": {
+    "selection_protocol": {
+      "candidate_runs": [
+        "reports/deep_supervision_20261107",
+        "reports/pruned_head_20261107",
+        "reports/consistency_long_20261107",
+        "reports/sam_head_20261107"
+      ],
+      "selection": "Among validation-qualified candidates only, maximum .35accuracy+.65macroF1 with no lower seven metrics than the same deployed baseline raw validation. If none qualifies, no test access.",
+      "test": "Freeze one selected candidate, evaluate once using strict-all-metrics, never try the other candidate after seeing test.",
+      "declaration": "Added after two deep-supervision validation epochs; exploratory selection on reused validation, not an independent fresh protocol. Third longer self-distillation continuation added after negative auxiliary/capacity/foreign-teacher validation outcomes; before any new test access. Foreign teacher rejected and never used for FusDenseNet training. Fourth/final SAM classifier-only comparison added during the conservative continuation, before test access.",
+      "test_accessed": false
+    },
+    "qualified_candidates": [
+      {
+        "run": "reports/consistency_long_20261107",
+        "best_sha256": "ffd96fba3f471e130055bc50c20b07a4b49f250d5729cd66fff21bda27fe472d",
+        "metrics": {
+          "accuracy": 0.5808564231738035,
+          "macro_precision": 0.5398721699254462,
+          "macro_recall": 0.5259886114467177,
+          "macro_f1": 0.5285136864389137,
+          "disgust_precision": 0.45161290322580644,
+          "disgust_recall": 0.28,
+          "disgust_f1": 0.345679012345679
+        },
+        "score": 0.5468336442961251
+      }
+    ],
+    "chosen": {
+      "run": "reports/consistency_long_20261107",
+      "best_sha256": "ffd96fba3f471e130055bc50c20b07a4b49f250d5729cd66fff21bda27fe472d",
+      "metrics": {
+        "accuracy": 0.5808564231738035,
+        "macro_precision": 0.5398721699254462,
+        "macro_recall": 0.5259886114467177,
+        "macro_f1": 0.5285136864389137,
+        "disgust_precision": 0.45161290322580644,
+        "disgust_recall": 0.28,
+        "disgust_f1": 0.345679012345679
+      },
+      "score": 0.5468336442961251
+    },
+    "test_accessed": false,
+    "synthetic": false
+  },
+  "deep_run_completion": {
+    "completed_additional_epochs": 5,
+    "validation_improved": false,
+    "best_score": 0.5427376267859443,
+    "test_accessed": false,
+    "synthetic": false,
+    "parameters_trained": "Full emotion path plus training-only fused companion; no new inference parameters",
+    "budget_check": "Completed epoch boundaries; elapsed time can overshoot"
+  },
+  "protocol": {
+    "initial_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+    "epochs_max": 12,
+    "patience": 5,
+    "max_minutes": 90,
+    "shortcut_dropout": 0.2,
+    "method": "Train-only companion on the588late fused features; higher late-path LR, lower early LR, MixUp on half batches, frozen BN refs, EMA/student validation. Inference architecture unchanged.",
+    "learning_rates": {
+      "early": 1e-05,
+      "late": 0.0002,
+      "classifier": 0.0001,
+      "companion": 0.001
+    },
+    "loss": "Main weighted smoothed CE +.25 companion CE; MixUp Beta(.2,.2) on half batches, all training faces retained; CE class weight power.25",
+    "selection": "Validation-only .35 accuracy+.65 macro F1; require no lower accuracy, macro precision/recall/F1 and disgust precision/recall/F1 than initial raw validation. Compare student and EMA.",
+    "test": "One frozen selected candidate only if validation improves; strict no regression across seven aggregate/disgust metrics before integration. Historical test remains previously inspected; no80% promise.",
+    "sources": [
+      "https://doi.org/10.1007/s41870-025-02531-y",
+      "https://proceedings.mlr.press/v38/lee15a.html"
+    ],
+    "assumptions": "Companion width128, feature slice588, LR groups and training recipe are project choices. No causal architecture claim, external teacher, FER+ label merge or new physiological metric."
+  },
+  "evaluation_protocol": {
+    "declared_before_test": true,
+    "strict_all_metrics": true,
+    "flip_selection": "Existing F1/accuracy/disgust F1 rule plus no lower raw validation accuracy, macro precision/recall/F1 or disgust precision/recall/F1",
+    "deployment": "Existing positive accuracy/macro F1/disgust F1 with nondecreasing disgust recall, plus nondecreasing macro precision/recall and disgust precision",
+    "test_accessed": false,
+    "no_test_candidate_search": true
+  },
+  "source_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "selected_best_sha256": "ffd96fba3f471e130055bc50c20b07a4b49f250d5729cd66fff21bda27fe472d",
+  "active_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "deployed": false,
+  "validation_candidate_qualified": true,
+  "selected_candidate": "EMA",
+  "selected_epoch": 133,
+  "validation_initial_raw": {
+    "accuracy": 0.580352644836272,
+    "macro_precision": 0.5244524095520752,
+    "macro_recall": 0.5256540852978745,
+    "macro_f1": 0.5224833862973063,
+    "disgust_precision": 0.3333333333333333,
+    "disgust_recall": 0.28,
+    "disgust_f1": 0.30434782608695654
+  },
+  "validation_selected_raw": {
+    "accuracy": 0.5808564231738035,
+    "macro_precision": 0.5398721699254462,
+    "macro_recall": 0.5259886114467177,
+    "macro_f1": 0.5285136864389137,
+    "disgust_precision": 0.45161290322580644,
+    "disgust_recall": 0.28,
+    "disgust_f1": 0.345679012345679
+  },
+  "best_observed_validation": {
+    "accuracy": 0.5816120906801008,
+    "macro_precision": 0.5582038563397616,
+    "macro_recall": 0.5217657737478706,
+    "macro_f1": 0.5333300860464342,
+    "disgust_precision": 0.52,
+    "disgust_recall": 0.26,
+    "disgust_f1": 0.3466666666666667
+  },
+  "best_observed_file": "validation_03_SAM.json",
+  "validation_comparison": {
+    "n": 3970,
+    "metrics": {
+      "accuracy": {
+        "baseline": 0.580352644836272,
+        "colab": 0.5808564231738035,
+        "difference": 0.0005037783375314575
+      },
+      "macro_precision": {
+        "baseline": 0.5244524095520752,
+        "colab": 0.5398721699254462,
+        "difference": 0.015419760373371005
+      },
+      "macro_recall": {
+        "baseline": 0.5256540852978745,
+        "colab": 0.5259886114467177,
+        "difference": 0.0003345261488432172
+      },
+      "macro_f1": {
+        "baseline": 0.5224833862973063,
+        "colab": 0.5285136864389137,
+        "difference": 0.0060303001416074364
+      },
+      "disgust_precision": {
+        "baseline": 0.3333333333333333,
+        "colab": 0.45161290322580644,
+        "difference": 0.11827956989247312
+      },
+      "disgust_recall": {
+        "baseline": 0.28,
+        "colab": 0.28,
+        "difference": 0.0
+      },
+      "disgust_f1": {
+        "baseline": 0.30434782608695654,
+        "colab": 0.345679012345679,
+        "difference": 0.04133118625872245
+      }
+    },
+    "limitation": "Validation selection/diagnostic only, not held-out test or webcam performance."
+  },
+  "test_comparison": {
+    "n": 6561,
+    "checkpoint_sha256": "286d783f9f8692148bbcd765e20a817f7b82c421f0d6bd14c22b00bbcb9acb80",
+    "metrics": {
+      "accuracy": {
+        "baseline": 0.574150281969212,
+        "colab": 0.572930955647005,
+        "difference": -0.0012193263222070039
+      },
+      "macro_f1": {
+        "baseline": 0.5320404110907176,
+        "colab": 0.5336855376876011,
+        "difference": 0.0016451265968834283
+      },
+      "disgust_recall": {
+        "baseline": 0.3670886075949367,
+        "colab": 0.35443037974683544,
+        "difference": -0.012658227848101278
+      },
+      "disgust_f1": {
+        "baseline": 0.4172661870503597,
+        "colab": 0.42748091603053434,
+        "difference": 0.010214728980174614
+      },
+      "macro_precision": {
+        "baseline": 0.5391905789239385,
+        "colab": 0.5458079227173034,
+        "difference": 0.0066173437933648716
+      },
+      "macro_recall": {
+        "baseline": 0.5325106108129906,
+        "colab": 0.5307938889533699,
+        "difference": -0.0017167218596206846
+      },
+      "disgust_precision": {
+        "baseline": 0.48333333333333334,
+        "colab": 0.5384615384615384,
+        "difference": 0.0551282051282051
+      }
+    },
+    "recommended_for_integration": false,
+    "rule": "Accuracy, macro F1 and disgust F1 increase; none of the seven declared aggregate/disgust metrics decreases; engineering gate, not significance evidence",
+    "strict_all_metrics": true,
+    "limitation": "Descriptive comparison; do not tune further using this test result. GPU execution itself is not an architectural innovation."
+  },
+  "selected_weight_changes": {
+    "stem": {
+      "changed_tensors": 2,
+      "changed_elements": 240,
+      "max_absolute_change": 0.004819355905056
+    },
+    "fusion": {
+      "changed_tensors": 30,
+      "changed_elements": 38151,
+      "max_absolute_change": 0.00694245845079422
+    },
+    "more_fusion": {
+      "changed_tensors": 60,
+      "changed_elements": 76352,
+      "max_absolute_change": 0.005927160382270813
+    },
+    "cross_connections": {
+      "changed_tensors": 4,
+      "changed_elements": 4656,
+      "max_absolute_change": 0.005281046032905579
+    },
+    "final_fusion": {
+      "changed_tensors": 2,
+      "changed_elements": 8112,
+      "max_absolute_change": 0.005726814270019531
+    },
+    "final_activation": {
+      "changed_tensors": 2,
+      "changed_elements": 96,
+      "max_absolute_change": 0.001856088638305664
+    },
+    "dense": {
+      "changed_tensors": 9,
+      "changed_elements": 19800,
+      "max_absolute_change": 0.004464656114578247
+    },
+    "classifier": {
+      "changed_tensors": 4,
+      "changed_elements": 1366899,
+      "max_absolute_change": 0.017380081117153168
+    },
+    "reconstruct": {
+      "changed_tensors": 1,
+      "changed_elements": 42,
+      "max_absolute_change": 8.344650268554688e-07
+    }
+  },
+  "trained_student_weight_changes": {
+    "stem": {
+      "changed_tensors": 2,
+      "changed_elements": 239,
+      "max_absolute_change": 0.002714991569519043
+    },
+    "fusion": {
+      "changed_tensors": 30,
+      "changed_elements": 37846,
+      "max_absolute_change": 0.04482785239815712
+    },
+    "more_fusion": {
+      "changed_tensors": 60,
+      "changed_elements": 76352,
+      "max_absolute_change": 0.03240741044282913
+    },
+    "cross_connections": {
+      "changed_tensors": 4,
+      "changed_elements": 4656,
+      "max_absolute_change": 0.03406144678592682
+    },
+    "final_fusion": {
+      "changed_tensors": 2,
+      "changed_elements": 8112,
+      "max_absolute_change": 0.05062080919742584
+    },
+    "final_activation": {
+      "changed_tensors": 2,
+      "changed_elements": 96,
+      "max_absolute_change": 0.022659897804260254
+    },
+    "dense": {
+      "changed_tensors": 9,
+      "changed_elements": 19800,
+      "max_absolute_change": 0.03904430568218231
+    },
+    "classifier": {
+      "changed_tensors": 4,
+      "changed_elements": 1366908,
+      "max_absolute_change": 0.04579226300120354
+    }
+  },
+  "synthetic": false
+}

@@ -1,0 +1,12 @@
+{
+  "n_train": 23503,
+  "manifest_sha256": "326eeabc6fca7fb119030aae617f0cacae3ab28ed3d948c7c00d23c5299e10c2",
+  "overlap_counts": {
+    "validation": 0,
+    "historical_test_input_hashes": 0,
+    "train": 1
+  },
+  "test_pixels_opened": false,
+  "test_labels_used_to_select_training": false,
+  "policy": "Reject mirror augmentation if exact held-out input overlaps exist. This is not an identity/near-duplicate audit."
+}

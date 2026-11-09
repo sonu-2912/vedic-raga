@@ -1,0 +1,17 @@
+{
+  "split": "fixed validation only; reused for checkpoint selection",
+  "n": 3970,
+  "single_macro_f1": 0.5497485075755532,
+  "flip_macro_f1": 0.5406890361874283,
+  "horizontal_flip_tta": false,
+  "temperature": 0.7559425234794617,
+  "flip_selection_rule": "mean logits only when validation macro F1 improves >0.002, accuracy, disgust recall and disgust F1 do not decrease; strict mode additionally requires no seven-metric regression against raw",
+  "strict_all_metrics": false,
+  "single_disgust_f1": 0.3695652173913043,
+  "flip_disgust_f1": 0.27848101265822783,
+  "nll_before": 1.1058125495910645,
+  "nll_after": 1.081386923789978,
+  "accuracy_unchanged_by_temperature": 0.6027707808564232,
+  "limitations": "No independent calibration cohort or webcam-domain validation. Temperature does not fix wrong labels.",
+  "checkpoint_sha256": "a4ed3e54d3b863e6381a8de3ec16428020e58c6d006e48cdfbf72a03ee88c249"
+}

@@ -1,0 +1,134 @@
+{
+  "dataset": "data/private/fer2013-v1.zip",
+  "split": "test",
+  "n": 1375,
+  "duplicate_pixels_removed": 25,
+  "checkpoint_epoch": 2,
+  "checkpoint_sha256": "2295f39d4de8a901457d986aa23d6aa06faf1c416c87ebd138a236ee6618bb86",
+  "pilot": true,
+  "seconds": 9.254929699993227,
+  "synthetic": false,
+  "accuracy": 0.2581818181818182,
+  "classification_report": {
+    "angry": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 181.0
+    },
+    "disgust": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 20.0
+    },
+    "fear": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 195.0
+    },
+    "happy": {
+      "precision": 0.2624113475177305,
+      "recall": 0.8604651162790697,
+      "f1-score": 0.40217391304347827,
+      "support": 344.0
+    },
+    "sad": {
+      "precision": 0.24183006535947713,
+      "recall": 0.15416666666666667,
+      "f1-score": 0.18829516539440203,
+      "support": 240.0
+    },
+    "surprise": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 156.0
+    },
+    "neutral": {
+      "precision": 0.23404255319148937,
+      "recall": 0.09205020920502092,
+      "f1-score": 0.13213213213213212,
+      "support": 239.0
+    },
+    "accuracy": 0.2581818181818182,
+    "macro avg": {
+      "precision": 0.10546913800981385,
+      "recall": 0.15809742745010816,
+      "f1-score": 0.10322874436714465,
+      "support": 1375.0
+    },
+    "weighted avg": {
+      "precision": 0.14854173777828344,
+      "recall": 0.2581818181818182,
+      "f1-score": 0.15644963298995826,
+      "support": 1375.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      0,
+      145,
+      24,
+      0,
+      12
+    ],
+    [
+      0,
+      0,
+      0,
+      19,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      167,
+      18,
+      0,
+      10
+    ],
+    [
+      0,
+      0,
+      0,
+      296,
+      26,
+      0,
+      22
+    ],
+    [
+      0,
+      0,
+      0,
+      182,
+      37,
+      0,
+      21
+    ],
+    [
+      0,
+      0,
+      0,
+      137,
+      12,
+      0,
+      7
+    ],
+    [
+      0,
+      0,
+      0,
+      182,
+      35,
+      0,
+      22
+    ]
+  ]
+}

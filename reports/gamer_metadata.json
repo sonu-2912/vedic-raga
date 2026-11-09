@@ -1,0 +1,164 @@
+{
+  "created": "2023-07-28T10:43:53.176308+00:00",
+  "modified": "2023-07-29T02:27:03.365030+00:00",
+  "id": 8191877,
+  "conceptrecid": "8191876",
+  "doi": "10.5281/zenodo.8191877",
+  "conceptdoi": "10.5281/zenodo.8191876",
+  "doi_url": "https://doi.org/10.5281/zenodo.8191877",
+  "metadata": {
+    "title": "GamER: Gameplay Physiological Signal Dataset for Emotion Recognition",
+    "doi": "10.5281/zenodo.8191877",
+    "publication_date": "2023-07-28",
+    "description": "<p>A dataset of physiological signals (EEG, ECG, EDA, EOG and Respiration) collected from 48 subjects while they were playing simple games designed to elicit emotional responses.</p>\n\n<p>Data were collected using the Biosignals PLUX Researcher kit, which allows up to 10 hours of signal recordings at up to 3kHz sampling rate and 16-bit resolution per channel, while recording data from up to eight sensors simultaneously.</p>\n\n<p>The dataset consists of 3 files:</p>\n\n<ol>\n\t<li>data.zip: Contains the physiological signals. They are organized in 1 folder per subject, which contains the recorded data in .h5 and .txt format as provided by the Researcher kit.</li>\n\t<li>emotion_annotation.csv: Contains the emotion annotation that was produced by a psychologist based on the subjects self-reports and by examining the video of the data collection process (the videos are not included for privacy reasons)</li>\n\t<li>video_offsets.csv: Additional information for synchronizing the video-based annotations with the signals.</li>\n</ol>\n\n<p>For more information, refer to the accompanying publication.</p>\n\n<p><em>Disclaimer: All subjects have provided written consent for the publication of their anonymized physiological signals.</em></p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Alexandros Papadopoulos",
+        "affiliation": null,
+        "orcid": "0000-0002-8137-1350"
+      },
+      {
+        "name": "Chrysa Episkopou",
+        "affiliation": null,
+        "orcid": "0009-0002-6211-5746"
+      },
+      {
+        "name": "Amaryllis Malegiannaki",
+        "affiliation": null,
+        "orcid": "0000-0002-0174-105X"
+      },
+      {
+        "name": "Konstantinos Kyritsis",
+        "affiliation": null,
+        "orcid": "0000-0003-0905-7786"
+      },
+      {
+        "name": "Ioannis Sarafis",
+        "affiliation": null,
+        "orcid": "0000-0001-8449-1705"
+      },
+      {
+        "name": "Ioannis Papaefstathiou",
+        "affiliation": null,
+        "orcid": "0000-0001-6386-5616"
+      },
+      {
+        "name": "Anastasios Delopoulos",
+        "affiliation": null,
+        "orcid": "0000-0001-8220-8486"
+      }
+    ],
+    "keywords": [
+      "Physiological signals",
+      "Machine learning",
+      "Sentiment analysis",
+      "Emotion recognition",
+      "Gameplay",
+      "Simple games"
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "8191876"
+          }
+        }
+      ]
+    }
+  },
+  "title": "GamER: Gameplay Physiological Signal Dataset for Emotion Recognition",
+  "links": {
+    "self": "https://zenodo.org/api/records/8191877",
+    "self_html": "https://zenodo.org/records/8191877",
+    "preview_html": "https://zenodo.org/records/8191877?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.8191877",
+    "self_doi": "https://doi.org/10.5281/zenodo.8191877",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.8191877",
+    "reserve_doi": "https://zenodo.org/api/records/8191877/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/8191876",
+    "parent_html": "https://zenodo.org/records/8191876",
+    "parent_doi": "https://doi.org/10.5281/zenodo.8191876",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.8191876",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:8191877/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:8191877/sequence/default",
+    "files": "https://zenodo.org/api/records/8191877/files",
+    "media_files": "https://zenodo.org/api/records/8191877/media-files",
+    "latest": "https://zenodo.org/api/records/8191877/versions/latest",
+    "latest_html": "https://zenodo.org/records/8191877/latest",
+    "versions": "https://zenodo.org/api/records/8191877/versions",
+    "draft": "https://zenodo.org/api/records/8191877/draft",
+    "access_links": "https://zenodo.org/api/records/8191877/access/links",
+    "access_grants": "https://zenodo.org/api/records/8191877/access/grants",
+    "access_users": "https://zenodo.org/api/records/8191877/access/users",
+    "access_request": "https://zenodo.org/api/records/8191877/access/request",
+    "access": "https://zenodo.org/api/records/8191877/access",
+    "communities": "https://zenodo.org/api/records/8191877/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/8191877/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/8191877/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/8191877/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/8191877/quota-increase",
+    "requests": "https://zenodo.org/api/records/8191877/requests"
+  },
+  "updated": "2023-07-29T02:27:03.365030+00:00",
+  "recid": "8191877",
+  "revision": 3,
+  "files": [
+    {
+      "id": "69cfb27e-9401-4e92-a41f-088de5d7e96e",
+      "key": "data.zip",
+      "size": 919686572,
+      "checksum": "md5:127de6bfa4373ef94a64596c0f2f7129",
+      "links": {
+        "self": "https://zenodo.org/api/records/8191877/files/data.zip/content"
+      }
+    },
+    {
+      "id": "44bde4ce-647c-4e23-83dd-37b324c2a9e7",
+      "key": "video_offsets.csv",
+      "size": 457,
+      "checksum": "md5:789a824e1582ac6cc59e27a1cc2291e6",
+      "links": {
+        "self": "https://zenodo.org/api/records/8191877/files/video_offsets.csv/content"
+      }
+    },
+    {
+      "id": "22430455-088a-47aa-9164-f5f66d7a8639",
+      "key": "emotion_annotation.csv",
+      "size": 16094,
+      "checksum": "md5:aada3c3f1ad015c7f2392df84e81d456",
+      "links": {
+        "self": "https://zenodo.org/api/records/8191877/files/emotion_annotation.csv/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "169477"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 742,
+    "unique_downloads": 494,
+    "views": 870,
+    "unique_views": 766,
+    "version_downloads": 742,
+    "version_unique_downloads": 494,
+    "version_unique_views": 761,
+    "version_views": 865
+  },
+  "state": "done",
+  "submitted": true
+}

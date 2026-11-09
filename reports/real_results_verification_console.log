@@ -1,0 +1,16 @@
+{
+  "dataset_checksums": {
+    "data.zip": "md5:127de6bfa4373ef94a64596c0f2f7129",
+    "video_offsets.csv": "md5:789a824e1582ac6cc59e27a1cc2291e6",
+    "emotion_annotation.csv": "md5:aada3c3f1ad015c7f2392df84e81d456"
+  },
+  "paired_reports_audited": 2,
+  "subject_overlap": false,
+  "duplicate_accepted_annotation_ids": false,
+  "confusion_and_macro_f1_independently_recomputed": true,
+  "live_api_health": 200,
+  "live_model_sha256": "dbc4a9f9293fb4e1b28ae249958964cfe12e1b3b17a18f7e75bea77925b7a4ba",
+  "live_physiology_status": "evaluated",
+  "live_face_prediction_status": 200,
+  "private_user_images_used": false
+}

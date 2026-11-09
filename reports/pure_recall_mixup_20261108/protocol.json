@@ -1,0 +1,47 @@
+{
+  "initial_checkpoint_sha256": "f0082aff0511c40d8dff89fc03bbea965b416db55a0f771701efaa38f490c548",
+  "seed": 81123,
+  "head_lr": 0.0001,
+  "head_epochs_max": 40,
+  "head_min_epochs": 20,
+  "head_patience": 12,
+  "head_minutes_per_recipe": 8,
+  "mirror_common_weight": 0.5,
+  "recipes": [
+    {
+      "name": "mix0.2_common1.1",
+      "common_boost": 1.1,
+      "retention_weight": 1.0,
+      "mixup_alpha": 0.2
+    },
+    {
+      "name": "mix0.2_common1.3",
+      "common_boost": 1.3,
+      "retention_weight": 1.0,
+      "mixup_alpha": 0.2
+    },
+    {
+      "name": "mix0.4_common1.1",
+      "common_boost": 1.1,
+      "retention_weight": 1.0,
+      "mixup_alpha": 0.4
+    },
+    {
+      "name": "mix0.4_common1.3",
+      "common_boost": 1.3,
+      "retention_weight": 1.0,
+      "mixup_alpha": 0.4
+    }
+  ],
+  "full_epochs_max": 3,
+  "full_minutes": 35,
+  "full_backbone_lr": 5e-06,
+  "full_classifier_lr": 1e-05,
+  "selection": "Recover happy/surprise/neutral validation recall to at least earlier pure floors; retain current disgust precision/recall/F1 and macroprecision/recall; strictly improve current validationaccuracy and macroF1. Max .5accuracy+.5macroF1 among eligible. All head and full-network stages complete before one frozen candidate.",
+  "test_gate": "Same6561testfaces. Strict accuracy/macroF1 gains over current58.3448%/.555367. No reduction in current macroP/R or disgustP/R/F1 (retain37/79disgust correct). Happy/surprise/neutral recall recover at least81.5897%/73.8382%/58.5448%. No alternate testcandidate; if any condition fails, app/PPT unchanged.",
+  "method": "Conditional TRAIN-feature manifold mixup within the native pure FusDense classifier. No external encoder. Same current pure TRAIN reference, balanced correct positive/negative disgust-boundary retention, discarded for inference. Mixed TRAIN features only; real unmodified validation/test images. Not a new backbone feature-learning result.",
+  "limits": "Validation and test are historically reused; exploratory engineering, not fresh identity-disjoint confirmation. Full/head epochs not equivalent. No80%or reliable webcam/clinical guarantee.",
+  "class_view_normalization": "Raw common factor2/(1+lambda), mirror2lambda/(1+lambda); pair sum2 preserves intended class boost. Previous invalid trial preserved separately.",
+  "prior_run": "reports\\pure_recall_recovery_v2_20261108",
+  "run_condition": "Only if prior experiment evaluated no new test and produced no eligible validation candidate; at most one tested candidate across both experiments."
+}

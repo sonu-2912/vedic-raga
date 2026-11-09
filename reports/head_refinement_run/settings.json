@@ -1,0 +1,19 @@
+{
+  "device": "cpu",
+  "dataset_sha256": "9f3422c7a45b676c2965ef4fc5f3099932aa98fd13eaaa2c254f620a9894a6e9",
+  "manifest_sha256": "326eeabc6fca7fb119030aae617f0cacae3ab28ed3d948c7c00d23c5299e10c2",
+  "initial_checkpoint_sha256": "04e2a0e288b071a576422ba5adbf02d8fad604e4f22747064eab6aa7f7e7f53e",
+  "method": "Frozen backbone; existing MLP only; training-fitted feature normalization folded into Linear weights",
+  "seed": 67,
+  "epochs": 40,
+  "lr": 0.001,
+  "weight_power": 0.5,
+  "batch_size": 256,
+  "selection": "Maximum validation macro F1 among epochs with validation accuracy >= initial checkpoint; no test access",
+  "normalization": "training features only",
+  "architecture": {
+    "attention": true,
+    "dilated": true,
+    "version": 2
+  }
+}

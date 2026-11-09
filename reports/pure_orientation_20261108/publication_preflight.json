@@ -1,0 +1,51 @@
+{
+  "files_scanned": 180,
+  "forbidden_files": [],
+  "credential_files": [],
+  "personal_path_files": [],
+  "verification": {
+    "tests": 85,
+    "passed": 85,
+    "failures": 0,
+    "seconds": 114.817,
+    "frontend_build": "pass",
+    "portable_checkpoint_sha256": "4c9c8f2a9127493b2295637421923876bd6e64e91bb8b43ec486c018eb3334c7",
+    "source_weight_equality": "bit-identical tensors and inference settings",
+    "source_originals_unchanged": 55,
+    "private_dataset_or_feedback_exported": false,
+    "presentation_slides": 13,
+    "presentation_visual_review": "All13slides reviewed at full size; zero package/layout findings",
+    "native_powerpoint_open_verified": false,
+    "active_accuracy": 0.5834476451760402,
+    "active_macro_f1": 0.555367099062993,
+    "active_disgust_recall": 0.46835443037974683,
+    "active_disgust_precision": 0.5068493150684932,
+    "active_disgust_f1": 0.4868421052631579,
+    "all_seven_tracked_aggregate_disgust_metrics_improved": true,
+    "per_class_recall_regressions": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "native_classifier_epochs": 72,
+    "independent_failed_full_network_epochs": 6,
+    "pure_backbone_unchanged": true,
+    "model_variant": "Pure FusDenseNet, native classifier orientation repair; no hybrid",
+    "source_tests_passed": 85,
+    "source_test_seconds": 118.56
+  },
+  "presentation_review": {
+    "slides": 13,
+    "all_rendered_slides_reviewed_by_agent": true,
+    "all_slides_reviewed_at_full_size": true,
+    "v3_changed_slides": [
+      11
+    ],
+    "v3_changed_slide_reviewed": true,
+    "other_v3_renders_identical_to_reviewed_v2": true,
+    "package_findings": 0,
+    "layout_findings": 0,
+    "native_powerpoint_open_verified": false,
+    "sha256": "ab70551273d5cf0c4df21abab2c2805ca8fe7d6a0a95cc4b9d6a157774615cdb"
+  }
+}

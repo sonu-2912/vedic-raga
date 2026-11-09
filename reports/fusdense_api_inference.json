@@ -1,0 +1,40 @@
+{
+  "emotion": "happy",
+  "confidence": 0.26036059856414795,
+  "probabilities": {
+    "angry": 0.13900095224380493,
+    "disgust": 0.014633193612098694,
+    "fear": 0.13462726771831512,
+    "happy": 0.26036059856414795,
+    "sad": 0.13464868068695068,
+    "surprise": 0.16282135248184204,
+    "neutral": 0.15390795469284058
+  },
+  "native_probabilities": {
+    "angry": 0.13900095224380493,
+    "disgust": 0.014633193612098694,
+    "fear": 0.13462726771831512,
+    "happy": 0.26036059856414795,
+    "sad": 0.13464868068695068,
+    "surprise": 0.16282135248184204,
+    "neutral": 0.15390795469284058
+  },
+  "native_label": "happy",
+  "model": "fusdense",
+  "trained": true,
+  "face_box": [
+    177,
+    66,
+    95,
+    95
+  ],
+  "low_confidence": true,
+  "label_mapping": "FER2013 native labels",
+  "validation": "Limited real-data FER2013 pilot; no exact reproduction or clinical validity claimed.",
+  "held_out_evaluation": {
+    "n": 1375,
+    "accuracy": 0.2581818181818182,
+    "pilot": true,
+    "checkpoint_epoch": 2
+  }
+}

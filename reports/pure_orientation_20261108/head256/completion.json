@@ -1,0 +1,6 @@
+{
+  "completed_head_epochs": 44,
+  "validation_improved": true,
+  "backbone_unchanged": true,
+  "test_accessed": false
+}

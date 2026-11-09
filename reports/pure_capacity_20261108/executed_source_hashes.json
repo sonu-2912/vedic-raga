@@ -1,0 +1,11 @@
+{
+  "colab_common.py": "811170a47fae0122f4a204b31b3fa9d21586ba65bc05d8e85ec478aee89973b3",
+  "colab_evaluate.py": "827753659834005c5d65d1d11906223e15c40ccd694f9ba1b8bc1d06b943237b",
+  "compact_fusdense.py": "4e8e628cd0be0605bacaa0a4325056b697185ac558cd84d2f73def87084360c5",
+  "evaluate_compact_capacity.py": "719ded51c8387c7ba23f2cfc3fe80e909c60632506228efb447a5638a2f589a4",
+  "models.py": "302a705e16fc80c59fc421e4d51249e30bdad7fddacb271910028b90891e568b",
+  "recall_recovery_common.py": "c67dccac9f512a55ebc7369e00e10c131fe78b503985ae8ead8c19f4c10382b4",
+  "run_compact_capacity.py": "f6e68f7f643b754733554366c1f547a0d2689f6549a21299dad2948da6e61f3e",
+  "train_compact_capacity.py": "2e5d923d797c0371b6bd50674d702283e9b6681ad33a07a7efccc2c9a9413513",
+  "train_compact_full.py": "905beac3f69ea7ee9b93602c1c55e229ba804c01edeeb7c9639c852443303982"
+}

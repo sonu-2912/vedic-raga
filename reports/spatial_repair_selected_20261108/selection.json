@@ -1,0 +1,22 @@
+{
+  "chosen": {
+    "run": "reports/direct_dense_head_long_20261108",
+    "score": 0.5402229861791384,
+    "validation_accuracy": 0.6027707808564232,
+    "validation_macro_f1": 0.5497485075755532,
+    "validation_disgust_recall": 0.34
+  },
+  "candidates": [
+    {
+      "run": "reports/direct_dense_head_long_20261108",
+      "score": 0.5402229861791384,
+      "validation_accuracy": 0.6027707808564232,
+      "validation_macro_f1": 0.5497485075755532,
+      "validation_disgust_recall": 0.34
+    }
+  ],
+  "all_recipes_completed": true,
+  "test_accessed_at_selection": false,
+  "rule": "Choose max validation .5accuracy+.3macroF1+.2disgustF1 among candidates whose accuracy and disgust recall improve, macro/disgustF1 not decline. No alternate test search.",
+  "disclosure": "Dense transfer and failed translation screen added after v5epoch2validation, before test. Reused validation; exploratory, not a fresh prospective benchmark."
+}

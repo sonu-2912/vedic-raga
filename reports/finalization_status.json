@@ -1,0 +1,58 @@
+{
+  "stage": "audit, real training, app, reports, presentation and GitHub publication complete",
+  "validation_accuracy": 0.5740554156171285,
+  "single_validation_accuracy": 0.5680100755667506,
+  "test_accuracy": 0.5613473555860388,
+  "test_n": 6561,
+  "macro_f1": 0.510546631619279,
+  "disgust": {
+    "precision": 0.5588235294117647,
+    "recall": 0.24050632911392406,
+    "f1-score": 0.336283185840708,
+    "support": 79.0
+  },
+  "target_80_percent_validation_achieved": false,
+  "test_results": {
+    "tests": 41,
+    "passed": 41,
+    "failures": 0,
+    "test_seconds": 143.903,
+    "model_sha256": "9a733a87fc5ec0db544b74504d60ca9ea3d3c94c3648d85e61e5397ca10d43ed",
+    "original_repository_files": 55,
+    "original_repository_unchanged": true,
+    "facial_confusion_and_class_metrics_recomputed": true,
+    "all_test_errors_retained": true,
+    "controlled_raw_window_and_fold_audit": "pass",
+    "live_health": 200,
+    "live_emotion_and_recommendation_pipeline": 200,
+    "live_controlled_physiology": "evaluated",
+    "private_user_images_used": false,
+    "sensor_readings_claimed": false
+  },
+  "model_sha256": "9a733a87fc5ec0db544b74504d60ca9ea3d3c94c3648d85e61e5397ca10d43ed",
+  "presentation": "output/RagaMoodSync_Research_Audited_Reviewed.pptx",
+  "presentation_sha256": "d2473395081c638e8dd505c7ecd507fb675ad3da006c14d7174e8539d685b632",
+  "presentation_slides": 13,
+  "github": {
+    "owner": "sonu-2912",
+    "name": "RagaMoodSync",
+    "url": "https://github.com/sonu-2912/RagaMoodSync",
+    "clone_url": "https://github.com/sonu-2912/RagaMoodSync.git",
+    "private": true,
+    "id": 1449391910,
+    "status": "pushed and remote branch verified",
+    "branch": "main",
+    "commit": "5bc6d4432cb9fbf2a24a34b716d7ae7765709429"
+  },
+  "export_tests_passed": 41,
+  "export_frontend_build": "passed",
+  "private_files_excluded": true,
+  "source_state_tensors_bit_identical_in_portable_export": true,
+  "remaining_research": [
+    "Strong seven-class webcam recognition",
+    "80% validation target",
+    "Reliable disgust recall",
+    "Validated physiological fusion benefit",
+    "Aligned facial/physiological/raga/weather outcomes and real FDCF ranking-quality evidence"
+  ]
+}

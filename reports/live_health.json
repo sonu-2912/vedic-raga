@@ -1,0 +1,15 @@
+{
+  "health": {
+    "status": "ok",
+    "device": "cpu",
+    "ragas": 72,
+    "link_entries": 528,
+    "models": {
+      "navrasa": "supplied pretrained, native held-out validation unavailable",
+      "fusdense": "project-trained checkpoint present; see evaluation report",
+      "fdcf": "trainable, cold-start heuristic active"
+    },
+    "physical_sensors": false
+  },
+  "vite_status": 200
+}

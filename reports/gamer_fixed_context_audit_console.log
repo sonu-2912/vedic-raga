@@ -1,0 +1,47 @@
+{
+  "status": "pass",
+  "synthetic": false,
+  "checks": [
+    {
+      "task": "QWOP",
+      "windows": 13,
+      "participants": 12,
+      "game_values": 1,
+      "window_seconds": 30,
+      "participant_overlap": false,
+      "raw_window_recomputed": true,
+      "game_and_duration_controls_constant": true
+    },
+    {
+      "task": "CBAAD",
+      "windows": 13,
+      "participants": 13,
+      "game_values": 1,
+      "window_seconds": 30,
+      "participant_overlap": false,
+      "raw_window_recomputed": true,
+      "game_and_duration_controls_constant": true
+    },
+    {
+      "task": "QWOP_plus_offset",
+      "windows": 13,
+      "participants": 12,
+      "game_values": 1,
+      "window_seconds": 30,
+      "participant_overlap": false,
+      "raw_window_recomputed": true,
+      "game_and_duration_controls_constant": true
+    },
+    {
+      "task": "CBAAD_plus_offset",
+      "windows": 13,
+      "participants": 13,
+      "game_values": 1,
+      "window_seconds": 30,
+      "participant_overlap": false,
+      "raw_window_recomputed": true,
+      "game_and_duration_controls_constant": true
+    }
+  ],
+  "claim_boundary": "Game identity and window duration are controlled; no claim that every possible physiological/annotation confound is eliminated"
+}

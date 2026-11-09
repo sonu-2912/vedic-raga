@@ -1,0 +1,74 @@
+{
+  "records": [
+    {
+      "file": "test/angry/0.png",
+      "label": 0,
+      "pixel_sha256": "78a69a5c8bdab1ff143062b4219af33e399725391f704320499722792f19a71b"
+    },
+    {
+      "file": "test/angry/1.png",
+      "label": 0,
+      "pixel_sha256": "571e054f9ffba4accf9c389a24261e700782c6bf13c09a44d2e6798584ed93ad"
+    },
+    {
+      "file": "test/disgust/0.png",
+      "label": 1,
+      "pixel_sha256": "9141aa8fda20ce41c813299c3360e60ddb2ed2a726acbb351f8bb44a22939653"
+    },
+    {
+      "file": "test/disgust/1.png",
+      "label": 1,
+      "pixel_sha256": "75729e21dea312ae06c92b0b610e1f80fef2c66117b0a49819c76d8c84cdc018"
+    },
+    {
+      "file": "test/fear/0.png",
+      "label": 2,
+      "pixel_sha256": "215658bc880098759429e6142507a7444eb93e64f58bb2a6cb8b851b26275518"
+    },
+    {
+      "file": "test/fear/1.png",
+      "label": 2,
+      "pixel_sha256": "7457ff55a173ef12e38254d7faaded33757f773a368ae27ad8f4f281f08f95e5"
+    },
+    {
+      "file": "test/happy/0.png",
+      "label": 3,
+      "pixel_sha256": "1360b2dcead13e489f17a9828098c02ab37f9fe750a2b8042164a9967d5c5453"
+    },
+    {
+      "file": "test/happy/1.png",
+      "label": 3,
+      "pixel_sha256": "bd2290ce6d53c0fa493018e8c8d247ac9be4c01600784e89ec7348c7285bd735"
+    },
+    {
+      "file": "test/neutral/0.png",
+      "label": 6,
+      "pixel_sha256": "1e5d783d59cd64f7ac501edb7c36d7e23b821a5f857d1b6490050e40ba875ae9"
+    },
+    {
+      "file": "test/neutral/1.png",
+      "label": 6,
+      "pixel_sha256": "5e5952a6b9b0425379fc3bb519c2d65686fdd80691cc2243aebd0458d72aa096"
+    },
+    {
+      "file": "test/sad/0.png",
+      "label": 4,
+      "pixel_sha256": "136736095491aeded442dbd8f8a540ccd9a0815b4fb6e98df14ab508d94b6bc0"
+    },
+    {
+      "file": "test/sad/1.png",
+      "label": 4,
+      "pixel_sha256": "67ed9bf29eb7c761a89b4c4e98767218b826ab2c4d61a8b58c45306d1c2d9131"
+    },
+    {
+      "file": "test/surprise/0.png",
+      "label": 5,
+      "pixel_sha256": "becbb35d075af1687e4a5931705f1973ffd0d54343d73c96739f96880cd1a04a"
+    },
+    {
+      "file": "test/surprise/1.png",
+      "label": 5,
+      "pixel_sha256": "d1eef39f9e8a4e7383d0c42c85893750c7b2ef7977fd8ec1e5c4304d957c2868"
+    }
+  ]
+}

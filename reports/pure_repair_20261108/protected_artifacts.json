@@ -1,0 +1,8 @@
+{
+  "models/fusdense.pt": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "reports/emotion_evaluation.json": "a97c717f1aca24437aa7949352de5f15a771e2ff7e57639c56872191643e9953",
+  "reports/latest_emotion_experiment.json": "1517f317e59ab5f83077f8b0a70ff69275779cf9c57dfe827a54e42460d81af2",
+  "frontend/src/research/TrainingEvidence.jsx": "a1d77c65a9ca7e0fb0a2a30dae121013d0f97d591372d61cd3146a28044f0f47",
+  "output/RagaMoodSync_Research_Pure_FusDenseNet_Reviewed_v2.pptx": "34f99700aee420df91b27b33471f10a8e20912cca11bc6acddc31890caa21b2c",
+  "output/RagaMoodSync_Research.pptx": "34f99700aee420df91b27b33471f10a8e20912cca11bc6acddc31890caa21b2c"
+}

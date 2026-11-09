@@ -1,0 +1,8 @@
+{
+  "source_sha256": "f0082aff0511c40d8dff89fc03bbea965b416db55a0f771701efaa38f490c548",
+  "portable_sha256": "4c9c8f2a9127493b2295637421923876bd6e64e91bb8b43ec486c018eb3334c7",
+  "tensors_identical": true,
+  "inference_identical": true,
+  "raw_private_data_exported": false,
+  "plaintext_files_refreshed": 24
+}

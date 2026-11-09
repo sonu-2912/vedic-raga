@@ -1,0 +1,6553 @@
+{
+  "protocol": {
+    "dataset": "GamER official v1; DOI 10.5281/zenodo.8191877",
+    "license": "CC-BY-4.0",
+    "seed": 42,
+    "primary_task": [
+      "Angry",
+      "Sad"
+    ],
+    "secondary_task": [
+      "Angry",
+      "Sad",
+      "Bored",
+      "Stressed",
+      "Happy"
+    ],
+    "intervals": "whole annotated intervals >=15 seconds; no padding or invented labels",
+    "alignment": "signal time = video annotation time - VIDEO_OFFSET; offset-sign assumption disclosed; sensitivity +offset also reported",
+    "quality": "both modalities finite/nonflat, ADC clipping <=2%, >=8 RR, >=90% RR in 300..2000ms; no label-based signal rejection",
+    "model": "StandardScaler fitted only on training subjects + LogisticRegression C=1, balanced class weights, max_iter=2000",
+    "evaluation": "leave-one-participant-out; identical accepted intervals for EEG, cardiac and concatenated fusion; no tuning",
+    "features": {
+      "eeg": [
+        "theta_relative",
+        "alpha_relative",
+        "beta_relative",
+        "delta_relative",
+        "gamma_relative",
+        "spectral_entropy",
+        "hjorth_mobility",
+        "hjorth_complexity"
+      ],
+      "cardiac": [
+        "mean_rr_ms",
+        "rmssd_ms",
+        "sdnn_ms",
+        "pnn50",
+        "median_rr_ms",
+        "rr_iqr_ms"
+      ]
+    },
+    "limitations": [
+      "No disgust annotations",
+      "No face or weather data",
+      "Not a raga-response dataset",
+      "Single EEG lead and no ICA/manual artifact adjudication",
+      "Ultra-short interval HRV is noisy and not clinical HRV",
+      "Offset sign is an explicit assumption, not independently verified from omitted videos",
+      "Overlapping intervals remain in the same subject fold; effective n is participants, not intervals"
+    ]
+  },
+  "offset_sign": 1,
+  "fixed_window_seconds": 30,
+  "records": [
+    {
+      "annotation_id": 153,
+      "subject": 10,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "09:53-10:30",
+      "recording": "data/10/opensignals_00078065E016_2022-02-20_13-37-39.h5",
+      "first_sample": 230892,
+      "last_sample": 242892,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.22869471148511786,
+        0.055641603915642296,
+        0.059902252804850085,
+        0.6107101315286609,
+        0.009437656005506645,
+        0.7169198810287267,
+        0.12499642072850431,
+        3.89708495140296
+      ],
+      "cardiac": [
+        709.2682926829268,
+        33.26973098779129,
+        34.224643453397654,
+        0.075,
+        710.0,
+        47.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 41,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 155,
+      "subject": 10,
+      "label": "Angry",
+      "game": "QWOP",
+      "interval": "12:50-13:24",
+      "recording": "data/10/opensignals_00078065E016_2022-02-20_13-37-39.h5",
+      "first_sample": 301092,
+      "last_sample": 313092,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.22715550654424355,
+        0.10699607425511269,
+        0.25559126145130684,
+        0.33579489288500136,
+        0.039753361444675464,
+        0.8853771220171855,
+        0.2798635788063312,
+        2.1104249529099497
+      ],
+      "cardiac": [
+        732.8125,
+        43.38815565660808,
+        44.27546167359812,
+        0.2564102564102564,
+        732.5,
+        57.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 40,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 158,
+      "subject": 10,
+      "label": "Angry",
+      "game": "FLAPPY",
+      "interval": "18:50-19:26",
+      "recording": "data/10/opensignals_00078065E016_2022-02-20_13-37-39.h5",
+      "first_sample": 445492,
+      "last_sample": 457492,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.2510276285347891,
+        0.029557474009364097,
+        0.03931693354532618,
+        0.6159414328391454,
+        0.005853348680724229,
+        0.6733307639364849,
+        0.11194312167582783,
+        4.30434453272296
+      ],
+      "cardiac": [
+        704.0853658536586,
+        34.39431275661719,
+        36.600700546407644,
+        0.15,
+        700.0,
+        60.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 41,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 160,
+      "subject": 10,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "22:14-22:50",
+      "recording": "data/10/opensignals_00078065E016_2022-02-20_13-37-39.h5",
+      "first_sample": 527092,
+      "last_sample": 539092,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1602585722632907,
+        0.04369358572263204,
+        0.0820269627985043,
+        0.6488794908752853,
+        0.018267150942864473,
+        0.718821765050823,
+        0.138093653353807,
+        3.169161389141808
+      ],
+      "cardiac": [
+        749.3421052631579,
+        43.691563289755415,
+        37.38805006068077,
+        0.35135135135135137,
+        745.0,
+        56.875
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 38,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 163,
+      "subject": 12,
+      "label": "Curious",
+      "game": "CBAAD",
+      "interval": "03:45-04:15",
+      "recording": "data/12/opensignals_00078065E016_2022-02-21_20-35-20.h5",
+      "first_sample": 97078,
+      "last_sample": 109078,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.20058822482427083,
+        0.10037772960795797,
+        0.3219653917093945,
+        0.27196908480228354,
+        0.06150485355024755,
+        0.9205354844619292,
+        0.25084008290082527,
+        1.7307928916997857
+      ],
+      "cardiac": [
+        787.7702702702703,
+        44.21184795956849,
+        65.47312792650494,
+        0.1111111111111111,
+        800.0,
+        57.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 170,
+      "subject": 12,
+      "label": "Happy",
+      "game": "QWOP",
+      "interval": "14:00-15:00",
+      "recording": "data/12/opensignals_00078065E016_2022-02-21_20-35-20.h5",
+      "first_sample": 349078,
+      "last_sample": 361078,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.16292604307365904,
+        0.07605831788378314,
+        0.22251536051183915,
+        0.4200707709783044,
+        0.08670422937380858,
+        0.8708421199191894,
+        0.2454445258465129,
+        1.9103777517241036
+      ],
+      "cardiac": [
+        775.2027027027027,
+        92.95122675659292,
+        135.8095306066684,
+        0.3333333333333333,
+        827.5,
+        90.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 178,
+      "subject": 13,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "09:40-11:00",
+      "recording": "data/13/opensignals_00078065E016_2022-02-22_16-34-37.h5",
+      "first_sample": 247636,
+      "last_sample": 259636,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.17655217569305975,
+        0.05409389842745297,
+        0.08879055986286574,
+        0.6109868265297658,
+        0.025673551432268255,
+        0.7355358303054282,
+        0.15791277357666694,
+        3.026144006618345
+      ],
+      "cardiac": [
+        855.8333333333334,
+        25.337564750780608,
+        28.11573921608085,
+        0.0625,
+        855.0,
+        42.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 33,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 179,
+      "subject": 13,
+      "label": "Angry",
+      "game": "QWOP",
+      "interval": "14:30-15:00",
+      "recording": "data/13/opensignals_00078065E016_2022-02-22_16-34-37.h5",
+      "first_sample": 353636,
+      "last_sample": 365636,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.18713235789083982,
+        0.05500283143058702,
+        0.0669534967180539,
+        0.6375594204321801,
+        0.012778889031919078,
+        0.706528673670242,
+        0.11700061494639165,
+        3.47747727467757
+      ],
+      "cardiac": [
+        849.1176470588235,
+        23.896081839346117,
+        30.827491376998722,
+        0.030303030303030304,
+        843.75,
+        40.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 34,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 180,
+      "subject": 13,
+      "label": "Angry",
+      "game": "QWOP",
+      "interval": "15:06-15:38",
+      "recording": "data/13/opensignals_00078065E016_2022-02-22_16-34-37.h5",
+      "first_sample": 368436,
+      "last_sample": 380436,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.12886576276669848,
+        0.056896807953047024,
+        0.10275685100174102,
+        0.6434176445430841,
+        0.029207328785034063,
+        0.7221609362708834,
+        0.1502890632496536,
+        2.882696748601796
+      ],
+      "cardiac": [
+        843.2857142857143,
+        26.43318435781277,
+        41.501113683548176,
+        0.029411764705882353,
+        840.0,
+        51.25
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 35,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 196,
+      "subject": 14,
+      "label": "Disappointed",
+      "game": "WHG",
+      "interval": "09:39-10:13",
+      "recording": "data/14/opensignals_00078065E016_2022-02-22_20-57-46.h5",
+      "first_sample": 237560,
+      "last_sample": 249560,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.197764357862522,
+        0.059437437102325144,
+        0.254490984581413,
+        0.39711557013984117,
+        0.06201043845972189,
+        0.8722810580379369,
+        0.24288558460655646,
+        1.8620815535664816
+      ],
+      "cardiac": [
+        756.4102564102565,
+        22.645726911901527,
+        39.739260680166254,
+        0.02631578947368421,
+        752.5,
+        50.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 39,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 201,
+      "subject": 14,
+      "label": "Angry",
+      "game": "FLAPPY",
+      "interval": "19:08-19:40",
+      "recording": "data/14/opensignals_00078065E016_2022-02-22_20-57-46.h5",
+      "first_sample": 464760,
+      "last_sample": 476760,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.25548114540497097,
+        0.07711010606991375,
+        0.10557480482771402,
+        0.49210328759015604,
+        0.02351670771890111,
+        0.783556244648184,
+        0.1589726956506172,
+        2.5827493399391455
+      ],
+      "cardiac": [
+        808.4027777777778,
+        28.96118091514916,
+        49.41498029725174,
+        0.08571428571428572,
+        805.0,
+        91.875
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 36,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 205,
+      "subject": 15,
+      "label": "Curious",
+      "game": "CBAAD",
+      "interval": "03:16-03:46",
+      "recording": "data/15/opensignals_00078065E016_2022-02-22_22-00-12.h5",
+      "first_sample": 84011,
+      "last_sample": 96011,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.0868145497284296,
+        0.07814925342058386,
+        0.1732429677705058,
+        0.6092689332296335,
+        0.03433944317921808,
+        0.7055611091948172,
+        0.1744032800006403,
+        2.5788118878080546
+      ],
+      "cardiac": [
+        807.2142857142857,
+        127.09494482472543,
+        109.21641263984075,
+        0.38235294117647056,
+        832.5,
+        61.25
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 35,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 206,
+      "subject": 15,
+      "label": "Curious",
+      "game": "CBAAD",
+      "interval": "03:58-04:38",
+      "recording": "data/15/opensignals_00078065E016_2022-02-22_22-00-12.h5",
+      "first_sample": 102811,
+      "last_sample": 114811,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.10638034994525337,
+        0.10186510643458485,
+        0.187629427910609,
+        0.5345719271852767,
+        0.04852569213035271,
+        0.7495575695447657,
+        0.19601249999201265,
+        2.3161801311267154
+      ],
+      "cardiac": [
+        829.3571428571429,
+        51.69373895414051,
+        55.094647363126185,
+        0.35294117647058826,
+        817.5,
+        58.75
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 35,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 207,
+      "subject": 15,
+      "label": "Surprised",
+      "game": "WHG",
+      "interval": "08:04-08:39",
+      "recording": "data/15/opensignals_00078065E016_2022-02-22_22-00-12.h5",
+      "first_sample": 200211,
+      "last_sample": 212211,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.10009814160250909,
+        0.09926122753198995,
+        0.13614873724745655,
+        0.6164883258767387,
+        0.025087851226430972,
+        0.6851526838179638,
+        0.14991312330223544,
+        2.8577693527568626
+      ],
+      "cardiac": [
+        732.25,
+        44.9928769291204,
+        43.25609487216505,
+        0.23076923076923078,
+        726.25,
+        59.375
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 40,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 215,
+      "subject": 15,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "20:48-21:18",
+      "recording": "data/15/opensignals_00078065E016_2022-02-22_22-00-12.h5",
+      "first_sample": 504811,
+      "last_sample": 516811,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.20684579929545577,
+        0.061623117893327584,
+        0.1735101642506604,
+        0.4649333127827169,
+        0.053784062303044874,
+        0.8236159749767472,
+        0.20358970285072417,
+        2.207717054430062
+      ],
+      "cardiac": [
+        912.1774193548387,
+        27.15311522950298,
+        25.435719106241386,
+        0.03333333333333333,
+        910.0,
+        27.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 31,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 226,
+      "subject": 16,
+      "label": "Disappointed",
+      "game": "QWOP",
+      "interval": "18:04-18:38",
+      "recording": "data/16/opensignals_00078065E016_2022-02-23_12-49-06.h5",
+      "first_sample": 440480,
+      "last_sample": 452480,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.20945660295553548,
+        0.0683651938304211,
+        0.12812399952909284,
+        0.5092120224518351,
+        0.029391932830866756,
+        0.7880697140025461,
+        0.16768453215097032,
+        2.516823703275211
+      ],
+      "cardiac": [
+        715.375,
+        57.564066872240666,
+        46.75889467009706,
+        0.5128205128205128,
+        711.25,
+        62.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 40,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 243,
+      "subject": 17,
+      "label": "Disappointed",
+      "game": "QWOP",
+      "interval": "12:34-13:33",
+      "recording": "data/17/opensignals_00078065E016_2022-03-08_13-07-12.h5",
+      "first_sample": 314337,
+      "last_sample": 326337,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1560393244655511,
+        0.09096582918130733,
+        0.3839623759532965,
+        0.2415651778498725,
+        0.09899716398155331,
+        0.9451159924916057,
+        0.28451088695006777,
+        1.589667986911245
+      ],
+      "cardiac": [
+        761.8421052631579,
+        82.40576108173177,
+        60.61253831389579,
+        0.5675675675675675,
+        776.25,
+        66.25
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 38,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 253,
+      "subject": 19,
+      "label": "Curious",
+      "game": "CBAAD",
+      "interval": "04:20-04:50",
+      "recording": "data/19/opensignals_00078065E016_2022-03-16_10-02-54.h5",
+      "first_sample": 133273,
+      "last_sample": 145273,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1868678211187675,
+        0.08214173093620963,
+        0.16647764547365101,
+        0.47941843174790866,
+        0.038916302517734466,
+        0.8168667294070037,
+        0.19033687091730583,
+        2.2640786554583507
+      ],
+      "cardiac": [
+        613.2978723404256,
+        24.072467585442375,
+        39.75846362923575,
+        0.043478260869565216,
+        612.5,
+        43.75
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 47,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 259,
+      "subject": 19,
+      "label": "Angry",
+      "game": "QWOP",
+      "interval": "13:33-14:09",
+      "recording": "data/19/opensignals_00078065E016_2022-03-16_10-02-54.h5",
+      "first_sample": 355673,
+      "last_sample": 367673,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.14367230955280733,
+        0.07861428012760685,
+        0.3250015487420954,
+        0.27131576886621545,
+        0.15316971096164853,
+        0.9443059093184621,
+        0.2978923335319011,
+        1.6040812182938526
+      ],
+      "cardiac": [
+        605.5729166666666,
+        20.44712953895922,
+        33.51420619444792,
+        0.02127659574468085,
+        603.75,
+        38.125
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 48,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 29,
+      "subject": 2,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "33:50-34:33",
+      "recording": "data/2/opensignals_00078065E016_2022-01-28_17-36-48.h5",
+      "first_sample": 822387,
+      "last_sample": 834387,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.09904187320541544,
+        0.061079296813132455,
+        0.32348388963574404,
+        0.36603093502366657,
+        0.11515503838852233,
+        0.9068448239452458,
+        0.28619609038827193,
+        1.6715743607604558
+      ],
+      "cardiac": [
+        706.4024390243902,
+        220.15016182142588,
+        154.52047677865363,
+        0.225,
+        690.0,
+        70.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 41,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 277,
+      "subject": 22,
+      "label": "Stressed",
+      "game": "CBAAD",
+      "interval": "02:35-03:11",
+      "recording": "data/22/opensignals_00078065E016_2022-03-16_11-33-34.h5",
+      "first_sample": 70107,
+      "last_sample": 82107,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.22898890173618575,
+        0.11507704528000579,
+        0.13810230807777663,
+        0.4402797459343529,
+        0.04382759357480568,
+        0.8322580947177011,
+        0.18247280882549824,
+        2.3679118294009114
+      ],
+      "cardiac": [
+        795.9027777777778,
+        48.530182066715675,
+        43.655112520830244,
+        0.34285714285714286,
+        795.0,
+        63.125
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 36,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 283,
+      "subject": 22,
+      "label": "Disappointed",
+      "game": "WHG",
+      "interval": "07:08-07:42",
+      "recording": "data/22/opensignals_00078065E016_2022-03-16_11-33-34.h5",
+      "first_sample": 178907,
+      "last_sample": 190907,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.2064137156604724,
+        0.11080677813017854,
+        0.10041980870369953,
+        0.5298048381494813,
+        0.025487369688509332,
+        0.7741346418864921,
+        0.14110620531469065,
+        3.1135893196599724
+      ],
+      "cardiac": [
+        715.8125,
+        130.72897193263665,
+        113.03276626713159,
+        0.46153846153846156,
+        723.75,
+        133.75
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 40,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 301,
+      "subject": 24,
+      "label": "Stressed",
+      "game": "CBAAD",
+      "interval": "02:09-02:54",
+      "recording": "data/24/opensignals_00078065E016_2022-03-16_14-41-36.h5",
+      "first_sample": 60970,
+      "last_sample": 72970,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.20429768093826806,
+        0.06559046355286798,
+        0.16242873447127204,
+        0.46892503315277756,
+        0.06322171152282048,
+        0.832513058428064,
+        0.20232575786952894,
+        2.222693754131582
+      ],
+      "cardiac": [
+        753.974358974359,
+        101.1350061733533,
+        66.2672965224481,
+        0.5263157894736842,
+        732.5,
+        66.25
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 39,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 302,
+      "subject": 24,
+      "label": "Happy",
+      "game": "WHG",
+      "interval": "05:49-06:52",
+      "recording": "data/24/opensignals_00078065E016_2022-03-16_14-41-36.h5",
+      "first_sample": 152570,
+      "last_sample": 164570,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1961540299234435,
+        0.10683161851199714,
+        0.19852463140381021,
+        0.4258604456823365,
+        0.04664485814374687,
+        0.8526457285726282,
+        0.21299114226682989,
+        2.0582602398262098
+      ],
+      "cardiac": [
+        761.6216216216217,
+        102.69882477960063,
+        63.28456514969654,
+        0.5833333333333334,
+        757.5,
+        75.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 312,
+      "subject": 25,
+      "label": "Happy",
+      "game": "CBAAD",
+      "interval": "05:04-06:07",
+      "recording": "data/25/opensignals_00078065E016_2022-03-22_13-35-57.h5",
+      "first_sample": 139195,
+      "last_sample": 151195,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.134576106231243,
+        0.046764736271117484,
+        0.29535994459226406,
+        0.43898786077804663,
+        0.06534134225743952,
+        0.8626283785557873,
+        0.24687584870290502,
+        1.8026980965940578
+      ],
+      "cardiac": [
+        787.8378378378378,
+        71.65213030871992,
+        92.0864670699089,
+        0.4722222222222222,
+        790.0,
+        112.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 320,
+      "subject": 25,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "17:13-19:02",
+      "recording": "data/25/opensignals_00078065E016_2022-03-22_13-35-57.h5",
+      "first_sample": 439995,
+      "last_sample": 451995,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.06075394989087951,
+        0.03264819265466156,
+        0.5116112370666976,
+        0.14814178132880762,
+        0.23319551234407201,
+        0.9588635594731048,
+        0.3851834908835009,
+        1.264888060899601
+      ],
+      "cardiac": [
+        787.4324324324324,
+        91.09004244885021,
+        80.72476920600865,
+        0.4444444444444444,
+        767.5,
+        97.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 321,
+      "subject": 26,
+      "label": "Curious",
+      "game": "CBAAD",
+      "interval": "01:56-02:42",
+      "recording": "data/26/opensignals_00078065E016_2022-03-22_19-01-02.h5",
+      "first_sample": 55372,
+      "last_sample": 67372,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.15315031115734662,
+        0.06641143548958196,
+        0.12584069381794183,
+        0.5783021576568912,
+        0.03505997562935046,
+        0.7769978430078915,
+        0.17472908468089396,
+        2.4854198225924486
+      ],
+      "cardiac": [
+        712.6219512195122,
+        47.95505708473299,
+        50.09974806421247,
+        0.4,
+        715.0,
+        80.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 41,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 323,
+      "subject": 26,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "08:57-09:36",
+      "recording": "data/26/opensignals_00078065E016_2022-03-22_19-01-02.h5",
+      "first_sample": 222372,
+      "last_sample": 234372,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.16400801328978357,
+        0.05792902989265874,
+        0.21967098991473927,
+        0.45622236826561485,
+        0.05888115516799958,
+        0.8492164376266422,
+        0.22779033833011464,
+        1.9568987103838718
+      ],
+      "cardiac": [
+        675.0,
+        30.44071130512401,
+        50.849919230164815,
+        0.11904761904761904,
+        677.5,
+        83.75
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 43,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 324,
+      "subject": 26,
+      "label": "Angry",
+      "game": "QWOP",
+      "interval": "11:20-12:20",
+      "recording": "data/26/opensignals_00078065E016_2022-03-22_19-01-02.h5",
+      "first_sample": 283772,
+      "last_sample": 295772,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.18078544723091483,
+        0.07488900448353115,
+        0.20801385383350257,
+        0.43517738156997365,
+        0.06071071231612198,
+        0.856716281351846,
+        0.22096636223810517,
+        2.0329091335525784
+      ],
+      "cardiac": [
+        705.2439024390244,
+        56.75330386858548,
+        45.59606917696134,
+        0.375,
+        710.0,
+        52.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 41,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 325,
+      "subject": 26,
+      "label": "Angry",
+      "game": "FLAPPY",
+      "interval": "13:50-14:46",
+      "recording": "data/26/opensignals_00078065E016_2022-03-22_19-01-02.h5",
+      "first_sample": 342972,
+      "last_sample": 354972,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.16228095189659356,
+        0.0814157877243757,
+        0.3147022789082711,
+        0.3142108788640495,
+        0.09333232708399138,
+        0.919089190762696,
+        0.27016283137412556,
+        1.7023057269267587
+      ],
+      "cardiac": [
+        697.6219512195122,
+        49.49905302124476,
+        69.58571876540157,
+        0.175,
+        710.0,
+        72.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 41,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 326,
+      "subject": 26,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "15:54-17:34",
+      "recording": "data/26/opensignals_00078065E016_2022-03-22_19-01-02.h5",
+      "first_sample": 401372,
+      "last_sample": 413372,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1781178078479242,
+        0.059085921367326,
+        0.11859555852006795,
+        0.5688348098617477,
+        0.03566008222081868,
+        0.7756394857870891,
+        0.17691745016769128,
+        2.5007397836369787
+      ],
+      "cardiac": [
+        727.875,
+        34.49265994010305,
+        36.01793534708322,
+        0.1282051282051282,
+        731.25,
+        33.75
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 40,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 331,
+      "subject": 27,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "09:03-09:42",
+      "recording": "data/27/opensignals_00078065E016_2022-03-22_19-27-27.h5",
+      "first_sample": 224525,
+      "last_sample": 236525,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.21065205945305315,
+        0.07191018587916276,
+        0.10213901626061633,
+        0.5498357301290151,
+        0.026899143212227264,
+        0.7722359784056131,
+        0.16257913581518837,
+        2.6495499590838505
+      ],
+      "cardiac": [
+        563.6057692307693,
+        17.6047286428458,
+        24.676403060902793,
+        0.0,
+        558.75,
+        33.75
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 52,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 333,
+      "subject": 27,
+      "label": "Happy",
+      "game": "FLAPPY",
+      "interval": "14:36-15:21",
+      "recording": "data/27/opensignals_00078065E016_2022-03-22_19-27-27.h5",
+      "first_sample": 358925,
+      "last_sample": 370925,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.21711478632122397,
+        0.08283814348192436,
+        0.16246798598583337,
+        0.44991159807111036,
+        0.044579780091773706,
+        0.8276481738376321,
+        0.2007781235861238,
+        2.2114250041627317
+      ],
+      "cardiac": [
+        680.3571428571429,
+        35.0478766623113,
+        35.96056202155249,
+        0.14634146341463414,
+        677.5,
+        64.375
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 42,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 334,
+      "subject": 27,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "19:26-19:58",
+      "recording": "data/27/opensignals_00078065E016_2022-03-22_19-27-27.h5",
+      "first_sample": 472325,
+      "last_sample": 484325,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.12463169757928208,
+        0.0403857330472869,
+        0.21883912811923467,
+        0.5212315831744372,
+        0.07213978862903203,
+        0.8106926906462851,
+        0.22249164882149722,
+        2.075631637651703
+      ],
+      "cardiac": [
+        720.125,
+        43.26054043784426,
+        82.23432357816884,
+        0.1282051282051282,
+        716.25,
+        143.125
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 40,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 339,
+      "subject": 29,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "07:40-08:18",
+      "recording": "data/29/opensignals_00078065E016_2022-03-22_23-07-24.h5",
+      "first_sample": 190534,
+      "last_sample": 202534,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1491914540233936,
+        0.03667965434121718,
+        0.11696044831434076,
+        0.6275238522141003,
+        0.03747373684760866,
+        0.7395769079049427,
+        0.17909814647603853,
+        2.52107959283783
+      ],
+      "cardiac": [
+        802.7083333333334,
+        122.71991921211719,
+        119.90230398119962,
+        0.2857142857142857,
+        831.25,
+        57.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 36,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 345,
+      "subject": 29,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "15:30-16:10",
+      "recording": "data/29/opensignals_00078065E016_2022-03-22_23-07-24.h5",
+      "first_sample": 378934,
+      "last_sample": 390934,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.13128248974180515,
+        0.024050179413341623,
+        0.14451612306052536,
+        0.6142541496252424,
+        0.059695538069233424,
+        0.7674743293619214,
+        0.19406873693177062,
+        2.4240085439127106
+      ],
+      "cardiac": [
+        871.1363636363636,
+        30.210847596517382,
+        39.8242766583856,
+        0.0625,
+        877.5,
+        47.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 33,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 346,
+      "subject": 29,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "16:37-17:20",
+      "recording": "data/29/opensignals_00078065E016_2022-03-22_23-07-24.h5",
+      "first_sample": 406334,
+      "last_sample": 418334,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.12473003394240056,
+        0.026337933907680057,
+        0.2587318881509131,
+        0.46222374143786005,
+        0.10004776582863867,
+        0.8507894410417557,
+        0.26539032541545027,
+        1.7630489225571933
+      ],
+      "cardiac": [
+        863.939393939394,
+        45.6699265107795,
+        42.72015726938762,
+        0.34375,
+        865.0,
+        60.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 33,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 351,
+      "subject": 30,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "07:12-08:00",
+      "recording": "data/30/opensignals_00078065E016_2022-03-23_09-24-37.h5",
+      "first_sample": 181942,
+      "last_sample": 193942,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1366520101623735,
+        0.039514849531355783,
+        0.06517478386500096,
+        0.7148460112351676,
+        0.019690842136797195,
+        0.6800101764887488,
+        0.13292504326649823,
+        3.271541990204042
+      ],
+      "cardiac": [
+        594.4897959183673,
+        58.79430953190396,
+        41.988278348933086,
+        0.22916666666666666,
+        597.5,
+        47.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 49,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 352,
+      "subject": 30,
+      "label": "Angry",
+      "game": "QWOP",
+      "interval": "09:58-10:53",
+      "recording": "data/30/opensignals_00078065E016_2022-03-23_09-24-37.h5",
+      "first_sample": 249742,
+      "last_sample": 261742,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.19279583809600861,
+        0.0777523235621239,
+        0.07778782789619704,
+        0.5879865277023096,
+        0.029226764461870912,
+        0.7523550773305115,
+        0.15277802045689698,
+        2.910544503975634
+      ],
+      "cardiac": [
+        711.829268292683,
+        60.986678873340864,
+        59.79136745343111,
+        0.3,
+        712.5,
+        67.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 41,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 354,
+      "subject": 30,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "14:39-15:26",
+      "recording": "data/30/opensignals_00078065E016_2022-03-23_09-24-37.h5",
+      "first_sample": 360542,
+      "last_sample": 372542,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1652404356360851,
+        0.04727034823368209,
+        0.08698127519125287,
+        0.6310194671602294,
+        0.029125647788323605,
+        0.7388767805822981,
+        0.15472679726175562,
+        2.8149831444927957
+      ],
+      "cardiac": [
+        769.8684210526316,
+        40.269363312841456,
+        42.69212285886358,
+        0.16216216216216217,
+        773.75,
+        41.875
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 38,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 355,
+      "subject": 31,
+      "label": "Stressed",
+      "game": "CBAAD",
+      "interval": "02:14-03:05",
+      "recording": "data/31/opensignals_00078065E016_2022-03-23_09-48-30.h5",
+      "first_sample": 64929,
+      "last_sample": 76929,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.24121804637294814,
+        0.07813297471665727,
+        0.18163190941486257,
+        0.41462923927227513,
+        0.04761532007839251,
+        0.845227852385367,
+        0.1989664432423083,
+        2.191041859497831
+      ],
+      "cardiac": [
+        593.2142857142857,
+        21.25612656780785,
+        39.014553908338705,
+        0.020833333333333332,
+        592.5,
+        57.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 49,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 357,
+      "subject": 31,
+      "label": "Stressed",
+      "game": "WHG",
+      "interval": "05:53-06:34",
+      "recording": "data/31/opensignals_00078065E016_2022-03-23_09-48-30.h5",
+      "first_sample": 150529,
+      "last_sample": 162529,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.2370353597469324,
+        0.13190504856451074,
+        0.21901286398115535,
+        0.31609413933324426,
+        0.06705382062039669,
+        0.8998029547967704,
+        0.21119042456517578,
+        2.1013817269482615
+      ],
+      "cardiac": [
+        529.0625,
+        17.340179300740182,
+        34.71495125891856,
+        0.01818181818181818,
+        516.25,
+        35.62500000000006
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 56,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 362,
+      "subject": 31,
+      "label": "Angry",
+      "game": "QWOP",
+      "interval": "10:06-11:23",
+      "recording": "data/31/opensignals_00078065E016_2022-03-23_09-48-30.h5",
+      "first_sample": 258929,
+      "last_sample": 270929,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.25212646366510716,
+        0.0885457690387749,
+        0.16874414804399018,
+        0.3948871403887175,
+        0.0560580943550956,
+        0.8549033865378016,
+        0.2020812051532438,
+        2.1958421814858413
+      ],
+      "cardiac": [
+        568.7254901960785,
+        58.57260451781191,
+        60.26062675789974,
+        0.22,
+        567.5,
+        68.75
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 51,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 390,
+      "subject": 33,
+      "label": "Bored",
+      "game": "CBAAD",
+      "interval": "03:03-03:40",
+      "recording": "data/33/opensignals_00078065E016_2022-03-23_10-47-50.h5",
+      "first_sample": 79408,
+      "last_sample": 91408,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.2266347729260175,
+        0.10899405494407831,
+        0.27164640130174944,
+        0.25439817796365666,
+        0.09784880451651536,
+        0.9286954937071955,
+        0.274974108251572,
+        1.7834123612617656
+      ],
+      "cardiac": [
+        746.6447368421053,
+        48.00936001082131,
+        70.89027569255684,
+        0.24324324324324326,
+        737.5,
+        94.375
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 38,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 391,
+      "subject": 33,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "06:31-07:03",
+      "recording": "data/33/opensignals_00078065E016_2022-03-23_10-47-50.h5",
+      "first_sample": 161608,
+      "last_sample": 173608,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.272885351007324,
+        0.14073892486747652,
+        0.2780711489183009,
+        0.19065653819353973,
+        0.07548992520623062,
+        0.930338364022088,
+        0.2617953571427324,
+        1.8411255907987596
+      ],
+      "cardiac": [
+        743.3333333333334,
+        98.32060206016685,
+        69.17829113900025,
+        0.34210526315789475,
+        735.0,
+        66.25
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 39,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 392,
+      "subject": 33,
+      "label": "Angry",
+      "game": "QWOP",
+      "interval": "09:35-10:15",
+      "recording": "data/33/opensignals_00078065E016_2022-03-23_10-47-50.h5",
+      "first_sample": 236808,
+      "last_sample": 248808,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.21295874140613125,
+        0.12265503773996543,
+        0.23092279893630918,
+        0.3256851056748511,
+        0.07015979685481745,
+        0.8929408482521431,
+        0.303542053796808,
+        2.0200776576594115
+      ],
+      "cardiac": [
+        743.4615384615385,
+        58.361678576920575,
+        56.44226027489749,
+        0.18421052631578946,
+        752.5,
+        73.75
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 39,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 399,
+      "subject": 34,
+      "label": "Bored",
+      "game": "CBAAD",
+      "interval": "04:07-04:45",
+      "recording": "data/34/opensignals_00078065E016_2022-03-23_11-18-01.h5",
+      "first_sample": 111586,
+      "last_sample": 123586,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.15687663492464504,
+        0.04546694258912603,
+        0.1021620183330805,
+        0.6301413310828773,
+        0.02660695654116358,
+        0.7401468387457141,
+        0.1624785561391867,
+        2.843758993031438
+      ],
+      "cardiac": [
+        721.1875,
+        34.46012188022556,
+        53.85458667941159,
+        0.07692307692307693,
+        728.75,
+        70.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 40,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 410,
+      "subject": 36,
+      "label": "Bored",
+      "game": "CBAAD",
+      "interval": "02:11-02:53",
+      "recording": "data/36/opensignals_00078065E016_2022-03-23_12-07-24.h5",
+      "first_sample": 58942,
+      "last_sample": 70942,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.10250716741554856,
+        0.07770681966835702,
+        0.4252895003135518,
+        0.1790924688816116,
+        0.1810315697331883,
+        0.9463205302829204,
+        0.35218075409856314,
+        1.3229706014779166
+      ],
+      "cardiac": [
+        858.1060606060606,
+        92.59074940295062,
+        67.73694034366486,
+        0.4375,
+        850.0,
+        75.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 33,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 419,
+      "subject": 36,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "12:50-15:05",
+      "recording": "data/36/opensignals_00078065E016_2022-03-23_12-07-24.h5",
+      "first_sample": 333142,
+      "last_sample": 345142,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.019322334128254154,
+        0.028782531883563178,
+        0.6402845975199675,
+        0.02839922080489584,
+        0.26685922493275477,
+        0.9402931155891736,
+        0.4170389167047273,
+        1.1568739102051124
+      ],
+      "cardiac": [
+        842.5,
+        106.53637876331258,
+        106.76723478784315,
+        0.5454545454545454,
+        823.75,
+        147.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 34,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 433,
+      "subject": 38,
+      "label": "Bored",
+      "game": "CBAAD",
+      "interval": "02:30-03:08",
+      "recording": "data/38/opensignals_00078065E016_2022-03-23_13-08-35.h5",
+      "first_sample": 67027,
+      "last_sample": 79027,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.030207036384120835,
+        0.03678752592343227,
+        0.6305364736847174,
+        0.03713233157718066,
+        0.24919751279515967,
+        0.9265880678591686,
+        0.4278015285451517,
+        1.2053152242316325
+      ],
+      "cardiac": [
+        799.5138888888889,
+        36.571847095819486,
+        38.935933845799106,
+        0.11428571428571428,
+        801.25,
+        53.125
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 36,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 440,
+      "subject": 38,
+      "label": "Bored",
+      "game": "FLAPPY",
+      "interval": "11:58-12:57",
+      "recording": "data/38/opensignals_00078065E016_2022-03-23_13-08-35.h5",
+      "first_sample": 298427,
+      "last_sample": 310427,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.18486518697513182,
+        0.04017536486662893,
+        0.06727035146881452,
+        0.665110327213192,
+        0.014813059282609916,
+        0.707349968351393,
+        0.14306645802848303,
+        3.6094623414054836
+      ],
+      "cardiac": [
+        788.7162162162163,
+        43.734124103623145,
+        64.22784319001255,
+        0.3055555555555556,
+        800.0,
+        95.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 445,
+      "subject": 38,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "15:10-15:40",
+      "recording": "data/38/opensignals_00078065E016_2022-03-23_13-08-35.h5",
+      "first_sample": 369427,
+      "last_sample": 381427,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.0813756490307738,
+        0.035793460941369044,
+        0.4179976191601862,
+        0.2886424839810784,
+        0.14831483478874294,
+        0.9200314955036092,
+        0.3243071883906611,
+        1.459998417055554
+      ],
+      "cardiac": [
+        793.918918918919,
+        42.35678484283506,
+        58.7648933266086,
+        0.25,
+        792.5,
+        85.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 72,
+      "subject": 4,
+      "label": "Bored",
+      "game": "QWOP",
+      "interval": "18:47-19:20",
+      "recording": "data/4/opensignals_00078065E016_2022-01-30_19-34-01.h5",
+      "first_sample": 459101,
+      "last_sample": 471101,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1955001199837351,
+        0.058829227374718664,
+        0.15784466941306685,
+        0.5130654447039708,
+        0.038167827291180935,
+        0.8043535880529816,
+        0.34974461718416416,
+        2.0286366295728073
+      ],
+      "cardiac": [
+        616.9148936170212,
+        11.396986634537486,
+        23.528502407333853,
+        0.0,
+        615.0,
+        23.75
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 47,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 74,
+      "subject": 4,
+      "label": "Bored",
+      "game": "QWOP",
+      "interval": "20:00-20:40",
+      "recording": "data/4/opensignals_00078065E016_2022-01-30_19-34-01.h5",
+      "first_sample": 489701,
+      "last_sample": 501701,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.17949230181266904,
+        0.06097921911982366,
+        0.26416036945931,
+        0.38511076995201554,
+        0.07449881215053565,
+        0.8847231548924376,
+        0.3488470427180957,
+        1.8740413933487179
+      ],
+      "cardiac": [
+        588.25,
+        6.804485315449161,
+        10.279884260445897,
+        0.0,
+        590.0,
+        16.875
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 50,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 75,
+      "subject": 4,
+      "label": "Stressed",
+      "game": "FLAPPY",
+      "interval": "23:01-23:38",
+      "recording": "data/4/opensignals_00078065E016_2022-01-30_19-34-01.h5",
+      "first_sample": 561501,
+      "last_sample": 573501,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.13639554125594167,
+        0.05882040663077922,
+        0.16913209124354392,
+        0.5681856514310231,
+        0.04205339403071219,
+        0.7911715619357726,
+        0.43915259590032335,
+        1.6673887423516534
+      ],
+      "cardiac": [
+        628.804347826087,
+        15.083103128998356,
+        38.422863312366154,
+        0.0,
+        633.75,
+        54.375
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 46,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 85,
+      "subject": 4,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "27:50-28:25",
+      "recording": "data/4/opensignals_00078065E016_2022-01-30_19-34-01.h5",
+      "first_sample": 676701,
+      "last_sample": 688701,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.10536615445714693,
+        0.029902576511073423,
+        0.3072032692253159,
+        0.4217087496866643,
+        0.1029143130713745,
+        0.8741975273749785,
+        0.2825580373381745,
+        1.7327394781049146
+      ],
+      "cardiac": [
+        619.468085106383,
+        11.06428842090035,
+        21.219198714361386,
+        0.0,
+        620.0,
+        31.25
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 47,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 453,
+      "subject": 40,
+      "label": "Bored",
+      "game": "CBAAD",
+      "interval": "02:41-03:52",
+      "recording": "data/40/opensignals_00078065E016_2022-03-23_14-02-28.h5",
+      "first_sample": 85874,
+      "last_sample": 97874,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.10701049676420638,
+        0.06691003810198241,
+        0.1270429991375986,
+        0.6330364636358582,
+        0.03804834419682411,
+        0.7529054418119385,
+        0.18701791834655482,
+        2.399923337228849
+      ],
+      "cardiac": [
+        808.5416666666666,
+        79.29600962757927,
+        97.28157768633719,
+        0.4,
+        808.75,
+        136.875
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 36,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 456,
+      "subject": 40,
+      "label": "Happy",
+      "game": "WHG",
+      "interval": "06:47-07:30",
+      "recording": "data/40/opensignals_00078065E016_2022-03-23_14-02-28.h5",
+      "first_sample": 178674,
+      "last_sample": 190674,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.17363162129110335,
+        0.11303214810807352,
+        0.19254753009800038,
+        0.43331963922706296,
+        0.053629042189185516,
+        0.8579739867096158,
+        0.22271212527169193,
+        2.056309421410628
+      ],
+      "cardiac": [
+        792.8472222222222,
+        63.33865892395981,
+        66.64713255480521,
+        0.3142857142857143,
+        795.0,
+        93.125
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 36,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 457,
+      "subject": 40,
+      "label": "Angry",
+      "game": "QWOP",
+      "interval": "08:39-09:09",
+      "recording": "data/40/opensignals_00078065E016_2022-03-23_14-02-28.h5",
+      "first_sample": 220874,
+      "last_sample": 232874,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.16348199237859504,
+        0.08931365509700658,
+        0.1876477940631793,
+        0.45753314476688156,
+        0.07248299167397104,
+        0.850844837012195,
+        0.22348802798413195,
+        2.0677589475256815
+      ],
+      "cardiac": [
+        782.972972972973,
+        75.96371575371435,
+        71.6929163115105,
+        0.3888888888888889,
+        772.5,
+        100.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 459,
+      "subject": 40,
+      "label": "Happy",
+      "game": "FLAPPY",
+      "interval": "10:54-11:30",
+      "recording": "data/40/opensignals_00078065E016_2022-03-23_14-02-28.h5",
+      "first_sample": 276074,
+      "last_sample": 288074,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.17338025864663184,
+        0.09312017497704908,
+        0.24785138498612358,
+        0.3669438582410996,
+        0.07596183056237624,
+        0.8916633585983627,
+        0.22180689263429593,
+        2.017922581464673
+      ],
+      "cardiac": [
+        761.9594594594595,
+        73.18284748946755,
+        76.9066333631583,
+        0.5,
+        765.0,
+        80.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 460,
+      "subject": 40,
+      "label": "Disappointed",
+      "game": "FLAPPY",
+      "interval": "10:54-11:30",
+      "recording": "data/40/opensignals_00078065E016_2022-03-23_14-02-28.h5",
+      "first_sample": 276074,
+      "last_sample": 288074,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.17338025864663184,
+        0.09312017497704908,
+        0.24785138498612358,
+        0.3669438582410996,
+        0.07596183056237624,
+        0.8916633585983627,
+        0.22180689263429593,
+        2.017922581464673
+      ],
+      "cardiac": [
+        761.9594594594595,
+        73.18284748946755,
+        76.9066333631583,
+        0.5,
+        765.0,
+        80.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 489,
+      "subject": 43,
+      "label": "Bored",
+      "game": "CBAAD",
+      "interval": "05:30-06:09",
+      "recording": "data/43/opensignals_00078065E016_2022-03-27_21-00-21.h5",
+      "first_sample": 139180,
+      "last_sample": 151180,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.18212677097925561,
+        0.042327639087652184,
+        0.10814059511210003,
+        0.607846028910404,
+        0.02782253622481976,
+        0.7279371788077016,
+        0.1697262565936034,
+        2.871829869554944
+      ],
+      "cardiac": [
+        741.7307692307693,
+        43.00780222973012,
+        80.2343480517381,
+        0.23684210526315788,
+        730.0,
+        127.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 39,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 491,
+      "subject": 43,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "09:09-09:42",
+      "recording": "data/43/opensignals_00078065E016_2022-03-27_21-00-21.h5",
+      "first_sample": 225580,
+      "last_sample": 237580,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.18678050728240014,
+        0.037553185656429657,
+        0.05706534184394289,
+        0.6635459739673952,
+        0.019930977308562574,
+        0.6974731838172175,
+        0.13898338835969887,
+        3.514534897212175
+      ],
+      "cardiac": [
+        658.125,
+        105.35446812303867,
+        76.74354188418874,
+        0.4186046511627907,
+        655.0,
+        70.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 44,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 499,
+      "subject": 44,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "08:29-09:00",
+      "recording": "data/44/opensignals_00078065E016_2022-03-28_19-53-28.h5",
+      "first_sample": 208472,
+      "last_sample": 220472,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1616339506404637,
+        0.10860062397778353,
+        0.2631668470097851,
+        0.356837457846592,
+        0.07549144542605378,
+        0.8996002335772042,
+        0.2607956667531309,
+        1.8453687923083892
+      ],
+      "cardiac": [
+        813.0714285714286,
+        41.64803505004062,
+        40.23865255775677,
+        0.08823529411764706,
+        802.5,
+        51.25
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 35,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 502,
+      "subject": 44,
+      "label": "Angry",
+      "game": "QWOP",
+      "interval": "13:12-13:55",
+      "recording": "data/44/opensignals_00078065E016_2022-03-28_19-53-28.h5",
+      "first_sample": 324072,
+      "last_sample": 336072,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.07186223113279887,
+        0.02481296008286525,
+        0.053645743317399526,
+        0.820302192466876,
+        0.012053459953971788,
+        0.5870938325218737,
+        0.11227252800107809,
+        3.907306676947099
+      ],
+      "cardiac": [
+        755.9615384615385,
+        80.78358027535833,
+        63.68770275164097,
+        0.5526315789473685,
+        747.5,
+        82.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 39,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 503,
+      "subject": 44,
+      "label": "Angry",
+      "game": "FLAPPY",
+      "interval": "16:53-17:33",
+      "recording": "data/44/opensignals_00078065E016_2022-03-28_19-53-28.h5",
+      "first_sample": 411872,
+      "last_sample": 423872,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.27170216083069093,
+        0.05017225863196651,
+        0.09839849073091182,
+        0.5074831138908331,
+        0.03775060503569763,
+        0.7684732251211392,
+        0.17288077715437344,
+        2.8096426568588173
+      ],
+      "cardiac": [
+        784.8648648648649,
+        31.559577697498497,
+        42.70760546512254,
+        0.08333333333333333,
+        790.0,
+        55.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 508,
+      "subject": 45,
+      "label": "Angry",
+      "game": "CBAAD",
+      "interval": "04:20-04:52",
+      "recording": "data/45/opensignals_00078065E016_2022-03-29_18-26-32.h5",
+      "first_sample": 108969,
+      "last_sample": 120969,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.22828421318909353,
+        0.13199476040641006,
+        0.17378419376343013,
+        0.3796548805074135,
+        0.04855332394079062,
+        0.8556416364487178,
+        0.20599364206488793,
+        2.14797420513608
+      ],
+      "cardiac": [
+        785.3378378378378,
+        91.47897451205812,
+        75.69163079874137,
+        0.6111111111111112,
+        800.0,
+        110.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 509,
+      "subject": 45,
+      "label": "Stressed",
+      "game": "CBAAD",
+      "interval": "04:20-04:53",
+      "recording": "data/45/opensignals_00078065E016_2022-03-29_18-26-32.h5",
+      "first_sample": 109169,
+      "last_sample": 121169,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.20808204827791266,
+        0.12471530379252713,
+        0.19026014090065113,
+        0.3876579410263164,
+        0.052686989925814054,
+        0.8623455009054198,
+        0.1987924361858836,
+        2.2178584257564085
+      ],
+      "cardiac": [
+        780.3378378378378,
+        94.43637628936567,
+        84.27213310114689,
+        0.6111111111111112,
+        802.5,
+        122.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 515,
+      "subject": 45,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "24:20-24:54",
+      "recording": "data/45/opensignals_00078065E016_2022-03-29_18-26-32.h5",
+      "first_sample": 589369,
+      "last_sample": 601369,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.17855246169834632,
+        0.09632453458571347,
+        0.2779827213414286,
+        0.3430989937302838,
+        0.06888493869810652,
+        0.9001169873477486,
+        0.23659912512414877,
+        1.891390329552949
+      ],
+      "cardiac": [
+        773.7162162162163,
+        70.34883320520201,
+        83.971766133073,
+        0.5555555555555556,
+        790.0,
+        130.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 517,
+      "subject": 45,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "25:38-26:30",
+      "recording": "data/45/opensignals_00078065E016_2022-03-29_18-26-32.h5",
+      "first_sample": 624169,
+      "last_sample": 636169,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.14651391336871067,
+        0.08724892800897158,
+        0.3611246649668343,
+        0.3015274936507097,
+        0.06531769029692669,
+        0.9119780770379895,
+        0.2697504553877574,
+        1.6530674275384725
+      ],
+      "cardiac": [
+        799.7916666666666,
+        71.57164242910736,
+        67.8427146315021,
+        0.45714285714285713,
+        788.75,
+        121.25
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 36,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 520,
+      "subject": 46,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "06:27-06:57",
+      "recording": "data/46/opensignals_00078065E016_2022-03-29_19-02-09.h5",
+      "first_sample": 159916,
+      "last_sample": 171916,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.15426729468766454,
+        0.07415160979049784,
+        0.16082858538441278,
+        0.5185643039402563,
+        0.06431438477662571,
+        0.8127508627226913,
+        0.22831540421640034,
+        2.028804864622154
+      ],
+      "cardiac": [
+        800.5555555555555,
+        45.977478959035714,
+        89.69215428164573,
+        0.2571428571428571,
+        793.75,
+        95.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 36,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 530,
+      "subject": 46,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "14:56-15:40",
+      "recording": "data/46/opensignals_00078065E016_2022-03-29_19-02-09.h5",
+      "first_sample": 366316,
+      "last_sample": 378316,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.06348490435627742,
+        0.040679337521265964,
+        0.3905661214824158,
+        0.09951247946351877,
+        0.3813984556619977,
+        0.9636696802652133,
+        0.40763463239341075,
+        1.2469973090009914
+      ],
+      "cardiac": [
+        694.047619047619,
+        36.75479062852,
+        41.81460380959952,
+        0.12195121951219512,
+        685.0,
+        48.125
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 42,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 535,
+      "subject": 47,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "16:11-16:59",
+      "recording": "data/47/opensignals_00078065E016_2022-03-29_19-35-22.h5",
+      "first_sample": 397260,
+      "last_sample": 409260,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.20002774880174268,
+        0.07004129565848849,
+        0.19107858379349332,
+        0.3930420029884017,
+        0.10720078272742571,
+        0.8735230645729465,
+        0.2504772116651557,
+        1.9326746110509925
+      ],
+      "cardiac": [
+        646.6111111111111,
+        150.64209163685717,
+        101.96528424870492,
+        0.36363636363636365,
+        637.5,
+        97.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 45,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 539,
+      "subject": 47,
+      "label": "Angry",
+      "game": "FLAPPY",
+      "interval": "18:37-19:30",
+      "recording": "data/47/opensignals_00078065E016_2022-03-29_19-35-22.h5",
+      "first_sample": 456660,
+      "last_sample": 468660,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1742119214582668,
+        0.0728617435980961,
+        0.21806556125264528,
+        0.3922967928222835,
+        0.10094188642966334,
+        0.8774383766634768,
+        0.25579791240174055,
+        1.890413809130768
+      ],
+      "cardiac": [
+        673.8372093023256,
+        44.99173204468742,
+        84.66908420786189,
+        0.16666666666666666,
+        712.5,
+        132.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 43,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 543,
+      "subject": 48,
+      "label": "Bored",
+      "game": "CBAAD",
+      "interval": "04:19-04:57",
+      "recording": "data/48/opensignals_00078065E016_2022-03-29_20-09-35.h5",
+      "first_sample": 109650,
+      "last_sample": 121650,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.13064942706974653,
+        0.0659224065840602,
+        0.18028837897232766,
+        0.5113698171813126,
+        0.07206058860610352,
+        0.8287523004567559,
+        0.22921888337667792,
+        2.0229635230238605
+      ],
+      "cardiac": [
+        672.8488372093024,
+        41.590406402942314,
+        82.44691906251828,
+        0.09523809523809523,
+        672.5,
+        128.75
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 43,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 87,
+      "subject": 5,
+      "label": "Bored",
+      "game": "CBAAD",
+      "interval": "03:48-04:47",
+      "recording": "data/5/opensignals_00078065E016_2022-01-31_19-17-24.h5",
+      "first_sample": 102305,
+      "last_sample": 114305,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.11873926130409278,
+        0.03786688315451685,
+        0.05589162350030068,
+        0.7488304698354544,
+        0.012437593535039872,
+        0.6668057741886689,
+        0.12209540774683181,
+        3.485682980067361
+      ],
+      "cardiac": [
+        721.1875,
+        22.224091801697014,
+        36.02433072030838,
+        0.0,
+        722.5,
+        58.125
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 40,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 91,
+      "subject": 5,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "10:29-11:02",
+      "recording": "data/5/opensignals_00078065E016_2022-01-31_19-17-24.h5",
+      "first_sample": 257505,
+      "last_sample": 269505,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.17260003763094015,
+        0.04781353974270599,
+        0.05772927499913875,
+        0.6762063398935951,
+        0.012641297226255005,
+        0.6953489483497187,
+        0.12221342729495313,
+        3.497814274048403
+      ],
+      "cardiac": [
+        699.8780487804878,
+        24.312419665677048,
+        39.51246330080625,
+        0.05,
+        692.5,
+        67.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 41,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 95,
+      "subject": 5,
+      "label": "Curious",
+      "game": "QWOP",
+      "interval": "16:44-17:15",
+      "recording": "data/5/opensignals_00078065E016_2022-01-31_19-17-24.h5",
+      "first_sample": 407105,
+      "last_sample": 419105,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.40423979959614986,
+        0.06381632665706836,
+        0.08637007083545814,
+        0.3618837149517485,
+        0.016732180337671054,
+        0.7513253913379548,
+        0.14961139758491626,
+        2.792658827956716
+      ],
+      "cardiac": [
+        682.3214285714286,
+        18.425029370860532,
+        26.786149822243054,
+        0.0,
+        678.75,
+        32.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 42,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 102,
+      "subject": 6,
+      "label": "Curious",
+      "game": "CBAAD",
+      "interval": "04:28-05:13",
+      "recording": "data/6/opensignals_00078065E016_2022-02-17_16-54-06.h5",
+      "first_sample": 119864,
+      "last_sample": 131864,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.14207438380532036,
+        0.11875106420798125,
+        0.30680301225861845,
+        0.3228657931361015,
+        0.08319245578728107,
+        0.9147417176141635,
+        0.2855989375454027,
+        1.7109665712532691
+      ],
+      "cardiac": [
+        807.2142857142857,
+        41.94490433890629,
+        64.50539030306894,
+        0.23529411764705882,
+        820.0,
+        70.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 35,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 105,
+      "subject": 6,
+      "label": "Stressed",
+      "game": "WHG",
+      "interval": "11:00-11:38",
+      "recording": "data/6/opensignals_00078065E016_2022-02-17_16-54-06.h5",
+      "first_sample": 275264,
+      "last_sample": 287264,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.14682265631202,
+        0.17764718436400304,
+        0.2788597692134492,
+        0.2974185370669534,
+        0.06252845686253079,
+        0.9192134308729407,
+        0.3294393809204887,
+        1.930597630108875
+      ],
+      "cardiac": [
+        726.5625,
+        47.958315233127195,
+        79.60376130625087,
+        0.20512820512820512,
+        717.5,
+        111.25
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 40,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 108,
+      "subject": 6,
+      "label": "Happy",
+      "game": "QWOP",
+      "interval": "16:05-16:36",
+      "recording": "data/6/opensignals_00078065E016_2022-02-17_16-54-06.h5",
+      "first_sample": 395864,
+      "last_sample": 407864,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1315086213590926,
+        0.11687589349298008,
+        0.18256981357185445,
+        0.4743220641750022,
+        0.06434778631237607,
+        0.8432036162395875,
+        0.23267644792024472,
+        2.07395422201002
+      ],
+      "cardiac": [
+        793.581081081081,
+        54.23073134507981,
+        71.76480814220636,
+        0.2777777777777778,
+        792.5,
+        110.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 111,
+      "subject": 6,
+      "label": "Happy",
+      "game": "FLAPPY",
+      "interval": "21:03-21:33",
+      "recording": "data/6/opensignals_00078065E016_2022-02-17_16-54-06.h5",
+      "first_sample": 514864,
+      "last_sample": 526864,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.18542221170409787,
+        0.17378265368406445,
+        0.21847601071678655,
+        0.3554365934373996,
+        0.028903508094590576,
+        0.8762169685113185,
+        0.32233301047640855,
+        2.074229062299366
+      ],
+      "cardiac": [
+        732.0512820512821,
+        31.077153564704258,
+        51.824830828651564,
+        0.05263157894736842,
+        725.0,
+        78.75
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 39,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 114,
+      "subject": 6,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "25:49-26:20",
+      "recording": "data/6/opensignals_00078065E016_2022-02-17_16-54-06.h5",
+      "first_sample": 629464,
+      "last_sample": 641464,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.061232497015014674,
+        0.07770122120066232,
+        0.5256470111789798,
+        0.12155700172906972,
+        0.1881683975804475,
+        0.96568383018214,
+        0.36262616812223747,
+        1.2954477631757695
+      ],
+      "cardiac": [
+        800.4861111111111,
+        46.17513245398282,
+        76.19950188355293,
+        0.22857142857142856,
+        820.0,
+        140.625
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 36,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 116,
+      "subject": 8,
+      "label": "Curious",
+      "game": "CBAAD",
+      "interval": "04:42-05:12",
+      "recording": "data/8/opensignals_00078065E016_2022-02-19_13-41-58.h5",
+      "first_sample": 118370,
+      "last_sample": 130370,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.1402895276885697,
+        0.08565221718643623,
+        0.41497009365057347,
+        0.25621882545956187,
+        0.07032464590448517,
+        0.9342753402133066,
+        0.2891933409799598,
+        1.64251202311758
+      ],
+      "cardiac": [
+        756.7948717948718,
+        124.8235596857884,
+        111.34930328219615,
+        0.5,
+        720.0,
+        92.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 39,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 120,
+      "subject": 8,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "10:18-11:02",
+      "recording": "data/8/opensignals_00078065E016_2022-02-19_13-41-58.h5",
+      "first_sample": 255570,
+      "last_sample": 267570,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.13533113399797453,
+        0.0815964694096904,
+        0.09384901928186787,
+        0.6389884903793951,
+        0.018133642376831283,
+        0.7285296104157367,
+        0.16334296535839363,
+        2.97332708676241
+      ],
+      "cardiac": [
+        642.5,
+        45.291041157064484,
+        47.84860119547526,
+        0.3181818181818182,
+        637.5,
+        52.5
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 45,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 121,
+      "subject": 8,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "11:20-11:50",
+      "recording": "data/8/opensignals_00078065E016_2022-02-19_13-41-58.h5",
+      "first_sample": 277570,
+      "last_sample": 289570,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.10527794804350447,
+        0.046750025791176514,
+        0.06109372546226224,
+        0.7562270122504035,
+        0.01695083181035071,
+        0.6479203691295683,
+        0.13942683465247882,
+        3.3316820205058564
+      ],
+      "cardiac": [
+        691.4024390243902,
+        177.24806063819148,
+        131.47605388017408,
+        0.6,
+        680.0,
+        145.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 41,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 122,
+      "subject": 8,
+      "label": "Happy",
+      "game": "QWOP",
+      "interval": "14:00-14:40",
+      "recording": "data/8/opensignals_00078065E016_2022-02-19_13-41-58.h5",
+      "first_sample": 343570,
+      "last_sample": 355570,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.10910752857325196,
+        0.0574083776270409,
+        0.10434480324632302,
+        0.6700540799821059,
+        0.037336096241904045,
+        0.7105739140495015,
+        0.18213326901058116,
+        2.786428100139045
+      ],
+      "cardiac": [
+        768.1578947368421,
+        291.9861506341733,
+        212.0497489200817,
+        0.40540540540540543,
+        728.75,
+        165.625
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 38,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 131,
+      "subject": 8,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "23:30-24:15",
+      "recording": "data/8/opensignals_00078065E016_2022-02-19_13-41-58.h5",
+      "first_sample": 572570,
+      "last_sample": 584570,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.09963427676569693,
+        0.03218555118965131,
+        0.20791259335886894,
+        0.5876465720968678,
+        0.050484883689436585,
+        0.7673641063226337,
+        0.22114910503134974,
+        2.0661143649111517
+      ],
+      "cardiac": [
+        679.5833333333334,
+        36.798313190396875,
+        63.945281168666675,
+        0.1951219512195122,
+        695.0,
+        96.875
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 42,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 132,
+      "subject": 9,
+      "label": "Bored",
+      "game": "CBAAD",
+      "interval": "05:34-06:06",
+      "recording": "data/9/opensignals_00078065E016_2022-02-20_12-13-43.h5",
+      "first_sample": 139596,
+      "last_sample": 151596,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.2512017104483824,
+        0.039542302906004745,
+        0.044987088494907235,
+        0.6071990164087929,
+        0.015289747305592445,
+        0.7102198493305326,
+        0.27654256214667317,
+        2.596652737602737
+      ],
+      "cardiac": [
+        770.472972972973,
+        148.10551325172048,
+        92.50157250509807,
+        0.3333333333333333,
+        775.0,
+        70.0
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 37,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 136,
+      "subject": 9,
+      "label": "Angry",
+      "game": "WHG",
+      "interval": "11:40-12:10",
+      "recording": "data/9/opensignals_00078065E016_2022-02-20_12-13-43.h5",
+      "first_sample": 285596,
+      "last_sample": 297596,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.16849543593529853,
+        0.04926538770052418,
+        0.07275139842036014,
+        0.6690520622861981,
+        0.018932417216731456,
+        0.7047565324342151,
+        0.14441103361615049,
+        3.4314570861616853
+      ],
+      "cardiac": [
+        755.0657894736842,
+        195.3570016869324,
+        133.19550612562944,
+        0.5675675675675675,
+        757.5,
+        88.125
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 38,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    },
+    {
+      "annotation_id": 147,
+      "subject": 9,
+      "label": "Sad",
+      "game": "VIDEO",
+      "interval": "23:04-23:37",
+      "recording": "data/9/opensignals_00078065E016_2022-02-20_12-13-43.h5",
+      "first_sample": 559796,
+      "last_sample": 571796,
+      "sample_rate": 400.0,
+      "eeg": [
+        0.3120138243941063,
+        0.08589160640428019,
+        0.06546688510883826,
+        0.46960076515714294,
+        0.021499098585984307,
+        0.7672362661377331,
+        0.18311742501217387,
+        3.2247562750485925
+      ],
+      "cardiac": [
+        761.1184210526316,
+        35.04099915272996,
+        46.5197479441892,
+        0.05405405405405406,
+        751.25,
+        51.25
+      ],
+      "quality": {
+        "duration_seconds": 30.0,
+        "rr_count": 38,
+        "valid_rr_fraction": 1.0,
+        "ultrashort_hrv": true
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "annotation_id": 148,
+      "subject": 10,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 149,
+      "subject": 10,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 150,
+      "subject": 10,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 151,
+      "subject": 10,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 152,
+      "subject": 10,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 154,
+      "subject": 10,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 156,
+      "subject": 10,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 157,
+      "subject": 10,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 159,
+      "subject": 10,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 161,
+      "subject": 12,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 162,
+      "subject": 12,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 164,
+      "subject": 12,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 165,
+      "subject": 12,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 166,
+      "subject": 12,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 167,
+      "subject": 12,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 168,
+      "subject": 12,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 169,
+      "subject": 12,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 171,
+      "subject": 12,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 172,
+      "subject": 12,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 173,
+      "subject": 12,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 174,
+      "subject": 12,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 175,
+      "subject": 12,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 176,
+      "subject": 13,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 177,
+      "subject": 13,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 181,
+      "subject": 13,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 182,
+      "subject": 13,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 183,
+      "subject": 13,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 184,
+      "subject": 13,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 185,
+      "subject": 13,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 186,
+      "subject": 13,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 187,
+      "subject": 13,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 188,
+      "subject": 13,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 189,
+      "subject": 13,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 190,
+      "subject": 13,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 191,
+      "subject": 13,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 192,
+      "subject": 14,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 193,
+      "subject": 14,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 194,
+      "subject": 14,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 195,
+      "subject": 14,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 197,
+      "subject": 14,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 198,
+      "subject": 14,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 199,
+      "subject": 14,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 200,
+      "subject": 14,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 202,
+      "subject": 14,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 203,
+      "subject": 14,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 204,
+      "subject": 14,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 208,
+      "subject": 15,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 209,
+      "subject": 15,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 210,
+      "subject": 15,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 211,
+      "subject": 15,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 212,
+      "subject": 15,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 213,
+      "subject": 15,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 214,
+      "subject": 15,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 216,
+      "subject": 16,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 217,
+      "subject": 16,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 218,
+      "subject": 16,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 219,
+      "subject": 16,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 220,
+      "subject": 16,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 221,
+      "subject": 16,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 222,
+      "subject": 16,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 223,
+      "subject": 16,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 224,
+      "subject": 16,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 225,
+      "subject": 16,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 227,
+      "subject": 16,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 228,
+      "subject": 16,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 229,
+      "subject": 16,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 230,
+      "subject": 16,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 231,
+      "subject": 16,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 232,
+      "subject": 16,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 233,
+      "subject": 16,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 234,
+      "subject": 17,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 235,
+      "subject": 17,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 236,
+      "subject": 17,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 237,
+      "subject": 17,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 238,
+      "subject": 17,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 239,
+      "subject": 17,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 240,
+      "subject": 17,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 241,
+      "subject": 17,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 242,
+      "subject": 17,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 244,
+      "subject": 17,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 245,
+      "subject": 17,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 246,
+      "subject": 17,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 247,
+      "subject": 17,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 248,
+      "subject": 17,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 249,
+      "subject": 17,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 250,
+      "subject": 17,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 251,
+      "subject": 17,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 252,
+      "subject": 17,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 254,
+      "subject": 19,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 255,
+      "subject": 19,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 256,
+      "subject": 19,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 257,
+      "subject": 19,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 258,
+      "subject": 19,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 260,
+      "subject": 19,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 261,
+      "subject": 19,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 262,
+      "subject": 19,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 263,
+      "subject": 19,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 264,
+      "subject": 19,
+      "reason": "Annotation outside recording"
+    },
+    {
+      "annotation_id": 0,
+      "subject": 2,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 1,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 2,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 3,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 4,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 5,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 6,
+      "subject": 2,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 7,
+      "subject": 2,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 8,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 9,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 10,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 11,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 12,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 13,
+      "subject": 2,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 14,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 15,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 16,
+      "subject": 2,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 17,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 18,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 19,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 20,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 21,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 22,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 23,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 24,
+      "subject": 2,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 25,
+      "subject": 2,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 26,
+      "subject": 2,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 27,
+      "subject": 2,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 28,
+      "subject": 2,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 265,
+      "subject": 21,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 266,
+      "subject": 21,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 267,
+      "subject": 21,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 268,
+      "subject": 21,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 269,
+      "subject": 21,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 270,
+      "subject": 21,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 271,
+      "subject": 21,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 272,
+      "subject": 21,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 273,
+      "subject": 21,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 274,
+      "subject": 21,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 275,
+      "subject": 21,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 276,
+      "subject": 22,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 278,
+      "subject": 22,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 279,
+      "subject": 22,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 280,
+      "subject": 22,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 281,
+      "subject": 22,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 282,
+      "subject": 22,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 284,
+      "subject": 22,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 285,
+      "subject": 22,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 286,
+      "subject": 22,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 287,
+      "subject": 22,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 288,
+      "subject": 22,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 289,
+      "subject": 22,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 290,
+      "subject": 23,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 291,
+      "subject": 23,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 292,
+      "subject": 23,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 293,
+      "subject": 23,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 294,
+      "subject": 23,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 295,
+      "subject": 23,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 296,
+      "subject": 23,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 297,
+      "subject": 23,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 298,
+      "subject": 23,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 299,
+      "subject": 23,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 300,
+      "subject": 24,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 303,
+      "subject": 24,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 304,
+      "subject": 24,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 305,
+      "subject": 24,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 306,
+      "subject": 24,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 307,
+      "subject": 24,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 308,
+      "subject": 24,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 309,
+      "subject": 24,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 310,
+      "subject": 24,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 311,
+      "subject": 24,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 313,
+      "subject": 25,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 314,
+      "subject": 25,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 315,
+      "subject": 25,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 316,
+      "subject": 25,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 317,
+      "subject": 25,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 318,
+      "subject": 25,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 319,
+      "subject": 25,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 322,
+      "subject": 26,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 327,
+      "subject": 27,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 328,
+      "subject": 27,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 329,
+      "subject": 27,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 330,
+      "subject": 27,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 332,
+      "subject": 27,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 335,
+      "subject": 29,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 336,
+      "subject": 29,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 337,
+      "subject": 29,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 338,
+      "subject": 29,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 340,
+      "subject": 29,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 341,
+      "subject": 29,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 342,
+      "subject": 29,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 343,
+      "subject": 29,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 344,
+      "subject": 29,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 30,
+      "subject": 3,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 31,
+      "subject": 3,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 32,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 33,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 34,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 35,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 36,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 37,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 38,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 39,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 40,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 41,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 42,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 43,
+      "subject": 3,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 44,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 45,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 46,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 47,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 48,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 49,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 50,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 51,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 52,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 53,
+      "subject": 3,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 54,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 55,
+      "subject": 3,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 56,
+      "subject": 3,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 57,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 58,
+      "subject": 3,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 59,
+      "subject": 3,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 347,
+      "subject": 30,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 348,
+      "subject": 30,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 349,
+      "subject": 30,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 350,
+      "subject": 30,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 353,
+      "subject": 30,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 356,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 358,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 359,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 360,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 361,
+      "subject": 31,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 363,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 364,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 365,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 366,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 367,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 368,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 369,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 370,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 371,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 372,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 373,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 374,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 375,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 376,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 377,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 378,
+      "subject": 31,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 379,
+      "subject": 32,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 380,
+      "subject": 32,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 381,
+      "subject": 32,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 382,
+      "subject": 32,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 383,
+      "subject": 32,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 384,
+      "subject": 32,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 385,
+      "subject": 32,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 386,
+      "subject": 32,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 387,
+      "subject": 32,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 388,
+      "subject": 32,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 389,
+      "subject": 32,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 393,
+      "subject": 33,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 394,
+      "subject": 33,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 395,
+      "subject": 33,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 396,
+      "subject": 33,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 397,
+      "subject": 33,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 398,
+      "subject": 33,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 400,
+      "subject": 34,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 401,
+      "subject": 34,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 402,
+      "subject": 34,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 403,
+      "subject": 34,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 404,
+      "subject": 34,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 405,
+      "subject": 34,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 406,
+      "subject": 34,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 407,
+      "subject": 34,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 408,
+      "subject": 34,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 409,
+      "subject": 36,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 411,
+      "subject": 36,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 412,
+      "subject": 36,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 413,
+      "subject": 36,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 414,
+      "subject": 36,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 415,
+      "subject": 36,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 416,
+      "subject": 36,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 417,
+      "subject": 36,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 418,
+      "subject": 36,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 420,
+      "subject": 37,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 421,
+      "subject": 37,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 422,
+      "subject": 37,
+      "reason": "Annotation outside recording"
+    },
+    {
+      "annotation_id": 423,
+      "subject": 37,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 424,
+      "subject": 37,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 425,
+      "subject": 37,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 426,
+      "subject": 37,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 427,
+      "subject": 37,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 428,
+      "subject": 37,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 429,
+      "subject": 37,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 430,
+      "subject": 37,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 431,
+      "subject": 37,
+      "reason": "Annotation outside recording"
+    },
+    {
+      "annotation_id": 432,
+      "subject": 38,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 434,
+      "subject": 38,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 435,
+      "subject": 38,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 436,
+      "subject": 38,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 437,
+      "subject": 38,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 438,
+      "subject": 38,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 439,
+      "subject": 38,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 441,
+      "subject": 38,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 442,
+      "subject": 38,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 443,
+      "subject": 38,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 444,
+      "subject": 38,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 446,
+      "subject": 39,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 447,
+      "subject": 39,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 448,
+      "subject": 39,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 449,
+      "subject": 39,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 450,
+      "subject": 39,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 451,
+      "subject": 39,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 452,
+      "subject": 39,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 60,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 61,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 62,
+      "subject": 4,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 63,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 64,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 65,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 66,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 67,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 68,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 69,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 70,
+      "subject": 4,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 71,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 73,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 76,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 77,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 78,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 79,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 80,
+      "subject": 4,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 81,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 82,
+      "subject": 4,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 83,
+      "subject": 4,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 84,
+      "subject": 4,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 86,
+      "subject": 4,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 454,
+      "subject": 40,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 455,
+      "subject": 40,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 458,
+      "subject": 40,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 461,
+      "subject": 40,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 462,
+      "subject": 40,
+      "reason": "Annotation outside recording"
+    },
+    {
+      "annotation_id": 463,
+      "subject": 41,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 464,
+      "subject": 41,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 465,
+      "subject": 41,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 466,
+      "subject": 41,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 467,
+      "subject": 41,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 468,
+      "subject": 41,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 469,
+      "subject": 41,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 470,
+      "subject": 41,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 471,
+      "subject": 41,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 472,
+      "subject": 41,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 473,
+      "subject": 41,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 474,
+      "subject": 41,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 475,
+      "subject": 41,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 476,
+      "subject": 41,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 477,
+      "subject": 41,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 478,
+      "subject": 41,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 479,
+      "subject": 42,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 480,
+      "subject": 42,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 481,
+      "subject": 42,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 482,
+      "subject": 42,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 483,
+      "subject": 42,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 484,
+      "subject": 42,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 485,
+      "subject": 42,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 486,
+      "subject": 42,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 487,
+      "subject": 42,
+      "reason": "Missing video offset"
+    },
+    {
+      "annotation_id": 488,
+      "subject": 42,
+      "reason": "Missing video offset"
+    },
+    {
+      "annotation_id": 490,
+      "subject": 43,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 492,
+      "subject": 43,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 493,
+      "subject": 43,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 494,
+      "subject": 43,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 495,
+      "subject": 43,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 496,
+      "subject": 43,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 497,
+      "subject": 43,
+      "reason": "Malformed annotation interval"
+    },
+    {
+      "annotation_id": 498,
+      "subject": 44,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 500,
+      "subject": 44,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 501,
+      "subject": 44,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 504,
+      "subject": 44,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 505,
+      "subject": 44,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 506,
+      "subject": 44,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 507,
+      "subject": 44,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 510,
+      "subject": 45,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 511,
+      "subject": 45,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 512,
+      "subject": 45,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 513,
+      "subject": 45,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 514,
+      "subject": 45,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 516,
+      "subject": 45,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 518,
+      "subject": 46,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 519,
+      "subject": 46,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 521,
+      "subject": 46,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 522,
+      "subject": 46,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 523,
+      "subject": 46,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 524,
+      "subject": 46,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 525,
+      "subject": 46,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 526,
+      "subject": 46,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 527,
+      "subject": 46,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 528,
+      "subject": 46,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 529,
+      "subject": 46,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 531,
+      "subject": 47,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 532,
+      "subject": 47,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 533,
+      "subject": 47,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 534,
+      "subject": 47,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 536,
+      "subject": 47,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 537,
+      "subject": 47,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 538,
+      "subject": 47,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 540,
+      "subject": 47,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 541,
+      "subject": 47,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 542,
+      "subject": 47,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 544,
+      "subject": 48,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 545,
+      "subject": 48,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 546,
+      "subject": 48,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 547,
+      "subject": 48,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 548,
+      "subject": 48,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 549,
+      "subject": 48,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 550,
+      "subject": 48,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 551,
+      "subject": 48,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 88,
+      "subject": 5,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 89,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 90,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 92,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 93,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 94,
+      "subject": 5,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 96,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 97,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 98,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 99,
+      "subject": 5,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 100,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 101,
+      "subject": 5,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 87,
+      "subject": 5,
+      "reason": "Annotation outside recording"
+    },
+    {
+      "annotation_id": 88,
+      "subject": 5,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 89,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 90,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 91,
+      "subject": 5,
+      "reason": "Annotation outside recording"
+    },
+    {
+      "annotation_id": 92,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 93,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 94,
+      "subject": 5,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 95,
+      "subject": 5,
+      "reason": "Annotation outside recording"
+    },
+    {
+      "annotation_id": 96,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 97,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 98,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 99,
+      "subject": 5,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 100,
+      "subject": 5,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 101,
+      "subject": 5,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 103,
+      "subject": 6,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 104,
+      "subject": 6,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 106,
+      "subject": 6,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 107,
+      "subject": 6,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 109,
+      "subject": 6,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 110,
+      "subject": 6,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 112,
+      "subject": 6,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 113,
+      "subject": 6,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 115,
+      "subject": 6,
+      "reason": "Annotation outside recording"
+    },
+    {
+      "annotation_id": 117,
+      "subject": 8,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 118,
+      "subject": 8,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 119,
+      "subject": 8,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 123,
+      "subject": 8,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 124,
+      "subject": 8,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 125,
+      "subject": 8,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 126,
+      "subject": 8,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 127,
+      "subject": 8,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 128,
+      "subject": 8,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 129,
+      "subject": 8,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 130,
+      "subject": 8,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 133,
+      "subject": 9,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 134,
+      "subject": 9,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 135,
+      "subject": 9,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 137,
+      "subject": 9,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 138,
+      "subject": 9,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 139,
+      "subject": 9,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 140,
+      "subject": 9,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 141,
+      "subject": 9,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 142,
+      "subject": 9,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 143,
+      "subject": 9,
+      "reason": "Annotation shorter than 15 seconds"
+    },
+    {
+      "annotation_id": 144,
+      "subject": 9,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 145,
+      "subject": 9,
+      "reason": "Annotation shorter than fixed window"
+    },
+    {
+      "annotation_id": 146,
+      "subject": 9,
+      "reason": "Annotation shorter than fixed window"
+    }
+  ],
+  "recording_audit": [
+    {
+      "subject": 1,
+      "file": "data/1/opensignals_00078065E016_2022-01-21_14-15-08.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 2098.8,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 276.234
+    },
+    {
+      "subject": 10,
+      "file": "data/10/opensignals_00078065E016_2022-02-20_13-37-39.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1436.85,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": -19.269
+    },
+    {
+      "subject": 11,
+      "file": "data/11/opensignals_00078065E016_2022-02-20_19-38-10.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 19.05,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 11,
+      "file": "data/11/opensignals_00078065E016_2022-02-20_19-47-15.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 114.15,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 11,
+      "file": "data/11/opensignals_00078065E016_2022-02-20_19-54-24.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 73.8,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 11,
+      "file": "data/11/opensignals_00078065E016_2022-02-20_20-04-40.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 179.1,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 11,
+      "file": "data/11/opensignals_00078065E016_2022-02-20_20-10-11.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 39.0,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 11,
+      "file": "data/11/opensignals_00078065E016_2022-02-20_20-11-37.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 122.85,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 11,
+      "file": "data/11/opensignals_00078065E016_2022-02-20_20-14-02.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 8.1,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 11,
+      "file": "data/11/opensignals_00078065E016_2022-02-20_20-16-08.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 414.0,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 12,
+      "file": "data/12/opensignals_00078065E016_2022-02-21_20-35-20.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1356.0,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 17.696
+    },
+    {
+      "subject": 13,
+      "file": "data/13/opensignals_00078065E016_2022-02-22_16-34-37.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1479.9,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 14.09
+    },
+    {
+      "subject": 14,
+      "file": "data/14/opensignals_00078065E016_2022-02-22_20-57-46.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1443.75,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 12.901
+    },
+    {
+      "subject": 15,
+      "file": "data/15/opensignals_00078065E016_2022-02-22_22-00-12.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1360.05,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 14.028
+    },
+    {
+      "subject": 16,
+      "file": "data/16/opensignals_00078065E016_2022-02-23_12-49-06.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1544.25,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 15.199
+    },
+    {
+      "subject": 17,
+      "file": "data/17/opensignals_00078065E016_2022-03-08_13-07-12.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1430.25,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 17.343
+    },
+    {
+      "subject": 18,
+      "file": "data/18/opensignals_00078065E016_2022-03-13_20-10-17.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 41.1,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 18,
+      "file": "data/18/opensignals_00078065E016_2022-03-13_20-11-53.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1012.95,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 18,
+      "file": "data/18/opensignals_00078065E016_2022-03-13_20-29-10.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 359.1,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 19,
+      "file": "data/19/opensignals_00078065E016_2022-03-16_10-02-54.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1180.05,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 73.183
+    },
+    {
+      "subject": 2,
+      "file": "data/2/opensignals_00078065E016_2022-01-28_17-36-48.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 2611.05,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 19.468
+    },
+    {
+      "subject": 20,
+      "file": "data/20/opensignals_00078065E016_2022-03-16_10-34-22.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 917.1,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 21,
+      "file": "data/21/opensignals_00078065E016_2022-03-16_11-03-21.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 936.6,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 20.127
+    },
+    {
+      "subject": 22,
+      "file": "data/22/opensignals_00078065E016_2022-03-16_11-33-34.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 988.35,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 17.267
+    },
+    {
+      "subject": 23,
+      "file": "data/23/opensignals_00078065E016_2022-03-16_14-14-24.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1115.4,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 14.665
+    },
+    {
+      "subject": 24,
+      "file": "data/24/opensignals_00078065E016_2022-03-16_14-41-36.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 951.15,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 15.924
+    },
+    {
+      "subject": 25,
+      "file": "data/25/opensignals_00078065E016_2022-03-22_13-35-57.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1176.75,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 27.487
+    },
+    {
+      "subject": 26,
+      "file": "data/26/opensignals_00078065E016_2022-03-22_19-01-02.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1108.65,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 14.431
+    },
+    {
+      "subject": 27,
+      "file": "data/27/opensignals_00078065E016_2022-03-22_19-27-27.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1221.0,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 13.812
+    },
+    {
+      "subject": 28,
+      "file": "data/28/opensignals_00078065E016_2022-03-22_20-35-05.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 946.5,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 29,
+      "file": "data/29/opensignals_00078065E016_2022-03-22_23-07-24.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1093.2,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 12.334
+    },
+    {
+      "subject": 3,
+      "file": "data/3/opensignals_00078065E016_2022-01-28_18-39-47.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1721.1,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 20.857
+    },
+    {
+      "subject": 30,
+      "file": "data/30/opensignals_00078065E016_2022-03-23_09-24-37.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1040.4,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 13.855
+    },
+    {
+      "subject": 31,
+      "file": "data/31/opensignals_00078065E016_2022-03-23_09-48-30.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1115.55,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 17.823
+    },
+    {
+      "subject": 32,
+      "file": "data/32/opensignals_00078065E016_2022-03-23_10-22-41.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1060.65,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 16.521
+    },
+    {
+      "subject": 33,
+      "file": "data/33/opensignals_00078065E016_2022-03-23_10-47-50.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 963.0,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 12.02
+    },
+    {
+      "subject": 34,
+      "file": "data/34/opensignals_00078065E016_2022-03-23_11-18-01.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1023.6,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 27.966
+    },
+    {
+      "subject": 35,
+      "file": "data/35/opensignals_00078065E016_2022-03-23_11-43-54.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 821.55,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 36,
+      "file": "data/36/opensignals_00078065E016_2022-03-23_12-07-24.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 933.15,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 10.356
+    },
+    {
+      "subject": 37,
+      "file": "data/37/opensignals_00078065E016_2022-03-23_12-38-45.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1034.55,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 17.9
+    },
+    {
+      "subject": 38,
+      "file": "data/38/opensignals_00078065E016_2022-03-23_13-08-35.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 967.05,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 13.567
+    },
+    {
+      "subject": 39,
+      "file": "data/39/opensignals_00078065E016_2022-03-23_13-37-24.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 972.0,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 25.056
+    },
+    {
+      "subject": 4,
+      "file": "data/4/opensignals_00078065E016_2022-01-30_19-34-01.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1788.75,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 19.253
+    },
+    {
+      "subject": 40,
+      "file": "data/40/opensignals_00078065E016_2022-03-23_14-02-28.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 888.75,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 33.184
+    },
+    {
+      "subject": 41,
+      "file": "data/41/opensignals_00078065E016_2022-03-23_14-25-54.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1126.95,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 26.566
+    },
+    {
+      "subject": 42,
+      "file": "data/42/opensignals_00078065E016_2022-03-23_14-50-11.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 847.65,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 43,
+      "file": "data/43/opensignals_00078065E016_2022-03-27_21-00-21.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1164.9,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 13.45
+    },
+    {
+      "subject": 44,
+      "file": "data/44/opensignals_00078065E016_2022-03-28_19-53-28.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1349.85,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 11.68
+    },
+    {
+      "subject": 45,
+      "file": "data/45/opensignals_00078065E016_2022-03-29_18-26-32.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1619.85,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 11.423
+    },
+    {
+      "subject": 46,
+      "file": "data/46/opensignals_00078065E016_2022-03-29_19-02-09.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 981.9,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 12.789
+    },
+    {
+      "subject": 47,
+      "file": "data/47/opensignals_00078065E016_2022-03-29_19-35-22.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1398.9,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 13.151
+    },
+    {
+      "subject": 48,
+      "file": "data/48/opensignals_00078065E016_2022-03-29_20-09-35.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 892.35,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 11.125
+    },
+    {
+      "subject": 5,
+      "file": "data/5/opensignals_00078065E016_2022-01-31_19-17-24.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1415.1,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 13.262
+    },
+    {
+      "subject": 5,
+      "file": "data/5/opensignals_00078065E016_2022-01-31_19-50-33.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 61.95,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 13.262
+    },
+    {
+      "subject": 6,
+      "file": "data/6/opensignals_00078065E016_2022-02-17_16-54-06.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1648.8,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 24.16
+    },
+    {
+      "subject": 7,
+      "file": "data/7/opensignals_00078065E016_2022-01-28_17-36-48.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 2611.05,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": null
+    },
+    {
+      "subject": 8,
+      "file": "data/8/opensignals_00078065E016_2022-02-19_13-41-58.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1481.25,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 13.924
+    },
+    {
+      "subject": 9,
+      "file": "data/9/opensignals_00078065E016_2022-02-20_12-13-43.h5",
+      "sample_rate": 400.0,
+      "duration_seconds": 1437.75,
+      "sensors": {
+        "EEG": "channel_1",
+        "ECG": "channel_2",
+        "EOG": "channel_3",
+        "EDA": "channel_4",
+        "RESPIRATION": "channel_5",
+        "CUSTOM/0.5/1.0/V": "channel_8",
+        "": "nSeq"
+      },
+      "video_offset": 13.991
+    }
+  ]
+}

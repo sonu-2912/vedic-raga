@@ -1,0 +1,25 @@
+{
+  "accuracy": 0.5258344764517604,
+  "macro_precision": 0.47575053229088776,
+  "macro_recall": 0.4637444198088338,
+  "macro_f1": 0.4657820909088007,
+  "disgust": {
+    "precision": 0.29508196721311475,
+    "recall": 0.22784810126582278,
+    "f1-score": 0.2571428571428571,
+    "support": 79.0
+  },
+  "test_n": 6561,
+  "checkpoint_sha256": "0906fe709300259b5e6c342eee79e9d6fab703e3dc3fa4a746b6422473aaf5df",
+  "parameters": 322080,
+  "architecture": {
+    "attention": true,
+    "dilated": true,
+    "version": 3
+  },
+  "selected_epoch": 78,
+  "train_count": 23503,
+  "val_count": 3970,
+  "selected_lineage_full_epochs": 19,
+  "selected_lineage_head_epochs": 69
+}

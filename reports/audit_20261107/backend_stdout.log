@@ -1,0 +1,5 @@
+INFO:     127.0.0.1:61537 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61538 - "GET /api/research/results HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61539 - "GET /api/research/physiology-controlled HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61540 - "POST /api/emotion/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61541 - "POST /api/recommendations HTTP/1.1" 200 OK

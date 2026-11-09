@@ -1,0 +1,31 @@
+{
+  "stage": "complete",
+  "updated": "2026-11-03T22:10:09.539792+05:30",
+  "accuracy": 0.5255296448712087,
+  "macro_precision": 0.4718198623111246,
+  "macro_recall": 0.4485359808038777,
+  "macro_f1": 0.44916607283447024,
+  "test_n": 6561,
+  "disgust_recall": 0.12658227848101267,
+  "checkpoint_sha256": "dbc4a9f9293fb4e1b28ae249958964cfe12e1b3b17a18f7e75bea77925b7a4ba",
+  "selected_epoch_index": 39,
+  "epoch_note": "Index mixes full-network and classifier-only history. Three extra full-network epochs and 34/30 head-only epochs completed across separate experiments; partial epoch 21 discarded.",
+  "tests_passed": 37,
+  "tests_total": 37,
+  "frontend_build": "passed with native config loader",
+  "live_api_checks": "health, matching model evidence, real physiology aggregate evidence and real model image inference passed",
+  "physiology": "Actual official GamER recordings; LOSO ablations, both offset signs, game-only confound control; no validated clinical/facial-fusion/raga outcome claim",
+  "powerpoint_slides": 13,
+  "powerpoint_path": "output\\RagaMoodSync_Research_Real_Data_Final.pptx",
+  "powerpoint_sha256": "1c04b9eea0bb51763e44ece04d55be431f33222de6f6f57e699bae1a8791aa7d",
+  "visual_review": "All 13 rendered slides inspected individually; actual browser tables/screenshots verified. Native PowerPoint execution not claimed.",
+  "pending_research": [
+    "Reliable seven-class webcam recognition",
+    "Strong disgust classification",
+    "Independent facial evaluation",
+    "Confirmed physiological annotation alignment and conventional-duration HRV validation",
+    "Facial-plus-physiological fusion on aligned recordings",
+    "Real raga/physiology/weather outcome evaluation",
+    "Interaction-trained FDCF quality metrics"
+  ]
+}

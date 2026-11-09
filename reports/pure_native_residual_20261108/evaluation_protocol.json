@@ -1,0 +1,9 @@
+{
+  "single_view_only": true,
+  "temperature_fit": "Validation only, does not change class argmax",
+  "require_disgust_recall_gain": true,
+  "gate": "Positive test accuracy, macroF1, disgust recall AND disgustF1 versus earlier PUREFus baseline; all7metrics reported. Formerhybrid is a separate comparison, not a teacher or pure score.",
+  "candidates": "At mostonevalidation-qualified frozen pure checkpoint after entiredeclaredruncompletes; no alternate test search.",
+  "timing": "Strict recall-gain gate specified during training before anynewtestaccess, stronger than trainingprotocol minimum non-regression.",
+  "test": "Full6561historically inspectedrecords, not fresh/identity-disjoint confirmation"
+}

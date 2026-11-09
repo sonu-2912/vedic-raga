@@ -1,0 +1,141 @@
+{"validation_faces": 1024, "total": 3970}
+{"validation_faces": 2048, "total": 3970}
+{"validation_faces": 3072, "total": 3970}
+{"validation_faces": 3970, "total": 3970}
+{
+  "n": 3970,
+  "accuracy": 0.5806045340050378,
+  "balanced_accuracy": 0.5226042396975157,
+  "classification_report": {
+    "angry": {
+      "precision": 0.5165289256198347,
+      "recall": 0.44563279857397503,
+      "f1-score": 0.4784688995215311,
+      "support": 561.0
+    },
+    "disgust": {
+      "precision": 0.358974358974359,
+      "recall": 0.28,
+      "f1-score": 0.3146067415730337,
+      "support": 50.0
+    },
+    "fear": {
+      "precision": 0.4891304347826087,
+      "recall": 0.4032258064516129,
+      "f1-score": 0.44204322200392926,
+      "support": 558.0
+    },
+    "happy": {
+      "precision": 0.7560763888888888,
+      "recall": 0.8326959847036329,
+      "f1-score": 0.7925386715195633,
+      "support": 1046.0
+    },
+    "sad": {
+      "precision": 0.4752,
+      "recall": 0.4316860465116279,
+      "f1-score": 0.4523990860624524,
+      "support": 688.0
+    },
+    "surprise": {
+      "precision": 0.5880952380952381,
+      "recall": 0.7057142857142857,
+      "f1-score": 0.6415584415584416,
+      "support": 350.0
+    },
+    "neutral": {
+      "precision": 0.5075949367088608,
+      "recall": 0.5592747559274756,
+      "f1-score": 0.5321831453218314,
+      "support": 717.0
+    },
+    "accuracy": 0.5806045340050378,
+    "macro avg": {
+      "precision": 0.5273714690099701,
+      "recall": 0.5226042396975157,
+      "f1-score": 0.5219711725086832,
+      "support": 3970.0
+    },
+    "weighted avg": {
+      "precision": 0.5713422250784647,
+      "recall": 0.5806045340050378,
+      "f1-score": 0.5735965488539198,
+      "support": 3970.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      250,
+      9,
+      62,
+      56,
+      83,
+      19,
+      82
+    ],
+    [
+      15,
+      14,
+      5,
+      3,
+      11,
+      1,
+      1
+    ],
+    [
+      61,
+      2,
+      225,
+      33,
+      99,
+      76,
+      62
+    ],
+    [
+      25,
+      1,
+      30,
+      871,
+      34,
+      31,
+      54
+    ],
+    [
+      69,
+      9,
+      66,
+      69,
+      297,
+      10,
+      168
+    ],
+    [
+      10,
+      1,
+      25,
+      35,
+      10,
+      247,
+      22
+    ],
+    [
+      54,
+      3,
+      47,
+      85,
+      91,
+      36,
+      401
+    ]
+  ],
+  "negative_log_likelihood": 1.1494196653366089,
+  "source_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "split": "val",
+  "recipe": {
+    "translation_tta_pixels": 2,
+    "temperature": 1.0
+  },
+  "test_images_opened": false,
+  "seconds": 105.25636040000245,
+  "qualified": false
+}

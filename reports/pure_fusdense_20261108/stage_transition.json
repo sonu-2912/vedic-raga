@@ -1,0 +1,21 @@
+{
+  "actual_completed_full_epochs": 5,
+  "original_maximum_epochs": 12,
+  "stop_reason": "Own110-minute wall budget reached at completed-epoch boundary, before patience minimum. Walltime includes execution pause; no partial epoch counted.",
+  "completed_epoch_wall_seconds": [
+    447.23242670000764,
+    437.3025817000016,
+    451.95069930001046,
+    416.3226685000118,
+    5019.121768199984
+  ],
+  "completed_epoch_cpu_seconds": [
+    1065.078125,
+    1070.4375,
+    1068.640625,
+    1036.640625,
+    1112.953125
+  ],
+  "next_stage": "Native purev8residualdense feature refinement, bounded45minutes",
+  "test_accessed": false
+}

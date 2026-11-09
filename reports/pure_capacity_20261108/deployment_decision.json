@@ -1,0 +1,6 @@
+{
+  "eligible": false,
+  "test_evaluated": false,
+  "installed": false,
+  "reason": "No compact pure FusDenseNet validation checkpoint recovered all requested classes while retaining disgust and aggregate metrics. App/PPT unchanged."
+}

@@ -1,0 +1,13 @@
+{
+  "source": "Official Torchvision DenseNet121 IMAGENET1K_V1",
+  "url": "https://download.pytorch.org/models/densenet121-a639ec97.pth",
+  "sha256": "a639ec97d7c33b07ae66f0b5fb7d0192f95a3b11b7576c66c0126c2a727c4395",
+  "bytes": 32342954,
+  "torchvision": "0.20.1+cpu",
+  "training_corpus": "ImageNet1K; no FER expression supervision in this source",
+  "code_licence": "Torchvision BSD3Clause, preserved locally. ImageNet access/data rights are distinct; no ImageNet images downloaded or redistributed.",
+  "native_reported_accuracy": "74.434% is ImageNet1K top1, NOT FER or project accuracy",
+  "preprocessing": "Official weights.transforms(), grayscale replicatedRGB",
+  "frozen": true,
+  "test_images_used": false
+}

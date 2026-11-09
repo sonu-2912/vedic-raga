@@ -1,0 +1,46 @@
+{
+  "tests": 37,
+  "passed": 37,
+  "failures": 0,
+  "errors": 0,
+  "test_seconds": 188.035,
+  "original_repository_files": 55,
+  "original_repository_unchanged": true,
+  "reference_pdf_identical": true,
+  "python": "3.11.18",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "synthetic_emotion": {
+    "accuracy": 0.14285714285714285,
+    "macro_precision": 0.02040816326530612,
+    "macro_recall": 0.14285714285714285,
+    "macro_f1": 0.03571428571428571,
+    "parameters": 163744,
+    "seconds": 12.370635200000834
+  },
+  "real_fer2013_metrics": {
+    "n": 6561,
+    "accuracy": 0.5255296448712087,
+    "macro_precision": 0.4718198623111246,
+    "macro_recall": 0.4485359808038777,
+    "macro_f1": 0.44916607283447024,
+    "pilot": false,
+    "parameters": 223776
+  },
+  "clinical_results": null,
+  "training": {
+    "epochs_completed": 49,
+    "selected_epoch": 39,
+    "train_count": 23503,
+    "val_count": 3970,
+    "seconds": 42548.62335009989,
+    "timing_note": "Epoch 5 includes an overnight interruption; summed wall time is not active CPU training duration. Continuation records aggregate process CPU seconds separately.",
+    "resume_provenance": {
+      "checkpoint_sha256": "0807e82e39b34893294c0cad1188c9d5c0d42161a303538ab11a731d7d2ab6ef",
+      "source_epoch": 5,
+      "history_offset": 5,
+      "optimizer": "AdamW restarted, not exact optimizer-state continuation"
+    }
+  },
+  "updated": "2026-11-03T22:10:08.706316",
+  "context_evaluation": "Real GamER participant-held-out EEG/cardiac fusion benchmark, plus offset sensitivity and game-context control; no facial-fusion/raga/weather efficacy result"
+}

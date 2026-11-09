@@ -1,0 +1,6 @@
+{
+  "eligible": false,
+  "test_evaluated": false,
+  "installed": false,
+  "reason": "No moderate fine-spatial native classifier checkpoint recovered all requested classes while retaining disgust and aggregate metrics. App/PPT unchanged."
+}

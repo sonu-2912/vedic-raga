@@ -1,0 +1,138 @@
+{
+  "created": "2017-04-13T17:07:13.299967+00:00",
+  "modified": "2024-08-03T11:48:20.196964+00:00",
+  "id": 546113,
+  "conceptrecid": "796158",
+  "doi": "10.1109/JBHI.2017.2688239",
+  "doi_url": "https://doi.org/10.1109/JBHI.2017.2688239",
+  "metadata": {
+    "title": "DREAMER: A Database for Emotion Recognition through EEG and ECG Signals from Wireless Low-cost Off-the-Shelf Devices",
+    "doi": "10.1109/JBHI.2017.2688239",
+    "publication_date": "2017-04-13",
+    "description": "<p>We present DREAMER, a multi-modal database consisting of electroencephalogram (EEG) and electrocardiogram (ECG) signals recorded during affect elicitation by means of audio-visual stimuli. Signals from 23 participants were recorded along with the participants' self-assessment of their affective state after each stimuli, in terms of valence, arousal, and dominance. All the signals were captured using portable, wearable, wireless, low-cost and off-the-shelf equipment that has the potential to allow the use of affective computing methods in everyday applications. The Emotiv EPOC wireless EEG headset was used for EEG and the Shimmer2 ECG sensor for ECG.</p><p>Classification results for valence, arousal and dominance of the proposed database are comparable to the ones achieved for other databases that use non-portable, expensive, medical grade devices.</p><p>The proposed database is made publicly available in order to allow researchers to achieve a more thorough evaluation of the suitability of these capturing devices for affect recognition applications.</p><p>&nbsp;</p><p>Please cite as:</p><p>S. Katsigiannis, N. Ramzan, \"DREAMER: A Database for Emotion Recognition Through EEG and ECG Signals from Wireless Low-cost Off-the-Shelf Devices,\" IEEE Journal of Biomedical and Health Informatics, vol. 22, no. 1, pp. 98-107, Jan. 2018. doi: 10.1109/JBHI.2017.2688239</p>",
+    "access_right": "restricted",
+    "creators": [
+      {
+        "name": "Katsigiannis, Stamos",
+        "affiliation": "University of the West of Scotland"
+      },
+      {
+        "name": "Ramzan, Naeem",
+        "affiliation": "University of the West of Scotland"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Katsigiannis, Stamos",
+        "affiliation": "University of the West of Scotland",
+        "type": "Researcher"
+      },
+      {
+        "name": "Ramzan, Naeem",
+        "affiliation": "University of the West of Scotland",
+        "type": "Researcher"
+      },
+      {
+        "name": "Cuntz, Thomas",
+        "affiliation": "University of the West of Scotland",
+        "type": "DataCollector"
+      },
+      {
+        "name": "Palke, Sebastian",
+        "affiliation": "University of the West of Scotland",
+        "type": "DataCollector"
+      }
+    ],
+    "keywords": [
+      "Affect, Emotion, EEG, ECG, physiological signals, wireless devices, affect recognition"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.1109/JBHI.2017.2688239",
+        "relation": "isSupplementTo",
+        "scheme": "doi"
+      }
+    ],
+    "references": [
+      "S. Katsigiannis, N. Ramzan, \"DREAMER: A Database for Emotion Recognition Through EEG and ECG Signals from Wireless Low-cost Off-the-Shelf Devices,\" IEEE Journal of Biomedical and Health Informatics, vol. 22, no. 1, pp. 98-107, Jan. 2018. doi: 10.1109/JBHI.2017.2688239"
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "796158"
+          }
+        }
+      ]
+    }
+  },
+  "title": "DREAMER: A Database for Emotion Recognition through EEG and ECG Signals from Wireless Low-cost Off-the-Shelf Devices",
+  "links": {
+    "self": "https://zenodo.org/api/records/546113",
+    "self_html": "https://zenodo.org/records/546113",
+    "preview_html": "https://zenodo.org/records/546113?preview=1",
+    "doi": "https://doi.org/10.1109/JBHI.2017.2688239",
+    "self_doi": "https://doi.org/10.1109/JBHI.2017.2688239",
+    "self_doi_html": "https://zenodo.org/doi/10.1109/JBHI.2017.2688239",
+    "reserve_doi": "https://zenodo.org/api/records/546113/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/796158",
+    "parent_html": "https://zenodo.org/records/796158",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:546113/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:546113/sequence/default",
+    "files": "https://zenodo.org/api/records/546113/files",
+    "media_files": "https://zenodo.org/api/records/546113/media-files",
+    "thumbnails": {
+      "10": "https://zenodo.org/api/iiif/record:546113:DREAMER.pdf/full/%5E10,/0/default.jpg",
+      "50": "https://zenodo.org/api/iiif/record:546113:DREAMER.pdf/full/%5E50,/0/default.jpg",
+      "100": "https://zenodo.org/api/iiif/record:546113:DREAMER.pdf/full/%5E100,/0/default.jpg",
+      "250": "https://zenodo.org/api/iiif/record:546113:DREAMER.pdf/full/%5E250,/0/default.jpg",
+      "750": "https://zenodo.org/api/iiif/record:546113:DREAMER.pdf/full/%5E750,/0/default.jpg",
+      "1200": "https://zenodo.org/api/iiif/record:546113:DREAMER.pdf/full/%5E1200,/0/default.jpg"
+    },
+    "latest": "https://zenodo.org/api/records/546113/versions/latest",
+    "latest_html": "https://zenodo.org/records/546113/latest",
+    "versions": "https://zenodo.org/api/records/546113/versions",
+    "draft": "https://zenodo.org/api/records/546113/draft",
+    "access_links": "https://zenodo.org/api/records/546113/access/links",
+    "access_grants": "https://zenodo.org/api/records/546113/access/grants",
+    "access_users": "https://zenodo.org/api/records/546113/access/users",
+    "access_request": "https://zenodo.org/api/records/546113/access/request",
+    "access": "https://zenodo.org/api/records/546113/access",
+    "communities": "https://zenodo.org/api/records/546113/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/546113/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/546113/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/546113/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/546113/quota-increase",
+    "requests": "https://zenodo.org/api/records/546113/requests"
+  },
+  "updated": "2024-08-03T11:48:20.196964+00:00",
+  "recid": "546113",
+  "revision": 15,
+  "files": [],
+  "swh": {},
+  "owners": [
+    {
+      "id": "28348"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 20912,
+    "unique_downloads": 11181,
+    "views": 76906,
+    "unique_views": 61156,
+    "version_downloads": 20802,
+    "version_unique_downloads": 11116,
+    "version_unique_views": 60845,
+    "version_views": 76482
+  },
+  "state": "done",
+  "submitted": true
+}

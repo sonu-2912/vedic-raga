@@ -1,0 +1,10 @@
+{
+  "url": "https://s3.amazonaws.com/openneuro.org/ds003751/sub-mit007/eeg/sub-mit007_task-Emotion_eeg.fdt",
+  "bytes_read": 64,
+  "magic_hex": "26224ec688fa57c6365c01c5680947c6",
+  "gzip": false,
+  "hdf5": false,
+  "matlab": false,
+  "zip": false,
+  "meaning": "File format diagnostic only, no signal-layout inference or performance claim."
+}

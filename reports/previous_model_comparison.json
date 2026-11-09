@@ -1,0 +1,16 @@
+{
+  "protocol": "Same complete retained test images, excluded against full revised training/validation pixel hashes. Checkpoints differ in data budget, architecture and training recipe; not a controlled architecture ablation.",
+  "n": 6561,
+  "baseline": {
+    "accuracy": 0.2652034750800183,
+    "macro_f1": 0.10478527891409024,
+    "checkpoint_sha256": "2295f39d4de8a901457d986aa23d6aa06faf1c416c87ebd138a236ee6618bb86"
+  },
+  "revised": {
+    "accuracy": 0.501295534217345,
+    "macro_f1": 0.39598172626072886,
+    "checkpoint_sha256": "04e2a0e288b071a576422ba5adbf02d8fad604e4f22747064eab6aa7f7e7f53e"
+  },
+  "accuracy_gain_percentage_points": 23.609205913732666,
+  "macro_f1_gain": 0.29119644734663863
+}

@@ -1,0 +1,44 @@
+{
+  "architecture": {
+    "attention": true,
+    "dilated": true,
+    "version": 8,
+    "head_width": 512
+  },
+  "inference_parameters": 1946256,
+  "train_only_projection_parameters": 93080,
+  "counts": [
+    3279,
+    330,
+    3336,
+    6039,
+    4038,
+    2327,
+    4154
+  ],
+  "sampling_prior": [
+    0.14024539291858673,
+    0.04221934452652931,
+    0.14214009046554565,
+    0.23198899626731873,
+    0.16547489166259766,
+    0.10860049724578857,
+    0.16933077573776245
+  ],
+  "CE_importance": [
+    1.0016788244247437,
+    0.5791662931442261,
+    1.0035910606384277,
+    1.0569413900375366,
+    1.0233381986618042,
+    0.9589243531227112,
+    1.0260472297668457
+  ],
+  "source_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "initial_max_logit_difference": 0.0,
+  "native_refinement_parameters": 117360,
+  "external_encoder": false,
+  "teacher": false,
+  "logit_offsets_at_inference": false,
+  "test_opened": false
+}

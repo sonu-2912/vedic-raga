@@ -1,0 +1,17 @@
+{
+  "seed": 81121,
+  "resamples": 4000,
+  "accuracy_difference": 0.009297363206828228,
+  "accuracy_paired_image_bootstrap_95pct": [
+    0.0009144947416552355,
+    0.01783264746227709
+  ],
+  "disgust_recall_difference": 0.10126582278481013,
+  "disgust_paired_image_bootstrap_95pct": [
+    0.02531645569620253,
+    0.17721518987341772
+  ],
+  "accuracy_net_additional_correct": 61,
+  "disgust_net_additional_correct": 8,
+  "scope": "Descriptive paired image bootstrap on the already inspected benchmark; not identity-aware or confirmatory, not used for training/selection/deployment gating."
+}

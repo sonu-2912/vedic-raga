@@ -1,0 +1,651 @@
+{
+  "kind": "Actual software execution with manual weather and SYNTHETIC EEG/HRV/reference; no participant or sensor evidence",
+  "scenarios": {
+    "confirmed_mood_only": {
+      "effective_goal": "balance",
+      "target_bhava": "bhaya",
+      "ragas": [
+        {
+          "name": "Jait",
+          "score": 0.71125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Jaitashree",
+          "score": 0.71125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Malshree",
+          "score": 0.71125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Bilaskhani Todi",
+          "score": 0.54225,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Jog",
+          "score": 0.54225,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Malkauns",
+          "score": 0.54225,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        }
+      ],
+      "context": {
+        "emotion_source": "manual",
+        "requested_goal": "balance",
+        "effective_goal": "balance",
+        "weather": {
+          "available": false,
+          "season_tags": [],
+          "source": null
+        },
+        "physiology": null,
+        "priority": "Confirmed mood and explicit listening goal first; body reference policy and weather add experimental context. No emotion is inferred from weather or physiological features.",
+        "fusion_validation": "Rule-based engineering integration; no measured multimodal recognition or mood-improvement benefit."
+      }
+    },
+    "weather_only": {
+      "effective_goal": "balance",
+      "target_bhava": "bhaya",
+      "ragas": [
+        {
+          "name": "Malshree",
+          "score": 0.74125,
+          "weather_adjustment": 0.03,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Jait",
+          "score": 0.71125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Jaitashree",
+          "score": 0.71125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Jog",
+          "score": 0.57225,
+          "weather_adjustment": 0.03,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Miyan Ki Malhar",
+          "score": 0.57225,
+          "weather_adjustment": 0.03,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Bilaskhani Todi",
+          "score": 0.54225,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        }
+      ],
+      "context": {
+        "emotion_source": "manual",
+        "requested_goal": "balance",
+        "effective_goal": "balance",
+        "weather": {
+          "available": true,
+          "weather": {
+            "condition": "rain",
+            "temperature_c": null,
+            "humidity_percent": null,
+            "precipitation_mm": null,
+            "city": "",
+            "observed_at": "",
+            "source": "manual"
+          },
+          "source": "manual",
+          "season_tags": [
+            "varsha"
+          ],
+          "policy": "Weather-inspired preference for matching source Ritu annotations, capped at 0.03. Weather is not geographical season or a mood measurement.",
+          "validated": false
+        },
+        "physiology": null,
+        "priority": "Confirmed mood and explicit listening goal first; body reference policy and weather add experimental context. No emotion is inferred from weather or physiological features.",
+        "fusion_validation": "Rule-based engineering integration; no measured multimodal recognition or mood-improvement benefit."
+      }
+    },
+    "body_without_reference": {
+      "effective_goal": "balance",
+      "target_bhava": "bhaya",
+      "ragas": [
+        {
+          "name": "Jait",
+          "score": 0.71125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Jaitashree",
+          "score": 0.71125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Malshree",
+          "score": 0.71125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Bilaskhani Todi",
+          "score": 0.54225,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Jog",
+          "score": 0.54225,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Malkauns",
+          "score": 0.54225,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        }
+      ],
+      "context": {
+        "emotion_source": "manual",
+        "requested_goal": "balance",
+        "effective_goal": "balance",
+        "weather": {
+          "available": false,
+          "season_tags": [],
+          "source": null
+        },
+        "physiology": {
+          "available": true,
+          "features": {
+            "eeg": {
+              "source": "synthetic sample",
+              "sample_data": true,
+              "sample_rate": 128.0,
+              "channels": 1,
+              "duration_seconds": 16.0,
+              "bands": {
+                "theta": {
+                  "absolute_v2": [
+                    2.0969983568001748e-13
+                  ],
+                  "relative": [
+                    0.0016883649730322886
+                  ]
+                },
+                "alpha": {
+                  "absolute_v2": [
+                    8.19800105127785e-12
+                  ],
+                  "relative": [
+                    0.06600490543530906
+                  ]
+                },
+                "beta": {
+                  "absolute_v2": [
+                    1.1536001401096883e-10
+                  ],
+                  "relative": [
+                    0.9288028591583376
+                  ]
+                }
+              },
+              "basic_quality_pass": true,
+              "peak_to_peak_uv": [
+                45.74403642832876
+              ],
+              "quality": "Only a basic 500-microvolt amplitude screen. No ocular/muscle artifact rejection or calibrated emotion model. Input units must be volts.",
+              "arousal_hint": null,
+              "session_id": "synthetic-demo"
+            },
+            "hrv": {
+              "source": "synthetic sample",
+              "sample_data": true,
+              "method": "RR intervals",
+              "beats": 91,
+              "duration_seconds": 76.63585758876245,
+              "rmssd_ms": 11.712536494654497,
+              "sdnn_ms": 22.12263627889311,
+              "mean_hr_bpm": 70.4630987360652,
+              "quality": "Short-window time-domain estimates. No autonomic diagnosis or emotion inference. No ectopic-beat correction.",
+              "arousal_hint": null,
+              "session_id": "synthetic-demo"
+            }
+          },
+          "available_modalities": [
+            "eeg",
+            "hrv"
+          ],
+          "sample_data": true,
+          "deviations": [],
+          "calming_context": false,
+          "arousal_hint": null,
+          "validated": false,
+          "interpretation": "Features describe signals; they do not identify happy, disgusted, neutral, stressed or a disease.",
+          "reason": "Features attached. A personal reference is needed before relative physiology can affect ranking."
+        },
+        "priority": "Confirmed mood and explicit listening goal first; body reference policy and weather add experimental context. No emotion is inferred from weather or physiological features.",
+        "fusion_validation": "Rule-based engineering integration; no measured multimodal recognition or mood-improvement benefit."
+      }
+    },
+    "body_without_hrv": {
+      "effective_goal": "balance",
+      "target_bhava": "bhaya",
+      "ragas": [
+        {
+          "name": "Jait",
+          "score": 0.71125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Jaitashree",
+          "score": 0.71125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Malshree",
+          "score": 0.71125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Bilaskhani Todi",
+          "score": 0.54225,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Jog",
+          "score": 0.54225,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        },
+        {
+          "name": "Malkauns",
+          "score": 0.54225,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.0
+        }
+      ],
+      "context": {
+        "emotion_source": "manual",
+        "requested_goal": "balance",
+        "effective_goal": "balance",
+        "weather": {
+          "available": false,
+          "season_tags": [],
+          "source": null
+        },
+        "physiology": {
+          "available": true,
+          "features": {
+            "eeg": {
+              "source": "synthetic sample",
+              "sample_data": true,
+              "sample_rate": 128.0,
+              "channels": 1,
+              "duration_seconds": 16.0,
+              "bands": {
+                "theta": {
+                  "absolute_v2": [
+                    2.0969983568001748e-13
+                  ],
+                  "relative": [
+                    0.0016883649730322886
+                  ]
+                },
+                "alpha": {
+                  "absolute_v2": [
+                    8.19800105127785e-12
+                  ],
+                  "relative": [
+                    0.06600490543530906
+                  ]
+                },
+                "beta": {
+                  "absolute_v2": [
+                    1.1536001401096883e-10
+                  ],
+                  "relative": [
+                    0.9288028591583376
+                  ]
+                }
+              },
+              "basic_quality_pass": true,
+              "peak_to_peak_uv": [
+                45.74403642832876
+              ],
+              "quality": "Only a basic 500-microvolt amplitude screen. No ocular/muscle artifact rejection or calibrated emotion model. Input units must be volts.",
+              "arousal_hint": null,
+              "session_id": "synthetic-demo"
+            }
+          },
+          "available_modalities": [
+            "eeg"
+          ],
+          "sample_data": true,
+          "deviations": [
+            {
+              "feature": "EEG alpha/beta relative to reference",
+              "ratio": 0.02368816474686615,
+              "below_reference": true
+            }
+          ],
+          "calming_context": false,
+          "arousal_hint": null,
+          "validated": false,
+          "interpretation": "Features describe signals; they do not identify happy, disgusted, neutral, stressed or a disease.",
+          "reason": "No concordant EEG/HRV reference deviation. Available features are retained without an automatic physiology adjustment."
+        },
+        "priority": "Confirmed mood and explicit listening goal first; body reference policy and weather add experimental context. No emotion is inferred from weather or physiological features.",
+        "fusion_validation": "Rule-based engineering integration; no measured multimodal recognition or mood-improvement benefit."
+      }
+    },
+    "body_with_reference": {
+      "effective_goal": "calm",
+      "target_bhava": "shama",
+      "ragas": [
+        {
+          "name": "Chandrakauns",
+          "score": 0.74125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.03
+        },
+        {
+          "name": "Malkauns",
+          "score": 0.74125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.03
+        },
+        {
+          "name": "Shanmukhapriya",
+          "score": 0.74125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.03
+        },
+        {
+          "name": "Vibhas",
+          "score": 0.74125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.03
+        },
+        {
+          "name": "Asavari",
+          "score": 0.55725,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.015
+        },
+        {
+          "name": "Bhairav",
+          "score": 0.55725,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.015
+        }
+      ],
+      "context": {
+        "emotion_source": "manual",
+        "requested_goal": "balance",
+        "effective_goal": "calm",
+        "weather": {
+          "available": false,
+          "season_tags": [],
+          "source": null
+        },
+        "physiology": {
+          "available": true,
+          "features": {
+            "eeg": {
+              "source": "synthetic sample",
+              "sample_data": true,
+              "sample_rate": 128.0,
+              "channels": 1,
+              "duration_seconds": 16.0,
+              "bands": {
+                "theta": {
+                  "absolute_v2": [
+                    2.0969983568001748e-13
+                  ],
+                  "relative": [
+                    0.0016883649730322886
+                  ]
+                },
+                "alpha": {
+                  "absolute_v2": [
+                    8.19800105127785e-12
+                  ],
+                  "relative": [
+                    0.06600490543530906
+                  ]
+                },
+                "beta": {
+                  "absolute_v2": [
+                    1.1536001401096883e-10
+                  ],
+                  "relative": [
+                    0.9288028591583376
+                  ]
+                }
+              },
+              "basic_quality_pass": true,
+              "peak_to_peak_uv": [
+                45.74403642832876
+              ],
+              "quality": "Only a basic 500-microvolt amplitude screen. No ocular/muscle artifact rejection or calibrated emotion model. Input units must be volts.",
+              "arousal_hint": null,
+              "session_id": "synthetic-demo"
+            },
+            "hrv": {
+              "source": "synthetic sample",
+              "sample_data": true,
+              "method": "RR intervals",
+              "beats": 91,
+              "duration_seconds": 76.63585758876245,
+              "rmssd_ms": 11.712536494654497,
+              "sdnn_ms": 22.12263627889311,
+              "mean_hr_bpm": 70.4630987360652,
+              "quality": "Short-window time-domain estimates. No autonomic diagnosis or emotion inference. No ectopic-beat correction.",
+              "arousal_hint": null,
+              "session_id": "synthetic-demo"
+            }
+          },
+          "available_modalities": [
+            "eeg",
+            "hrv"
+          ],
+          "sample_data": true,
+          "deviations": [
+            {
+              "feature": "EEG alpha/beta relative to reference",
+              "ratio": 0.02368816474686615,
+              "below_reference": true
+            },
+            {
+              "feature": "RMSSD relative to reference",
+              "ratio": 0.3904178831551499,
+              "below_reference": true
+            }
+          ],
+          "calming_context": true,
+          "arousal_hint": null,
+          "validated": false,
+          "interpretation": "Features describe signals; they do not identify happy, disgusted, neutral, stressed or a disease.",
+          "reason": "Both values are below the supplied references. The experimental policy can suggest a calm listening direction; it does not determine your mood."
+        },
+        "priority": "Confirmed mood and explicit listening goal first; body reference policy and weather add experimental context. No emotion is inferred from weather or physiological features.",
+        "fusion_validation": "Rule-based engineering integration; no measured multimodal recognition or mood-improvement benefit."
+      }
+    },
+    "all_contexts": {
+      "effective_goal": "calm",
+      "target_bhava": "shama",
+      "ragas": [
+        {
+          "name": "Chandrakauns",
+          "score": 0.74125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.03
+        },
+        {
+          "name": "Malkauns",
+          "score": 0.74125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.03
+        },
+        {
+          "name": "Shanmukhapriya",
+          "score": 0.74125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.03
+        },
+        {
+          "name": "Vibhas",
+          "score": 0.74125,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.03
+        },
+        {
+          "name": "Jog",
+          "score": 0.58725,
+          "weather_adjustment": 0.03,
+          "physiology_adjustment": 0.015
+        },
+        {
+          "name": "Asavari",
+          "score": 0.55725,
+          "weather_adjustment": 0.0,
+          "physiology_adjustment": 0.015
+        }
+      ],
+      "context": {
+        "emotion_source": "manual",
+        "requested_goal": "balance",
+        "effective_goal": "calm",
+        "weather": {
+          "available": true,
+          "weather": {
+            "condition": "rain",
+            "temperature_c": null,
+            "humidity_percent": null,
+            "precipitation_mm": null,
+            "city": "",
+            "observed_at": "",
+            "source": "manual"
+          },
+          "source": "manual",
+          "season_tags": [
+            "varsha"
+          ],
+          "policy": "Weather-inspired preference for matching source Ritu annotations, capped at 0.03. Weather is not geographical season or a mood measurement.",
+          "validated": false
+        },
+        "physiology": {
+          "available": true,
+          "features": {
+            "eeg": {
+              "source": "synthetic sample",
+              "sample_data": true,
+              "sample_rate": 128.0,
+              "channels": 1,
+              "duration_seconds": 16.0,
+              "bands": {
+                "theta": {
+                  "absolute_v2": [
+                    2.0969983568001748e-13
+                  ],
+                  "relative": [
+                    0.0016883649730322886
+                  ]
+                },
+                "alpha": {
+                  "absolute_v2": [
+                    8.19800105127785e-12
+                  ],
+                  "relative": [
+                    0.06600490543530906
+                  ]
+                },
+                "beta": {
+                  "absolute_v2": [
+                    1.1536001401096883e-10
+                  ],
+                  "relative": [
+                    0.9288028591583376
+                  ]
+                }
+              },
+              "basic_quality_pass": true,
+              "peak_to_peak_uv": [
+                45.74403642832876
+              ],
+              "quality": "Only a basic 500-microvolt amplitude screen. No ocular/muscle artifact rejection or calibrated emotion model. Input units must be volts.",
+              "arousal_hint": null,
+              "session_id": "synthetic-demo"
+            },
+            "hrv": {
+              "source": "synthetic sample",
+              "sample_data": true,
+              "method": "RR intervals",
+              "beats": 91,
+              "duration_seconds": 76.63585758876245,
+              "rmssd_ms": 11.712536494654497,
+              "sdnn_ms": 22.12263627889311,
+              "mean_hr_bpm": 70.4630987360652,
+              "quality": "Short-window time-domain estimates. No autonomic diagnosis or emotion inference. No ectopic-beat correction.",
+              "arousal_hint": null,
+              "session_id": "synthetic-demo"
+            }
+          },
+          "available_modalities": [
+            "eeg",
+            "hrv"
+          ],
+          "sample_data": true,
+          "deviations": [
+            {
+              "feature": "EEG alpha/beta relative to reference",
+              "ratio": 0.02368816474686615,
+              "below_reference": true
+            },
+            {
+              "feature": "RMSSD relative to reference",
+              "ratio": 0.3904178831551499,
+              "below_reference": true
+            }
+          ],
+          "calming_context": true,
+          "arousal_hint": null,
+          "validated": false,
+          "interpretation": "Features describe signals; they do not identify happy, disgusted, neutral, stressed or a disease.",
+          "reason": "Both values are below the supplied references. The experimental policy can suggest a calm listening direction; it does not determine your mood."
+        },
+        "priority": "Confirmed mood and explicit listening goal first; body reference policy and weather add experimental context. No emotion is inferred from weather or physiological features.",
+        "fusion_validation": "Rule-based engineering integration; no measured multimodal recognition or mood-improvement benefit."
+      }
+    }
+  },
+  "recognition_accuracy": null,
+  "recommendation_quality": null,
+  "mood_improvement": null,
+  "interpretation": "Ablations verify that optional inputs reach the scorer and change goals/scores where specified. They do not establish better recommendations or emotion recognition."
+}

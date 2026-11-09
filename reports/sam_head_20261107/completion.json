@@ -1,0 +1,8 @@
+{
+  "completed_additional_epochs": 10,
+  "validation_improved": false,
+  "best_score": 0.5427376267859443,
+  "test_accessed": false,
+  "synthetic": false,
+  "parameters_trained": "Classifier only, SAM/AdamW; backbone frozen and architecture unchanged"
+}

@@ -1,0 +1,22 @@
+{
+  "method": "Train DenseNet feature head DIRECTLY against FER TRAIN labels, independently of the overconfident FusDenseNet logits. Frozen feature extractors. Combine calibrated baseline and direct-head probabilities, not class thresholds.",
+  "initial_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "seed": 907,
+  "epochs_max": 60,
+  "patience": 12,
+  "class_weight_power": 0.5,
+  "label_smoothing": 0,
+  "head": "LayerNorm1024->128->7, dropout.5",
+  "lr": 0.001,
+  "weight_decay": 0.01,
+  "probability_mixtures": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "baseline_temperature": 1.2692193984985352,
+  "selection": "Validation accuracy AND disgust recall strictly improve; macro/disgustF1 no lower. Max .5accuracy+.3macroF1+.2disgustF1 across60epochs/3predeclared mixtures.",
+  "disclosure": "Third exploratory recipe declared after failed residual-head validation, before ANY new test access. Highly reused validation, not fresh confirmatory evidence; all failed recipes kept.",
+  "early_stopping": "Track unconstrained validation objective progress; never stop a learning new head solely because it has not crossed joint deployment floors yet. Eligibility still requires BOTH accuracy and disgust recall gains.",
+  "test": "One final candidate across all completed recipes. No alternate test search."
+}

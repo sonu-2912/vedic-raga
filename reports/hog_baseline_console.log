@@ -1,0 +1,144 @@
+{"split": "train", "n": 23503, "features": 900}
+{"split": "val", "n": 3970, "features": 900}
+{"split": "test", "n": 6561, "features": 900}
+{
+  "model": "Fixed HOG + linear SVM baseline, not FusDenseNet",
+  "synthetic": false,
+  "hyperparameters": {
+    "descriptor": "48x48 window, 16x16 block, 8x8 stride/cell, 9 orientation bins",
+    "features": 900,
+    "C": 0.1,
+    "class_weight": "balanced",
+    "max_iter": 5000,
+    "selection": "Fixed beforehand; no validation or test hyperparameter search"
+  },
+  "train_n": 23503,
+  "val_n": 3970,
+  "n": 6561,
+  "accuracy": 0.4147233653406493,
+  "validation_accuracy": 0.41788413098236776,
+  "classification_report": {
+    "angry": {
+      "precision": 0.2850182704019488,
+      "recall": 0.2635135135135135,
+      "f1-score": 0.2738443534230544,
+      "support": 888.0
+    },
+    "disgust": {
+      "precision": 0.06460674157303371,
+      "recall": 0.2911392405063291,
+      "f1-score": 0.10574712643678161,
+      "support": 79.0
+    },
+    "fear": {
+      "precision": 0.2886405959031657,
+      "recall": 0.1681127982646421,
+      "f1-score": 0.21247429746401644,
+      "support": 922.0
+    },
+    "happy": {
+      "precision": 0.6019822639540949,
+      "recall": 0.6744593804792519,
+      "f1-score": 0.6361631753031973,
+      "support": 1711.0
+    },
+    "sad": {
+      "precision": 0.3638470451911935,
+      "recall": 0.2621035058430718,
+      "f1-score": 0.3047064531780689,
+      "support": 1198.0
+    },
+    "surprise": {
+      "precision": 0.40389016018306634,
+      "recall": 0.6075731497418244,
+      "f1-score": 0.4852233676975945,
+      "support": 581.0
+    },
+    "neutral": {
+      "precision": 0.4090528080469405,
+      "recall": 0.4128595600676819,
+      "f1-score": 0.4109473684210526,
+      "support": 1182.0
+    },
+    "accuracy": 0.4147233653406493,
+    "macro avg": {
+      "precision": 0.34529112646477766,
+      "recall": 0.3828230212023307,
+      "f1-score": 0.3470151631319665,
+      "support": 6561.0
+    },
+    "weighted avg": {
+      "precision": 0.4127980189096586,
+      "recall": 0.4147233653406493,
+      "f1-score": 0.40673635132557306,
+      "support": 6561.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      234,
+      80,
+      76,
+      145,
+      122,
+      90,
+      141
+    ],
+    [
+      23,
+      23,
+      5,
+      8,
+      7,
+      7,
+      6
+    ],
+    [
+      114,
+      62,
+      155,
+      145,
+      137,
+      166,
+      143
+    ],
+    [
+      121,
+      57,
+      67,
+      1154,
+      117,
+      71,
+      124
+    ],
+    [
+      178,
+      61,
+      106,
+      210,
+      314,
+      82,
+      247
+    ],
+    [
+      35,
+      23,
+      40,
+      62,
+      24,
+      353,
+      44
+    ],
+    [
+      116,
+      50,
+      88,
+      193,
+      142,
+      105,
+      488
+    ]
+  ],
+  "seconds": 314.31252060004044,
+  "limitations": "Single fixed classical baseline. No subject-disjoint protocol; exact same final test exclusions as deep models. Test performance is not used for FusDenseNet selection."
+}

@@ -1,0 +1,6 @@
+{
+  "completed_additional_epochs": 30,
+  "best_macro_f1": 0.4569148743780119,
+  "test_accessed": false,
+  "synthetic": false
+}

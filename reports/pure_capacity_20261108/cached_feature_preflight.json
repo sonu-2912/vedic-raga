@@ -1,0 +1,7 @@
+{
+  "validation_images": 64,
+  "maximum_absolute_feature_error": 2.384185791015625e-06,
+  "coarse_feature_width": 1260,
+  "all_native_backbone_tensors_equal_to_active_model": true,
+  "no_test_images_read": true
+}

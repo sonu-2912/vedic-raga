@@ -1,0 +1,6 @@
+{
+  "eligible": false,
+  "test_evaluated": false,
+  "installed": false,
+  "reason": "None of four same-network native parameter rollback candidates met every unchanged class/aggregate validation gate. App/PPT unchanged."
+}

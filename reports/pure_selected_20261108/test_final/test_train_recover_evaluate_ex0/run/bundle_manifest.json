@@ -1,0 +1,24 @@
+{
+  "schema": "ragamoodsync-colab-v1",
+  "single_view_only": false,
+  "require_disgust_recall_gain": false,
+  "strict_all_metrics": false,
+  "source_best_sha256": "fe1111d14b531025e25d6cb18d7f2427f10dac306834e72112d8fe021092d372",
+  "checkpoint_sha256": "0aabd2fb0b00e91a5585ee813ce172284356779c024f7400499afbdfa5933ef2",
+  "recommended_for_integration": false,
+  "files": {
+    "models/fusdense.pt": "0aabd2fb0b00e91a5585ee813ce172284356779c024f7400499afbdfa5933ef2",
+    "reports/calibration.json": "30294865b677030bf3c869f912fc671ac748bddbd783ce44f76c1f5bed4f1f40",
+    "reports/colab_comparison.json": "0e9b7f6c766ee1721d8cc33ec2c58679cef552ee9a5a10957c2337eca7c2ca34",
+    "reports/COLAB_EXPERIMENTS.md": "46b764d39c51b007751daf5bb761e204ac98e7092961eee35ebe4148085760e5",
+    "reports/colab_settings.json": "c9b93062f6df8711ad4e558c9fc050c51108f9545c5e7ff8513b5db042bca7ce",
+    "reports/emotion_evaluation.json": "493c5824bb4e5cb7581bb0848a43dfe40c58285e9139b600897ebdc953c81001",
+    "reports/emotion_evaluation.png": "ad29fdcf19401643fada192aa15f28177dd64bbd8858656fe21a141b00af9bf0",
+    "reports/emotion_evaluation_manifest.json": "e65bf07c746debde2625b5ef4b61096821ce1ceb46db0d571f05ffab34244905",
+    "reports/expression_policy.json": "5dd91a2e281f10809fed38b12d56a6223b0d6a7b510cf3a81bf466d582c3e04e",
+    "reports/fer_training_manifest.json": "b229da5d1df22a779ab46c4464ae295fa8b874c2f6d045f01f3b39edf9417129",
+    "reports/training_curves.png": "c1c89b4b1172d8f504e0c48ab058fa541fd4c5ac7df172dadf2c43fed4fe212c",
+    "reports/training_history.json": "6eef7d771b3516cefd02c49aed9dde409c5efa7a94c94d9137992ad61546b7c5",
+    "reports/validation_evaluation.json": "b3fbcc7b7edcfa2864ccd10214cece480423e048de0d91b629e31b0e5fe63883"
+  }
+}

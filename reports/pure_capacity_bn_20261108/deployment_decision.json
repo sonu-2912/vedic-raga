@@ -1,0 +1,6 @@
+{
+  "eligible": false,
+  "test_evaluated": false,
+  "installed": false,
+  "reason": "None of three TRAIN-only BN-recalibrated pure models passed every unchanged class and aggregate validation gate. App/PPT unchanged."
+}

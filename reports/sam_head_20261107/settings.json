@@ -1,0 +1,16 @@
+{
+  "initial_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "method": "Same512-unit frozen-backbone classifier; SAM rho.05 with AdamW.0001/wd.003, same dropout masks for both gradient passes, exact weight restoration before step. No architecture change.",
+  "loss": "CE weight power.25/smoothing.02 +.1 correct own-teacher KL T2, dropout.45",
+  "epochs_max": 40,
+  "patience": 10,
+  "selection": "Same seven validation floors and .35accuracy+.65macroF1; train-only normalization folded back with exact validation argmax preservation",
+  "disclosure": "Fourth and final exploratory recipe added during conservative continuation, after previous negative trials, before any test access. Reused validation, no independent-validation claim.",
+  "test_accessed": false,
+  "source": "https://arxiv.org/abs/2010.01412",
+  "device": "cpu",
+  "manifest_sha256": "326eeabc6fca7fb119030aae617f0cacae3ab28ed3d948c7c00d23c5299e10c2",
+  "dataset_sha256": "9f3422c7a45b676c2965ef4fc5f3099932aa98fd13eaaa2c254f620a9894a6e9",
+  "seed": 521,
+  "threads": 2
+}

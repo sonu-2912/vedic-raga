@@ -1,0 +1,23 @@
+{
+  "slides": 13,
+  "individually_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "actual_metrics_checked": true,
+  "historical_ui_image_labeled": true,
+  "native_tables_and_chart": true,
+  "native_powerpoint_opened": false,
+  "sha256": "d2473395081c638e8dd505c7ecd507fb675ad3da006c14d7174e8539d685b632"
+}

@@ -1,0 +1,41 @@
+{
+  "candidates": [
+    {
+      "path": "reports\\further_fusdense_run\\natural_bn_candidates\\last_natural_bn.pt",
+      "report": "reports\\further_fusdense_run\\natural_bn_candidates\\last_natural_bn_validation.json",
+      "provenance": {
+        "method": "last_natural_bn",
+        "source_checkpoints": [
+          {
+            "epoch": 51,
+            "sha256": "062d0c32578f129f56f43d387563793ff9aa21efb69a54189048c963dc45a63b"
+          }
+        ],
+        "BN_data": "fixed training images only, natural unaugmented distribution; no test/validation images update statistics",
+        "teacher": null,
+        "test_accessed": false
+      }
+    },
+    {
+      "path": "reports\\further_fusdense_run\\natural_bn_candidates\\last3_average_natural_bn.pt",
+      "report": "reports\\further_fusdense_run\\natural_bn_candidates\\last3_average_natural_bn_validation.json",
+      "provenance": {
+        "method": "last3_average_natural_bn",
+        "source_checkpoints": [
+          {
+            "epoch": 50,
+            "sha256": "90b9f4469a0929edcd70bd49971f0791991b41d5eb5a15a1ccafeaaf1cda1191"
+          },
+          {
+            "epoch": 51,
+            "sha256": "062d0c32578f129f56f43d387563793ff9aa21efb69a54189048c963dc45a63b"
+          }
+        ],
+        "BN_data": "fixed training images only, natural unaugmented distribution; no test/validation images update statistics",
+        "teacher": null,
+        "test_accessed": false
+      }
+    }
+  ],
+  "test_accessed": false
+}

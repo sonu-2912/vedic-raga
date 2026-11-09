@@ -1,0 +1,25 @@
+{
+  "reported": true,
+  "decision": {
+    "eligible": false,
+    "test_evaluated": false,
+    "installed": false,
+    "reason": "No manifold-mixup validation checkpoint recovered all requested classes while retaining disgust and aggregate metrics. App/PPT unchanged."
+  },
+  "protected_unchanged": {
+    "models/fusdense.pt": true,
+    "reports/emotion_evaluation.json": true,
+    "reports/latest_emotion_experiment.json": true,
+    "frontend/src/research/TrainingEvidence.jsx": true,
+    "backend/main.py": true,
+    "output/RagaMoodSync_Research_Pure_Orientation_Repair_Reviewed_v3.pptx": true,
+    "output/RagaMoodSync_Research.pptx": true
+  },
+  "tests": {
+    "tests": 94.0,
+    "failures": 0.0,
+    "errors": 0.0,
+    "skipped": 0.0,
+    "time": 129.343
+  }
+}

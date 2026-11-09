@@ -1,0 +1,34 @@
+Caching only fixed-training teacher predictions; no validation/test targets.
+{"teacher_train_faces": 3200, "total_training_faces": 23503}
+{"teacher_train_faces": 6400, "total_training_faces": 23503}
+{"teacher_train_faces": 9600, "total_training_faces": 23503}
+{"teacher_train_faces": 12800, "total_training_faces": 23503}
+{"teacher_train_faces": 16000, "total_training_faces": 23503}
+{"teacher_train_faces": 19200, "total_training_faces": 23503}
+{"teacher_train_faces": 22400, "total_training_faces": 23503}
+Training teacher cache complete.
+{"epoch": 121, "batch": 75, "batches": 368, "training_loss": 1.6521876255671184}
+{"epoch": 121, "batch": 150, "batches": 368, "training_loss": 1.5939284300804137}
+{"epoch": 121, "batch": 225, "batches": 368, "training_loss": 1.5589723698298137}
+{"epoch": 121, "batch": 300, "batches": 368, "training_loss": 1.5310231804847718}
+{"epoch": 121, "phase": "full_network_consistency", "loss": 1.516700638891083, "accuracy": 0.5474194783644641, "val_loss": 1.195052981376648, "val_accuracy": 0.5715365239294711, "val_macro_f1": 0.5197223554503897, "val_balanced_accuracy": 0.5185299810638093, "val_disgust_recall": 0.26, "val_disgust_f1": 0.3291139240506329, "seconds": 489.1212743000069, "candidates": [{"kind": "student", "accuracy": 0.5715365239294711, "macro_f1": 0.5197223554503897, "disgust_recall": 0.26, "disgust_f1": 0.3291139240506329, "eligible": true, "score": 0.5404480228420222}, {"kind": "EMA", "accuracy": 0.5700251889168766, "macro_f1": 0.5145767505679741, "disgust_recall": 0.24, "disgust_f1": 0.3, "eligible": true, "score": 0.5367561259075351}]}
+{"epoch": 122, "batch": 75, "batches": 368, "training_loss": 1.4340519253412882}
+{"epoch": 122, "batch": 150, "batches": 368, "training_loss": 1.4222451154390972}
+{"epoch": 122, "batch": 225, "batches": 368, "training_loss": 1.416381270620558}
+{"epoch": 122, "batch": 300, "batches": 368, "training_loss": 1.4115272057056427}
+{"epoch": 122, "phase": "full_network_consistency", "loss": 1.4039803068673251, "accuracy": 0.5635025315917117, "val_loss": 1.1827986240386963, "val_accuracy": 0.5712846347607052, "val_macro_f1": 0.5177300216193733, "val_balanced_accuracy": 0.519355038767481, "val_disgust_recall": 0.28, "val_disgust_f1": 0.3111111111111111, "seconds": 656.721838100013, "candidates": [{"kind": "student", "accuracy": 0.5712846347607052, "macro_f1": 0.5177300216193733, "disgust_recall": 0.28, "disgust_f1": 0.3111111111111111, "eligible": true, "score": 0.5391518668759061}, {"kind": "EMA", "accuracy": 0.573551637279597, "macro_f1": 0.5160592403741122, "disgust_recall": 0.26, "disgust_f1": 0.29213483146067415, "eligible": false, "score": 0.5390561991363061}]}
+{"epoch": 123, "batch": 75, "batches": 368, "training_loss": 1.375510638554891}
+{"epoch": 123, "batch": 150, "batches": 368, "training_loss": 1.3947380288441975}
+{"epoch": 123, "batch": 225, "batches": 368, "training_loss": 1.3894624858432345}
+{"epoch": 123, "batch": 300, "batches": 368, "training_loss": 1.3901205988725027}
+{"epoch": 123, "phase": "full_network_consistency", "loss": 1.3839370068634225, "accuracy": 0.5724375611624049, "val_loss": 1.1825112104415894, "val_accuracy": 0.5740554156171285, "val_macro_f1": 0.5173762143228078, "val_balanced_accuracy": 0.5206823340227313, "val_disgust_recall": 0.26, "val_disgust_f1": 0.2988505747126437, "seconds": 748.039386599994, "candidates": [{"kind": "student", "accuracy": 0.5750629722921914, "macro_f1": 0.5164986448406296, "disgust_recall": 0.3, "disgust_f1": 0.2777777777777778, "eligible": false, "score": 0.5399243758212543}, {"kind": "EMA", "accuracy": 0.5740554156171285, "macro_f1": 0.5173762143228078, "disgust_recall": 0.26, "disgust_f1": 0.2988505747126437, "eligible": true, "score": 0.5400478948405361}]}
+{"epoch": 124, "batch": 75, "batches": 368, "training_loss": 1.3690660365422567}
+{"epoch": 124, "batch": 150, "batches": 368, "training_loss": 1.3716217796007792}
+{"epoch": 124, "batch": 225, "batches": 368, "training_loss": 1.3705457570817736}
+{"epoch": 124, "batch": 300, "batches": 368, "training_loss": 1.3726959335803985}
+{"epoch": 124, "phase": "full_network_consistency", "loss": 1.3664490189627576, "accuracy": 0.5743096625962643, "val_loss": 1.1760554313659668, "val_accuracy": 0.580352644836272, "val_macro_f1": 0.5224833862973063, "val_balanced_accuracy": 0.5256540852978745, "val_disgust_recall": 0.28, "val_disgust_f1": 0.30434782608695654, "seconds": 1633.9211172000068, "candidates": [{"kind": "student", "accuracy": 0.580352644836272, "macro_f1": 0.5224833862973063, "disgust_recall": 0.28, "disgust_f1": 0.30434782608695654, "eligible": true, "score": 0.5456310897128925}, {"kind": "EMA", "accuracy": 0.5770780856423173, "macro_f1": 0.5171592532423817, "disgust_recall": 0.26, "disgust_f1": 0.2765957446808511, "eligible": false, "score": 0.5411267862023559}]}
+{"epoch": 125, "batch": 75, "batches": 368, "training_loss": 1.3723420651753744}
+{"epoch": 125, "batch": 150, "batches": 368, "training_loss": 1.373247963587443}
+{"epoch": 125, "batch": 225, "batches": 368, "training_loss": 1.367665531370375}
+{"epoch": 125, "batch": 300, "batches": 368, "training_loss": 1.3670885936419168}
+{"epoch": 125, "phase": "full_network_consistency", "loss": 1.3684825522795243, "accuracy": 0.5732459685997532, "val_loss": 1.1761189699172974, "val_accuracy": 0.5795969773299748, "val_macro_f1": 0.5212875196396153, "val_balanced_accuracy": 0.5261163270474134, "val_disgust_recall": 0.28, "val_disgust_f1": 0.2978723404255319, "seconds": 3365.404813100002, "candidates": [{"kind": "student", "accuracy": 0.5773299748110832, "macro_f1": 0.51798333167549, "disgust_recall": 0.28, "disgust_f1": 0.2978723404255319, "eligible": true, "score": 0.5417219889297273}, {"kind": "EMA", "accuracy": 0.5795969773299748, "macro_f1": 0.5212875196396153, "disgust_recall": 0.28, "disgust_f1": 0.2978723404255319, "eligible": true, "score": 0.5446113027157591}]}

@@ -1,0 +1,699 @@
+{
+  "completed_full_epochs_at_audit": 1,
+  "initial_checkpoint_sha256": "99720da30d4ab9b423ed640c2206d7babe5ec61d62bbab708c76b1d091d2bcc9",
+  "parameters": [
+    {
+      "name": "stem.0.weight",
+      "parameters": 216,
+      "changed": true,
+      "relative_L2_change": 0.0002624120970722288
+    },
+    {
+      "name": "stem.0.bias",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 0.00016700028209015727
+    },
+    {
+      "name": "fusion.a.layers.0.0.weight",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 4.80976996186655e-05
+    },
+    {
+      "name": "fusion.a.layers.0.0.bias",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 0.00012544335913844407
+    },
+    {
+      "name": "fusion.a.layers.0.2.weight",
+      "parameters": 2592,
+      "changed": true,
+      "relative_L2_change": 0.00037293025525286794
+    },
+    {
+      "name": "fusion.a.layers.1.0.weight",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 5.8778397942660376e-05
+    },
+    {
+      "name": "fusion.a.layers.1.0.bias",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 0.00020573634537868202
+    },
+    {
+      "name": "fusion.a.layers.1.2.weight",
+      "parameters": 3888,
+      "changed": true,
+      "relative_L2_change": 0.0004467567487154156
+    },
+    {
+      "name": "fusion.a.layers.2.0.weight",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 4.449828702490777e-05
+    },
+    {
+      "name": "fusion.a.layers.2.0.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.0002474735083524138
+    },
+    {
+      "name": "fusion.a.layers.2.2.weight",
+      "parameters": 5184,
+      "changed": true,
+      "relative_L2_change": 0.0005039184470660985
+    },
+    {
+      "name": "fusion.b.layers.0.0.weight",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 5.155249891686253e-05
+    },
+    {
+      "name": "fusion.b.layers.0.0.bias",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 0.0002169058716390282
+    },
+    {
+      "name": "fusion.b.layers.0.2.weight",
+      "parameters": 2592,
+      "changed": true,
+      "relative_L2_change": 0.0005938385147601366
+    },
+    {
+      "name": "fusion.b.layers.1.0.weight",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 6.331987242447212e-05
+    },
+    {
+      "name": "fusion.b.layers.1.0.bias",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 0.00036676673335023224
+    },
+    {
+      "name": "fusion.b.layers.1.2.weight",
+      "parameters": 3888,
+      "changed": true,
+      "relative_L2_change": 0.0005652944673784077
+    },
+    {
+      "name": "fusion.b.layers.2.0.weight",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 5.315045200404711e-05
+    },
+    {
+      "name": "fusion.b.layers.2.0.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.00022430415265262127
+    },
+    {
+      "name": "fusion.b.layers.2.2.weight",
+      "parameters": 5184,
+      "changed": true,
+      "relative_L2_change": 0.0007396437576971948
+    },
+    {
+      "name": "fusion.proj_a.weight",
+      "parameters": 1920,
+      "changed": true,
+      "relative_L2_change": 0.0003197398327756673
+    },
+    {
+      "name": "fusion.proj_a.bias",
+      "parameters": 32,
+      "changed": true,
+      "relative_L2_change": 0.00030218655592761934
+    },
+    {
+      "name": "fusion.proj_b.weight",
+      "parameters": 1920,
+      "changed": true,
+      "relative_L2_change": 0.0005093849613331258
+    },
+    {
+      "name": "fusion.proj_b.bias",
+      "parameters": 32,
+      "changed": true,
+      "relative_L2_change": 0.0005080279079265893
+    },
+    {
+      "name": "fusion.cross.in_proj_weight",
+      "parameters": 3072,
+      "changed": true,
+      "relative_L2_change": 0.0002777584595605731
+    },
+    {
+      "name": "fusion.cross.in_proj_bias",
+      "parameters": 96,
+      "changed": true,
+      "relative_L2_change": 0.0005640871240757406
+    },
+    {
+      "name": "fusion.cross.out_proj.weight",
+      "parameters": 1024,
+      "changed": true,
+      "relative_L2_change": 0.0004009624244645238
+    },
+    {
+      "name": "fusion.cross.out_proj.bias",
+      "parameters": 32,
+      "changed": true,
+      "relative_L2_change": 0.0007827251101844013
+    },
+    {
+      "name": "fusion.reduce.weight",
+      "parameters": 6144,
+      "changed": true,
+      "relative_L2_change": 0.0004405844083521515
+    },
+    {
+      "name": "fusion.reduce.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.0008042853442020714
+    },
+    {
+      "name": "fusion.activation.0.weight",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 5.594181129708886e-05
+    },
+    {
+      "name": "fusion.activation.0.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.00025065039517357945
+    },
+    {
+      "name": "more_fusion.0.a.layers.0.0.weight",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 6.116640724940225e-05
+    },
+    {
+      "name": "more_fusion.0.a.layers.0.0.bias",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 0.00030147022334858775
+    },
+    {
+      "name": "more_fusion.0.a.layers.0.2.weight",
+      "parameters": 2592,
+      "changed": true,
+      "relative_L2_change": 0.0005241851322352886
+    },
+    {
+      "name": "more_fusion.0.a.layers.1.0.weight",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 5.217393481871113e-05
+    },
+    {
+      "name": "more_fusion.0.a.layers.1.0.bias",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 0.0003472079406492412
+    },
+    {
+      "name": "more_fusion.0.a.layers.1.2.weight",
+      "parameters": 3888,
+      "changed": true,
+      "relative_L2_change": 0.00047977513168007135
+    },
+    {
+      "name": "more_fusion.0.a.layers.2.0.weight",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 4.290478318580426e-05
+    },
+    {
+      "name": "more_fusion.0.a.layers.2.0.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.0002954835072159767
+    },
+    {
+      "name": "more_fusion.0.a.layers.2.2.weight",
+      "parameters": 5184,
+      "changed": true,
+      "relative_L2_change": 0.0005412498721852899
+    },
+    {
+      "name": "more_fusion.0.b.layers.0.0.weight",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 5.550208516069688e-05
+    },
+    {
+      "name": "more_fusion.0.b.layers.0.0.bias",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 0.00017548403411637992
+    },
+    {
+      "name": "more_fusion.0.b.layers.0.2.weight",
+      "parameters": 2592,
+      "changed": true,
+      "relative_L2_change": 0.0006218638736754656
+    },
+    {
+      "name": "more_fusion.0.b.layers.1.0.weight",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 5.500736369867809e-05
+    },
+    {
+      "name": "more_fusion.0.b.layers.1.0.bias",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 0.00020940152171533555
+    },
+    {
+      "name": "more_fusion.0.b.layers.1.2.weight",
+      "parameters": 3888,
+      "changed": true,
+      "relative_L2_change": 0.0004924993263557553
+    },
+    {
+      "name": "more_fusion.0.b.layers.2.0.weight",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 5.0643440772546455e-05
+    },
+    {
+      "name": "more_fusion.0.b.layers.2.0.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.0001817740994738415
+    },
+    {
+      "name": "more_fusion.0.b.layers.2.2.weight",
+      "parameters": 5184,
+      "changed": true,
+      "relative_L2_change": 0.00057664152700454
+    },
+    {
+      "name": "more_fusion.0.proj_a.weight",
+      "parameters": 1920,
+      "changed": true,
+      "relative_L2_change": 0.00040239020017907023
+    },
+    {
+      "name": "more_fusion.0.proj_a.bias",
+      "parameters": 32,
+      "changed": true,
+      "relative_L2_change": 0.00038004000089131296
+    },
+    {
+      "name": "more_fusion.0.proj_b.weight",
+      "parameters": 1920,
+      "changed": true,
+      "relative_L2_change": 0.00045543507440015674
+    },
+    {
+      "name": "more_fusion.0.proj_b.bias",
+      "parameters": 32,
+      "changed": true,
+      "relative_L2_change": 0.0003709811717271805
+    },
+    {
+      "name": "more_fusion.0.cross.in_proj_weight",
+      "parameters": 3072,
+      "changed": true,
+      "relative_L2_change": 0.0002730311534833163
+    },
+    {
+      "name": "more_fusion.0.cross.in_proj_bias",
+      "parameters": 96,
+      "changed": true,
+      "relative_L2_change": 0.000507935939822346
+    },
+    {
+      "name": "more_fusion.0.cross.out_proj.weight",
+      "parameters": 1024,
+      "changed": true,
+      "relative_L2_change": 0.0003517458389978856
+    },
+    {
+      "name": "more_fusion.0.cross.out_proj.bias",
+      "parameters": 32,
+      "changed": true,
+      "relative_L2_change": 0.0008053706842474639
+    },
+    {
+      "name": "more_fusion.0.reduce.weight",
+      "parameters": 6144,
+      "changed": true,
+      "relative_L2_change": 0.000568862073123455
+    },
+    {
+      "name": "more_fusion.0.reduce.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.0011421811068430543
+    },
+    {
+      "name": "more_fusion.0.activation.0.weight",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 6.281489913817495e-05
+    },
+    {
+      "name": "more_fusion.0.activation.0.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.0002509105543140322
+    },
+    {
+      "name": "more_fusion.1.a.layers.0.0.weight",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 5.257032535155304e-05
+    },
+    {
+      "name": "more_fusion.1.a.layers.0.0.bias",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 0.00022877714945934713
+    },
+    {
+      "name": "more_fusion.1.a.layers.0.2.weight",
+      "parameters": 2592,
+      "changed": true,
+      "relative_L2_change": 0.0004882620123680681
+    },
+    {
+      "name": "more_fusion.1.a.layers.1.0.weight",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 4.266437463229522e-05
+    },
+    {
+      "name": "more_fusion.1.a.layers.1.0.bias",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 0.0002850883174687624
+    },
+    {
+      "name": "more_fusion.1.a.layers.1.2.weight",
+      "parameters": 3888,
+      "changed": true,
+      "relative_L2_change": 0.00047374999849125743
+    },
+    {
+      "name": "more_fusion.1.a.layers.2.0.weight",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 4.674518640968017e-05
+    },
+    {
+      "name": "more_fusion.1.a.layers.2.0.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.00028676135116256773
+    },
+    {
+      "name": "more_fusion.1.a.layers.2.2.weight",
+      "parameters": 5184,
+      "changed": true,
+      "relative_L2_change": 0.0005720657063648105
+    },
+    {
+      "name": "more_fusion.1.b.layers.0.0.weight",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 8.738703036215156e-05
+    },
+    {
+      "name": "more_fusion.1.b.layers.0.0.bias",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 0.00047873600851744413
+    },
+    {
+      "name": "more_fusion.1.b.layers.0.2.weight",
+      "parameters": 2592,
+      "changed": true,
+      "relative_L2_change": 0.0008108259062282741
+    },
+    {
+      "name": "more_fusion.1.b.layers.1.0.weight",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 7.028844265732914e-05
+    },
+    {
+      "name": "more_fusion.1.b.layers.1.0.bias",
+      "parameters": 36,
+      "changed": true,
+      "relative_L2_change": 0.0003818727855104953
+    },
+    {
+      "name": "more_fusion.1.b.layers.1.2.weight",
+      "parameters": 3888,
+      "changed": true,
+      "relative_L2_change": 0.0007567396969534457
+    },
+    {
+      "name": "more_fusion.1.b.layers.2.0.weight",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 6.276792555581778e-05
+    },
+    {
+      "name": "more_fusion.1.b.layers.2.0.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.0002793815219774842
+    },
+    {
+      "name": "more_fusion.1.b.layers.2.2.weight",
+      "parameters": 5184,
+      "changed": true,
+      "relative_L2_change": 0.0008695052238181233
+    },
+    {
+      "name": "more_fusion.1.proj_a.weight",
+      "parameters": 1920,
+      "changed": true,
+      "relative_L2_change": 0.00034311204217374325
+    },
+    {
+      "name": "more_fusion.1.proj_a.bias",
+      "parameters": 32,
+      "changed": true,
+      "relative_L2_change": 0.00038917738129384816
+    },
+    {
+      "name": "more_fusion.1.proj_b.weight",
+      "parameters": 1920,
+      "changed": true,
+      "relative_L2_change": 0.0006287586875259876
+    },
+    {
+      "name": "more_fusion.1.proj_b.bias",
+      "parameters": 32,
+      "changed": true,
+      "relative_L2_change": 0.0004406238440424204
+    },
+    {
+      "name": "more_fusion.1.cross.in_proj_weight",
+      "parameters": 3072,
+      "changed": true,
+      "relative_L2_change": 0.0003146751841995865
+    },
+    {
+      "name": "more_fusion.1.cross.in_proj_bias",
+      "parameters": 96,
+      "changed": true,
+      "relative_L2_change": 0.0006021570297889411
+    },
+    {
+      "name": "more_fusion.1.cross.out_proj.weight",
+      "parameters": 1024,
+      "changed": true,
+      "relative_L2_change": 0.00041898919153027236
+    },
+    {
+      "name": "more_fusion.1.cross.out_proj.bias",
+      "parameters": 32,
+      "changed": true,
+      "relative_L2_change": 0.0006978595047257841
+    },
+    {
+      "name": "more_fusion.1.reduce.weight",
+      "parameters": 6144,
+      "changed": true,
+      "relative_L2_change": 0.0004913396551273763
+    },
+    {
+      "name": "more_fusion.1.reduce.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.0007035251474007964
+    },
+    {
+      "name": "more_fusion.1.activation.0.weight",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 4.045625973958522e-05
+    },
+    {
+      "name": "more_fusion.1.activation.0.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.00019847905787173659
+    },
+    {
+      "name": "cross_connections.0.weight",
+      "parameters": 1728,
+      "changed": true,
+      "relative_L2_change": 0.00043553143041208386
+    },
+    {
+      "name": "cross_connections.0.bias",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 0.00019568535208236426
+    },
+    {
+      "name": "cross_connections.1.weight",
+      "parameters": 2880,
+      "changed": true,
+      "relative_L2_change": 0.0005305178347043693
+    },
+    {
+      "name": "cross_connections.1.bias",
+      "parameters": 24,
+      "changed": true,
+      "relative_L2_change": 0.0005870458553545177
+    },
+    {
+      "name": "final_fusion.weight",
+      "parameters": 8064,
+      "changed": true,
+      "relative_L2_change": 0.00044606748269870877
+    },
+    {
+      "name": "final_fusion.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.0007669878541491926
+    },
+    {
+      "name": "final_activation.0.weight",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 5.523282379726879e-05
+    },
+    {
+      "name": "final_activation.0.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.00018419446132611483
+    },
+    {
+      "name": "dense.layers.0.0.weight",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 7.454233127646148e-05
+    },
+    {
+      "name": "dense.layers.0.0.bias",
+      "parameters": 48,
+      "changed": true,
+      "relative_L2_change": 0.00018295501649845392
+    },
+    {
+      "name": "dense.layers.0.2.weight",
+      "parameters": 5184,
+      "changed": true,
+      "relative_L2_change": 0.0006345547735691071
+    },
+    {
+      "name": "dense.layers.1.0.weight",
+      "parameters": 60,
+      "changed": true,
+      "relative_L2_change": 5.572800000663847e-05
+    },
+    {
+      "name": "dense.layers.1.0.bias",
+      "parameters": 60,
+      "changed": true,
+      "relative_L2_change": 0.0001193735733977519
+    },
+    {
+      "name": "dense.layers.1.2.weight",
+      "parameters": 6480,
+      "changed": true,
+      "relative_L2_change": 0.0005645784549415112
+    },
+    {
+      "name": "dense.layers.2.0.weight",
+      "parameters": 72,
+      "changed": true,
+      "relative_L2_change": 6.023798050591722e-05
+    },
+    {
+      "name": "dense.layers.2.0.bias",
+      "parameters": 72,
+      "changed": true,
+      "relative_L2_change": 0.00015074423572514206
+    },
+    {
+      "name": "dense.layers.2.2.weight",
+      "parameters": 7776,
+      "changed": true,
+      "relative_L2_change": 0.0006471826345659792
+    },
+    {
+      "name": "classifier.0.weight",
+      "parameters": 1677312,
+      "changed": true,
+      "relative_L2_change": 0.0002401254459982738
+    },
+    {
+      "name": "classifier.0.bias",
+      "parameters": 512,
+      "changed": true,
+      "relative_L2_change": 2.3896272978163324e-05
+    },
+    {
+      "name": "classifier.3.weight",
+      "parameters": 3584,
+      "changed": true,
+      "relative_L2_change": 0.0029439034406095743
+    },
+    {
+      "name": "classifier.3.bias",
+      "parameters": 7,
+      "changed": true,
+      "relative_L2_change": 0.00016174197662621737
+    },
+    {
+      "name": "reconstruct.weight",
+      "parameters": 48,
+      "changed": false,
+      "relative_L2_change": 0.0
+    },
+    {
+      "name": "reconstruct.bias",
+      "parameters": 1,
+      "changed": false,
+      "relative_L2_change": 0.0
+    }
+  ],
+  "emotion_path_changed_tensors": 113,
+  "attention_changed_tensors": 12,
+  "inference_hybrid": false
+}

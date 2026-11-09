@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.5613473555860388,
+  "macro_precision": 0.5465944924514946,
+  "macro_recall": 0.498145733346759,
+  "macro_f1": 0.510546631619279,
+  "disgust": {
+    "precision": 0.5588235294117647,
+    "recall": 0.24050632911392406,
+    "f1-score": 0.336283185840708,
+    "support": 79.0
+  },
+  "test_n": 6561,
+  "checkpoint_sha256": "9a733a87fc5ec0db544b74504d60ca9ea3d3c94c3648d85e61e5397ca10d43ed",
+  "parameters": 1828896,
+  "architecture": {
+    "attention": true,
+    "dilated": true,
+    "version": 4,
+    "head_width": 512
+  },
+  "selected_epoch": 110,
+  "train_count": 23503,
+  "val_count": 3970,
+  "selected_lineage_full_epochs": 19,
+  "selected_lineage_head_epochs": 101,
+  "classifier_inputs": 3276,
+  "classifier_hidden": 512
+}

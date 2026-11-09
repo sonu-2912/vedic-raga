@@ -1,0 +1,18 @@
+{
+  "metrics": "Test images\n6561\nAccuracy\n50.13%\nMacro precision\n0.4841\nMacro recall\n0.4115\nMacro F1\n0.3960",
+  "plots": [
+    {
+      "alt": "Measured training and validation curves",
+      "height": 608,
+      "loaded": true,
+      "width": 2080
+    },
+    {
+      "alt": "Actual test confusion matrix",
+      "height": 900,
+      "loaded": true,
+      "width": 1050
+    }
+  ],
+  "url": "http://127.0.0.1:8000/?view=research&tab=Research&revision=full-training"
+}

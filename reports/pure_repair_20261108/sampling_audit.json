@@ -1,0 +1,17 @@
+{
+  "old_draws": 23552,
+  "old_unique_faces": 14720,
+  "pool_faces": 23503,
+  "old_unique_fraction": 0.6263030251457261,
+  "old_unique_per_class": [
+    2031,
+    314,
+    2101,
+    3547,
+    2505,
+    1591,
+    2631
+  ],
+  "seed": 81109,
+  "limitations": "One measured epoch; expected old coverage varies by seed. No validation/test images."
+}

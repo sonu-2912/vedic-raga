@@ -1,0 +1,35 @@
+{
+  "architecture": {
+    "attention": true,
+    "dilated": true,
+    "version": 2
+  },
+  "seed": 42,
+  "dataset_sha256": "8564cab1f2d77db53ae6a1391afcd9668bb6001d4a729162f715c7e7f4b2c4f2",
+  "manifest_sha256": "61ba2d23a78d163b1537f805770b843858e70d6a16a797434b2eed39db351027",
+  "initial_checkpoint_sha256": "808fcccdf6a9a6dcda39dedf86174f86c5c35e207b8895f6eb0271e0d3518fe5",
+  "epochs": 2,
+  "lr": 0.0003,
+  "weight_power": 0.75,
+  "sampler_power": 0.0,
+  "freeze_bn": false,
+  "mild_augmentation": false,
+  "batch_size": 32,
+  "amp": false,
+  "smoke_batches": 0,
+  "loss": "weighted CE (label smoothing .02) + .05 reconstruction MSE",
+  "selection": "validation macro F1; no test access",
+  "class_counts": [
+    9,
+    9,
+    8,
+    8,
+    8,
+    9,
+    8
+  ],
+  "torch": "2.5.1+cpu",
+  "cuda": null,
+  "device": "cpu",
+  "warm_start": "Model weights from previous best; optimizer restarted for new recipe"
+}

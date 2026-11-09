@@ -1,0 +1,9 @@
+{
+  "completed_additional_epochs": 4,
+  "validation_improved": false,
+  "test_accessed": false,
+  "external_encoder": false,
+  "teacher": false,
+  "training_only_projection_removed_from_export": true,
+  "synthetic": false
+}

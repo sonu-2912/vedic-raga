@@ -1,0 +1,10 @@
+{
+  "models/fusdense.pt": "f0082aff0511c40d8dff89fc03bbea965b416db55a0f771701efaa38f490c548",
+  "reports/emotion_evaluation.json": "4a9949956c82c37a32e3813e766b16a764cdee5a16845c6a30471cdd19637b96",
+  "reports/latest_emotion_experiment.json": "58ac2ac61d1ed20819486bc67b6e38770ed0709a36908e882fe2a471809242a3",
+  "frontend/src/research/TrainingEvidence.jsx": "e31d00d12f305c5bef32b3cf4b225b6ee336879d0e48c956b9e3ce1491bc85e3",
+  "backend/main.py": "c67c0c9ecaa15e02613e9e7054fa552485a40901b63fefc6ec7480104b25abbc",
+  "output/RagaMoodSync_Research_Pure_Orientation_Repair_Reviewed_v3.pptx": "ab70551273d5cf0c4df21abab2c2805ca8fe7d6a0a95cc4b9d6a157774615cdb",
+  "output/RagaMoodSync_Research.pptx": "ab70551273d5cf0c4df21abab2c2805ca8fe7d6a0a95cc4b9d6a157774615cdb",
+  "backend/models.py": "302a705e16fc80c59fc421e4d51249e30bdad7fddacb271910028b90891e568b"
+}

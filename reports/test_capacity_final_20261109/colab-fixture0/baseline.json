@@ -1,0 +1,1 @@
+{"accuracy": 0.0, "classification_report": {"macro avg": {"f1-score": 0.0}, "disgust": {"recall": 0.0, "f1-score": 0.0}}, "predictions": {"truth": [0, 0, 1, 1, 2, 2, 3, 3, 6, 6, 4, 4, 5, 5]}}

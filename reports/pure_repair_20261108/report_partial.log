@@ -1,0 +1,7 @@
+{
+  "epochs": 4,
+  "completed": false,
+  "test_available": false,
+  "deployed": false,
+  "app_ppt_unchanged": true
+}

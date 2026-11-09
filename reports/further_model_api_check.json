@@ -1,0 +1,53 @@
+{
+  "input": "Existing public NASA/scikit-image fixture. No user photograph. Inference smoke test only, no accuracy claim.",
+  "response": {
+    "pure_fusdense": true,
+    "external_encoder": false,
+    "model_variant": "Pure FusDenseNet",
+    "emotion": "happy",
+    "confidence": 0.9216247200965881,
+    "probabilities": {
+      "angry": 0.00012859335402026772,
+      "disgust": 1.7575199962038823e-08,
+      "fear": 0.0002315384626854211,
+      "happy": 0.9216247200965881,
+      "sad": 4.936739060212858e-05,
+      "surprise": 0.018908873200416565,
+      "neutral": 0.05905690789222717
+    },
+    "native_probabilities": {
+      "angry": 0.00012859335402026772,
+      "disgust": 1.7575199962038823e-08,
+      "fear": 0.0002315384626854211,
+      "happy": 0.9216247200965881,
+      "sad": 4.936739060212858e-05,
+      "surprise": 0.018908873200416565,
+      "neutral": 0.05905690789222717
+    },
+    "native_label": "happy",
+    "model": "fusdense",
+    "trained": true,
+    "face_box": [
+      177,
+      66,
+      95,
+      95
+    ],
+    "low_confidence": false,
+    "label_mapping": "FER2013 native labels",
+    "validation": "Project-trained model. Check matching evaluation provenance before interpreting performance.",
+    "held_out_evaluation": {
+      "n": 6561,
+      "accuracy": 0.5834476451760402,
+      "pilot": false,
+      "checkpoint_epoch": 143,
+      "macro_f1": 0.555367099062993,
+      "checkpoint_sha256": "f0082aff0511c40d8dff89fc03bbea965b416db55a0f771701efaa38f490c548"
+    },
+    "suggested_emotion": "happy",
+    "abstained": false,
+    "needs_confirmation": true,
+    "reason": "Expression suggestion requires your confirmation.",
+    "policy_source": "Class-specific validation evidence and conservative deployment thresholds; not a new classifier or mood measurement."
+  }
+}

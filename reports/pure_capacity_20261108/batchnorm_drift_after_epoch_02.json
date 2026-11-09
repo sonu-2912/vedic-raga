@@ -1,0 +1,218 @@
+{
+  "source_latest_sha256": "7af2fd14a46313b33ae0919c358f891c38dc03adc65a121af796495e4bc41603",
+  "completed_full_epochs_at_audit": 2,
+  "cohort": "First1024fixedTRAINfaces only; no validation/test statistics used",
+  "interpretation": "Frozen-statistic mismatch hypothesis only. TRAIN drift does not establish that recalibration improves validation or test.",
+  "reports": {
+    "deployed_pure_baseline": {
+      "layer_statistics": {
+        "fusion.a.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.041988398987697705,
+          "mean_empirical_to_stored_variance_ratio": 0.8362248175002387
+        },
+        "fusion.a.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.037322058053301375,
+          "mean_empirical_to_stored_variance_ratio": 0.8798802417930903
+        },
+        "fusion.a.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.03577956167936068,
+          "mean_empirical_to_stored_variance_ratio": 0.9065400095834123
+        },
+        "fusion.b.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.0368102848457094,
+          "mean_empirical_to_stored_variance_ratio": 0.8186909996312556
+        },
+        "fusion.b.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.03372039266552588,
+          "mean_empirical_to_stored_variance_ratio": 0.848957337297177
+        },
+        "fusion.b.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.03145178124909114,
+          "mean_empirical_to_stored_variance_ratio": 0.8682170110750679
+        },
+        "fusion.activation.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.04880002045408364,
+          "mean_empirical_to_stored_variance_ratio": 0.9348595319691549
+        },
+        "more_fusion.0.a.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.046422831315203965,
+          "mean_empirical_to_stored_variance_ratio": 0.9740979772012529
+        },
+        "more_fusion.0.a.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.04219980620046321,
+          "mean_empirical_to_stored_variance_ratio": 0.9707218742248356
+        },
+        "more_fusion.0.a.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.03682034779370969,
+          "mean_empirical_to_stored_variance_ratio": 0.9712211522680524
+        },
+        "more_fusion.0.b.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.06624662208751872,
+          "mean_empirical_to_stored_variance_ratio": 0.9608370830528074
+        },
+        "more_fusion.0.b.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.07697282799515312,
+          "mean_empirical_to_stored_variance_ratio": 0.8992768787906089
+        },
+        "more_fusion.0.b.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.06989461082423366,
+          "mean_empirical_to_stored_variance_ratio": 0.8772015982473161
+        },
+        "more_fusion.0.activation.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.07888180202823596,
+          "mean_empirical_to_stored_variance_ratio": 0.7787732803018766
+        },
+        "more_fusion.1.a.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.05500160426368186,
+          "mean_empirical_to_stored_variance_ratio": 0.8632461391485283
+        },
+        "more_fusion.1.a.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.05260511579767804,
+          "mean_empirical_to_stored_variance_ratio": 0.8723933669496883
+        },
+        "more_fusion.1.a.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.048355192076951624,
+          "mean_empirical_to_stored_variance_ratio": 0.8874428751312783
+        },
+        "more_fusion.1.b.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.07278781728300303,
+          "mean_empirical_to_stored_variance_ratio": 0.8437825837025498
+        },
+        "more_fusion.1.b.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.07478301982942143,
+          "mean_empirical_to_stored_variance_ratio": 0.802785958144784
+        },
+        "more_fusion.1.b.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.06841813788775086,
+          "mean_empirical_to_stored_variance_ratio": 0.8048813538097687
+        },
+        "more_fusion.1.activation.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.06742775548396128,
+          "mean_empirical_to_stored_variance_ratio": 0.7101536938690515
+        },
+        "final_activation.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.049612538617443934,
+          "mean_empirical_to_stored_variance_ratio": 0.7638024861940463
+        },
+        "dense.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.03725517804459503,
+          "mean_empirical_to_stored_variance_ratio": 1.0248046822946508
+        },
+        "dense.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.03688688388296073,
+          "mean_empirical_to_stored_variance_ratio": 1.0496263561535129
+        },
+        "dense.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.038698396605108765,
+          "mean_empirical_to_stored_variance_ratio": 1.0712366135256
+        }
+      },
+      "mean_across_layers_of_SD_shift": 0.05140571943807379
+    },
+    "latest_compact_student": {
+      "layer_statistics": {
+        "fusion.a.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.042927696922251644,
+          "mean_empirical_to_stored_variance_ratio": 0.8359399392336092
+        },
+        "fusion.a.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.04015516632109589,
+          "mean_empirical_to_stored_variance_ratio": 0.8810982014595895
+        },
+        "fusion.a.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.038052665704571415,
+          "mean_empirical_to_stored_variance_ratio": 0.9092285007670773
+        },
+        "fusion.b.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.03762757617156406,
+          "mean_empirical_to_stored_variance_ratio": 0.8200952727917642
+        },
+        "fusion.b.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.03506631948873737,
+          "mean_empirical_to_stored_variance_ratio": 0.8519558863838235
+        },
+        "fusion.b.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.0341977282291703,
+          "mean_empirical_to_stored_variance_ratio": 0.871442104189895
+        },
+        "fusion.activation.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.05590026726123574,
+          "mean_empirical_to_stored_variance_ratio": 0.9564928947199665
+        },
+        "more_fusion.0.a.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.052406079660977,
+          "mean_empirical_to_stored_variance_ratio": 1.0045179731696572
+        },
+        "more_fusion.0.a.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.04731622605455255,
+          "mean_empirical_to_stored_variance_ratio": 0.9993010120290288
+        },
+        "more_fusion.0.a.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.03988003108675506,
+          "mean_empirical_to_stored_variance_ratio": 1.0026690089047359
+        },
+        "more_fusion.0.b.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.07469826738628998,
+          "mean_empirical_to_stored_variance_ratio": 0.9875354884749813
+        },
+        "more_fusion.0.b.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.08942383070176166,
+          "mean_empirical_to_stored_variance_ratio": 0.9137831076465448
+        },
+        "more_fusion.0.b.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.0819019738923416,
+          "mean_empirical_to_stored_variance_ratio": 0.8869428318953899
+        },
+        "more_fusion.0.activation.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.10011288928573016,
+          "mean_empirical_to_stored_variance_ratio": 0.7764903394430341
+        },
+        "more_fusion.1.a.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.05781871117673842,
+          "mean_empirical_to_stored_variance_ratio": 0.8732002893093203
+        },
+        "more_fusion.1.a.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.05693880221993756,
+          "mean_empirical_to_stored_variance_ratio": 0.8805808431895503
+        },
+        "more_fusion.1.a.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.052430262440006335,
+          "mean_empirical_to_stored_variance_ratio": 0.8971946461206887
+        },
+        "more_fusion.1.b.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.07717381550330099,
+          "mean_empirical_to_stored_variance_ratio": 0.8488043763733345
+        },
+        "more_fusion.1.b.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.081825179051242,
+          "mean_empirical_to_stored_variance_ratio": 0.8003364685027077
+        },
+        "more_fusion.1.b.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.07733217525625748,
+          "mean_empirical_to_stored_variance_ratio": 0.8014006490967608
+        },
+        "more_fusion.1.activation.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.0687695328067507,
+          "mean_empirical_to_stored_variance_ratio": 0.6815649605689993
+        },
+        "final_activation.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.051139607022667066,
+          "mean_empirical_to_stored_variance_ratio": 0.7469773142565765
+        },
+        "dense.layers.0.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.049369027613411665,
+          "mean_empirical_to_stored_variance_ratio": 1.070649016985599
+        },
+        "dense.layers.1.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.049767373282194376,
+          "mean_empirical_to_stored_variance_ratio": 1.1060574430765489
+        },
+        "dense.layers.2.0": {
+          "mean_absolute_mean_shift_in_stored_SD": 0.05304618362656077,
+          "mean_empirical_to_stored_variance_ratio": 1.1314304958234171
+        }
+      },
+      "mean_across_layers_of_SD_shift": 0.05781109552664408
+    }
+  }
+}

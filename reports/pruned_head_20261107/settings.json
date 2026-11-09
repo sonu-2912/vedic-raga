@@ -1,0 +1,16 @@
+{
+  "initial_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "method": "Separate validation-only capacity control: prune512\u2192256 MLP units using class-balanced training activations/output contributions; freeze the existing backbone; train-normalize features and fold normalization back into Linear weights.",
+  "epochs_max": 40,
+  "patience": 10,
+  "loss": "Weighted CE power.25/smoothing.02 +.1 correct-teacher KL T2 on training only; dropout.5, AdamW.001, weight decay.003, batch256",
+  "selection": "Same seven raw-validation floors and .35accuracy+.65macroF1 as the full-feature trial",
+  "test_accessed": false,
+  "disclosure": "Additional exploratory validation recipe declared after the first two deep-supervision epochs, before any new test access. No claim of independent validation.",
+  "inference_change": "MLP width256 is a disclosed project choice, not recovered author dimensions. All FusDenseNet feature/fusion/attention mechanisms retained.",
+  "dataset_sha256": "9f3422c7a45b676c2965ef4fc5f3099932aa98fd13eaaa2c254f620a9894a6e9",
+  "manifest_sha256": "326eeabc6fca7fb119030aae617f0cacae3ab28ed3d948c7c00d23c5299e10c2",
+  "device": "cpu",
+  "seed": 419,
+  "threads": 2
+}

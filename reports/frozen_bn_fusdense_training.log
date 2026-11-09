@@ -1,0 +1,20 @@
+{"device": "cpu", "train": 23503, "val": 3970, "start_additional_epoch": 0, "initial_or_recovered_best_macro_f1": 0.4569148743780119}
+{"epoch": 50, "batch": 50, "batches": 368, "loss": 1.4513598489761352}
+{"epoch": 50, "batch": 100, "batches": 368, "loss": 1.4471066081523896}
+{"epoch": 50, "batch": 150, "batches": 368, "loss": 1.4481575854619344}
+{"epoch": 50, "batch": 200, "batches": 368, "loss": 1.4435935378074647}
+{"epoch": 50, "batch": 250, "batches": 368, "loss": 1.440394944190979}
+{"epoch": 50, "batch": 300, "batches": 368, "loss": 1.4335990583896636}
+{"epoch": 50, "batch": 350, "batches": 368, "loss": 1.4345903951781136}
+{"epoch": 50, "loss": 1.4343427431277558, "accuracy": 0.45177211419818747, "val_loss": 1.2699685096740723, "val_accuracy": 0.5103274583816528, "val_macro_f1": 0.4311569839080196, "val_balanced_accuracy": 0.4451693673784037, "val_disgust_recall": 0.2, "val_disgust_f1": 0.1724137931034483, "learning_rate": 0.0001, "seconds": 673.9160651999991, "saved_new_best": false}
+{"epoch": 51, "batch": 50, "batches": 368, "loss": 1.4119253134727479}
+{"epoch": 51, "batch": 100, "batches": 368, "loss": 1.4292371988296508}
+{"epoch": 51, "batch": 150, "batches": 368, "loss": 1.4222194449106853}
+{"epoch": 51, "batch": 200, "batches": 368, "loss": 1.4280791199207306}
+{"epoch": 51, "batch": 250, "batches": 368, "loss": 1.4255256819725037}
+{"epoch": 51, "batch": 300, "batches": 368, "loss": 1.422267746925354}
+{"epoch": 51, "batch": 350, "batches": 368, "loss": 1.4237443811552866}
+{"epoch": 51, "loss": 1.422261749040024, "accuracy": 0.4580691826575331, "val_loss": 1.2577250003814697, "val_accuracy": 0.5181360244750977, "val_macro_f1": 0.4376803280428833, "val_balanced_accuracy": 0.45084192654393135, "val_disgust_recall": 0.2, "val_disgust_f1": 0.20618556701030927, "learning_rate": 9.846666218300807e-05, "seconds": 645.21918679995, "saved_new_best": false}
+{"epoch": 52, "batch": 50, "batches": 368, "loss": 1.4378196620941162}
+{"epoch": 52, "batch": 100, "batches": 368, "loss": 1.4378964233398437}
+{"epoch": 52, "batch": 150, "batches": 368, "loss": 1.4278850849469502}

@@ -1,0 +1,6 @@
+{
+  "validation_examples": 16,
+  "max_logit_difference": 0.0,
+  "predictions_identical": true,
+  "not_an_accuracy_score": true
+}

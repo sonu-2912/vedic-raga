@@ -1,0 +1,7942 @@
+{
+  "protocol": {
+    "dataset": "GamER official v1",
+    "tasks": {
+      "QWOP": [
+        "Angry",
+        "Happy"
+      ],
+      "CBAAD": [
+        "Bored",
+        "Stressed"
+      ]
+    },
+    "primary_minimum_seconds": 30,
+    "sensitivity_minimum_seconds": 15,
+    "evaluation": "Separate leave-one-participant-out classifiers within each constant game; fixed balanced LogisticRegression C=1; fold-fitted StandardScaler",
+    "controls": [
+      "Majority",
+      "Duration only",
+      "Game only (constant)"
+    ],
+    "no_game_identity_feature": true,
+    "minimum_participants_per_class": 3,
+    "seed": 91,
+    "selection": "No hyperparameter selection on these held-out scores",
+    "limitations": [
+      "Small cohorts and source psychologist labels",
+      "Short-window RR statistics are exploratory; conventional-duration HRV may not be estimable",
+      "EEG/ECG artifact and time-within-game confounding remain possible",
+      "Offset sign is not independently confirmed; both signs reported",
+      "No FER faces, disgust or raga response labels"
+    ]
+  },
+  "synthetic": false,
+  "tasks": {
+    "QWOP_30s": {
+      "status": "evaluated",
+      "game": "QWOP",
+      "labels": [
+        "Angry",
+        "Happy"
+      ],
+      "minimum_seconds": 30,
+      "n": 13,
+      "participants": 12,
+      "class_participants": {
+        "Angry": 9,
+        "Happy": 3
+      },
+      "class_counts": {
+        "Angry": 10,
+        "Happy": 3
+      },
+      "participants_with_both_labels": 0,
+      "results": {
+        "EEG": {
+          "accuracy": 0.5384615384615384,
+          "macro_f1": 0.4583333333333333,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1-score": 0.6666666666666666,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.2,
+              "recall": 0.3333333333333333,
+              "f1-score": 0.25,
+              "support": 3.0
+            },
+            "accuracy": 0.5384615384615384,
+            "macro avg": {
+              "precision": 0.475,
+              "recall": 0.4666666666666667,
+              "f1-score": 0.4583333333333333,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.6230769230769231,
+              "recall": 0.5384615384615384,
+              "f1-score": 0.5705128205128205,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              6,
+              4
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        "Cardiac": {
+          "accuracy": 0.5384615384615384,
+          "macro_f1": 0.35,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.7,
+              "recall": 0.7,
+              "f1-score": 0.7,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 3.0
+            },
+            "accuracy": 0.5384615384615384,
+            "macro avg": {
+              "precision": 0.35,
+              "recall": 0.35,
+              "f1-score": 0.35,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.5384615384615384,
+              "recall": 0.5384615384615384,
+              "f1-score": 0.5384615384615384,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        "Fusion": {
+          "accuracy": 0.6153846153846154,
+          "macro_f1": 0.5112781954887218,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.7777777777777778,
+              "recall": 0.7,
+              "f1-score": 0.7368421052631579,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.25,
+              "recall": 0.3333333333333333,
+              "f1-score": 0.2857142857142857,
+              "support": 3.0
+            },
+            "accuracy": 0.6153846153846154,
+            "macro avg": {
+              "precision": 0.5138888888888888,
+              "recall": 0.5166666666666666,
+              "f1-score": 0.5112781954887218,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.6559829059829061,
+              "recall": 0.6153846153846154,
+              "f1-score": 0.6327356853672643,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        "Majority": {
+          "accuracy": 0.7692307692307693,
+          "macro_f1": 0.43478260869565216,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.7692307692307693,
+              "recall": 1.0,
+              "f1-score": 0.8695652173913043,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 3.0
+            },
+            "accuracy": 0.7692307692307693,
+            "macro avg": {
+              "precision": 0.38461538461538464,
+              "recall": 0.5,
+              "f1-score": 0.43478260869565216,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.591715976331361,
+              "recall": 0.7692307692307693,
+              "f1-score": 0.6688963210702341,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              10,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        "Duration only": {
+          "accuracy": 0.0,
+          "macro_f1": 0.0,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 3.0
+            },
+            "accuracy": 0.0,
+            "macro avg": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              10
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        "Game only (constant)": {
+          "accuracy": 0.7692307692307693,
+          "macro_f1": 0.43478260869565216,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.7692307692307693,
+              "recall": 1.0,
+              "f1-score": 0.8695652173913043,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 3.0
+            },
+            "accuracy": 0.7692307692307693,
+            "macro avg": {
+              "precision": 0.38461538461538464,
+              "recall": 0.5,
+              "f1-score": 0.43478260869565216,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.591715976331361,
+              "recall": 0.7692307692307693,
+              "f1-score": 0.6688963210702341,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              10,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        }
+      },
+      "fusion_minus_eeg_macro_f1": 0.05294486215538846,
+      "participant_bootstrap_95pct_interval": [
+        -0.10699810606060607,
+        0.2510430745724863
+      ],
+      "predictions": {
+        "truth": [
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy"
+        ],
+        "subjects": [
+          10,
+          12,
+          13,
+          13,
+          19,
+          26,
+          30,
+          31,
+          33,
+          40,
+          44,
+          6,
+          8
+        ],
+        "EEG": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Angry"
+        ],
+        "Cardiac": [
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry"
+        ],
+        "Fusion": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Angry"
+        ],
+        "Majority": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry"
+        ],
+        "Duration only": [
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry"
+        ],
+        "Game only (constant)": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry"
+        ]
+      },
+      "folds": [
+        {
+          "subject": 6,
+          "training_subjects": [
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            108
+          ]
+        },
+        {
+          "subject": 8,
+          "training_subjects": [
+            6,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            122
+          ]
+        },
+        {
+          "subject": 10,
+          "training_subjects": [
+            6,
+            8,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            155
+          ]
+        },
+        {
+          "subject": 12,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            170
+          ]
+        },
+        {
+          "subject": 13,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            179,
+            180
+          ]
+        },
+        {
+          "subject": 19,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            259
+          ]
+        },
+        {
+          "subject": 26,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            324
+          ]
+        },
+        {
+          "subject": 30,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            352
+          ]
+        },
+        {
+          "subject": 31,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            362
+          ]
+        },
+        {
+          "subject": 33,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            392
+          ]
+        },
+        {
+          "subject": 40,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            44
+          ],
+          "annotation_ids": [
+            457
+          ]
+        },
+        {
+          "subject": 44,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40
+          ],
+          "annotation_ids": [
+            502
+          ]
+        }
+      ]
+    },
+    "CBAAD_30s": {
+      "status": "evaluated",
+      "game": "CBAAD",
+      "labels": [
+        "Bored",
+        "Stressed"
+      ],
+      "minimum_seconds": 30,
+      "n": 13,
+      "participants": 13,
+      "class_participants": {
+        "Bored": 9,
+        "Stressed": 4
+      },
+      "class_counts": {
+        "Bored": 9,
+        "Stressed": 4
+      },
+      "participants_with_both_labels": 0,
+      "results": {
+        "EEG": {
+          "accuracy": 0.5384615384615384,
+          "macro_f1": 0.5357142857142857,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.8,
+              "recall": 0.4444444444444444,
+              "f1-score": 0.5714285714285714,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.375,
+              "recall": 0.75,
+              "f1-score": 0.5,
+              "support": 4.0
+            },
+            "accuracy": 0.5384615384615384,
+            "macro avg": {
+              "precision": 0.5875,
+              "recall": 0.5972222222222222,
+              "f1-score": 0.5357142857142857,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.6692307692307692,
+              "recall": 0.5384615384615384,
+              "f1-score": 0.5494505494505494,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              4,
+              5
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        "Cardiac": {
+          "accuracy": 0.6153846153846154,
+          "macro_f1": 0.5751633986928104,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.75,
+              "recall": 0.6666666666666666,
+              "f1-score": 0.7058823529411765,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.4,
+              "recall": 0.5,
+              "f1-score": 0.4444444444444444,
+              "support": 4.0
+            },
+            "accuracy": 0.6153846153846154,
+            "macro avg": {
+              "precision": 0.575,
+              "recall": 0.5833333333333333,
+              "f1-score": 0.5751633986928104,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.6423076923076922,
+              "recall": 0.6153846153846154,
+              "f1-score": 0.6254399195575666,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              6,
+              3
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        "Fusion": {
+          "accuracy": 0.6153846153846154,
+          "macro_f1": 0.5751633986928104,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.75,
+              "recall": 0.6666666666666666,
+              "f1-score": 0.7058823529411765,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.4,
+              "recall": 0.5,
+              "f1-score": 0.4444444444444444,
+              "support": 4.0
+            },
+            "accuracy": 0.6153846153846154,
+            "macro avg": {
+              "precision": 0.575,
+              "recall": 0.5833333333333333,
+              "f1-score": 0.5751633986928104,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.6423076923076922,
+              "recall": 0.6153846153846154,
+              "f1-score": 0.6254399195575666,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              6,
+              3
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        "Majority": {
+          "accuracy": 0.6923076923076923,
+          "macro_f1": 0.4090909090909091,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.6923076923076923,
+              "recall": 1.0,
+              "f1-score": 0.8181818181818182,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 4.0
+            },
+            "accuracy": 0.6923076923076923,
+            "macro avg": {
+              "precision": 0.34615384615384615,
+              "recall": 0.5,
+              "f1-score": 0.4090909090909091,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.47928994082840237,
+              "recall": 0.6923076923076923,
+              "f1-score": 0.5664335664335665,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        "Duration only": {
+          "accuracy": 0.15384615384615385,
+          "macro_f1": 0.15384615384615385,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.25,
+              "recall": 0.1111111111111111,
+              "f1-score": 0.15384615384615385,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.1111111111111111,
+              "recall": 0.25,
+              "f1-score": 0.15384615384615385,
+              "support": 4.0
+            },
+            "accuracy": 0.15384615384615385,
+            "macro avg": {
+              "precision": 0.18055555555555555,
+              "recall": 0.18055555555555555,
+              "f1-score": 0.15384615384615385,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.20726495726495728,
+              "recall": 0.15384615384615385,
+              "f1-score": 0.15384615384615385,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              1,
+              8
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        "Game only (constant)": {
+          "accuracy": 0.6923076923076923,
+          "macro_f1": 0.4090909090909091,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.6923076923076923,
+              "recall": 1.0,
+              "f1-score": 0.8181818181818182,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 4.0
+            },
+            "accuracy": 0.6923076923076923,
+            "macro avg": {
+              "precision": 0.34615384615384615,
+              "recall": 0.5,
+              "f1-score": 0.4090909090909091,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.47928994082840237,
+              "recall": 0.6923076923076923,
+              "f1-score": 0.5664335664335665,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        }
+      },
+      "fusion_minus_eeg_macro_f1": 0.039449112978524714,
+      "participant_bootstrap_95pct_interval": [
+        -0.23214285714285715,
+        0.2837680905695611
+      ],
+      "predictions": {
+        "truth": [
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored"
+        ],
+        "subjects": [
+          22,
+          24,
+          31,
+          33,
+          34,
+          36,
+          38,
+          40,
+          43,
+          45,
+          48,
+          5,
+          9
+        ],
+        "EEG": [
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed"
+        ],
+        "Cardiac": [
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored"
+        ],
+        "Fusion": [
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed"
+        ],
+        "Majority": [
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored"
+        ],
+        "Duration only": [
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed"
+        ],
+        "Game only (constant)": [
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored"
+        ]
+      },
+      "folds": [
+        {
+          "subject": 5,
+          "training_subjects": [
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            87
+          ]
+        },
+        {
+          "subject": 9,
+          "training_subjects": [
+            5,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            132
+          ]
+        },
+        {
+          "subject": 22,
+          "training_subjects": [
+            5,
+            9,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            277
+          ]
+        },
+        {
+          "subject": 24,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            301
+          ]
+        },
+        {
+          "subject": 31,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            355
+          ]
+        },
+        {
+          "subject": 33,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            390
+          ]
+        },
+        {
+          "subject": 34,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            399
+          ]
+        },
+        {
+          "subject": 36,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            410
+          ]
+        },
+        {
+          "subject": 38,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            433
+          ]
+        },
+        {
+          "subject": 40,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            453
+          ]
+        },
+        {
+          "subject": 43,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            489
+          ]
+        },
+        {
+          "subject": 45,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            48
+          ],
+          "annotation_ids": [
+            509
+          ]
+        },
+        {
+          "subject": 48,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45
+          ],
+          "annotation_ids": [
+            543
+          ]
+        }
+      ]
+    },
+    "QWOP_15s": {
+      "status": "evaluated",
+      "game": "QWOP",
+      "labels": [
+        "Angry",
+        "Happy"
+      ],
+      "minimum_seconds": 15,
+      "n": 35,
+      "participants": 24,
+      "class_participants": {
+        "Angry": 16,
+        "Happy": 8
+      },
+      "class_counts": {
+        "Angry": 23,
+        "Happy": 12
+      },
+      "participants_with_both_labels": 0,
+      "results": {
+        "EEG": {
+          "accuracy": 0.4857142857142857,
+          "macro_f1": 0.47500000000000003,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.6470588235294118,
+              "recall": 0.4782608695652174,
+              "f1-score": 0.55,
+              "support": 23.0
+            },
+            "Happy": {
+              "precision": 0.3333333333333333,
+              "recall": 0.5,
+              "f1-score": 0.4,
+              "support": 12.0
+            },
+            "accuracy": 0.4857142857142857,
+            "macro avg": {
+              "precision": 0.4901960784313726,
+              "recall": 0.4891304347826087,
+              "f1-score": 0.47500000000000003,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.5394957983193277,
+              "recall": 0.4857142857142857,
+              "f1-score": 0.49857142857142867,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              11,
+              12
+            ],
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        "Cardiac": {
+          "accuracy": 0.8,
+          "macro_f1": 0.7733580018501387,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.8333333333333334,
+              "recall": 0.8695652173913043,
+              "f1-score": 0.851063829787234,
+              "support": 23.0
+            },
+            "Happy": {
+              "precision": 0.7272727272727273,
+              "recall": 0.6666666666666666,
+              "f1-score": 0.6956521739130435,
+              "support": 12.0
+            },
+            "accuracy": 0.8,
+            "macro avg": {
+              "precision": 0.7803030303030303,
+              "recall": 0.7681159420289855,
+              "f1-score": 0.7733580018501387,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.796969696969697,
+              "recall": 0.8,
+              "f1-score": 0.7977798334875116,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              20,
+              3
+            ],
+            [
+              4,
+              8
+            ]
+          ]
+        },
+        "Fusion": {
+          "accuracy": 0.7142857142857143,
+          "macro_f1": 0.7023809523809523,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.8421052631578947,
+              "recall": 0.6956521739130435,
+              "f1-score": 0.7619047619047619,
+              "support": 23.0
+            },
+            "Happy": {
+              "precision": 0.5625,
+              "recall": 0.75,
+              "f1-score": 0.6428571428571429,
+              "support": 12.0
+            },
+            "accuracy": 0.7142857142857143,
+            "macro avg": {
+              "precision": 0.7023026315789473,
+              "recall": 0.7228260869565217,
+              "f1-score": 0.7023809523809523,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.7462406015037594,
+              "recall": 0.7142857142857143,
+              "f1-score": 0.7210884353741497,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              16,
+              7
+            ],
+            [
+              3,
+              9
+            ]
+          ]
+        },
+        "Majority": {
+          "accuracy": 0.6571428571428571,
+          "macro_f1": 0.39655172413793105,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.6571428571428571,
+              "recall": 1.0,
+              "f1-score": 0.7931034482758621,
+              "support": 23.0
+            },
+            "Happy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 12.0
+            },
+            "accuracy": 0.6571428571428571,
+            "macro avg": {
+              "precision": 0.32857142857142857,
+              "recall": 0.5,
+              "f1-score": 0.39655172413793105,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.43183673469387757,
+              "recall": 0.6571428571428571,
+              "f1-score": 0.5211822660098523,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              23,
+              0
+            ],
+            [
+              12,
+              0
+            ]
+          ]
+        },
+        "Duration only": {
+          "accuracy": 0.5428571428571428,
+          "macro_f1": 0.542483660130719,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.7692307692307693,
+              "recall": 0.43478260869565216,
+              "f1-score": 0.5555555555555556,
+              "support": 23.0
+            },
+            "Happy": {
+              "precision": 0.4090909090909091,
+              "recall": 0.75,
+              "f1-score": 0.5294117647058824,
+              "support": 12.0
+            },
+            "accuracy": 0.5428571428571428,
+            "macro avg": {
+              "precision": 0.5891608391608392,
+              "recall": 0.592391304347826,
+              "f1-score": 0.542483660130719,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.6457542457542458,
+              "recall": 0.5428571428571428,
+              "f1-score": 0.5465919701213818,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              10,
+              13
+            ],
+            [
+              3,
+              9
+            ]
+          ]
+        },
+        "Game only (constant)": {
+          "accuracy": 0.6571428571428571,
+          "macro_f1": 0.39655172413793105,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.6571428571428571,
+              "recall": 1.0,
+              "f1-score": 0.7931034482758621,
+              "support": 23.0
+            },
+            "Happy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 12.0
+            },
+            "accuracy": 0.6571428571428571,
+            "macro avg": {
+              "precision": 0.32857142857142857,
+              "recall": 0.5,
+              "f1-score": 0.39655172413793105,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.43183673469387757,
+              "recall": 0.6571428571428571,
+              "f1-score": 0.5211822660098523,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              23,
+              0
+            ],
+            [
+              12,
+              0
+            ]
+          ]
+        }
+      },
+      "fusion_minus_eeg_macro_f1": 0.2273809523809523,
+      "participant_bootstrap_95pct_interval": [
+        -0.04674114754597496,
+        0.49042582899218584
+      ],
+      "predictions": {
+        "truth": [
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry"
+        ],
+        "subjects": [
+          10,
+          12,
+          13,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15,
+          19,
+          2,
+          2,
+          21,
+          21,
+          24,
+          24,
+          26,
+          29,
+          30,
+          31,
+          31,
+          33,
+          36,
+          40,
+          43,
+          44,
+          45,
+          46,
+          46,
+          47,
+          47,
+          6,
+          8,
+          8,
+          9
+        ],
+        "EEG": [
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry"
+        ],
+        "Cardiac": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry"
+        ],
+        "Fusion": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry"
+        ],
+        "Majority": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry"
+        ],
+        "Duration only": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy"
+        ],
+        "Game only (constant)": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry"
+        ]
+      },
+      "folds": [
+        {
+          "subject": 2,
+          "training_subjects": [
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            13,
+            16
+          ]
+        },
+        {
+          "subject": 6,
+          "training_subjects": [
+            2,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            108
+          ]
+        },
+        {
+          "subject": 8,
+          "training_subjects": [
+            2,
+            6,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            122,
+            123
+          ]
+        },
+        {
+          "subject": 9,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            138
+          ]
+        },
+        {
+          "subject": 10,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            155
+          ]
+        },
+        {
+          "subject": 12,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            170
+          ]
+        },
+        {
+          "subject": 13,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            179,
+            180,
+            181
+          ]
+        },
+        {
+          "subject": 14,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            197,
+            198
+          ]
+        },
+        {
+          "subject": 15,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            210,
+            211
+          ]
+        },
+        {
+          "subject": 19,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            259
+          ]
+        },
+        {
+          "subject": 21,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            270,
+            271
+          ]
+        },
+        {
+          "subject": 24,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            304,
+            305
+          ]
+        },
+        {
+          "subject": 26,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            324
+          ]
+        },
+        {
+          "subject": 29,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            340
+          ]
+        },
+        {
+          "subject": 30,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            352
+          ]
+        },
+        {
+          "subject": 31,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            361,
+            362
+          ]
+        },
+        {
+          "subject": 33,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            392
+          ]
+        },
+        {
+          "subject": 36,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            414
+          ]
+        },
+        {
+          "subject": 40,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            457
+          ]
+        },
+        {
+          "subject": 43,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            493
+          ]
+        },
+        {
+          "subject": 44,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            502
+          ]
+        },
+        {
+          "subject": 45,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            513
+          ]
+        },
+        {
+          "subject": 46,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            47
+          ],
+          "annotation_ids": [
+            522,
+            524
+          ]
+        },
+        {
+          "subject": 47,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46
+          ],
+          "annotation_ids": [
+            536,
+            537
+          ]
+        }
+      ]
+    },
+    "CBAAD_15s": {
+      "status": "evaluated",
+      "game": "CBAAD",
+      "labels": [
+        "Bored",
+        "Stressed"
+      ],
+      "minimum_seconds": 15,
+      "n": 35,
+      "participants": 24,
+      "class_participants": {
+        "Bored": 14,
+        "Stressed": 10
+      },
+      "class_counts": {
+        "Bored": 20,
+        "Stressed": 15
+      },
+      "participants_with_both_labels": 0,
+      "results": {
+        "EEG": {
+          "accuracy": 0.6857142857142857,
+          "macro_f1": 0.6857142857142857,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.8,
+              "recall": 0.6,
+              "f1-score": 0.6857142857142857,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.6,
+              "recall": 0.8,
+              "f1-score": 0.6857142857142857,
+              "support": 15.0
+            },
+            "accuracy": 0.6857142857142857,
+            "macro avg": {
+              "precision": 0.7,
+              "recall": 0.7,
+              "f1-score": 0.6857142857142857,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.7142857142857143,
+              "recall": 0.6857142857142857,
+              "f1-score": 0.6857142857142857,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              12,
+              8
+            ],
+            [
+              3,
+              12
+            ]
+          ]
+        },
+        "Cardiac": {
+          "accuracy": 0.4857142857142857,
+          "macro_f1": 0.47500000000000003,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.55,
+              "recall": 0.55,
+              "f1-score": 0.55,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.4,
+              "recall": 0.4,
+              "f1-score": 0.4,
+              "support": 15.0
+            },
+            "accuracy": 0.4857142857142857,
+            "macro avg": {
+              "precision": 0.47500000000000003,
+              "recall": 0.47500000000000003,
+              "f1-score": 0.47500000000000003,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.4857142857142857,
+              "recall": 0.4857142857142857,
+              "f1-score": 0.4857142857142857,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              11,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ]
+        },
+        "Fusion": {
+          "accuracy": 0.6571428571428571,
+          "macro_f1": 0.6568627450980392,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1-score": 0.6666666666666666,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.5789473684210527,
+              "recall": 0.7333333333333333,
+              "f1-score": 0.6470588235294118,
+              "support": 15.0
+            },
+            "accuracy": 0.6571428571428571,
+            "macro avg": {
+              "precision": 0.6644736842105263,
+              "recall": 0.6666666666666666,
+              "f1-score": 0.6568627450980392,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.6766917293233082,
+              "recall": 0.6571428571428571,
+              "f1-score": 0.6582633053221288,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              12,
+              8
+            ],
+            [
+              4,
+              11
+            ]
+          ]
+        },
+        "Majority": {
+          "accuracy": 0.5714285714285714,
+          "macro_f1": 0.36363636363636365,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.5714285714285714,
+              "recall": 1.0,
+              "f1-score": 0.7272727272727273,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 15.0
+            },
+            "accuracy": 0.5714285714285714,
+            "macro avg": {
+              "precision": 0.2857142857142857,
+              "recall": 0.5,
+              "f1-score": 0.36363636363636365,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.32653061224489793,
+              "recall": 0.5714285714285714,
+              "f1-score": 0.4155844155844156,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              20,
+              0
+            ],
+            [
+              15,
+              0
+            ]
+          ]
+        },
+        "Duration only": {
+          "accuracy": 0.5428571428571428,
+          "macro_f1": 0.542483660130719,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.6428571428571429,
+              "recall": 0.45,
+              "f1-score": 0.5294117647058824,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.47619047619047616,
+              "recall": 0.6666666666666666,
+              "f1-score": 0.5555555555555556,
+              "support": 15.0
+            },
+            "accuracy": 0.5428571428571428,
+            "macro avg": {
+              "precision": 0.5595238095238095,
+              "recall": 0.5583333333333333,
+              "f1-score": 0.542483660130719,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.5714285714285714,
+              "recall": 0.5428571428571428,
+              "f1-score": 0.5406162464985994,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              9,
+              11
+            ],
+            [
+              5,
+              10
+            ]
+          ]
+        },
+        "Game only (constant)": {
+          "accuracy": 0.5714285714285714,
+          "macro_f1": 0.36363636363636365,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.5714285714285714,
+              "recall": 1.0,
+              "f1-score": 0.7272727272727273,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 15.0
+            },
+            "accuracy": 0.5714285714285714,
+            "macro avg": {
+              "precision": 0.2857142857142857,
+              "recall": 0.5,
+              "f1-score": 0.36363636363636365,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.32653061224489793,
+              "recall": 0.5714285714285714,
+              "f1-score": 0.4155844155844156,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              20,
+              0
+            ],
+            [
+              15,
+              0
+            ]
+          ]
+        }
+      },
+      "fusion_minus_eeg_macro_f1": -0.028851540616246507,
+      "participant_bootstrap_95pct_interval": [
+        -0.20136710352838227,
+        0.13352521649740776
+      ],
+      "predictions": {
+        "truth": [
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored"
+        ],
+        "subjects": [
+          10,
+          13,
+          14,
+          14,
+          17,
+          2,
+          22,
+          22,
+          22,
+          23,
+          23,
+          24,
+          24,
+          3,
+          3,
+          30,
+          30,
+          31,
+          33,
+          34,
+          36,
+          36,
+          38,
+          38,
+          39,
+          4,
+          40,
+          43,
+          45,
+          46,
+          48,
+          5,
+          5,
+          9,
+          9
+        ],
+        "EEG": [
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed"
+        ],
+        "Cardiac": [
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed"
+        ],
+        "Fusion": [
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed"
+        ],
+        "Majority": [
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored"
+        ],
+        "Duration only": [
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed"
+        ],
+        "Game only (constant)": [
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored"
+        ]
+      },
+      "folds": [
+        {
+          "subject": 2,
+          "training_subjects": [
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            0
+          ]
+        },
+        {
+          "subject": 3,
+          "training_subjects": [
+            2,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            30,
+            31
+          ]
+        },
+        {
+          "subject": 4,
+          "training_subjects": [
+            2,
+            3,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            62
+          ]
+        },
+        {
+          "subject": 5,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            87,
+            89
+          ]
+        },
+        {
+          "subject": 9,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            132,
+            133
+          ]
+        },
+        {
+          "subject": 10,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            148
+          ]
+        },
+        {
+          "subject": 13,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            176
+          ]
+        },
+        {
+          "subject": 14,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            193,
+            194
+          ]
+        },
+        {
+          "subject": 17,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            234
+          ]
+        },
+        {
+          "subject": 22,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            276,
+            277,
+            278
+          ]
+        },
+        {
+          "subject": 23,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            290,
+            291
+          ]
+        },
+        {
+          "subject": 24,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            300,
+            301
+          ]
+        },
+        {
+          "subject": 30,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            347,
+            348
+          ]
+        },
+        {
+          "subject": 31,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            355
+          ]
+        },
+        {
+          "subject": 33,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            390
+          ]
+        },
+        {
+          "subject": 34,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            399
+          ]
+        },
+        {
+          "subject": 36,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            409,
+            410
+          ]
+        },
+        {
+          "subject": 38,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            433,
+            434
+          ]
+        },
+        {
+          "subject": 39,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            446
+          ]
+        },
+        {
+          "subject": 40,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            453
+          ]
+        },
+        {
+          "subject": 43,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            489
+          ]
+        },
+        {
+          "subject": 45,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            509
+          ]
+        },
+        {
+          "subject": 46,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            518
+          ]
+        },
+        {
+          "subject": 48,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46
+          ],
+          "annotation_ids": [
+            543
+          ]
+        }
+      ]
+    },
+    "QWOP_60s": {
+      "status": "insufficient",
+      "n": 3,
+      "class_participants": {
+        "Angry": 2,
+        "Happy": 1
+      },
+      "reason": "Fewer than three participants in a class; no valid claim from this cohort"
+    },
+    "CBAAD_60s": {
+      "status": "insufficient",
+      "n": 1,
+      "class_participants": {
+        "Bored": 1,
+        "Stressed": 0
+      },
+      "reason": "Fewer than three participants in a class; no valid claim from this cohort"
+    },
+    "QWOP_30s_plus_offset": {
+      "status": "evaluated",
+      "game": "QWOP",
+      "labels": [
+        "Angry",
+        "Happy"
+      ],
+      "minimum_seconds": 30,
+      "n": 13,
+      "participants": 12,
+      "class_participants": {
+        "Angry": 9,
+        "Happy": 3
+      },
+      "class_counts": {
+        "Angry": 10,
+        "Happy": 3
+      },
+      "participants_with_both_labels": 0,
+      "results": {
+        "EEG": {
+          "accuracy": 0.6153846153846154,
+          "macro_f1": 0.5112781954887218,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.7777777777777778,
+              "recall": 0.7,
+              "f1-score": 0.7368421052631579,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.25,
+              "recall": 0.3333333333333333,
+              "f1-score": 0.2857142857142857,
+              "support": 3.0
+            },
+            "accuracy": 0.6153846153846154,
+            "macro avg": {
+              "precision": 0.5138888888888888,
+              "recall": 0.5166666666666666,
+              "f1-score": 0.5112781954887218,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.6559829059829061,
+              "recall": 0.6153846153846154,
+              "f1-score": 0.6327356853672643,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        "Cardiac": {
+          "accuracy": 0.7692307692307693,
+          "macro_f1": 0.706766917293233,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.8888888888888888,
+              "recall": 0.8,
+              "f1-score": 0.8421052631578947,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.5,
+              "recall": 0.6666666666666666,
+              "f1-score": 0.5714285714285714,
+              "support": 3.0
+            },
+            "accuracy": 0.7692307692307693,
+            "macro avg": {
+              "precision": 0.6944444444444444,
+              "recall": 0.7333333333333334,
+              "f1-score": 0.706766917293233,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.7991452991452992,
+              "recall": 0.7692307692307693,
+              "f1-score": 0.7796414112203585,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              8,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        "Fusion": {
+          "accuracy": 0.8461538461538461,
+          "macro_f1": 0.7833333333333333,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.9,
+              "recall": 0.9,
+              "f1-score": 0.9,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.6666666666666666,
+              "recall": 0.6666666666666666,
+              "f1-score": 0.6666666666666666,
+              "support": 3.0
+            },
+            "accuracy": 0.8461538461538461,
+            "macro avg": {
+              "precision": 0.7833333333333333,
+              "recall": 0.7833333333333333,
+              "f1-score": 0.7833333333333333,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.8461538461538461,
+              "recall": 0.8461538461538461,
+              "f1-score": 0.8461538461538461,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              9,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        "Majority": {
+          "accuracy": 0.7692307692307693,
+          "macro_f1": 0.43478260869565216,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.7692307692307693,
+              "recall": 1.0,
+              "f1-score": 0.8695652173913043,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 3.0
+            },
+            "accuracy": 0.7692307692307693,
+            "macro avg": {
+              "precision": 0.38461538461538464,
+              "recall": 0.5,
+              "f1-score": 0.43478260869565216,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.591715976331361,
+              "recall": 0.7692307692307693,
+              "f1-score": 0.6688963210702341,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              10,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        "Duration only": {
+          "accuracy": 0.0,
+          "macro_f1": 0.0,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 3.0
+            },
+            "accuracy": 0.0,
+            "macro avg": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              10
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        "Game only (constant)": {
+          "accuracy": 0.7692307692307693,
+          "macro_f1": 0.43478260869565216,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.7692307692307693,
+              "recall": 1.0,
+              "f1-score": 0.8695652173913043,
+              "support": 10.0
+            },
+            "Happy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 3.0
+            },
+            "accuracy": 0.7692307692307693,
+            "macro avg": {
+              "precision": 0.38461538461538464,
+              "recall": 0.5,
+              "f1-score": 0.43478260869565216,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.591715976331361,
+              "recall": 0.7692307692307693,
+              "f1-score": 0.6688963210702341,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              10,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        }
+      },
+      "fusion_minus_eeg_macro_f1": 0.27205513784461155,
+      "participant_bootstrap_95pct_interval": [
+        -0.32748628364389226,
+        0.6666666666666667
+      ],
+      "predictions": {
+        "truth": [
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy"
+        ],
+        "subjects": [
+          10,
+          12,
+          13,
+          13,
+          19,
+          26,
+          30,
+          31,
+          33,
+          40,
+          44,
+          6,
+          8
+        ],
+        "EEG": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry"
+        ],
+        "Cardiac": [
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Happy"
+        ],
+        "Fusion": [
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy"
+        ],
+        "Majority": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry"
+        ],
+        "Duration only": [
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry"
+        ],
+        "Game only (constant)": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry"
+        ]
+      },
+      "folds": [
+        {
+          "subject": 6,
+          "training_subjects": [
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            108
+          ]
+        },
+        {
+          "subject": 8,
+          "training_subjects": [
+            6,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            122
+          ]
+        },
+        {
+          "subject": 10,
+          "training_subjects": [
+            6,
+            8,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            155
+          ]
+        },
+        {
+          "subject": 12,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            170
+          ]
+        },
+        {
+          "subject": 13,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            179,
+            180
+          ]
+        },
+        {
+          "subject": 19,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            26,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            259
+          ]
+        },
+        {
+          "subject": 26,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            30,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            324
+          ]
+        },
+        {
+          "subject": 30,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            31,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            352
+          ]
+        },
+        {
+          "subject": 31,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            33,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            362
+          ]
+        },
+        {
+          "subject": 33,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            40,
+            44
+          ],
+          "annotation_ids": [
+            392
+          ]
+        },
+        {
+          "subject": 40,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            44
+          ],
+          "annotation_ids": [
+            457
+          ]
+        },
+        {
+          "subject": 44,
+          "training_subjects": [
+            6,
+            8,
+            10,
+            12,
+            13,
+            19,
+            26,
+            30,
+            31,
+            33,
+            40
+          ],
+          "annotation_ids": [
+            502
+          ]
+        }
+      ]
+    },
+    "CBAAD_30s_plus_offset": {
+      "status": "evaluated",
+      "game": "CBAAD",
+      "labels": [
+        "Bored",
+        "Stressed"
+      ],
+      "minimum_seconds": 30,
+      "n": 13,
+      "participants": 13,
+      "class_participants": {
+        "Bored": 9,
+        "Stressed": 4
+      },
+      "class_counts": {
+        "Bored": 9,
+        "Stressed": 4
+      },
+      "participants_with_both_labels": 0,
+      "results": {
+        "EEG": {
+          "accuracy": 0.8461538461538461,
+          "macro_f1": 0.8194444444444444,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.8888888888888888,
+              "recall": 0.8888888888888888,
+              "f1-score": 0.8888888888888888,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.75,
+              "recall": 0.75,
+              "f1-score": 0.75,
+              "support": 4.0
+            },
+            "accuracy": 0.8461538461538461,
+            "macro avg": {
+              "precision": 0.8194444444444444,
+              "recall": 0.8194444444444444,
+              "f1-score": 0.8194444444444444,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.8461538461538461,
+              "recall": 0.8461538461538461,
+              "f1-score": 0.8461538461538461,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        "Cardiac": {
+          "accuracy": 0.6923076923076923,
+          "macro_f1": 0.5666666666666667,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.7272727272727273,
+              "recall": 0.8888888888888888,
+              "f1-score": 0.8,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.5,
+              "recall": 0.25,
+              "f1-score": 0.3333333333333333,
+              "support": 4.0
+            },
+            "accuracy": 0.6923076923076923,
+            "macro avg": {
+              "precision": 0.6136363636363636,
+              "recall": 0.5694444444444444,
+              "f1-score": 0.5666666666666667,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.6573426573426574,
+              "recall": 0.6923076923076923,
+              "f1-score": 0.6564102564102564,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        "Fusion": {
+          "accuracy": 0.7692307692307693,
+          "macro_f1": 0.7450980392156863,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.875,
+              "recall": 0.7777777777777778,
+              "f1-score": 0.8235294117647058,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.6,
+              "recall": 0.75,
+              "f1-score": 0.6666666666666666,
+              "support": 4.0
+            },
+            "accuracy": 0.7692307692307693,
+            "macro avg": {
+              "precision": 0.7375,
+              "recall": 0.7638888888888888,
+              "f1-score": 0.7450980392156863,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.7903846153846155,
+              "recall": 0.7692307692307693,
+              "f1-score": 0.77526395173454,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              7,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        "Majority": {
+          "accuracy": 0.6923076923076923,
+          "macro_f1": 0.4090909090909091,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.6923076923076923,
+              "recall": 1.0,
+              "f1-score": 0.8181818181818182,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 4.0
+            },
+            "accuracy": 0.6923076923076923,
+            "macro avg": {
+              "precision": 0.34615384615384615,
+              "recall": 0.5,
+              "f1-score": 0.4090909090909091,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.47928994082840237,
+              "recall": 0.6923076923076923,
+              "f1-score": 0.5664335664335665,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        "Duration only": {
+          "accuracy": 0.15384615384615385,
+          "macro_f1": 0.15384615384615385,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.25,
+              "recall": 0.1111111111111111,
+              "f1-score": 0.15384615384615385,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.1111111111111111,
+              "recall": 0.25,
+              "f1-score": 0.15384615384615385,
+              "support": 4.0
+            },
+            "accuracy": 0.15384615384615385,
+            "macro avg": {
+              "precision": 0.18055555555555555,
+              "recall": 0.18055555555555555,
+              "f1-score": 0.15384615384615385,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.20726495726495728,
+              "recall": 0.15384615384615385,
+              "f1-score": 0.15384615384615385,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              1,
+              8
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        "Game only (constant)": {
+          "accuracy": 0.6923076923076923,
+          "macro_f1": 0.4090909090909091,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.6923076923076923,
+              "recall": 1.0,
+              "f1-score": 0.8181818181818182,
+              "support": 9.0
+            },
+            "Stressed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 4.0
+            },
+            "accuracy": 0.6923076923076923,
+            "macro avg": {
+              "precision": 0.34615384615384615,
+              "recall": 0.5,
+              "f1-score": 0.4090909090909091,
+              "support": 13.0
+            },
+            "weighted avg": {
+              "precision": 0.47928994082840237,
+              "recall": 0.6923076923076923,
+              "f1-score": 0.5664335664335665,
+              "support": 13.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        }
+      },
+      "fusion_minus_eeg_macro_f1": -0.07434640522875813,
+      "participant_bootstrap_95pct_interval": [
+        -0.47272727272727266,
+        0.27368421052631575
+      ],
+      "predictions": {
+        "truth": [
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored"
+        ],
+        "subjects": [
+          22,
+          24,
+          31,
+          33,
+          34,
+          36,
+          38,
+          40,
+          43,
+          45,
+          48,
+          5,
+          9
+        ],
+        "EEG": [
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored"
+        ],
+        "Cardiac": [
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed"
+        ],
+        "Fusion": [
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed"
+        ],
+        "Majority": [
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored"
+        ],
+        "Duration only": [
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed"
+        ],
+        "Game only (constant)": [
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored"
+        ]
+      },
+      "folds": [
+        {
+          "subject": 5,
+          "training_subjects": [
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            87
+          ]
+        },
+        {
+          "subject": 9,
+          "training_subjects": [
+            5,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            132
+          ]
+        },
+        {
+          "subject": 22,
+          "training_subjects": [
+            5,
+            9,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            277
+          ]
+        },
+        {
+          "subject": 24,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            301
+          ]
+        },
+        {
+          "subject": 31,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            355
+          ]
+        },
+        {
+          "subject": 33,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            390
+          ]
+        },
+        {
+          "subject": 34,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            36,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            399
+          ]
+        },
+        {
+          "subject": 36,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            38,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            410
+          ]
+        },
+        {
+          "subject": 38,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            433
+          ]
+        },
+        {
+          "subject": 40,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            453
+          ]
+        },
+        {
+          "subject": 43,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            489
+          ]
+        },
+        {
+          "subject": 45,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            48
+          ],
+          "annotation_ids": [
+            509
+          ]
+        },
+        {
+          "subject": 48,
+          "training_subjects": [
+            5,
+            9,
+            22,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45
+          ],
+          "annotation_ids": [
+            543
+          ]
+        }
+      ]
+    },
+    "QWOP_15s_plus_offset": {
+      "status": "evaluated",
+      "game": "QWOP",
+      "labels": [
+        "Angry",
+        "Happy"
+      ],
+      "minimum_seconds": 15,
+      "n": 34,
+      "participants": 24,
+      "class_participants": {
+        "Angry": 16,
+        "Happy": 8
+      },
+      "class_counts": {
+        "Angry": 22,
+        "Happy": 12
+      },
+      "participants_with_both_labels": 0,
+      "results": {
+        "EEG": {
+          "accuracy": 0.5294117647058824,
+          "macro_f1": 0.5142857142857142,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.6666666666666666,
+              "recall": 0.5454545454545454,
+              "f1-score": 0.6,
+              "support": 22.0
+            },
+            "Happy": {
+              "precision": 0.375,
+              "recall": 0.5,
+              "f1-score": 0.42857142857142855,
+              "support": 12.0
+            },
+            "accuracy": 0.5294117647058824,
+            "macro avg": {
+              "precision": 0.5208333333333333,
+              "recall": 0.5227272727272727,
+              "f1-score": 0.5142857142857142,
+              "support": 34.0
+            },
+            "weighted avg": {
+              "precision": 0.5637254901960783,
+              "recall": 0.5294117647058824,
+              "f1-score": 0.5394957983193277,
+              "support": 34.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              12,
+              10
+            ],
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        "Cardiac": {
+          "accuracy": 0.6176470588235294,
+          "macro_f1": 0.5521783181357649,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.68,
+              "recall": 0.7727272727272727,
+              "f1-score": 0.723404255319149,
+              "support": 22.0
+            },
+            "Happy": {
+              "precision": 0.4444444444444444,
+              "recall": 0.3333333333333333,
+              "f1-score": 0.38095238095238093,
+              "support": 12.0
+            },
+            "accuracy": 0.6176470588235294,
+            "macro avg": {
+              "precision": 0.5622222222222222,
+              "recall": 0.553030303030303,
+              "f1-score": 0.5521783181357649,
+              "support": 34.0
+            },
+            "weighted avg": {
+              "precision": 0.5968627450980392,
+              "recall": 0.6176470588235294,
+              "f1-score": 0.6025388878955837,
+              "support": 34.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              17,
+              5
+            ],
+            [
+              8,
+              4
+            ]
+          ]
+        },
+        "Fusion": {
+          "accuracy": 0.6470588235294118,
+          "macro_f1": 0.6136363636363636,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.7272727272727273,
+              "recall": 0.7272727272727273,
+              "f1-score": 0.7272727272727273,
+              "support": 22.0
+            },
+            "Happy": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "f1-score": 0.5,
+              "support": 12.0
+            },
+            "accuracy": 0.6470588235294118,
+            "macro avg": {
+              "precision": 0.6136363636363636,
+              "recall": 0.6136363636363636,
+              "f1-score": 0.6136363636363636,
+              "support": 34.0
+            },
+            "weighted avg": {
+              "precision": 0.6470588235294118,
+              "recall": 0.6470588235294118,
+              "f1-score": 0.6470588235294118,
+              "support": 34.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              16,
+              6
+            ],
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        "Majority": {
+          "accuracy": 0.6470588235294118,
+          "macro_f1": 0.39285714285714285,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.6470588235294118,
+              "recall": 1.0,
+              "f1-score": 0.7857142857142857,
+              "support": 22.0
+            },
+            "Happy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 12.0
+            },
+            "accuracy": 0.6470588235294118,
+            "macro avg": {
+              "precision": 0.3235294117647059,
+              "recall": 0.5,
+              "f1-score": 0.39285714285714285,
+              "support": 34.0
+            },
+            "weighted avg": {
+              "precision": 0.41868512110726647,
+              "recall": 0.6470588235294118,
+              "f1-score": 0.5084033613445378,
+              "support": 34.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              22,
+              0
+            ],
+            [
+              12,
+              0
+            ]
+          ]
+        },
+        "Duration only": {
+          "accuracy": 0.5588235294117647,
+          "macro_f1": 0.5584415584415584,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.7692307692307693,
+              "recall": 0.45454545454545453,
+              "f1-score": 0.5714285714285714,
+              "support": 22.0
+            },
+            "Happy": {
+              "precision": 0.42857142857142855,
+              "recall": 0.75,
+              "f1-score": 0.5454545454545454,
+              "support": 12.0
+            },
+            "accuracy": 0.5588235294117647,
+            "macro avg": {
+              "precision": 0.5989010989010989,
+              "recall": 0.6022727272727273,
+              "f1-score": 0.5584415584415584,
+              "support": 34.0
+            },
+            "weighted avg": {
+              "precision": 0.6489980607627667,
+              "recall": 0.5588235294117647,
+              "f1-score": 0.5622612681436211,
+              "support": 34.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              10,
+              12
+            ],
+            [
+              3,
+              9
+            ]
+          ]
+        },
+        "Game only (constant)": {
+          "accuracy": 0.6470588235294118,
+          "macro_f1": 0.39285714285714285,
+          "classification_report": {
+            "Angry": {
+              "precision": 0.6470588235294118,
+              "recall": 1.0,
+              "f1-score": 0.7857142857142857,
+              "support": 22.0
+            },
+            "Happy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 12.0
+            },
+            "accuracy": 0.6470588235294118,
+            "macro avg": {
+              "precision": 0.3235294117647059,
+              "recall": 0.5,
+              "f1-score": 0.39285714285714285,
+              "support": 34.0
+            },
+            "weighted avg": {
+              "precision": 0.41868512110726647,
+              "recall": 0.6470588235294118,
+              "f1-score": 0.5084033613445378,
+              "support": 34.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              22,
+              0
+            ],
+            [
+              12,
+              0
+            ]
+          ]
+        }
+      },
+      "fusion_minus_eeg_macro_f1": 0.09935064935064941,
+      "participant_bootstrap_95pct_interval": [
+        -0.06458333333333327,
+        0.2645212558218908
+      ],
+      "predictions": {
+        "truth": [
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry"
+        ],
+        "subjects": [
+          10,
+          12,
+          13,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15,
+          19,
+          2,
+          2,
+          21,
+          24,
+          24,
+          26,
+          29,
+          30,
+          31,
+          31,
+          33,
+          36,
+          40,
+          43,
+          44,
+          45,
+          46,
+          46,
+          47,
+          47,
+          6,
+          8,
+          8,
+          9
+        ],
+        "EEG": [
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry"
+        ],
+        "Cardiac": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry"
+        ],
+        "Fusion": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry"
+        ],
+        "Majority": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry"
+        ],
+        "Duration only": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Angry",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Happy",
+          "Angry",
+          "Angry",
+          "Happy",
+          "Happy"
+        ],
+        "Game only (constant)": [
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry",
+          "Angry"
+        ]
+      },
+      "folds": [
+        {
+          "subject": 2,
+          "training_subjects": [
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            13,
+            16
+          ]
+        },
+        {
+          "subject": 6,
+          "training_subjects": [
+            2,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            108
+          ]
+        },
+        {
+          "subject": 8,
+          "training_subjects": [
+            2,
+            6,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            122,
+            123
+          ]
+        },
+        {
+          "subject": 9,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            138
+          ]
+        },
+        {
+          "subject": 10,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            155
+          ]
+        },
+        {
+          "subject": 12,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            170
+          ]
+        },
+        {
+          "subject": 13,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            179,
+            180,
+            181
+          ]
+        },
+        {
+          "subject": 14,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            197,
+            198
+          ]
+        },
+        {
+          "subject": 15,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            210,
+            211
+          ]
+        },
+        {
+          "subject": 19,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            259
+          ]
+        },
+        {
+          "subject": 21,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            270
+          ]
+        },
+        {
+          "subject": 24,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            304,
+            305
+          ]
+        },
+        {
+          "subject": 26,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            324
+          ]
+        },
+        {
+          "subject": 29,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            340
+          ]
+        },
+        {
+          "subject": 30,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            352
+          ]
+        },
+        {
+          "subject": 31,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            361,
+            362
+          ]
+        },
+        {
+          "subject": 33,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            392
+          ]
+        },
+        {
+          "subject": 36,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            40,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            414
+          ]
+        },
+        {
+          "subject": 40,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            457
+          ]
+        },
+        {
+          "subject": 43,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            44,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            493
+          ]
+        },
+        {
+          "subject": 44,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            45,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            502
+          ]
+        },
+        {
+          "subject": 45,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            46,
+            47
+          ],
+          "annotation_ids": [
+            513
+          ]
+        },
+        {
+          "subject": 46,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            47
+          ],
+          "annotation_ids": [
+            522,
+            524
+          ]
+        },
+        {
+          "subject": 47,
+          "training_subjects": [
+            2,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            21,
+            24,
+            26,
+            29,
+            30,
+            31,
+            33,
+            36,
+            40,
+            43,
+            44,
+            45,
+            46
+          ],
+          "annotation_ids": [
+            536,
+            537
+          ]
+        }
+      ]
+    },
+    "CBAAD_15s_plus_offset": {
+      "status": "evaluated",
+      "game": "CBAAD",
+      "labels": [
+        "Bored",
+        "Stressed"
+      ],
+      "minimum_seconds": 15,
+      "n": 35,
+      "participants": 24,
+      "class_participants": {
+        "Bored": 14,
+        "Stressed": 10
+      },
+      "class_counts": {
+        "Bored": 20,
+        "Stressed": 15
+      },
+      "participants_with_both_labels": 0,
+      "results": {
+        "EEG": {
+          "accuracy": 0.5428571428571428,
+          "macro_f1": 0.542483660130719,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.625,
+              "recall": 0.5,
+              "f1-score": 0.5555555555555556,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.47368421052631576,
+              "recall": 0.6,
+              "f1-score": 0.5294117647058824,
+              "support": 15.0
+            },
+            "accuracy": 0.5428571428571428,
+            "macro avg": {
+              "precision": 0.5493421052631579,
+              "recall": 0.55,
+              "f1-score": 0.542483660130719,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.5601503759398496,
+              "recall": 0.5428571428571428,
+              "f1-score": 0.5443510737628384,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              10,
+              10
+            ],
+            [
+              6,
+              9
+            ]
+          ]
+        },
+        "Cardiac": {
+          "accuracy": 0.45714285714285713,
+          "macro_f1": 0.4499586435070306,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.5263157894736842,
+              "recall": 0.5,
+              "f1-score": 0.5128205128205128,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.375,
+              "recall": 0.4,
+              "f1-score": 0.3870967741935484,
+              "support": 15.0
+            },
+            "accuracy": 0.45714285714285713,
+            "macro avg": {
+              "precision": 0.4506578947368421,
+              "recall": 0.45,
+              "f1-score": 0.4499586435070306,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.46146616541353386,
+              "recall": 0.45714285714285713,
+              "f1-score": 0.4589389105518137,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              10,
+              10
+            ],
+            [
+              9,
+              6
+            ]
+          ]
+        },
+        "Fusion": {
+          "accuracy": 0.6,
+          "macro_f1": 0.5996732026143792,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.7142857142857143,
+              "recall": 0.5,
+              "f1-score": 0.5882352941176471,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.5238095238095238,
+              "recall": 0.7333333333333333,
+              "f1-score": 0.6111111111111112,
+              "support": 15.0
+            },
+            "accuracy": 0.6,
+            "macro avg": {
+              "precision": 0.6190476190476191,
+              "recall": 0.6166666666666667,
+              "f1-score": 0.5996732026143792,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.6326530612244898,
+              "recall": 0.6,
+              "f1-score": 0.5980392156862746,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              10,
+              10
+            ],
+            [
+              4,
+              11
+            ]
+          ]
+        },
+        "Majority": {
+          "accuracy": 0.5714285714285714,
+          "macro_f1": 0.36363636363636365,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.5714285714285714,
+              "recall": 1.0,
+              "f1-score": 0.7272727272727273,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 15.0
+            },
+            "accuracy": 0.5714285714285714,
+            "macro avg": {
+              "precision": 0.2857142857142857,
+              "recall": 0.5,
+              "f1-score": 0.36363636363636365,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.32653061224489793,
+              "recall": 0.5714285714285714,
+              "f1-score": 0.4155844155844156,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              20,
+              0
+            ],
+            [
+              15,
+              0
+            ]
+          ]
+        },
+        "Duration only": {
+          "accuracy": 0.5428571428571428,
+          "macro_f1": 0.542483660130719,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.6428571428571429,
+              "recall": 0.45,
+              "f1-score": 0.5294117647058824,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.47619047619047616,
+              "recall": 0.6666666666666666,
+              "f1-score": 0.5555555555555556,
+              "support": 15.0
+            },
+            "accuracy": 0.5428571428571428,
+            "macro avg": {
+              "precision": 0.5595238095238095,
+              "recall": 0.5583333333333333,
+              "f1-score": 0.542483660130719,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.5714285714285714,
+              "recall": 0.5428571428571428,
+              "f1-score": 0.5406162464985994,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              9,
+              11
+            ],
+            [
+              5,
+              10
+            ]
+          ]
+        },
+        "Game only (constant)": {
+          "accuracy": 0.5714285714285714,
+          "macro_f1": 0.36363636363636365,
+          "classification_report": {
+            "Bored": {
+              "precision": 0.5714285714285714,
+              "recall": 1.0,
+              "f1-score": 0.7272727272727273,
+              "support": 20.0
+            },
+            "Stressed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 15.0
+            },
+            "accuracy": 0.5714285714285714,
+            "macro avg": {
+              "precision": 0.2857142857142857,
+              "recall": 0.5,
+              "f1-score": 0.36363636363636365,
+              "support": 35.0
+            },
+            "weighted avg": {
+              "precision": 0.32653061224489793,
+              "recall": 0.5714285714285714,
+              "f1-score": 0.4155844155844156,
+              "support": 35.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              20,
+              0
+            ],
+            [
+              15,
+              0
+            ]
+          ]
+        }
+      },
+      "fusion_minus_eeg_macro_f1": 0.05718954248366015,
+      "participant_bootstrap_95pct_interval": [
+        -0.16146789833226768,
+        0.26538364843026147
+      ],
+      "predictions": {
+        "truth": [
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored"
+        ],
+        "subjects": [
+          10,
+          13,
+          14,
+          14,
+          17,
+          2,
+          22,
+          22,
+          22,
+          23,
+          23,
+          24,
+          24,
+          3,
+          3,
+          30,
+          30,
+          31,
+          33,
+          34,
+          36,
+          36,
+          38,
+          38,
+          39,
+          4,
+          40,
+          43,
+          45,
+          46,
+          48,
+          5,
+          5,
+          9,
+          9
+        ],
+        "EEG": [
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed"
+        ],
+        "Cardiac": [
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed"
+        ],
+        "Fusion": [
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed"
+        ],
+        "Majority": [
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored"
+        ],
+        "Duration only": [
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Bored",
+          "Stressed",
+          "Bored",
+          "Stressed"
+        ],
+        "Game only (constant)": [
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored",
+          "Bored"
+        ]
+      },
+      "folds": [
+        {
+          "subject": 2,
+          "training_subjects": [
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            0
+          ]
+        },
+        {
+          "subject": 3,
+          "training_subjects": [
+            2,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            30,
+            31
+          ]
+        },
+        {
+          "subject": 4,
+          "training_subjects": [
+            2,
+            3,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            62
+          ]
+        },
+        {
+          "subject": 5,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            87,
+            89
+          ]
+        },
+        {
+          "subject": 9,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            132,
+            133
+          ]
+        },
+        {
+          "subject": 10,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            148
+          ]
+        },
+        {
+          "subject": 13,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            176
+          ]
+        },
+        {
+          "subject": 14,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            193,
+            194
+          ]
+        },
+        {
+          "subject": 17,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            234
+          ]
+        },
+        {
+          "subject": 22,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            276,
+            277,
+            278
+          ]
+        },
+        {
+          "subject": 23,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            290,
+            291
+          ]
+        },
+        {
+          "subject": 24,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            300,
+            301
+          ]
+        },
+        {
+          "subject": 30,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            347,
+            348
+          ]
+        },
+        {
+          "subject": 31,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            355
+          ]
+        },
+        {
+          "subject": 33,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            390
+          ]
+        },
+        {
+          "subject": 34,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            399
+          ]
+        },
+        {
+          "subject": 36,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            409,
+            410
+          ]
+        },
+        {
+          "subject": 38,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            39,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            433,
+            434
+          ]
+        },
+        {
+          "subject": 39,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            40,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            446
+          ]
+        },
+        {
+          "subject": 40,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            43,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            453
+          ]
+        },
+        {
+          "subject": 43,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            45,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            489
+          ]
+        },
+        {
+          "subject": 45,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            46,
+            48
+          ],
+          "annotation_ids": [
+            509
+          ]
+        },
+        {
+          "subject": 46,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            48
+          ],
+          "annotation_ids": [
+            518
+          ]
+        },
+        {
+          "subject": 48,
+          "training_subjects": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            13,
+            14,
+            17,
+            22,
+            23,
+            24,
+            30,
+            31,
+            33,
+            34,
+            36,
+            38,
+            39,
+            40,
+            43,
+            45,
+            46
+          ],
+          "annotation_ids": [
+            543
+          ]
+        }
+      ]
+    },
+    "QWOP_60s_plus_offset": {
+      "status": "insufficient",
+      "n": 3,
+      "class_participants": {
+        "Angry": 2,
+        "Happy": 1
+      },
+      "reason": "Fewer than three participants in a class; no valid claim from this cohort"
+    },
+    "CBAAD_60s_plus_offset": {
+      "status": "insufficient",
+      "n": 1,
+      "class_participants": {
+        "Bored": 1,
+        "Stressed": 0
+      },
+      "reason": "Fewer than three participants in a class; no valid claim from this cohort"
+    }
+  }
+}

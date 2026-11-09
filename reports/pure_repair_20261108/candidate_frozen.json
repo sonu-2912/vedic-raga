@@ -1,0 +1,5 @@
+{
+  "training_locked": true,
+  "test_accessed": false,
+  "reason": "Coverage run finished without candidate; subsequent orientation repair is the only remaining candidate source."
+}

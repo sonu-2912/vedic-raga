@@ -1,0 +1,10 @@
+[
+  {
+    "file": "reports\\further_fusdense_run\\epoch_snapshots\\000-90b9f4469a09.pt",
+    "sha256": "90b9f4469a0929edcd70bd49971f0791991b41d5eb5a15a1ccafeaaf1cda1191"
+  },
+  {
+    "file": "reports\\further_fusdense_run\\epoch_snapshots\\001-062d0c32578f.pt",
+    "sha256": "062d0c32578f129f56f43d387563793ff9aa21efb69a54189048c963dc45a63b"
+  }
+]

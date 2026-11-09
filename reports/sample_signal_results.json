@@ -1,0 +1,49 @@
+{
+  "eeg": {
+    "source": "synthetic sample",
+    "sample_data": true,
+    "sample_rate": 128.0,
+    "channels": 1,
+    "duration_seconds": 16.0,
+    "bands": {
+      "theta": {
+        "absolute_v2": [
+          1.2723544538758972e-11
+        ],
+        "relative": [
+          0.09967434119898187
+        ]
+      },
+      "alpha": {
+        "absolute_v2": [
+          1.1149639028609404e-10
+        ],
+        "relative": [
+          0.8734460129390136
+        ]
+      },
+      "beta": {
+        "absolute_v2": [
+          2.418187838687901e-12
+        ],
+        "relative": [
+          0.018943721144871792
+        ]
+      }
+    },
+    "quality": "No ocular/muscle artifact rejection or calibrated emotion model. Input units must be volts.",
+    "arousal_hint": null
+  },
+  "hrv": {
+    "source": "synthetic sample",
+    "sample_data": true,
+    "method": "RR intervals",
+    "beats": 91,
+    "duration_seconds": 76.63585758876245,
+    "rmssd_ms": 11.712536494654497,
+    "sdnn_ms": 22.12263627889311,
+    "mean_hr_bpm": 70.4630987360652,
+    "quality": "Short-window time-domain estimates. No autonomic diagnosis or emotion inference. No ectopic-beat correction.",
+    "arousal_hint": null
+  }
+}

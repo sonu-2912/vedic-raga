@@ -1,0 +1,2 @@
+{"mode": "last_natural_bn", "validation_accuracy": 0.5130982367758187, "macro_f1": 0.4331776858030593, "disgust_f1": 0.15714285714285714}
+{"mode": "last3_average_natural_bn", "validation_accuracy": 0.5093198992443325, "macro_f1": 0.4302080449346284, "disgust_f1": 0.15384615384615385}

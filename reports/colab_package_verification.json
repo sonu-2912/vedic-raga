@@ -1,0 +1,27 @@
+{
+  "workflow_tests_unique_passed": 6,
+  "failures": 0,
+  "gpu_execution_verified": false,
+  "local_test_device": "CPU",
+  "fixture_data": "generated tiny images, not FER2013 scientific results",
+  "checks": [
+    "actual train/recovery/evaluation/export/import with backups",
+    "fixed pixel/label verification",
+    "CUDA-unavailable error",
+    "archive traversal rejection",
+    "post-test training lock",
+    "all notebook code cells compile",
+    "83 packaged file hashes verified",
+    "deployed checkpoint unchanged"
+  ],
+  "project_zip_bytes": 2917196,
+  "project_zip_sha256": "45d2489ea7817a6cc37bd7bba61d0d32cbb9f8cddf6b21d3ae00f53072b1b1b0",
+  "test_cases": [
+    "test_cuda_request_fails_clearly_without_gpu",
+    "test_evaluated_run_cannot_continue_training",
+    "test_fixed_split_checks_pixel_identity",
+    "test_importer_rejects_traversal_before_writing",
+    "test_notebook_cells_are_valid_python_and_have_no_executed_results",
+    "test_train_recover_evaluate_export_import_cpu"
+  ]
+}

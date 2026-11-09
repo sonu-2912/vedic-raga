@@ -1,0 +1,8 @@
+{
+  "completed_head_epochs": 279,
+  "validation_improved": false,
+  "selection": null,
+  "test_accessed": false,
+  "external_encoder": false,
+  "inference_hybrid": false
+}

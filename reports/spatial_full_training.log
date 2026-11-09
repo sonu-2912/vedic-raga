@@ -1,0 +1,42 @@
+{"device": "cpu", "train": 23503, "val": 3970, "start_additional_epoch": 0, "initial_or_recovered_best_macro_f1": 0.4739888394154386}
+{"epoch": 89, "batch": 50, "batches": 368, "loss": 1.4111972093582152}
+{"epoch": 89, "batch": 100, "batches": 368, "loss": 1.4105980348587037}
+{"epoch": 89, "batch": 150, "batches": 368, "loss": 1.418732533454895}
+{"epoch": 89, "batch": 200, "batches": 368, "loss": 1.416571807861328}
+{"epoch": 89, "batch": 250, "batches": 368, "loss": 1.4135099101066588}
+{"epoch": 89, "batch": 300, "batches": 368, "loss": 1.4125377758344015}
+{"epoch": 89, "batch": 350, "batches": 368, "loss": 1.4136621182305473}
+{"epoch": 89, "loss": 1.4132360324744786, "accuracy": 0.5018933753137897, "val_loss": 1.2503457069396973, "val_accuracy": 0.5319899320602417, "val_macro_f1": 0.46166667644646836, "val_balanced_accuracy": 0.464864073445526, "val_disgust_recall": 0.18, "val_disgust_f1": 0.21176470588235294, "learning_rate": 0.0001, "seconds": 496.4600056000054, "saved_new_best": false}
+{"epoch": 90, "batch": 50, "batches": 368, "loss": 1.39526887178421}
+{"epoch": 90, "batch": 100, "batches": 368, "loss": 1.3926296424865723}
+{"epoch": 90, "batch": 150, "batches": 368, "loss": 1.395883357524872}
+{"epoch": 90, "batch": 200, "batches": 368, "loss": 1.4033634233474732}
+{"epoch": 90, "batch": 250, "batches": 368, "loss": 1.4079512524604798}
+{"epoch": 90, "batch": 300, "batches": 368, "loss": 1.4087577283382415}
+{"epoch": 90, "batch": 350, "batches": 368, "loss": 1.4112274210793632}
+{"epoch": 90, "loss": 1.4101668498325677, "accuracy": 0.49848955452495425, "val_loss": 1.2438448667526245, "val_accuracy": 0.5375314950942993, "val_macro_f1": 0.46790341925496853, "val_balanced_accuracy": 0.4721710246785492, "val_disgust_recall": 0.22, "val_disgust_f1": 0.24444444444444444, "learning_rate": 9.846666218300807e-05, "seconds": 450.7767044000211, "saved_new_best": false}
+{"epoch": 91, "batch": 50, "batches": 368, "loss": 1.3712322402000428}
+{"epoch": 91, "batch": 100, "batches": 368, "loss": 1.3927063202857972}
+{"epoch": 91, "batch": 150, "batches": 368, "loss": 1.3932476965586345}
+{"epoch": 91, "batch": 200, "batches": 368, "loss": 1.3964004969596864}
+{"epoch": 91, "batch": 250, "batches": 368, "loss": 1.3974480795860291}
+{"epoch": 91, "batch": 300, "batches": 368, "loss": 1.4006076204776763}
+{"epoch": 91, "batch": 350, "batches": 368, "loss": 1.4006902412005833}
+{"epoch": 91, "loss": 1.4002294613189739, "accuracy": 0.5016806365144875, "val_loss": 1.242972731590271, "val_accuracy": 0.5264483690261841, "val_macro_f1": 0.4569925894509443, "val_balanced_accuracy": 0.47216598343695687, "val_disgust_recall": 0.3, "val_disgust_f1": 0.25862068965517243, "learning_rate": 9.397114317029975e-05, "seconds": 466.25847439997597, "saved_new_best": false}
+{"epoch": 92, "batch": 50, "batches": 368, "loss": 1.386802725791931}
+{"epoch": 92, "batch": 100, "batches": 368, "loss": 1.3967538559436798}
+{"epoch": 92, "batch": 150, "batches": 368, "loss": 1.4009355513254802}
+{"epoch": 92, "batch": 200, "batches": 368, "loss": 1.398695632815361}
+{"epoch": 92, "batch": 250, "batches": 368, "loss": 1.4015610914230348}
+{"epoch": 92, "batch": 300, "batches": 368, "loss": 1.3967802516619365}
+{"epoch": 92, "batch": 350, "batches": 368, "loss": 1.3953543424606323}
+{"epoch": 92, "loss": 1.3965277022688114, "accuracy": 0.5080202527336936, "val_loss": 1.2619677782058716, "val_accuracy": 0.5234256982803345, "val_macro_f1": 0.45783215701799806, "val_balanced_accuracy": 0.4683822366704398, "val_disgust_recall": 0.28, "val_disgust_f1": 0.25, "learning_rate": 8.681980515339464e-05, "seconds": 507.9008850999526, "saved_new_best": false}
+{"epoch": 93, "batch": 50, "batches": 368, "loss": 1.411068983078003}
+{"epoch": 93, "batch": 100, "batches": 368, "loss": 1.3942409992218017}
+{"epoch": 93, "batch": 150, "batches": 368, "loss": 1.400444397131602}
+{"epoch": 93, "batch": 200, "batches": 368, "loss": 1.4049367254972458}
+{"epoch": 93, "batch": 250, "batches": 368, "loss": 1.4033152356147767}
+{"epoch": 93, "batch": 300, "batches": 368, "loss": 1.402535413901011}
+{"epoch": 93, "batch": 350, "batches": 368, "loss": 1.4005954016957964}
+{"epoch": 93, "loss": 1.400928689490804, "accuracy": 0.5065736288984385, "val_loss": 1.2417100667953491, "val_accuracy": 0.5324937105178833, "val_macro_f1": 0.4645462834670923, "val_balanced_accuracy": 0.46805587237667323, "val_disgust_recall": 0.24, "val_disgust_f1": 0.26373626373626374, "learning_rate": 7.75e-05, "seconds": 479.60568340000464, "saved_new_best": false}
+Validation plateau; stopping. Best checkpoint retained.

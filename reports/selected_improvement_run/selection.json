@@ -1,0 +1,52 @@
+{
+  "chosen": {
+    "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\head_refinement_continued_run\\best.pt",
+    "run_dir": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\head_refinement_continued_run",
+    "kind": "head_refinement",
+    "epoch": 39,
+    "val_accuracy": 0.528463476070529,
+    "val_macro_f1": 0.4569148743780119
+  },
+  "eligible_count": 2,
+  "all_candidates": [
+    {
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\real_improvement_run\\epoch_snapshots\\000-f738e678972f.pt",
+      "kind": "full_network",
+      "epoch": 18,
+      "val_accuracy": 0.4969773292541504,
+      "val_macro_f1": 0.40227199116728046
+    },
+    {
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\real_improvement_run\\epoch_snapshots\\001-b5865950789a.pt",
+      "kind": "full_network",
+      "epoch": 19,
+      "val_accuracy": 0.48765742778778076,
+      "val_macro_f1": 0.39611379600731483
+    },
+    {
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\real_improvement_run\\epoch_snapshots\\002-552f420005fe.pt",
+      "kind": "full_network",
+      "epoch": 20,
+      "val_accuracy": 0.4934508800506592,
+      "val_macro_f1": 0.40745701960620295
+    },
+    {
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\head_refinement_run\\best.pt",
+      "run_dir": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\head_refinement_run",
+      "kind": "head_refinement",
+      "epoch": 41,
+      "val_accuracy": 0.5231738035264484,
+      "val_macro_f1": 0.4487952619769336
+    },
+    {
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\head_refinement_continued_run\\best.pt",
+      "run_dir": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\head_refinement_continued_run",
+      "kind": "head_refinement",
+      "epoch": 39,
+      "val_accuracy": 0.528463476070529,
+      "val_macro_f1": 0.4569148743780119
+    }
+  ],
+  "test_accessed": false,
+  "source_sha256": "96ac21351b9067cefb7347ec67956a7c56bb6bab761b7d7eafe268621198596c"
+}

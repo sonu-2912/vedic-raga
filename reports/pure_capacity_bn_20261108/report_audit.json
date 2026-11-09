@@ -1,0 +1,19 @@
+{
+  "report": "PURE_BATCHNORM_RESULTS.md",
+  "protected_unchanged": {
+    "models/fusdense.pt": true,
+    "reports/emotion_evaluation.json": true,
+    "reports/latest_emotion_experiment.json": true,
+    "frontend/src/research/TrainingEvidence.jsx": true,
+    "backend/main.py": true,
+    "output/RagaMoodSync_Research_Pure_Orientation_Repair_Reviewed_v3.pptx": true,
+    "output/RagaMoodSync_Research.pptx": true,
+    "backend/models.py": true
+  },
+  "decision": {
+    "eligible": false,
+    "test_evaluated": false,
+    "installed": false,
+    "reason": "None of three TRAIN-only BN-recalibrated pure models passed every unchanged class and aggregate validation gate. App/PPT unchanged."
+  }
+}

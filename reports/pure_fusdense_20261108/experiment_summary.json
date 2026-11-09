@@ -1,0 +1,1482 @@
+{
+  "protocol": {
+    "initial_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+    "epochs_max": 12,
+    "min_epochs": 6,
+    "patience": 6,
+    "max_minutes": 110,
+    "backbone_lr": 8e-05,
+    "classifier_lr": 6e-05,
+    "projection_lr": 0.0005,
+    "dropout": 0.4,
+    "rdrop_weight": 0.5,
+    "contrastive_weight": 0.05,
+    "contrastive_temperature": 0.1,
+    "seed": 1108,
+    "method": "PURE v4FusDenseNet full-network, no hybrid teacher/external encoder. Class-paired batches (50natural+2perclass,64unique perbatch), sqrt(p/q)CE importance, training-only fused588->128contrastive projection and shared-backbone exact classifier-dropout RDrop.",
+    "selection": "Accuracy AND disgust recall strictly improve over pure baseline on fixed3970validation faces; macro/disgustF1 cannot decline. Max .4accuracy+.4macroF1+.2disgustF1, student/EMA. Early stopping tracks unconstrained objective progress, not eligibility.",
+    "test": "At most ONE frozen qualifying candidate, single-view only, full6561retainedhistorically inspected test. Gate accuracy/macroF1/disgustF1 improve, disgustrecall no lower than PUREbaseline. Former hybrid is separately reported; userexplicitlyrequests puredefault, not a hidden hybrid replacement. No alternate test search.",
+    "deployment": "Install an improved pure model if it passes its pure baseline gate; disclose its comparison to former59.26%hybrid even if lower. Do not relabel the hybrid as pure. Preserve all originals.",
+    "limitations": "Repeatedly reused validation and historically inspected test, not fresh/identity-disjoint confirmation. Auxiliary projection/batch/loss choices are project training extensions; no exact original-author reproduction."
+  },
+  "evaluation_protocol": {
+    "single_view_only": true,
+    "temperature_fit": "Validation only, does not change class argmax",
+    "require_disgust_recall_gain": true,
+    "gate": "Positive test accuracy, macroF1, disgust recall AND disgustF1 versus earlier PUREFus baseline; all7metrics reported. Formerhybrid is a separate comparison, not a teacher or pure score.",
+    "candidates": "At mostonevalidation-qualified frozen pure checkpoint after entiredeclaredruncompletes; no alternate test search.",
+    "timing": "Strict recall-gain gate specified during training before anynewtestaccess, stronger than trainingprotocol minimum non-regression.",
+    "test": "Full6561historically inspectedrecords, not fresh/identity-disjoint confirmation"
+  },
+  "completion": {
+    "completed_additional_epochs": 5,
+    "validation_improved": false,
+    "test_accessed": false,
+    "external_encoder": false,
+    "teacher": false,
+    "training_only_projection_removed_from_export": true,
+    "synthetic": false
+  },
+  "native_completion": {
+    "completed_additional_epochs": 4,
+    "validation_improved": false,
+    "test_accessed": false,
+    "external_encoder": false,
+    "teacher": false,
+    "training_only_projection_removed_from_export": true,
+    "synthetic": false
+  },
+  "selection": {
+    "chosen": null,
+    "candidates": [],
+    "all_pure_recipes_completed": true,
+    "test_accessed_at_selection": false,
+    "rule": "One max-scoring validation-qualified purecheckpoint, no alternate testcandidate",
+    "timing": "Native residual-dense variant specified during v4training before anynewtest. V4budget capped/reallocated; both actualcounts preserved. Reused validation, not a fresh prospective benchmark."
+  },
+  "native_protocol": {
+    "initial_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+    "epochs_max": 6,
+    "min_epochs": 4,
+    "patience": 3,
+    "max_minutes": 45,
+    "backbone_lr": 4e-05,
+    "classifier_lr": 6e-05,
+    "projection_lr": 0.0005,
+    "dropout": 0.4,
+    "rdrop_weight": 0.5,
+    "contrastive_weight": 0.05,
+    "contrastive_temperature": 0.1,
+    "seed": 1108,
+    "method": "PURE nativev8 FusDenseNet: add2GN/dilated dense growth layers plus zero-initialized local residual fusion INSIDE each of6fusionbranches. Same classifier/input widths, no separate encoder/teacher. Otherloss/sampling rules retained; original backbone LRhalved, newlayers LR3e-4. Originalv4initialization logits must match.",
+    "selection": "Accuracy AND disgust recall strictly improve over pure baseline on fixed3970validation faces; macro/disgustF1 cannot decline. Max .4accuracy+.4macroF1+.2disgustF1, student/EMA. Early stopping tracks unconstrained objective progress, not eligibility.",
+    "test": "At most ONE frozen qualifying candidate, single-view only, full6561retainedhistorically inspected test. Gate accuracy/macroF1/disgustF1 improve, disgustrecall no lower than PUREbaseline. Former hybrid is separately reported; userexplicitlyrequests puredefault, not a hidden hybrid replacement. No alternate test search.",
+    "deployment": "Install an improved pure model if it passes its pure baseline gate; disclose its comparison to former59.26%hybrid even if lower. Do not relabel the hybrid as pure. Preserve all originals.",
+    "limitations": "Repeatedly reused validation and historically inspected test, not fresh/identity-disjoint confirmation. Auxiliary projection/batch/loss choices are project training extensions; no exact original-author reproduction.",
+    "new_features_lr": 0.0003,
+    "disclosure": "Secondpure recipe declared after v4epoch3validation, before anynewtestaccess; both startfromsamepre-hybrid purebaseline. V4training capped at6completed epochs for CPUbudgetallocation; any unfinished next epoch is not counted. Comparison is exploratory, not an isolated equal-budget ablation.",
+    "budget_note": "Bounded45-minute CPUstage, checkedat completed-epoch boundaries. The first run wall budget includes execution pauses; actual completed counts, not targets, are reported."
+  },
+  "initialization_audit": {
+    "architecture": {
+      "attention": true,
+      "dilated": true,
+      "version": 4,
+      "head_width": 512
+    },
+    "inference_parameters": 1828896,
+    "train_only_projection_parameters": 93080,
+    "counts": [
+      3279,
+      330,
+      3336,
+      6039,
+      4038,
+      2327,
+      4154
+    ],
+    "sampling_prior": [
+      0.14024539291858673,
+      0.04221934452652931,
+      0.14214009046554565,
+      0.23198899626731873,
+      0.16547489166259766,
+      0.10860049724578857,
+      0.16933077573776245
+    ],
+    "CE_importance": [
+      1.0016788244247437,
+      0.5791662931442261,
+      1.0035910606384277,
+      1.0569413900375366,
+      1.0233381986618042,
+      0.9589243531227112,
+      1.0260472297668457
+    ],
+    "source_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+    "external_encoder": false,
+    "teacher": false,
+    "logit_offsets_at_inference": false,
+    "test_opened": false
+  },
+  "latest_experiment": {
+    "method": "pure_fusdense",
+    "history": [
+      {
+        "epoch": 126,
+        "phase": "full_network_pure_supcon_rdrop",
+        "CE": 1.0782662796909395,
+        "RDrop": 0.13983031082898378,
+        "SupCon": 3.896886043574499,
+        "loss": 1.343025734567124,
+        "accuracy": 0.6199473505434783,
+        "val_loss": 1.1512552499771118,
+        "val_accuracy": 0.5763224181360201,
+        "val_macro_f1": 0.519888253730356,
+        "val_balanced_accuracy": 0.5151388624284706,
+        "val_disgust_recall": 0.22,
+        "val_disgust_f1": 0.2894736842105263,
+        "seconds": 447.23242670000764,
+        "cpu_seconds": 1065.078125,
+        "sample_counts": [
+          3282,
+          977,
+          3286,
+          5537,
+          3928,
+          2528,
+          4014
+        ],
+        "selected_kind": "student",
+        "saved_new_best": false,
+        "recipe": "v4regularized"
+      },
+      {
+        "epoch": 127,
+        "phase": "full_network_pure_supcon_rdrop",
+        "CE": 1.0642717657205851,
+        "RDrop": 0.12534339072020806,
+        "SupCon": 3.8625458854696024,
+        "loss": 1.3200707513353098,
+        "accuracy": 0.6253396739130435,
+        "val_loss": 1.1561179161071777,
+        "val_accuracy": 0.5775818639798489,
+        "val_macro_f1": 0.5224682104921012,
+        "val_balanced_accuracy": 0.5217462065931742,
+        "val_disgust_recall": 0.26,
+        "val_disgust_f1": 0.29213483146067415,
+        "seconds": 437.3025817000016,
+        "cpu_seconds": 1070.4375,
+        "sample_counts": [
+          3331,
+          1015,
+          3390,
+          5516,
+          3924,
+          2494,
+          3882
+        ],
+        "selected_kind": "student",
+        "saved_new_best": false,
+        "recipe": "v4regularized"
+      },
+      {
+        "epoch": 128,
+        "phase": "full_network_pure_supcon_rdrop",
+        "CE": 1.0660683658459913,
+        "RDrop": 0.11963464775244179,
+        "SupCon": 3.859370806294939,
+        "loss": 1.3188542309014692,
+        "accuracy": 0.6262313179347826,
+        "val_loss": 1.1414505243301392,
+        "val_accuracy": 0.5783375314861461,
+        "val_macro_f1": 0.5162531123605731,
+        "val_balanced_accuracy": 0.5103636647527833,
+        "val_disgust_recall": 0.2,
+        "val_disgust_f1": 0.2702702702702703,
+        "seconds": 451.95069930001046,
+        "cpu_seconds": 1068.640625,
+        "sample_counts": [
+          3297,
+          987,
+          3325,
+          5447,
+          3941,
+          2523,
+          4032
+        ],
+        "selected_kind": "EMA",
+        "saved_new_best": false,
+        "recipe": "v4regularized"
+      },
+      {
+        "epoch": 129,
+        "phase": "full_network_pure_supcon_rdrop",
+        "CE": 1.0437916365006696,
+        "RDrop": 0.11672202896569735,
+        "SupCon": 3.840030648138212,
+        "loss": 1.294154181752516,
+        "accuracy": 0.6356997282608695,
+        "val_loss": 1.1421889066696167,
+        "val_accuracy": 0.5801007556675063,
+        "val_macro_f1": 0.5215518153102296,
+        "val_balanced_accuracy": 0.5154401981717688,
+        "val_disgust_recall": 0.22,
+        "val_disgust_f1": 0.2894736842105263,
+        "seconds": 416.3226685000118,
+        "cpu_seconds": 1036.640625,
+        "sample_counts": [
+          3328,
+          999,
+          3268,
+          5515,
+          3899,
+          2543,
+          4000
+        ],
+        "selected_kind": "EMA",
+        "saved_new_best": false,
+        "recipe": "v4regularized"
+      },
+      {
+        "epoch": 130,
+        "phase": "full_network_pure_supcon_rdrop",
+        "CE": 1.0284269722583501,
+        "RDrop": 0.11350365066091003,
+        "SupCon": 3.830912571238435,
+        "loss": 1.2767244271286156,
+        "accuracy": 0.6403277853260869,
+        "val_loss": 1.1424227952957153,
+        "val_accuracy": 0.5843828715365239,
+        "val_macro_f1": 0.5244976113531045,
+        "val_balanced_accuracy": 0.5198164510393783,
+        "val_disgust_recall": 0.22,
+        "val_disgust_f1": 0.28205128205128205,
+        "seconds": 5019.121768199984,
+        "cpu_seconds": 1112.953125,
+        "sample_counts": [
+          3334,
+          986,
+          3379,
+          5476,
+          3817,
+          2579,
+          3981
+        ],
+        "selected_kind": "EMA",
+        "saved_new_best": false,
+        "recipe": "v4regularized"
+      },
+      {
+        "epoch": 126,
+        "phase": "full_network_pure_native_residual",
+        "CE": 1.0770308404513027,
+        "RDrop": 0.13480811598508255,
+        "SupCon": 3.8989796619052473,
+        "loss": 1.3393838829968288,
+        "accuracy": 0.6267408288043478,
+        "val_loss": 1.1496211290359497,
+        "val_accuracy": 0.5811083123425693,
+        "val_macro_f1": 0.5236832539076033,
+        "val_balanced_accuracy": 0.5188741965716781,
+        "val_disgust_recall": 0.22,
+        "val_disgust_f1": 0.2972972972972973,
+        "seconds": 674.6567053000035,
+        "cpu_seconds": 1569.015625,
+        "sample_counts": [
+          3252,
+          1006,
+          3345,
+          5471,
+          3851,
+          2641,
+          3986
+        ],
+        "selected_kind": "EMA",
+        "saved_new_best": false,
+        "recipe": "v8native"
+      },
+      {
+        "epoch": 127,
+        "phase": "full_network_pure_native_residual",
+        "CE": 1.0666246880655703,
+        "RDrop": 0.12127671830113167,
+        "SupCon": 3.863878952420276,
+        "loss": 1.3204569920249607,
+        "accuracy": 0.6247877038043478,
+        "val_loss": 1.136805534362793,
+        "val_accuracy": 0.5848866498740554,
+        "val_macro_f1": 0.5270139044024367,
+        "val_balanced_accuracy": 0.5217880495462343,
+        "val_disgust_recall": 0.24,
+        "val_disgust_f1": 0.3037974683544304,
+        "seconds": 937.7269214999978,
+        "cpu_seconds": 2359.5,
+        "sample_counts": [
+          3239,
+          1027,
+          3314,
+          5429,
+          3971,
+          2588,
+          3984
+        ],
+        "selected_kind": "EMA",
+        "saved_new_best": false,
+        "recipe": "v8native"
+      },
+      {
+        "epoch": 128,
+        "phase": "full_network_pure_native_residual",
+        "CE": 1.0571260113754999,
+        "RDrop": 0.11527110421625168,
+        "SupCon": 3.8452302334101303,
+        "loss": 1.3070230707526207,
+        "accuracy": 0.6282693614130435,
+        "val_loss": 1.136793851852417,
+        "val_accuracy": 0.5836272040302267,
+        "val_macro_f1": 0.5275855947174737,
+        "val_balanced_accuracy": 0.5230768666479915,
+        "val_disgust_recall": 0.24,
+        "val_disgust_f1": 0.3076923076923077,
+        "seconds": 1001.1403702000098,
+        "cpu_seconds": 2483.0625,
+        "sample_counts": [
+          3329,
+          1008,
+          3337,
+          5474,
+          3888,
+          2510,
+          4006
+        ],
+        "selected_kind": "EMA",
+        "saved_new_best": false,
+        "recipe": "v8native"
+      },
+      {
+        "epoch": 129,
+        "phase": "full_network_pure_native_residual",
+        "CE": 1.0532733791548272,
+        "RDrop": 0.11295301544115595,
+        "SupCon": 3.837444548373637,
+        "loss": 1.30162211475165,
+        "accuracy": 0.6279721467391305,
+        "val_loss": 1.1332383155822754,
+        "val_accuracy": 0.5826196473551637,
+        "val_macro_f1": 0.5251606505239569,
+        "val_balanced_accuracy": 0.519424303641795,
+        "val_disgust_recall": 0.22,
+        "val_disgust_f1": 0.29333333333333333,
+        "seconds": 868.798123799992,
+        "cpu_seconds": 2541.875,
+        "sample_counts": [
+          3285,
+          991,
+          3317,
+          5397,
+          3971,
+          2552,
+          4039
+        ],
+        "selected_kind": "EMA",
+        "saved_new_best": false,
+        "recipe": "v8native"
+      }
+    ],
+    "completed_epochs": 9,
+    "completed_full_epochs": 9,
+    "completed_head_epochs": 0,
+    "curve_run": "reports/pure_native_residual_20261108",
+    "curve_phase": "full_network_pure_native_residual",
+    "external_encoder": false,
+    "teacher": false,
+    "single_view_only": true,
+    "training_only_projection_parameters": 93080,
+    "inference_parameters": 1828896,
+    "candidate_checkpoint_sha256": null,
+    "test_comparison": null,
+    "former_hybrid_comparison": null,
+    "validation_comparison": {
+      "n": 3970,
+      "metrics": {
+        "accuracy": {
+          "baseline": 0.580352644836272,
+          "colab": 0.5836272040302267,
+          "difference": 0.003274559193954696
+        },
+        "macro_precision": {
+          "baseline": 0.5244524095520752,
+          "colab": 0.5417684346398366,
+          "difference": 0.017316025087761422
+        },
+        "macro_recall": {
+          "baseline": 0.5256540852978745,
+          "colab": 0.5230768666479915,
+          "difference": -0.0025772186498830285
+        },
+        "macro_f1": {
+          "baseline": 0.5224833862973063,
+          "colab": 0.5275855947174737,
+          "difference": 0.005102208420167398
+        },
+        "disgust_precision": {
+          "baseline": 0.3333333333333333,
+          "colab": 0.42857142857142855,
+          "difference": 0.09523809523809523
+        },
+        "disgust_recall": {
+          "baseline": 0.28,
+          "colab": 0.24,
+          "difference": -0.040000000000000036
+        },
+        "disgust_f1": {
+          "baseline": 0.30434782608695654,
+          "colab": 0.3076923076923077,
+          "difference": 0.0033444816053511683
+        }
+      }
+    },
+    "validation_comparison_kind": "Best observed validation diagnostic only; no candidate qualified",
+    "validation_candidate_qualified": false,
+    "deployed": false,
+    "limitation": "Pure FusDenseNet, no external encoder/teacher or inference ensemble. Auxiliary projection is stripped. Baseline comparison is earlier PUREmodel; the former hybrid is reported separately. Reused validation and historically inspected test are not fresh/identity-disjoint confirmation. Training uses paired batches, augmentation and two dropout draws; raw single-view validation has different conditions."
+  },
+  "active_source_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "source_pure_baseline_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "frozen_candidate_sha256": null,
+  "selected_weight_changes": {},
+  "trained_student_weight_changes": {
+    "stem": {
+      "changed_tensors": 2,
+      "changed_elements": 240,
+      "max_abs_change": 0.009719491004943848
+    },
+    "fusion": {
+      "changed_tensors": 30,
+      "changed_elements": 38176,
+      "max_abs_change": 0.014757856726646423
+    },
+    "more_fusion": {
+      "changed_tensors": 60,
+      "changed_elements": 76352,
+      "max_abs_change": 0.014909237623214722
+    },
+    "cross_connections": {
+      "changed_tensors": 4,
+      "changed_elements": 4656,
+      "max_abs_change": 0.012357383966445923
+    },
+    "final_fusion": {
+      "changed_tensors": 2,
+      "changed_elements": 8112,
+      "max_abs_change": 0.01413419097661972
+    },
+    "final_activation": {
+      "changed_tensors": 2,
+      "changed_elements": 96,
+      "max_abs_change": 0.003257453441619873
+    },
+    "dense": {
+      "changed_tensors": 9,
+      "changed_elements": 19800,
+      "max_abs_change": 0.011841222643852234
+    },
+    "classifier": {
+      "changed_tensors": 4,
+      "changed_elements": 1366902,
+      "max_abs_change": 0.051990509033203125
+    }
+  },
+  "native_trained_student_weight_changes": {
+    "stem": {
+      "changed_tensors": 2,
+      "changed_elements": 240,
+      "max_abs_change": 0.0050811730325222015
+    },
+    "fusion": {
+      "changed_tensors": 30,
+      "changed_elements": 38176,
+      "max_abs_change": 0.0057441964745521545,
+      "added_tensors": 14,
+      "added_elements": 39120
+    },
+    "more_fusion": {
+      "changed_tensors": 60,
+      "changed_elements": 76351,
+      "max_abs_change": 0.005434252321720123,
+      "added_tensors": 28,
+      "added_elements": 78240
+    },
+    "cross_connections": {
+      "changed_tensors": 4,
+      "changed_elements": 4656,
+      "max_abs_change": 0.00474899634718895
+    },
+    "final_fusion": {
+      "changed_tensors": 2,
+      "changed_elements": 8112,
+      "max_abs_change": 0.006007704883813858
+    },
+    "final_activation": {
+      "changed_tensors": 2,
+      "changed_elements": 96,
+      "max_abs_change": 0.0019189715385437012
+    },
+    "dense": {
+      "changed_tensors": 9,
+      "changed_elements": 19800,
+      "max_abs_change": 0.00458875298500061
+    },
+    "classifier": {
+      "changed_tensors": 4,
+      "changed_elements": 1366895,
+      "max_abs_change": 0.035854339599609375
+    }
+  },
+  "best_observed_validation": {
+    "accuracy": 0.5836272040302267,
+    "macro_precision": 0.5417684346398366,
+    "macro_recall": 0.5230768666479915,
+    "macro_f1": 0.5275855947174737,
+    "disgust_precision": 0.42857142857142855,
+    "disgust_recall": 0.24,
+    "disgust_f1": 0.3076923076923077
+  },
+  "best_observed_file": "validation_03_EMA.json",
+  "results": {
+    "architecture": {
+      "attention": true,
+      "dilated": true,
+      "version": 4,
+      "head_width": 512
+    },
+    "parameters": 1828896,
+    "classifier_inputs": 3276,
+    "pure_test": {
+      "n": 6561,
+      "accuracy": 0.574150281969212,
+      "balanced_accuracy": 0.5325106108129906,
+      "classification_report": {
+        "angry": {
+          "precision": 0.5025062656641605,
+          "recall": 0.45157657657657657,
+          "f1-score": 0.47568208778173193,
+          "support": 888.0
+        },
+        "disgust": {
+          "precision": 0.48333333333333334,
+          "recall": 0.3670886075949367,
+          "f1-score": 0.4172661870503597,
+          "support": 79.0
+        },
+        "fear": {
+          "precision": 0.4472295514511873,
+          "recall": 0.3676789587852495,
+          "f1-score": 0.4035714285714286,
+          "support": 922.0
+        },
+        "happy": {
+          "precision": 0.7746947835738068,
+          "recall": 0.8158971361776739,
+          "f1-score": 0.7947623114147452,
+          "support": 1711.0
+        },
+        "sad": {
+          "precision": 0.467444120505345,
+          "recall": 0.4015025041736227,
+          "f1-score": 0.4319712617871576,
+          "support": 1198.0
+        },
+        "surprise": {
+          "precision": 0.6076487252124646,
+          "recall": 0.7383820998278829,
+          "f1-score": 0.6666666666666666,
+          "support": 581.0
+        },
+        "neutral": {
+          "precision": 0.4914772727272727,
+          "recall": 0.5854483925549916,
+          "f1-score": 0.5343629343629344,
+          "support": 1182.0
+        },
+        "accuracy": 0.574150281969212,
+        "macro avg": {
+          "precision": 0.5391905789239385,
+          "recall": 0.5325106108129906,
+          "f1-score": 0.5320404110907176,
+          "support": 6561.0
+        },
+        "weighted avg": {
+          "precision": 0.566411434301687,
+          "recall": 0.574150281969212,
+          "f1-score": 0.5675587239859746,
+          "support": 6561.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          401,
+          9,
+          88,
+          69,
+          146,
+          34,
+          141
+        ],
+        [
+          22,
+          29,
+          8,
+          4,
+          9,
+          2,
+          5
+        ],
+        [
+          96,
+          9,
+          339,
+          57,
+          152,
+          119,
+          150
+        ],
+        [
+          53,
+          1,
+          56,
+          1396,
+          59,
+          51,
+          95
+        ],
+        [
+          129,
+          8,
+          145,
+          114,
+          481,
+          33,
+          288
+        ],
+        [
+          16,
+          1,
+          41,
+          36,
+          21,
+          429,
+          37
+        ],
+        [
+          81,
+          3,
+          81,
+          126,
+          161,
+          38,
+          692
+        ]
+      ],
+      "negative_log_likelihood": 1.1588526964187622,
+      "split": "test",
+      "dataset": "FER2013 Kaggle v1 combined test folder",
+      "checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+      "checkpoint_epoch": 124,
+      "pilot": false,
+      "synthetic": false,
+      "architecture": {
+        "attention": true,
+        "dilated": true,
+        "version": 4,
+        "head_width": 512
+      },
+      "inference": {
+        "horizontal_flip_tta": false,
+        "temperature": 1.2692193984985352
+      },
+      "duplicate_pixels_removed": 617,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 2,
+          "accuracy": 0.5,
+          "confidence": 0.19580048322677612
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 621,
+          "accuracy": 0.2785829307568438,
+          "confidence": 0.2714388072490692
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 1572,
+          "accuracy": 0.37786259541984735,
+          "confidence": 0.3506299555301666
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 1218,
+          "accuracy": 0.4876847290640394,
+          "confidence": 0.4457499086856842
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 809,
+          "accuracy": 0.5648949320148331,
+          "confidence": 0.5458064675331116
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 553,
+          "accuracy": 0.64376130198915,
+          "confidence": 0.6447519063949585
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 394,
+          "accuracy": 0.7639593908629442,
+          "confidence": 0.7514623403549194
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 397,
+          "accuracy": 0.853904282115869,
+          "confidence": 0.8525856733322144
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 995,
+          "accuracy": 0.9567839195979899,
+          "confidence": 0.9712568521499634
+        }
+      ],
+      "expected_calibration_error_10_bins": 0.02054099776526448,
+      "limitation": "Expanded historically inspected test folder, not a fresh or identity-disjoint benchmark. All seven classes and all retained images included."
+    },
+    "pure_validation": {
+      "n": 3970,
+      "accuracy": 0.580352644836272,
+      "balanced_accuracy": 0.5256540852978745,
+      "classification_report": {
+        "angry": {
+          "precision": 0.5225409836065574,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.4861773117254528,
+          "support": 561.0
+        },
+        "disgust": {
+          "precision": 0.3333333333333333,
+          "recall": 0.28,
+          "f1-score": 0.30434782608695654,
+          "support": 50.0
+        },
+        "fear": {
+          "precision": 0.4948665297741273,
+          "recall": 0.43189964157706096,
+          "f1-score": 0.46124401913875596,
+          "support": 558.0
+        },
+        "happy": {
+          "precision": 0.761101243339254,
+          "recall": 0.8193116634799236,
+          "f1-score": 0.7891344383057091,
+          "support": 1046.0
+        },
+        "sad": {
+          "precision": 0.47068403908794787,
+          "recall": 0.42005813953488375,
+          "f1-score": 0.44393241167434716,
+          "support": 688.0
+        },
+        "surprise": {
+          "precision": 0.5802752293577982,
+          "recall": 0.7228571428571429,
+          "f1-score": 0.6437659033078881,
+          "support": 350.0
+        },
+        "neutral": {
+          "precision": 0.5083655083655083,
+          "recall": 0.5509065550906556,
+          "f1-score": 0.5287817938420348,
+          "support": 717.0
+        },
+        "accuracy": 0.580352644836272,
+        "macro avg": {
+          "precision": 0.5244524095520752,
+          "recall": 0.5256540852978745,
+          "f1-score": 0.5224833862973063,
+          "support": 3970.0
+        },
+        "weighted avg": {
+          "precision": 0.5726661464187847,
+          "recall": 0.580352644836272,
+          "f1-score": 0.5744714760463413,
+          "support": 3970.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          255,
+          10,
+          55,
+          55,
+          80,
+          20,
+          86
+        ],
+        [
+          11,
+          14,
+          5,
+          3,
+          14,
+          1,
+          2
+        ],
+        [
+          55,
+          3,
+          241,
+          29,
+          92,
+          78,
+          60
+        ],
+        [
+          28,
+          2,
+          30,
+          857,
+          38,
+          35,
+          56
+        ],
+        [
+          74,
+          9,
+          70,
+          71,
+          289,
+          16,
+          159
+        ],
+        [
+          14,
+          1,
+          28,
+          26,
+          9,
+          253,
+          19
+        ],
+        [
+          51,
+          3,
+          58,
+          85,
+          92,
+          33,
+          395
+        ]
+      ],
+      "negative_log_likelihood": 1.1760554313659668
+    },
+    "diagnostic_validation": {
+      "n": 3970,
+      "accuracy": 0.5836272040302267,
+      "balanced_accuracy": 0.5230768666479915,
+      "classification_report": {
+        "angry": {
+          "precision": 0.5131810193321616,
+          "recall": 0.5204991087344029,
+          "f1-score": 0.5168141592920354,
+          "support": 561.0
+        },
+        "disgust": {
+          "precision": 0.42857142857142855,
+          "recall": 0.24,
+          "f1-score": 0.3076923076923077,
+          "support": 50.0
+        },
+        "fear": {
+          "precision": 0.4829787234042553,
+          "recall": 0.4068100358422939,
+          "f1-score": 0.44163424124513617,
+          "support": 558.0
+        },
+        "happy": {
+          "precision": 0.7643884892086331,
+          "recall": 0.8126195028680688,
+          "f1-score": 0.7877664504170528,
+          "support": 1046.0
+        },
+        "sad": {
+          "precision": 0.4655436447166922,
+          "recall": 0.4418604651162791,
+          "f1-score": 0.453392990305742,
+          "support": 688.0
+        },
+        "surprise": {
+          "precision": 0.6140350877192983,
+          "recall": 0.7,
+          "f1-score": 0.6542056074766355,
+          "support": 350.0
+        },
+        "neutral": {
+          "precision": 0.523680649526387,
+          "recall": 0.5397489539748954,
+          "f1-score": 0.5315934065934066,
+          "support": 717.0
+        },
+        "accuracy": 0.5836272040302267,
+        "macro avg": {
+          "precision": 0.5417684346398366,
+          "recall": 0.5230768666479915,
+          "f1-score": 0.5275855947174737,
+          "support": 3970.0
+        },
+        "weighted avg": {
+          "precision": 0.5765896585952083,
+          "recall": 0.5836272040302267,
+          "f1-score": 0.5787939004970065,
+          "support": 3970.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          292,
+          9,
+          51,
+          52,
+          77,
+          13,
+          67
+        ],
+        [
+          15,
+          12,
+          5,
+          3,
+          14,
+          0,
+          1
+        ],
+        [
+          71,
+          2,
+          227,
+          35,
+          94,
+          70,
+          59
+        ],
+        [
+          33,
+          0,
+          32,
+          850,
+          41,
+          32,
+          58
+        ],
+        [
+          84,
+          4,
+          66,
+          70,
+          304,
+          12,
+          148
+        ],
+        [
+          12,
+          1,
+          37,
+          26,
+          10,
+          245,
+          19
+        ],
+        [
+          62,
+          0,
+          52,
+          76,
+          113,
+          27,
+          387
+        ]
+      ],
+      "negative_log_likelihood": 1.136793851852417
+    },
+    "qualified": false,
+    "new_test_available": false,
+    "test_label": "Earlier pure baseline; no new test",
+    "pure_deployed": false,
+    "active_is_pure": true,
+    "active_test": {
+      "n": 6561,
+      "accuracy": 0.574150281969212,
+      "balanced_accuracy": 0.5325106108129906,
+      "classification_report": {
+        "angry": {
+          "precision": 0.5025062656641605,
+          "recall": 0.45157657657657657,
+          "f1-score": 0.47568208778173193,
+          "support": 888.0
+        },
+        "disgust": {
+          "precision": 0.48333333333333334,
+          "recall": 0.3670886075949367,
+          "f1-score": 0.4172661870503597,
+          "support": 79.0
+        },
+        "fear": {
+          "precision": 0.4472295514511873,
+          "recall": 0.3676789587852495,
+          "f1-score": 0.4035714285714286,
+          "support": 922.0
+        },
+        "happy": {
+          "precision": 0.7746947835738068,
+          "recall": 0.8158971361776739,
+          "f1-score": 0.7947623114147452,
+          "support": 1711.0
+        },
+        "sad": {
+          "precision": 0.467444120505345,
+          "recall": 0.4015025041736227,
+          "f1-score": 0.4319712617871576,
+          "support": 1198.0
+        },
+        "surprise": {
+          "precision": 0.6076487252124646,
+          "recall": 0.7383820998278829,
+          "f1-score": 0.6666666666666666,
+          "support": 581.0
+        },
+        "neutral": {
+          "precision": 0.4914772727272727,
+          "recall": 0.5854483925549916,
+          "f1-score": 0.5343629343629344,
+          "support": 1182.0
+        },
+        "accuracy": 0.574150281969212,
+        "macro avg": {
+          "precision": 0.5391905789239385,
+          "recall": 0.5325106108129906,
+          "f1-score": 0.5320404110907176,
+          "support": 6561.0
+        },
+        "weighted avg": {
+          "precision": 0.566411434301687,
+          "recall": 0.574150281969212,
+          "f1-score": 0.5675587239859746,
+          "support": 6561.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          401,
+          9,
+          88,
+          69,
+          146,
+          34,
+          141
+        ],
+        [
+          22,
+          29,
+          8,
+          4,
+          9,
+          2,
+          5
+        ],
+        [
+          96,
+          9,
+          339,
+          57,
+          152,
+          119,
+          150
+        ],
+        [
+          53,
+          1,
+          56,
+          1396,
+          59,
+          51,
+          95
+        ],
+        [
+          129,
+          8,
+          145,
+          114,
+          481,
+          33,
+          288
+        ],
+        [
+          16,
+          1,
+          41,
+          36,
+          21,
+          429,
+          37
+        ],
+        [
+          81,
+          3,
+          81,
+          126,
+          161,
+          38,
+          692
+        ]
+      ],
+      "negative_log_likelihood": 1.1588526964187622,
+      "split": "test",
+      "dataset": "FER2013 Kaggle v1 combined test folder",
+      "checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+      "checkpoint_epoch": 124,
+      "pilot": false,
+      "synthetic": false,
+      "architecture": {
+        "attention": true,
+        "dilated": true,
+        "version": 4,
+        "head_width": 512
+      },
+      "inference": {
+        "horizontal_flip_tta": false,
+        "temperature": 1.2692193984985352
+      },
+      "duplicate_pixels_removed": 617,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 2,
+          "accuracy": 0.5,
+          "confidence": 0.19580048322677612
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 621,
+          "accuracy": 0.2785829307568438,
+          "confidence": 0.2714388072490692
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 1572,
+          "accuracy": 0.37786259541984735,
+          "confidence": 0.3506299555301666
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 1218,
+          "accuracy": 0.4876847290640394,
+          "confidence": 0.4457499086856842
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 809,
+          "accuracy": 0.5648949320148331,
+          "confidence": 0.5458064675331116
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 553,
+          "accuracy": 0.64376130198915,
+          "confidence": 0.6447519063949585
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 394,
+          "accuracy": 0.7639593908629442,
+          "confidence": 0.7514623403549194
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 397,
+          "accuracy": 0.853904282115869,
+          "confidence": 0.8525856733322144
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 995,
+          "accuracy": 0.9567839195979899,
+          "confidence": 0.9712568521499634
+        }
+      ],
+      "expected_calibration_error_10_bins": 0.02054099776526448,
+      "limitation": "Expanded historically inspected test folder, not a fresh or identity-disjoint benchmark. All seven classes and all retained images included."
+    },
+    "hybrid_reference": {
+      "n": 6561,
+      "accuracy": 0.5925925925925926,
+      "balanced_accuracy": 0.5526219138705115,
+      "classification_report": {
+        "angry": {
+          "precision": 0.519753086419753,
+          "recall": 0.4740990990990991,
+          "f1-score": 0.4958775029446408,
+          "support": 888.0
+        },
+        "disgust": {
+          "precision": 0.5483870967741935,
+          "recall": 0.43037974683544306,
+          "f1-score": 0.48226950354609927,
+          "support": 79.0
+        },
+        "fear": {
+          "precision": 0.45701357466063347,
+          "recall": 0.3286334056399132,
+          "f1-score": 0.38233438485804416,
+          "support": 922.0
+        },
+        "happy": {
+          "precision": 0.7885998893193138,
+          "recall": 0.8328462887200467,
+          "f1-score": 0.8101193860147812,
+          "support": 1711.0
+        },
+        "sad": {
+          "precision": 0.4933712121212121,
+          "recall": 0.4348914858096828,
+          "f1-score": 0.4622892635314996,
+          "support": 1198.0
+        },
+        "surprise": {
+          "precision": 0.616519174041298,
+          "recall": 0.7194492254733219,
+          "f1-score": 0.6640190627482129,
+          "support": 581.0
+        },
+        "neutral": {
+          "precision": 0.5158249158249159,
+          "recall": 0.6480541455160744,
+          "f1-score": 0.5744281964754405,
+          "support": 1182.0
+        },
+        "accuracy": 0.5925925925925926,
+        "macro avg": {
+          "precision": 0.5627812784516171,
+          "recall": 0.5526219138705115,
+          "f1-score": 0.5530481857312455,
+          "support": 6561.0
+        },
+        "weighted avg": {
+          "precision": 0.5844361607365659,
+          "recall": 0.5925925925925926,
+          "f1-score": 0.5846146665305303,
+          "support": 6561.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          421,
+          10,
+          76,
+          84,
+          134,
+          35,
+          128
+        ],
+        [
+          18,
+          34,
+          3,
+          6,
+          9,
+          2,
+          7
+        ],
+        [
+          108,
+          6,
+          303,
+          50,
+          172,
+          121,
+          162
+        ],
+        [
+          40,
+          0,
+          42,
+          1425,
+          65,
+          44,
+          95
+        ],
+        [
+          128,
+          8,
+          126,
+          100,
+          521,
+          24,
+          291
+        ],
+        [
+          20,
+          2,
+          50,
+          40,
+          15,
+          418,
+          36
+        ],
+        [
+          75,
+          2,
+          63,
+          102,
+          140,
+          34,
+          766
+        ]
+      ],
+      "negative_log_likelihood": 1.096233606338501,
+      "split": "test",
+      "dataset": "FER2013 Kaggle v1 combined test folder",
+      "checkpoint_sha256": "a4ed3e54d3b863e6381a8de3ec16428020e58c6d006e48cdfbf72a03ee88c249",
+      "checkpoint_epoch": 155,
+      "pilot": false,
+      "synthetic": false,
+      "architecture": {
+        "attention": true,
+        "dilated": true,
+        "version": 7,
+        "head_width": 512,
+        "transfer_mix": 0.5,
+        "transfer_base_temperature": 1.2692193984985352
+      },
+      "inference": {
+        "horizontal_flip_tta": false,
+        "temperature": 0.7559425234794617
+      },
+      "duplicate_pixels_removed": 617,
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 318,
+          "accuracy": 0.2389937106918239,
+          "confidence": 0.27213209867477417
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 1250,
+          "accuracy": 0.3536,
+          "confidence": 0.353039026260376
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 1299,
+          "accuracy": 0.4372594303310239,
+          "confidence": 0.4483683407306671
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 938,
+          "accuracy": 0.5458422174840085,
+          "confidence": 0.5471641421318054
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 718,
+          "accuracy": 0.6796657381615598,
+          "confidence": 0.6481426358222961
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 588,
+          "accuracy": 0.7738095238095238,
+          "confidence": 0.747747004032135
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 523,
+          "accuracy": 0.8776290630975143,
+          "confidence": 0.8511356115341187
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 927,
+          "accuracy": 0.9579288025889967,
+          "confidence": 0.9659129977226257
+        }
+      ],
+      "expected_calibration_error_10_bins": 0.01312687664183879,
+      "limitation": "Expanded historically inspected test folder, not a fresh or identity-disjoint benchmark. All seven classes and all retained images included."
+    },
+    "additional_full_epochs": 9,
+    "checkpoint_epoch": 124,
+    "external_encoder": false,
+    "teacher": false,
+    "single_view_only": true
+  }
+}

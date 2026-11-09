@@ -1,0 +1,6 @@
+{
+  "scripts/train_spatial_generalization.py": "a62a2bc231b53301b2c59f6258341cc8fc8529bb35c3db955e95640eade1d94f",
+  "backend/models.py": "bd3ad6ebd99f78f4113d97d1b872d19613f095e2f5584682b07b944fd2701f3c",
+  "backend/datasets.py": "d51f941f29428b9703ac30e9a0a014f480fbcff350d79fd19f111a700240f59e",
+  "scripts/colab_common.py": "811170a47fae0122f4a204b31b3fa9d21586ba65bc05d8e85ec478aee89973b3"
+}

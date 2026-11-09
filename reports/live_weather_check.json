@@ -1,0 +1,16 @@
+{
+  "status": 200,
+  "body": {
+    "condition": "clear",
+    "temperature_c": 30.2,
+    "humidity_percent": 47,
+    "precipitation_mm": 0.0,
+    "city": "Pune, Maharashtra, India",
+    "observed_at": "2026-11-03T14:00",
+    "source": "open_meteo",
+    "source_url": "https://open-meteo.com/",
+    "timezone": "Asia/Kolkata",
+    "attribution": "Weather data: Open-Meteo. Model-based city weather, not an on-device sensor."
+  },
+  "example_city_not_user_location": "Pune"
+}

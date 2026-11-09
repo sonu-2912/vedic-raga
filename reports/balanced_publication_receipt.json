@@ -1,0 +1,19 @@
+{
+  "github": "https://github.com/sonu-2912/RagaMoodSync",
+  "commit": "fc99ca87949eef062a1b58705fec349ce991b48f",
+  "remote_verified": true,
+  "publication_worktree_clean": true,
+  "source_tests_passed": 60,
+  "publication_tests_passed": 60,
+  "publication_test_seconds": 153.977,
+  "frontend_build": "pass",
+  "ppt": "output/RagaMoodSync_Research_Balanced_Reviewed.pptx",
+  "ppt_sha256": "4984690e95d3bdf6c38942fe13b6fee4bac4793be68683c89ff04af38ff39677",
+  "archive": "output/github/RagaMoodSync_GitHub_Ready_Balanced.zip",
+  "archive_sha256": "524856953b5bd1685dcef6de3ec16b8bfe1d9f851371e6e77de9e8513d2f3efb",
+  "latest_candidate_deployed": false,
+  "reason": "Test accuracy, macro recall and disgust recall regressed; current model retained",
+  "active_test_accuracy": 0.574150281969212,
+  "active_test_macro_f1": 0.5320404110907176,
+  "active_test_disgust_recall": 0.3670886075949367
+}

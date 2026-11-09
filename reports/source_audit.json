@@ -1,0 +1,291 @@
+{
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 173,
+      "sha256": "bdc0156fded92c603024d31b7a3a0c9b58ecbf5be3d4aeeb0dd37db53148e9e2"
+    },
+    {
+      "path": "backend\\app\\__init__.py",
+      "bytes": 62,
+      "sha256": "310174d4c9a399fb85cea5fab396e9e9fee1eabe7509c64155371cee5f45fa12"
+    },
+    {
+      "path": "backend\\app\\api\\__init__.py",
+      "bytes": 30,
+      "sha256": "55dcea48413a429bb625b1e2dc686b7ff576d93082ec584be405f40c98367160"
+    },
+    {
+      "path": "backend\\app\\api\\auth_routes.py",
+      "bytes": 752,
+      "sha256": "c285833e3f1349035ff924091dbf325b45dd31e9c23bedc489272b0085f0bc51"
+    },
+    {
+      "path": "backend\\app\\api\\mode_routes.py",
+      "bytes": 283,
+      "sha256": "2baa95a2042eec733bc9c5e37cbd39edbbf2a186ae0a2b27d1526accd201ef92"
+    },
+    {
+      "path": "backend\\app\\api\\recommendation_routes.py",
+      "bytes": 6106,
+      "sha256": "4808dcadaf0bf40f6195766b3f0d141dce479084061db16a4a72481aa6eeac8c"
+    },
+    {
+      "path": "backend\\app\\config.py",
+      "bytes": 1547,
+      "sha256": "d75b3736c2c019be048ae2f4de93b6a07dc38c3f9b345602a6870d8eeb2b39ed"
+    },
+    {
+      "path": "backend\\app\\database.py",
+      "bytes": 4626,
+      "sha256": "7493967d207798913e438f76255ac5c3f169418697f5175f6a82e34c9d353869"
+    },
+    {
+      "path": "backend\\app\\main.py",
+      "bytes": 1338,
+      "sha256": "0b084649e2cd45f3dbb124e28f4afdc002162ce2ce23dd6a7db4cceb6e7c6983"
+    },
+    {
+      "path": "backend\\app\\schemas\\__init__.py",
+      "bytes": 56,
+      "sha256": "806fa347a9e8981852dfca93d810e0e4ef69352607d1ad0c3d4ba8da4e35ccdd"
+    },
+    {
+      "path": "backend\\app\\schemas\\auth.py",
+      "bytes": 367,
+      "sha256": "2dc20326cc3f23b6eef1902db7890e11503bbe466193c82d23ae81f419137ce1"
+    },
+    {
+      "path": "backend\\app\\schemas\\recommendation.py",
+      "bytes": 650,
+      "sha256": "5c832bd4f97f9f5717f0177965090d80b474cc31f85712edfc60446e8c61069e"
+    },
+    {
+      "path": "backend\\app\\services\\__init__.py",
+      "bytes": 90,
+      "sha256": "8032287cc5413ebd9114f8ef8d92718a6ca3955abcca27fb9b74c3e825527e61"
+    },
+    {
+      "path": "backend\\app\\services\\auth_service.py",
+      "bytes": 4013,
+      "sha256": "f1629fc847cce1070a60e93178cd81b46de8d15ee7c9584d8fcf24c834ac6927"
+    },
+    {
+      "path": "backend\\app\\services\\environment_service.py",
+      "bytes": 9493,
+      "sha256": "9aad242296451bc57f9f02b55d9855cddf0b736a427d1d31176562d98b071ba5"
+    },
+    {
+      "path": "backend\\app\\services\\mode_engine.py",
+      "bytes": 4652,
+      "sha256": "094debbadb2c9b5d986ee35d9de490c58ba09ecbbddbd035bf7c76f96a143996"
+    },
+    {
+      "path": "backend\\app\\services\\raga_recommender.py",
+      "bytes": 10176,
+      "sha256": "9466fba41abeb1831214934ceffe6bf49c1ecf0e95a51a94bc877266f1729425"
+    },
+    {
+      "path": "backend\\app\\services\\raga_repository.py",
+      "bytes": 2171,
+      "sha256": "c56c28f433d7921ccedcd260b782e1193d77ff02a2bdede9b8d6095a454c71b3"
+    },
+    {
+      "path": "backend\\app\\services\\rasa_bhava_mapper.py",
+      "bytes": 639,
+      "sha256": "c33301dc5c289e0edf2cc7fab2f7faa6a43ad84e5118838df2fba19426d42d44"
+    },
+    {
+      "path": "backend\\app\\services\\rasa_model.py",
+      "bytes": 6264,
+      "sha256": "7bfd0b3c038c7567591b98d47432b778a59c51c68d0917adb6f8797f2d412c19"
+    },
+    {
+      "path": "backend\\README.md",
+      "bytes": 428,
+      "sha256": "4bdaa8e9404f8ecc95207ae5d440a3f6d9f04529b865e96b062d0c2a5421e1f3"
+    },
+    {
+      "path": "backend\\requirements.txt",
+      "bytes": 132,
+      "sha256": "c91116aa9c941218b6af12ee91182439e52ec937b682e737537e127d2357cb42"
+    },
+    {
+      "path": "backend\\tests\\test_environment_service.py",
+      "bytes": 264,
+      "sha256": "635c0da31ca85595d3ea6a6d3f8025c919f516f50280f1ad5722ef0d5f1fbe1b"
+    },
+    {
+      "path": "backend\\tests\\test_raga_recommender.py",
+      "bytes": 3228,
+      "sha256": "3778e292516ad6a85c2d85dd8cd326e19d7c90e70177c5d299cf36fca793d216"
+    },
+    {
+      "path": "backend\\tests\\test_rasa_bhava_mapper.py",
+      "bytes": 271,
+      "sha256": "9fce73a25097324908b480c9dcfbd16e9dc1c5942a48937ec81222fbf1000020"
+    },
+    {
+      "path": "backend\\tests\\test_rasa_model.py",
+      "bytes": 1431,
+      "sha256": "197e96f97b41204acc51a18cdefbd9efbd7711ed7c8e1584d9dad0abe74af930"
+    },
+    {
+      "path": "best_navarasa_model.pth",
+      "bytes": 101850648,
+      "sha256": "88f6e65f7a757e886c82f57b5d76bca20d10bc2994e811f26980572f983397bc"
+    },
+    {
+      "path": "index.html",
+      "bytes": 663,
+      "sha256": "d125b33ee3230602ed87fd274a7453b246e070e39ac57189a9cdfb627b4f5e84"
+    },
+    {
+      "path": "NavrasaNet - Emotional State Recognition via the Navarasa Doctrine\\navrasanet_model_code.ipynb",
+      "bytes": 82907,
+      "sha256": "0d604b5b5a866fb3353585b2e35136a677cda6cc3cc59c41b44b55a7bba61b96"
+    },
+    {
+      "path": "NavrasaNet - Emotional State Recognition via the Navarasa Doctrine\\Shivansh_NavrasaNet.pdf",
+      "bytes": 8413245,
+      "sha256": "5ba3a464b4440b88204949d4d8113433c87f0569a7f2170959198b579204b318"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 59330,
+      "sha256": "5dcac1575cadd937a6b8ccc630eb02e8dd276ebd94493f47d19371254dca24ba"
+    },
+    {
+      "path": "package.json",
+      "bytes": 427,
+      "sha256": "c5e67c55987a5f4a8885fed83113c382b80c19b6dfa873fe94dd59bc2c97744a"
+    },
+    {
+      "path": "public\\icon.png",
+      "bytes": 356402,
+      "sha256": "5d0dc880cf3d99392e1861d56db70de9def0adb54b34aa22e7c211678672ad5f"
+    },
+    {
+      "path": "raga_sthayi_bhava_dataset_enriched.json",
+      "bytes": 50954,
+      "sha256": "2675283a6bd6d5a415150cf023a782424342c8c051247afd68fa622b2b5de05c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 60,
+      "sha256": "5cf677827569963e570700f2d3d462e00cbbd99983d413a5f7b768e6bf05a310"
+    },
+    {
+      "path": "src\\api\\auth.js",
+      "bytes": 507,
+      "sha256": "691d9426d77431f9b17e84ff9b665bab695923b7a5b360118d099d141963eb18"
+    },
+    {
+      "path": "src\\api\\client.js",
+      "bytes": 1476,
+      "sha256": "084128c2acbbbb3f84419d12b7ff2a9c061ef69f36bb53426c46711a6933b14a"
+    },
+    {
+      "path": "src\\api\\recommendations.js",
+      "bytes": 911,
+      "sha256": "7b001720e8ad032741ef847ddd79424a091514b35aa3cf95af9f02f726e8d6a4"
+    },
+    {
+      "path": "src\\App.jsx",
+      "bytes": 1081,
+      "sha256": "7d443668f488d75b10dd41cc1355b974799b96b4e4198643204b97201e51d135"
+    },
+    {
+      "path": "src\\components\\AppShell.jsx",
+      "bytes": 1167,
+      "sha256": "cbcf64959887976adf37c038e8c4886ae84012541e389d758b8909a8595396a5"
+    },
+    {
+      "path": "src\\components\\CameraCapture.jsx",
+      "bytes": 2784,
+      "sha256": "8e2cb1df987218f48a6da3124515643b49ef0dd9f1433951961d1ee3fc84c94a"
+    },
+    {
+      "path": "src\\components\\ContextPanel.jsx",
+      "bytes": 886,
+      "sha256": "153743513763b9085345ff2d48bfd242dd9bc867d58ee3880920b370cd03b937"
+    },
+    {
+      "path": "src\\components\\ModeSelector.jsx",
+      "bytes": 936,
+      "sha256": "20b0d565e9d297a29e4ccce9d6b7d4d05f4e86eddc9ea28d30d7bc714d628061"
+    },
+    {
+      "path": "src\\components\\ProtectedRoute.jsx",
+      "bytes": 312,
+      "sha256": "b14fa9d184674ff2e760d10a2fcc13f32620f1ae5171276565399295949b40be"
+    },
+    {
+      "path": "src\\components\\RagaCard.jsx",
+      "bytes": 1951,
+      "sha256": "1fec26ec3331bf98a24354b4b7aa20b33d10dae19f45cf98e5ff016a2358563d"
+    },
+    {
+      "path": "src\\main.jsx",
+      "bytes": 365,
+      "sha256": "471c6cd8c77b47fe7f4ba8c8f2a1c3c4109865ae6b8de35d75a9cc2c503393eb"
+    },
+    {
+      "path": "src\\pages\\Capture.jsx",
+      "bytes": 4070,
+      "sha256": "6680cfde69ab6c8850660b46f69c5635e3669c6ef2ab60abe6caf83c546ba69e"
+    },
+    {
+      "path": "src\\pages\\Dashboard.jsx",
+      "bytes": 2366,
+      "sha256": "e2f01ea888f009bef0958f6eb2de366ffa992a882e256505950002f5fdbac379"
+    },
+    {
+      "path": "src\\pages\\Login.jsx",
+      "bytes": 1947,
+      "sha256": "06043dffac4b964817606b72560de494a48086bdd655a8d3a779b22d64fad7ce"
+    },
+    {
+      "path": "src\\pages\\Recommendations.jsx",
+      "bytes": 2091,
+      "sha256": "f45587a889b9ffc06a84c82fbc264f218d9088853cde8fbd67d9f7472b13d86c"
+    },
+    {
+      "path": "src\\pages\\Register.jsx",
+      "bytes": 1884,
+      "sha256": "22a200cd1a08f0ad1c0ba90e690585495a7057e5130be30b3b3f6b71a373ae95"
+    },
+    {
+      "path": "src\\styles\\app.css",
+      "bytes": 9532,
+      "sha256": "7c1a917f29e07211f6b17e3ca40c3324f1405859ab62893ca576a85993927a34"
+    },
+    {
+      "path": "src\\styles\\theme.css",
+      "bytes": 1304,
+      "sha256": "e1bcbbed3ede25ef5d9af0dc91bc0070387b72e2c9bceef20d0b62dad1f6a2b1"
+    },
+    {
+      "path": "test.txt",
+      "bytes": 5,
+      "sha256": "f2ca1bb6c7e907d06dafe4687e579fce76b37e4e93b7605022da52e6ccc26fd2"
+    },
+    {
+      "path": "vite.config.js",
+      "bytes": 191,
+      "sha256": "b8085155295f7367713e24af3899a978f966bc0b62579e466e87178c1bae119b"
+    }
+  ],
+  "ragas": 72,
+  "youtube_link_entries": 528,
+  "unique_youtube_links": 516,
+  "metadata_keys": [
+    "prahara",
+    "primary_sthayi_bhava",
+    "raga_name",
+    "ritu",
+    "secondary_sthayi_bhava",
+    "youtube_links"
+  ],
+  "license_files": []
+}

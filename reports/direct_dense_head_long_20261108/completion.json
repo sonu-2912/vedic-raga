@@ -1,0 +1,8 @@
+{
+  "completed_additional_epochs": 42,
+  "validation_improved": true,
+  "best_score": 0.5402229861791384,
+  "test_accessed": false,
+  "synthetic": false,
+  "training": "Only the new direct-label residual-feature classifier; both feature extractors frozen"
+}

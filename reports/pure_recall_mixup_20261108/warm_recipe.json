@@ -1,0 +1,6 @@
+{
+  "name": "mix0.4_common1.3",
+  "common_boost": 1.3,
+  "retention_weight": 1.0,
+  "mixup_alpha": 0.4
+}

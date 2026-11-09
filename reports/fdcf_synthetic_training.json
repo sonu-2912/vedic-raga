@@ -1,0 +1,8 @@
+{
+  "observations": 16,
+  "users": 2,
+  "training_bce": 0.6079010367393494,
+  "epochs": 8,
+  "synthetic": true,
+  "validation": "No held-out ranking evaluation. Training loss is not recommendation quality."
+}

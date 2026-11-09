@@ -1,0 +1,54 @@
+{
+  "kind": "Actual integration test on one unlabeled public-domain portrait, with SYNTHETIC feedback",
+  "image_credit": "NASA Eileen Collins portrait via scikit-image. Public-domain status documented at https://scikit-image.org/docs/stable/api/skimage.data.html#skimage.data.astronaut",
+  "prediction": {
+    "emotion": "happy",
+    "confidence": 0.9973303079605103,
+    "probabilities": {
+      "angry": 0.0002462955890223384,
+      "disgust": 0.00040302969864569604,
+      "fear": 0.00046807783655822277,
+      "happy": 0.9973303079605103,
+      "sad": 0.00010384666529716924,
+      "surprise": 0.0004484406963456422,
+      "neutral": 0.0010000098263844848
+    },
+    "native_probabilities": {
+      "angry": 0.0002462955890223384,
+      "disgust": 0.00040302969864569604,
+      "fear": 0.00046807783655822277,
+      "happy": 0.9973303079605103,
+      "sad": 0.00010384666529716924,
+      "surprise": 0.0004484406963456422,
+      "neutral": 0.0010000098263844848
+    },
+    "native_label": "happy",
+    "model": "fusdense",
+    "trained": true,
+    "face_box": [
+      177,
+      66,
+      95,
+      95
+    ],
+    "low_confidence": false,
+    "label_mapping": "FER2013 native labels",
+    "validation": "Project-trained model. Check matching evaluation provenance before interpreting performance.",
+    "held_out_evaluation": {
+      "n": 6561,
+      "accuracy": 0.501295534217345,
+      "pilot": false,
+      "checkpoint_epoch": 16,
+      "macro_f1": 0.39598172626072886,
+      "checkpoint_sha256": "04e2a0e288b071a576422ba5adbf02d8fad604e4f22747064eab6aa7f7e7f53e"
+    }
+  },
+  "first_raga": "Dhani",
+  "score_before": 0.71125,
+  "score_after": 0.780221,
+  "feedback_records": 1,
+  "listening_records": 1,
+  "elapsed_seconds": 1.2337880000122823,
+  "classification_accuracy": null,
+  "reason": "No ground-truth emotion label; cannot estimate accuracy from this demonstration."
+}

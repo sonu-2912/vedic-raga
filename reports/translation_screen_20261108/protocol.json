@@ -1,0 +1,10 @@
+{
+  "source_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "recipe": {
+    "translation_tta_pixels": 2,
+    "horizontal_flip_tta": false,
+    "temperature": 1.0
+  },
+  "selection": "Both accuracy and disgust recall must strictly improve; macro/disgustF1 no lower than raw baseline. No test pixels opened.",
+  "disclosure": "Added during v5training, after raw baseline and epoch1validation were inspected, before any new test access. Five fixed whole-image views, no class thresholds, no exclusions."
+}

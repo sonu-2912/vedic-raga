@@ -1,0 +1,240 @@
+{"subject": 1, "accepted_so_far": 0, "offset_sign": -1}
+{"subject": 10, "accepted_so_far": 7, "offset_sign": -1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": -1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": -1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": -1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": -1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": -1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": -1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": -1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": -1}
+{"subject": 12, "accepted_so_far": 12, "offset_sign": -1}
+{"subject": 13, "accepted_so_far": 21, "offset_sign": -1}
+{"subject": 14, "accepted_so_far": 31, "offset_sign": -1}
+{"subject": 15, "accepted_so_far": 40, "offset_sign": -1}
+{"subject": 16, "accepted_so_far": 48, "offset_sign": -1}
+{"subject": 17, "accepted_so_far": 56, "offset_sign": -1}
+{"subject": 18, "accepted_so_far": 56, "offset_sign": -1}
+{"subject": 18, "accepted_so_far": 56, "offset_sign": -1}
+{"subject": 18, "accepted_so_far": 56, "offset_sign": -1}
+{"subject": 19, "accepted_so_far": 63, "offset_sign": -1}
+{"subject": 2, "accepted_so_far": 73, "offset_sign": -1}
+{"subject": 20, "accepted_so_far": 73, "offset_sign": -1}
+{"subject": 21, "accepted_so_far": 80, "offset_sign": -1}
+{"subject": 22, "accepted_so_far": 92, "offset_sign": -1}
+{"subject": 23, "accepted_so_far": 98, "offset_sign": -1}
+{"subject": 24, "accepted_so_far": 103, "offset_sign": -1}
+{"subject": 25, "accepted_so_far": 107, "offset_sign": -1}
+{"subject": 26, "accepted_so_far": 113, "offset_sign": -1}
+{"subject": 27, "accepted_so_far": 117, "offset_sign": -1}
+{"subject": 28, "accepted_so_far": 117, "offset_sign": -1}
+{"subject": 29, "accepted_so_far": 122, "offset_sign": -1}
+{"subject": 3, "accepted_so_far": 129, "offset_sign": -1}
+{"subject": 30, "accepted_so_far": 136, "offset_sign": -1}
+{"subject": 31, "accepted_so_far": 140, "offset_sign": -1}
+{"subject": 32, "accepted_so_far": 144, "offset_sign": -1}
+{"subject": 33, "accepted_so_far": 148, "offset_sign": -1}
+{"subject": 34, "accepted_so_far": 152, "offset_sign": -1}
+{"subject": 35, "accepted_so_far": 152, "offset_sign": -1}
+{"subject": 36, "accepted_so_far": 157, "offset_sign": -1}
+{"subject": 37, "accepted_so_far": 162, "offset_sign": -1}
+{"subject": 38, "accepted_so_far": 169, "offset_sign": -1}
+{"subject": 39, "accepted_so_far": 173, "offset_sign": -1}
+{"subject": 4, "accepted_so_far": 183, "offset_sign": -1}
+{"subject": 40, "accepted_so_far": 191, "offset_sign": -1}
+{"subject": 41, "accepted_so_far": 197, "offset_sign": -1}
+{"subject": 42, "accepted_so_far": 197, "offset_sign": -1}
+{"subject": 43, "accepted_so_far": 201, "offset_sign": -1}
+{"subject": 44, "accepted_so_far": 207, "offset_sign": -1}
+{"subject": 45, "accepted_so_far": 215, "offset_sign": -1}
+{"subject": 46, "accepted_so_far": 224, "offset_sign": -1}
+{"subject": 47, "accepted_so_far": 232, "offset_sign": -1}
+{"subject": 48, "accepted_so_far": 236, "offset_sign": -1}
+{"subject": 5, "accepted_so_far": 247, "offset_sign": -1}
+{"subject": 5, "accepted_so_far": 247, "offset_sign": -1}
+{"subject": 6, "accepted_so_far": 259, "offset_sign": -1}
+{"subject": 7, "accepted_so_far": 259, "offset_sign": -1}
+{"subject": 8, "accepted_so_far": 268, "offset_sign": -1}
+{"subject": 9, "accepted_so_far": 278, "offset_sign": -1}
+{
+  "anger_vs_sadness": {
+    "n": 161,
+    "subjects": 39,
+    "metrics": {
+      "EEG": {
+        "accuracy": 0.6894409937888198,
+        "macro_f1": 0.6774839743589745
+      },
+      "Cardiac": {
+        "accuracy": 0.6335403726708074,
+        "macro_f1": 0.627796716429607
+      },
+      "Fusion": {
+        "accuracy": 0.7453416149068323,
+        "macro_f1": 0.7395541526928389
+      },
+      "Majority": {
+        "accuracy": 0.577639751552795,
+        "macro_f1": 0.3661417322834646
+      },
+      "Game ID control": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      }
+    },
+    "delta_ci": [
+      -0.04039629782349649,
+      0.1700190957247994
+    ]
+  },
+  "five_class": {
+    "n": 240,
+    "subjects": 40,
+    "metrics": {
+      "EEG": {
+        "accuracy": 0.3,
+        "macro_f1": 0.25285232151954007
+      },
+      "Cardiac": {
+        "accuracy": 0.25,
+        "macro_f1": 0.24277173478456557
+      },
+      "Fusion": {
+        "accuracy": 0.32916666666666666,
+        "macro_f1": 0.2860535881402913
+      },
+      "Majority": {
+        "accuracy": 0.3875,
+        "macro_f1": 0.11171171171171171
+      },
+      "Game ID control": {
+        "accuracy": 0.6166666666666667,
+        "macro_f1": 0.49103135191390673
+      }
+    },
+    "delta_ci": [
+      -0.051291565287400816,
+      0.11676670353349099
+    ]
+  }
+}
+{"subject": 1, "accepted_so_far": 0, "offset_sign": 1}
+{"subject": 10, "accepted_so_far": 7, "offset_sign": 1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": 1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": 1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": 1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": 1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": 1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": 1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": 1}
+{"subject": 11, "accepted_so_far": 7, "offset_sign": 1}
+{"subject": 12, "accepted_so_far": 12, "offset_sign": 1}
+{"subject": 13, "accepted_so_far": 21, "offset_sign": 1}
+{"subject": 14, "accepted_so_far": 31, "offset_sign": 1}
+{"subject": 15, "accepted_so_far": 40, "offset_sign": 1}
+{"subject": 16, "accepted_so_far": 48, "offset_sign": 1}
+{"subject": 17, "accepted_so_far": 56, "offset_sign": 1}
+{"subject": 18, "accepted_so_far": 56, "offset_sign": 1}
+{"subject": 18, "accepted_so_far": 56, "offset_sign": 1}
+{"subject": 18, "accepted_so_far": 56, "offset_sign": 1}
+{"subject": 19, "accepted_so_far": 61, "offset_sign": 1}
+{"subject": 2, "accepted_so_far": 71, "offset_sign": 1}
+{"subject": 20, "accepted_so_far": 71, "offset_sign": 1}
+{"subject": 21, "accepted_so_far": 75, "offset_sign": 1}
+{"subject": 22, "accepted_so_far": 87, "offset_sign": 1}
+{"subject": 23, "accepted_so_far": 93, "offset_sign": 1}
+{"subject": 24, "accepted_so_far": 98, "offset_sign": 1}
+{"subject": 25, "accepted_so_far": 102, "offset_sign": 1}
+{"subject": 26, "accepted_so_far": 108, "offset_sign": 1}
+{"subject": 27, "accepted_so_far": 112, "offset_sign": 1}
+{"subject": 28, "accepted_so_far": 112, "offset_sign": 1}
+{"subject": 29, "accepted_so_far": 117, "offset_sign": 1}
+{"subject": 3, "accepted_so_far": 124, "offset_sign": 1}
+{"subject": 30, "accepted_so_far": 131, "offset_sign": 1}
+{"subject": 31, "accepted_so_far": 135, "offset_sign": 1}
+{"subject": 32, "accepted_so_far": 139, "offset_sign": 1}
+{"subject": 33, "accepted_so_far": 143, "offset_sign": 1}
+{"subject": 34, "accepted_so_far": 146, "offset_sign": 1}
+{"subject": 35, "accepted_so_far": 146, "offset_sign": 1}
+{"subject": 36, "accepted_so_far": 151, "offset_sign": 1}
+{"subject": 37, "accepted_so_far": 154, "offset_sign": 1}
+{"subject": 38, "accepted_so_far": 161, "offset_sign": 1}
+{"subject": 39, "accepted_so_far": 164, "offset_sign": 1}
+{"subject": 4, "accepted_so_far": 174, "offset_sign": 1}
+{"subject": 40, "accepted_so_far": 181, "offset_sign": 1}
+{"subject": 41, "accepted_so_far": 185, "offset_sign": 1}
+{"subject": 42, "accepted_so_far": 185, "offset_sign": 1}
+{"subject": 43, "accepted_so_far": 189, "offset_sign": 1}
+{"subject": 44, "accepted_so_far": 195, "offset_sign": 1}
+{"subject": 45, "accepted_so_far": 203, "offset_sign": 1}
+{"subject": 46, "accepted_so_far": 212, "offset_sign": 1}
+{"subject": 47, "accepted_so_far": 220, "offset_sign": 1}
+{"subject": 48, "accepted_so_far": 224, "offset_sign": 1}
+{"subject": 5, "accepted_so_far": 234, "offset_sign": 1}
+{"subject": 5, "accepted_so_far": 234, "offset_sign": 1}
+{"subject": 6, "accepted_so_far": 245, "offset_sign": 1}
+{"subject": 7, "accepted_so_far": 245, "offset_sign": 1}
+{"subject": 8, "accepted_so_far": 254, "offset_sign": 1}
+{"subject": 9, "accepted_so_far": 264, "offset_sign": 1}
+{
+  "anger_vs_sadness": {
+    "n": 148,
+    "subjects": 39,
+    "metrics": {
+      "EEG": {
+        "accuracy": 0.6824324324324325,
+        "macro_f1": 0.6678603829441818
+      },
+      "Cardiac": {
+        "accuracy": 0.6013513513513513,
+        "macro_f1": 0.5876269185360095
+      },
+      "Fusion": {
+        "accuracy": 0.7027027027027027,
+        "macro_f1": 0.6899638164159207
+      },
+      "Majority": {
+        "accuracy": 0.6081081081081081,
+        "macro_f1": 0.37815126050420167
+      },
+      "Game ID control": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      }
+    },
+    "delta_ci": [
+      -0.06624391462859633,
+      0.1191550515220218
+    ]
+  },
+  "five_class": {
+    "n": 227,
+    "subjects": 40,
+    "metrics": {
+      "EEG": {
+        "accuracy": 0.3303964757709251,
+        "macro_f1": 0.24979028007678358
+      },
+      "Cardiac": {
+        "accuracy": 0.20704845814977973,
+        "macro_f1": 0.2075754444290881
+      },
+      "Fusion": {
+        "accuracy": 0.28634361233480177,
+        "macro_f1": 0.2523364575546739
+      },
+      "Majority": {
+        "accuracy": 0.3964757709251101,
+        "macro_f1": 0.11356466876971609
+      },
+      "Game ID control": {
+        "accuracy": 0.6035242290748899,
+        "macro_f1": 0.4917264266795904
+      }
+    },
+    "delta_ci": [
+      -0.06333107212383489,
+      0.07596753359880173
+    ]
+  }
+}

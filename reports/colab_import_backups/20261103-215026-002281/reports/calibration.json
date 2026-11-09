@@ -1,0 +1,15 @@
+{
+  "split": "validation only, same fixed split used for checkpoint selection",
+  "n": 3970,
+  "single_macro_f1": 0.39884926800737824,
+  "flip_macro_f1": 0.4003569422708549,
+  "flip_selection_rule": "Use two-view mean logits only if validation macro F1 improves by more than 0.002",
+  "horizontal_flip_tta": false,
+  "temperature": 0.7439993023872375,
+  "nll_before": 1.3043335676193237,
+  "nll_after": 1.2796293497085571,
+  "accuracy_unchanged_by_temperature": 0.5088161209068011,
+  "seconds": 28.311978799989447,
+  "limitations": "Calibration fitting and checkpoint selection reuse validation. Test is not read. No webcam-domain or independent calibration validation.",
+  "checkpoint_sha256": "04e2a0e288b071a576422ba5adbf02d8fad604e4f22747064eab6aa7f7e7f53e"
+}

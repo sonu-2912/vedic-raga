@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "feedback": 1,
+    "listening": 2,
+    "recommendations": 222
+  },
+  "meaning": "Aggregate local feasibility only; engineering audit profiles may be present. No held-out recommendation-quality claim follows from row counts.",
+  "private_database_exported": false
+}

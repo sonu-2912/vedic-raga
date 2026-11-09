@@ -1,0 +1,50 @@
+{
+  "dataset": "GamER official v1; DOI 10.5281/zenodo.8191877",
+  "license": "CC-BY-4.0",
+  "seed": 42,
+  "primary_task": [
+    "Angry",
+    "Sad"
+  ],
+  "secondary_task": [
+    "Angry",
+    "Sad",
+    "Bored",
+    "Stressed",
+    "Happy"
+  ],
+  "intervals": "whole annotated intervals >=15 seconds; no padding or invented labels",
+  "alignment": "signal time = video annotation time - VIDEO_OFFSET; offset-sign assumption disclosed; sensitivity +offset also reported",
+  "quality": "both modalities finite/nonflat, ADC clipping <=2%, >=8 RR, >=90% RR in 300..2000ms; no label-based signal rejection",
+  "model": "StandardScaler fitted only on training subjects + LogisticRegression C=1, balanced class weights, max_iter=2000",
+  "evaluation": "leave-one-participant-out; identical accepted intervals for EEG, cardiac and concatenated fusion; no tuning",
+  "features": {
+    "eeg": [
+      "theta_relative",
+      "alpha_relative",
+      "beta_relative",
+      "delta_relative",
+      "gamma_relative",
+      "spectral_entropy",
+      "hjorth_mobility",
+      "hjorth_complexity"
+    ],
+    "cardiac": [
+      "mean_rr_ms",
+      "rmssd_ms",
+      "sdnn_ms",
+      "pnn50",
+      "median_rr_ms",
+      "rr_iqr_ms"
+    ]
+  },
+  "limitations": [
+    "No disgust annotations",
+    "No face or weather data",
+    "Not a raga-response dataset",
+    "Single EEG lead and no ICA/manual artifact adjudication",
+    "Ultra-short interval HRV is noisy and not clinical HRV",
+    "Offset sign is an explicit assumption, not independently verified from omitted videos",
+    "Overlapping intervals remain in the same subject fold; effective n is participants, not intervals"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "native_residual_capacity",
+  "head_width": 256,
+  "common_boost": 1.0,
+  "source_compact_recipe": "coarse256_common1.2"
+}

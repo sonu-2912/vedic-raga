@@ -1,0 +1,28 @@
+{
+  "candidates": [
+    {
+      "run": "dense_spatial_run",
+      "accuracy": 0.546095717884131,
+      "macro_f1": 0.4870780001991836,
+      "disgust_f1": 0.2962962962962963,
+      "disgust_recall": 0.24
+    },
+    {
+      "run": "dense_wide_run",
+      "accuracy": 0.5680100755667506,
+      "macro_f1": 0.5120298361013429,
+      "disgust_f1": 0.2926829268292683,
+      "disgust_recall": 0.24
+    }
+  ],
+  "selected": {
+    "run": "dense_wide_run",
+    "accuracy": 0.5680100755667506,
+    "macro_f1": 0.5120298361013429,
+    "disgust_f1": 0.2926829268292683,
+    "disgust_recall": 0.24
+  },
+  "test_accessed_before_selection": false,
+  "protocol": "TRAINING_PROTOCOL.md",
+  "baseline_sha256": "0906fe709300259b5e6c342eee79e9d6fab703e3dc3fa4a746b6422473aaf5df"
+}

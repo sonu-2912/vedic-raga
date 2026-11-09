@@ -1,0 +1,5 @@
+{
+  "restored": true,
+  "reason": "User requests no hybrid reliance. No new pure gain is claimed if candidate fails. Restore earlier independently evaluated pure model; not another candidate test.",
+  "checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618"
+}

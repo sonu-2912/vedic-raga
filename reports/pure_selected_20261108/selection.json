@@ -1,0 +1,8 @@
+{
+  "chosen": null,
+  "candidates": [],
+  "all_pure_recipes_completed": true,
+  "test_accessed_at_selection": false,
+  "rule": "One max-scoring validation-qualified purecheckpoint, no alternate testcandidate",
+  "timing": "Native residual-dense variant specified during v4training before anynewtest. V4budget capped/reallocated; both actualcounts preserved. Reused validation, not a fresh prospective benchmark."
+}

@@ -1,0 +1,2727 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="26" failures="0" skipped="0" tests="39" time="50.963" timestamp="2026-11-07T18:26:29.034048+05:30" hostname="LAPTOP-HP-BINDU"><testcase classname="tests.test_colab" name="test_notebook_cells_are_valid_python_and_have_no_executed_results" time="0.011" /><testcase classname="tests.test_colab" name="test_fixed_split_checks_pixel_identity" time="0.007"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=&lt;pluggy._tracing.TagTracerSub object at 0x0000024CCB64AFD0&gt;, _basetemp=None, _retention_count=3, _retention_policy='all')
+
+&gt;   ???
+
+C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\tests\test_colab.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_colab" name="test_cuda_request_fails_clearly_without_gpu" time="0.004" /><testcase classname="tests.test_colab" name="test_evaluated_run_cannot_continue_training" time="0.005"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D258F40&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_colab" name="test_train_recover_evaluate_export_import_cpu" time="0.001"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=&lt;pluggy._tracing.TagTracerSub object at 0x0000024CCB64AFD0&gt;, _basetemp=None, _retention_count=3, _retention_policy='all')
+
+&gt;   ???
+
+C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\tests\test_colab.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_colab" name="test_importer_rejects_traversal_before_writing" time="0.003"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D25A200&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_context" name="test_weather_contribution_and_invalid_input" time="0.004"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D1B96C0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_context" name="test_body_demonstration_requires_explicit_opt_in" time="0.004"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D1B9800&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_context" name="test_missing_reference_retains_features_without_inference" time="0.003"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D259580&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_context" name="test_unsynchronized_and_mixed_signals_are_not_joint_evidence" time="0.002" /><testcase classname="tests.test_context" name="test_uncertain_neutral_is_not_called_at_ease" time="0.004"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D25B1A0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_context" name="test_city_lookup_parses_provider_without_network" time="0.002" /><testcase classname="tests.test_context" name="test_explicit_goal_overrides_automatic_body_goal" time="0.004"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9CDF6200&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_finetuning" name="test_frozen_bn_keeps_references_but_learns_affine_and_keeps_dropout" time="0.124" /><testcase classname="tests.test_finetuning" name="test_spatial_upgrade_preserves_logits_then_learns_new_path" time="0.580" /><testcase classname="tests.test_pipeline" name="test_catalog_counts_and_missing_metadata" time="0.008"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D259580&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_feedback_personalization_and_persistence" time="0.006"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D258A40&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_dislike_lowers_score" time="0.004"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D285DA0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_listening_and_url_validation" time="0.003"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D259580&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_invalid_recommendations[payload0]" time="0.005"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D2868E0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_invalid_recommendations[payload1]" time="0.005"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D285800&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_invalid_recommendations[payload2]" time="0.004"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D284B80&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_invalid_recommendations[payload3]" time="0.007"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D285BC0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_invalid_feedback" time="0.004"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D285120&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_signals_and_multimodal" time="0.003"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D284B80&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_hrv_known_values" time="0.023" /><testcase classname="tests.test_pipeline" name="test_signal_validation" time="0.005"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D2871A0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_image_validation" time="0.006"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D287380&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_fusdense_forward_backward" time="0.258" /><testcase classname="tests.test_pipeline" name="test_fdcf_focus_and_gradient" time="0.033" /><testcase classname="tests.test_pipeline" name="test_fusdense_v2_spatial_classifier_and_attention_gradients" time="0.280" /><testcase classname="tests.test_pipeline" name="test_checkpoint_cache_refreshes_after_atomic_replacement" time="0.004"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D284EA0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_research_evidence_refuses_mismatched_metrics" time="0.004"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D287A60&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_shared_inference_flip_and_temperature" time="0.026" /><testcase classname="tests.test_pipeline" name="test_forget_profile" time="0.006"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D286520&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1047: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_fer_zip_split_limit_and_images" time="0.004"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D287880&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_pipeline" name="test_fer_csv_official_usage_split" time="0.004"><error message="failed on setup with &quot;PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x0000024C9D286980&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: TResult | None = func()
+
+.venv\Lib\site-packages\_pytest\runner.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\_pytest\runner.py:242: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\_pytest\unraisableexception.py:90: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\unraisableexception.py:70: in unraisable_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\logging.py:840: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+.venv\Lib\site-packages\_pytest\logging.py:829: in _runtest_for
+    yield
+.venv\Lib\site-packages\_pytest\capture.py:875: in pytest_runtest_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\threadexception.py:87: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+.venv\Lib\site-packages\_pytest\threadexception.py:68: in thread_exception_runtest_hook
+    yield
+.venv\Lib\site-packages\_pytest\runner.py:160: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+.venv\Lib\site-packages\_pytest\runner.py:514: in setup
+    col.setup()
+.venv\Lib\site-packages\_pytest\python.py:1630: in setup
+    self._request._fillfixtures()
+.venv\Lib\site-packages\_pytest\fixtures.py:697: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:532: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+.venv\Lib\site-packages\_pytest\fixtures.py:617: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+.venv\Lib\site-packages\_pytest\fixtures.py:1091: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+.venv\Lib\site-packages\pluggy\_caller.py:197: in __call__
+    return self._hookexec(
+.venv\Lib\site-packages\pluggy\_manager.py:183: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+.venv\Lib\site-packages\pluggy\_execution.py:64: in run_old_style_hookwrapper
+    return result.get_result()
+.venv\Lib\site-packages\pluggy\_execution.py:49: in run_old_style_hookwrapper
+    res = yield
+.venv\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+.venv\Lib\site-packages\_pytest\fixtures.py:1140: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+.venv\Lib\site-packages\_pytest\fixtures.py:891: in call_fixture_func
+    fixture_result = next(generator)
+.venv\Lib\site-packages\_pytest\tmpdir.py:265: in tmp_path
+    path = _mk_tmp(request, tmp_path_factory)
+.venv\Lib\site-packages\_pytest\tmpdir.py:252: in _mk_tmp
+    return factory.mktemp(name, numbered=True)
+.venv\Lib\site-packages\_pytest\tmpdir.py:131: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+.venv\Lib\site-packages\_pytest\tmpdir.py:112: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+.venv\Lib\site-packages\_pytest\tmpdir.py:187: in getbasetemp
+    basetemp = make_numbered_dir_with_cleanup(
+.venv\Lib\site-packages\_pytest\pathlib.py:407: in make_numbered_dir_with_cleanup
+    raise e
+.venv\Lib\site-packages\_pytest\pathlib.py:388: in make_numbered_dir_with_cleanup
+    p = make_numbered_dir(root, prefix, mode)
+.venv\Lib\site-packages\_pytest\pathlib.py:229: in make_numbered_dir
+    max_existing = max(map(parse_num, find_suffixes(root, prefix)), default=-1)
+.venv\Lib\site-packages\_pytest\pathlib.py:188: in extract_suffixes
+    for entry in iter:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/bindu/AppData/Local/Temp/pytest-of-bindu')
+prefix = 'pytest-'
+
+    def find_prefixed(root: Path, prefix: str) -&gt; Iterator[os.DirEntry[str]]:
+        """Find all elements in root that begin with the prefix, case-insensitive."""
+        l_prefix = prefix.lower()
+&gt;       for x in os.scandir(root):
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\bindu\\AppData\\Local\\Temp\\pytest-of-bindu'
+
+.venv\Lib\site-packages\_pytest\pathlib.py:176: PermissionError</error></testcase><testcase classname="tests.test_real_physiology" name="test_recordings_need_duration_and_nonflat_data" time="6.760" /><testcase classname="tests.test_real_physiology" name="test_annotations_do_not_invent_seconds_or_labels" time="0.003" /></testsuite></testsuites>

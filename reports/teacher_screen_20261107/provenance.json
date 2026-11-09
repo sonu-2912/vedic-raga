@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/opencv/opencv_zoo",
+  "commit": "48b10fa505aeb51fbd127fc60a5c660040e823b7",
+  "model_sha256": "4f61307602fc089ce20488a31d4e4614e3c9753a7d6c41578c854858b183e1a9",
+  "bytes": 4791892,
+  "download_url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/facial_expression_recognition/facial_expression_recognition_mobilefacenet_2022july.onnx",
+  "licence": "Apache2.0; upstream directory explicitly licenses all files",
+  "purpose": "Separate validation-only pretrained teacher screen; never relabelled as FusDenseNet",
+  "upstream_metric": "88.27% on RAF-DB per source README, not a project/FER2013 result",
+  "training_data_provenance": "Associated paper evaluates RAF-DB and FERPlus with auxiliary AffectNet. Full released-checkpoint training image manifest unavailable; FER validation/test exposure cannot be independently ruled out.",
+  "adaptation": "FER already-cropped48x48grayscale replicated to RGB and resized112x112. No invented landmarks or claimed official RAF preprocessing.",
+  "validation_only": true,
+  "test_accessed": false,
+  "sensors": false
+}

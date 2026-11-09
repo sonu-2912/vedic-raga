@@ -1,0 +1,14 @@
+{
+  "completed_head_epochs": 20,
+  "validation_improved": false,
+  "selection": null,
+  "warm_recipe": {
+    "name": "fine384_best_verified",
+    "common_boost": 1.0,
+    "retention_weight": 0.5
+  },
+  "test_accessed": false,
+  "external_encoder": false,
+  "training_reference": "Current pure native classifier on TRAIN correct disgust-vs-rest positive/negative references",
+  "inference_hybrid": false
+}

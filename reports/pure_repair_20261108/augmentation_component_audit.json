@@ -1,0 +1,37 @@
+{
+  "train_only_disgust": {
+    "raw": {
+      "n": 330,
+      "correct": 315,
+      "recall": 0.9545454545454546,
+      "CE": 0.41044831709428264
+    },
+    "flip": {
+      "n": 330,
+      "correct": 117,
+      "recall": 0.35454545454545455,
+      "CE": 1.8853089303681345
+    },
+    "old_affine": {
+      "n": 330,
+      "correct": 232,
+      "recall": 0.703030303030303,
+      "CE": 0.8401993144642222
+    },
+    "old_color": {
+      "n": 330,
+      "correct": 305,
+      "recall": 0.9242424242424242,
+      "CE": 0.4786351290616122
+    },
+    "proposed": {
+      "n": 330,
+      "correct": 267,
+      "recall": 0.8090909090909091,
+      "CE": 0.7725013732910156
+    }
+  },
+  "seed": 81109,
+  "no_validation_or_test": true,
+  "limitation": "Training perturbation diagnostic, not a held-out accuracy gain."
+}

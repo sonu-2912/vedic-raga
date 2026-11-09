@@ -1,0 +1,446 @@
+{
+  "root": "C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\output\\github\\RagaMoodSync",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 173,
+      "sha256": "4c840b5c661f1b06baae2f92f1e764df8aa6a214f0326bb69bec07d182469701"
+    },
+    {
+      "path": "COLAB_README.md",
+      "bytes": 6675,
+      "sha256": "b7ef9442b3a6d5d2ad79a0d0b5e0d27ef099ac52d0ceaf824778b350286827d9"
+    },
+    {
+      "path": "DATASETS.md",
+      "bytes": 17090,
+      "sha256": "567adc6761fe1bde16d0197cf5aa502964b8e2e44ae08578de717e7526eb2ce4"
+    },
+    {
+      "path": "EXPERIMENTS.md",
+      "bytes": 12282,
+      "sha256": "0eef98075ec7c299f7c2e9015190eea083e33d167392c6deb31c9359ed66469d"
+    },
+    {
+      "path": "FURTHER_RESULTS.md",
+      "bytes": 8599,
+      "sha256": "21c6e42e4236e936357f0a21f71568f2d4f2fdd1264c46628b3cb08ee5a53903"
+    },
+    {
+      "path": "IKS_METHODOLOGY.md",
+      "bytes": 4569,
+      "sha256": "ec7e337960fa6cdb91524e1a348fd07ea7711ff83bff111715090334b22f72a5"
+    },
+    {
+      "path": "LITERATURE_REVIEW.md",
+      "bytes": 7686,
+      "sha256": "6c7c36d412a6b8bdf1eced71d307f08b4a55d916a55f8fc190d356a44140f1ee"
+    },
+    {
+      "path": "MODEL_CARDS.md",
+      "bytes": 7800,
+      "sha256": "30486dafa314bb8604a5d8f20b1d7c69e314f64bbb60f9b256b8403f1d6e6542"
+    },
+    {
+      "path": "PAPER_ANALYSIS.md",
+      "bytes": 5835,
+      "sha256": "13de4acc0be72f539dbbfd097ca2b6c648aec948b655f1bd600657cc1b96b95a"
+    },
+    {
+      "path": "PAPER_IMPLEMENTATION_MAPPING.md",
+      "bytes": 11526,
+      "sha256": "253f6d5feca80ad7ba7c84721071b4afabee7ee3c470c12cfdd16e12583b6aab"
+    },
+    {
+      "path": "PRIOR_ART_AND_IP.md",
+      "bytes": 3586,
+      "sha256": "53958145466b8de5d4fd0c8f3e6717e0cca42e0f5a8212e06364a325208d7c04"
+    },
+    {
+      "path": "pytest.ini",
+      "bytes": 29,
+      "sha256": "ddfcf6e0017476e9b9e8e55559c80e166c21f4f1ac242c7468dc85ad9dc69e52"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3383,
+      "sha256": "df0b21ec7658801917b11633114cf1aeeef905b6bcd6cd6e5d50d17603415b0e"
+    },
+    {
+      "path": "requirements-colab.txt",
+      "bytes": 296,
+      "sha256": "c6264c08bb3cd3b279f8013a32ba584b2bcf19ddfa3aa09aa4946a4bee86f458"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 406,
+      "sha256": "ab7959afb40a47c6b43f33433ff2ff224e7d7f5703958e77179aba8452f4d28e"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 4553,
+      "sha256": "86313ffda8b6e06a209c8a1dbe6b0a206cec7305a6038c3ea400c1217d001a34"
+    },
+    {
+      "path": "backend/catalog.py",
+      "bytes": 1299,
+      "sha256": "041925592566fb41b916bb0cb7a6c43624e39c7ccc28d0460d68badb77a97125"
+    },
+    {
+      "path": "backend/context.py",
+      "bytes": 3822,
+      "sha256": "2518c73f94399b73e76b6596e1dc36eaf2f4b7657967705acd045daba554b251"
+    },
+    {
+      "path": "backend/datasets.py",
+      "bytes": 4674,
+      "sha256": "d51f941f29428b9703ac30e9a0a014f480fbcff350d79fd19f111a700240f59e"
+    },
+    {
+      "path": "backend/emotion.py",
+      "bytes": 6866,
+      "sha256": "aa58d71f3db7356219202ac1d924e092a9760175d072731800039cf5e0771bb3"
+    },
+    {
+      "path": "backend/face_policy.py",
+      "bytes": 1176,
+      "sha256": "23df34a79c41b10806121e1a3719df225c1542c5938c72970d692840bd8084b3"
+    },
+    {
+      "path": "backend/inference.py",
+      "bytes": 352,
+      "sha256": "bfe3c70e00c66b76b78ddc7cc11857ecb96620e5bb2dcc78a5b36e53a267e179"
+    },
+    {
+      "path": "backend/main.py",
+      "bytes": 14690,
+      "sha256": "53fa74238ac9bd55872e89377346e3c8dd00e058248235f3c305ab6152504615"
+    },
+    {
+      "path": "backend/models.py",
+      "bytes": 7676,
+      "sha256": "7040dc7aa45b82b045e787092858f1231095c25d2fef19bf62098b64b4748cfc"
+    },
+    {
+      "path": "backend/physiology_features.py",
+      "bytes": 3083,
+      "sha256": "e71f6b61d0f600df238e94131dd0e1a605873ec5a2a94441267454f9d7afe4e7"
+    },
+    {
+      "path": "backend/recommender.py",
+      "bytes": 5505,
+      "sha256": "9deba5f948c5dbb91f4bafdabaea3d57cc5daf5bbbef7e9f30f0e38aa5c45c52"
+    },
+    {
+      "path": "backend/signals.py",
+      "bytes": 4756,
+      "sha256": "9f0c57fb2f00b02cad4302de3ca3cb3756bafe09a8c84b4e60721aaf849cdbac"
+    },
+    {
+      "path": "backend/storage.py",
+      "bytes": 1824,
+      "sha256": "d512aca6cf32a8275353f6fffaab5597386c46521e41983583d07f693deecff7"
+    },
+    {
+      "path": "backend/weather.py",
+      "bytes": 1878,
+      "sha256": "d41c1156f80153743857f7a1a6c519dbd7ce604d2192cddeec28dcb346cad870"
+    },
+    {
+      "path": "backend/__init__.py",
+      "bytes": 44,
+      "sha256": "cb7d43af08df7d29123af7a766d4b676a2c204df2fecc78e34927fae1028a456"
+    },
+    {
+      "path": "data/demo_face.png",
+      "bytes": 791555,
+      "sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5"
+    },
+    {
+      "path": "data/sample_signals.json",
+      "bytes": 70013,
+      "sha256": "9b4411b2fa4132dc99a6d1e8af18c33f4e27cda98c9eea70be00f97f79a9968a"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 486,
+      "sha256": "7eba1a3167fdc5e2d800d35aba60ae7a0032a5819ead29ac1afc619ba09068a5"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 58018,
+      "sha256": "50c96c2688a779d198f7641c987d7419bd71193f6c557cea24700a57f13207a3"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 300,
+      "sha256": "b784876c82c6a1be5a20d409a3c892f9ec82fb01d1ab5525d9a11da4a518f857"
+    },
+    {
+      "path": "frontend/vite.config.js",
+      "bytes": 175,
+      "sha256": "1d33b5836e723150dd91acb1d60bcc7cc81cc7e797d3035e6201c7799af79644"
+    },
+    {
+      "path": "frontend/src/listener.css",
+      "bytes": 22577,
+      "sha256": "852e6d65b5995891f747e0f8b202b92212684a6204eb1781fe93eb49aa356279"
+    },
+    {
+      "path": "frontend/src/ListenerApp.jsx",
+      "bytes": 24857,
+      "sha256": "f4de4db99bea742168f88f95d7a038bdac6c1224c1bb33cf175235d41fec04d3"
+    },
+    {
+      "path": "frontend/src/ListenerContext.jsx",
+      "bytes": 7776,
+      "sha256": "a0d263275ccc453f1067bf0b6e5c3a161ddb4059073789ca7c9fa8f46f67d8dd"
+    },
+    {
+      "path": "frontend/src/main.jsx",
+      "bytes": 406,
+      "sha256": "5472a93373fa5dc994eb8a6dfebff624b6c1755ea7a7147e003bce8a90ba5b2b"
+    },
+    {
+      "path": "frontend/src/PhotoEvidence.jsx",
+      "bytes": 781,
+      "sha256": "2c4ef1e01a00dd5d362632277a31c88846c735de44111da1639167c999cc6499"
+    },
+    {
+      "path": "frontend/src/style.css",
+      "bytes": 6390,
+      "sha256": "1e771f40e10d684ef6af607e08ea043a7c2b71928bed9cbcd01308ace4cee9af"
+    },
+    {
+      "path": "frontend/src/research/ContinuationEvidence.jsx",
+      "bytes": 1006,
+      "sha256": "840d4e17768dfa8ca8142a612f97ecb28c62fc7b933eca2a8b35bdbfe0b96cd3"
+    },
+    {
+      "path": "frontend/src/research/ControlledPhysiology.jsx",
+      "bytes": 3202,
+      "sha256": "e2fe64e7390d8bfe45eb3e6b5131cfbfb2f808dfda5e4d4dfc6c7e3bff3f5ce2"
+    },
+    {
+      "path": "frontend/src/research/PhysiologyEvidence.jsx",
+      "bytes": 3558,
+      "sha256": "d1c8f8c6454d3cfc436b0fdfa29bdf7649cdb7daedc014be6abfe821c9b05b49"
+    },
+    {
+      "path": "frontend/src/research/ResearchStudio.jsx",
+      "bytes": 16397,
+      "sha256": "91340e536b12ed5d3f0d27f0d552734916cde24eaaae42cb35d73637bdfe51d5"
+    },
+    {
+      "path": "frontend/src/research/studio.css",
+      "bytes": 6889,
+      "sha256": "516a76cd721879ffe4303f4353965af75e7a9591b1c58e01906ec729b3993b28"
+    },
+    {
+      "path": "frontend/src/research/TrainingEvidence.jsx",
+      "bytes": 6823,
+      "sha256": "520c718a3d8ffbd50efbb6ae01296c0e32149649b060d6468a65d1ed92cd2e4e"
+    },
+    {
+      "path": "models/fusdense.pt",
+      "bytes": 7380920,
+      "sha256": "ae3f9ab9a251211cfae7ee1cfae45397b420ed0b8365b65f3815e8bdece9070b"
+    },
+    {
+      "path": "presentation/RagaMoodSync_Research_Audited_Reviewed.pptx",
+      "bytes": 196697,
+      "sha256": "d2473395081c638e8dd505c7ecd507fb675ad3da006c14d7174e8539d685b632"
+    },
+    {
+      "path": "reports/calibration.json",
+      "bytes": 899,
+      "sha256": "1583f7fa08cea50a5a5b07c8882aeb2cab6390a7b6c4d45a59f16cc98fbebfb4"
+    },
+    {
+      "path": "reports/emotion_evaluation.json",
+      "bytes": 4812,
+      "sha256": "e42fa7048d42cbe7c262ff80d6f46ff4f71b24441edd68ad966870410525ca7d"
+    },
+    {
+      "path": "reports/emotion_evaluation.png",
+      "bytes": 70955,
+      "sha256": "600f39cd39184f4924033894a7dd99a0bd1cbd37b6d2d7d40804aa30118d8fb3"
+    },
+    {
+      "path": "reports/expression_policy.json",
+      "bytes": 2027,
+      "sha256": "bcc65585f0bdec1992ecdb15c03a9410889ba706b2d2837641a4e8a97d63da93"
+    },
+    {
+      "path": "reports/gamer_evaluation.json",
+      "bytes": 22122,
+      "sha256": "6834e2d9303eb98ff537679fefd5f18ef781d3b4da37cca49d980940dea15e27"
+    },
+    {
+      "path": "reports/gamer_evaluation_plus_offset.json",
+      "bytes": 22252,
+      "sha256": "25b3937f4764ff2fe597ce087764230c4f2c79676485c1122126c592805ec673"
+    },
+    {
+      "path": "reports/gamer_fixed_context.png",
+      "bytes": 63965,
+      "sha256": "5bce974737fd2d1d062f5b22301645fe635f6d68616d676f600fe2e60df945e3"
+    },
+    {
+      "path": "reports/gamer_fixed_context_evaluation.json",
+      "bytes": 32701,
+      "sha256": "c31ad2ac6e51aae530c4ffb029c42a85805d48650bc03c44f6c415cd38d3bf31"
+    },
+    {
+      "path": "reports/gamer_fusion.png",
+      "bytes": 69841,
+      "sha256": "c0cbca75f1c473275673531b971bc1f630f5c970ac54a6ac8954a91cdabeaa0c"
+    },
+    {
+      "path": "reports/gamer_metadata.json",
+      "bytes": 6896,
+      "sha256": "e08fb759cd5d60d377b58c87b16245cfe80fa66621e30cf6da6a40f6afce804b"
+    },
+    {
+      "path": "reports/model_export_provenance.json",
+      "bytes": 366,
+      "sha256": "02fd97fae383ead88b521e1777903603379dbaa0784b8ce043744f6d7dfa3535"
+    },
+    {
+      "path": "reports/training_curves.png",
+      "bytes": 110902,
+      "sha256": "eb52fe734126ca9909cadb9047314cf17fd72259c17947e0a981ff444d7c5032"
+    },
+    {
+      "path": "reports/training_history.json",
+      "bytes": 50253,
+      "sha256": "86ed07b825144004331e320cb3063d2b176f9529bbdd74f7d94e88e861bcd1ee"
+    },
+    {
+      "path": "reports/validation_evaluation.json",
+      "bytes": 2529,
+      "sha256": "ecc20301f87708df757e7b9b6bd8e6160b09b63f31be0fe72b829451a85c679f"
+    },
+    {
+      "path": "scripts/bootstrap_resources.py",
+      "bytes": 1596,
+      "sha256": "d9a1dbf1446e52169cbb9ed2187eb11a07254db415f4dd3c49f05d48f9c120df"
+    },
+    {
+      "path": "scripts/colab_common.py",
+      "bytes": 5396,
+      "sha256": "811170a47fae0122f4a204b31b3fa9d21586ba65bc05d8e85ec478aee89973b3"
+    },
+    {
+      "path": "scripts/colab_evaluate.py",
+      "bytes": 12931,
+      "sha256": "5c2c87bbcdf7aaaf9f4f7d24ef85f9ec9ea88c597da260af62f8ddf702479943"
+    },
+    {
+      "path": "scripts/colab_train.py",
+      "bytes": 13755,
+      "sha256": "2daf2522ef0b98d5fcc66ce4cbfda62c2207234e18c63a870ace87182f1350a5"
+    },
+    {
+      "path": "scripts/download_gamer.py",
+      "bytes": 4031,
+      "sha256": "7b482601d2e9951a31f79d98a5147fd2177a9c340c0a0bf45a9c508976418955"
+    },
+    {
+      "path": "scripts/evaluate_emotion.py",
+      "bytes": 4697,
+      "sha256": "d76d4f10c6f355f86b082e4d749137251cdf9fca5029029ae6fea6e2365e02da"
+    },
+    {
+      "path": "scripts/evaluate_recommendations.py",
+      "bytes": 2839,
+      "sha256": "645977a74555f91f4694b86b58116f3bac78f803cf9138b6328061b6458f8977"
+    },
+    {
+      "path": "scripts/gamer_controlled.py",
+      "bytes": 6521,
+      "sha256": "bbd740e4fcc59989f3f6043b8e4ea0746921ffb7936c1666db282e80ad62d861"
+    },
+    {
+      "path": "scripts/gamer_experiment.py",
+      "bytes": 11187,
+      "sha256": "e59ed5243ce776829561cf85b665d890b7da08fdd7ff7b2657aed9945e693d6b"
+    },
+    {
+      "path": "scripts/gamer_fixed_context.py",
+      "bytes": 2584,
+      "sha256": "83da88a5839aed9ef58d679c9c274e92ca0c99788bb109228fbea1da6a2c4cb3"
+    },
+    {
+      "path": "scripts/import_colab_model.py",
+      "bytes": 4724,
+      "sha256": "dd3eb9ad4f975797fd2c2561ca869cb82b616a5a04a57210b3f68e0150c0bcb1"
+    },
+    {
+      "path": "scripts/package_colab.py",
+      "bytes": 18975,
+      "sha256": "80f373448c5b63cfcdf1f7e4e7799f1dbd89b71a839babf4528803cfaefd4052"
+    },
+    {
+      "path": "scripts/refine_emotion_head.py",
+      "bytes": 7153,
+      "sha256": "1cbbc7ad131cf156677981513e11489e665aecdc2d23ac2e57bb49e6a131945a"
+    },
+    {
+      "path": "scripts/start-backend.ps1",
+      "bytes": 564,
+      "sha256": "45d03acb6492039eeaf2d3b8e89857c8becc354ac3e1afb55bf2a4526b1af821"
+    },
+    {
+      "path": "scripts/start-frontend.ps1",
+      "bytes": 115,
+      "sha256": "3e2cb8cc15e76a5a2d023d8ff4be4afcd5fbca4292b8a086bd96a49ef0d0672c"
+    },
+    {
+      "path": "scripts/train_emotion.py",
+      "bytes": 7690,
+      "sha256": "c97f5319c8f17943b5fcfd6f3f9073121624f626d9d1be87cc640c28c6568369"
+    },
+    {
+      "path": "scripts/train_fdcf.py",
+      "bytes": 2410,
+      "sha256": "be8c0267c916ce4a2b2b59bc5c0b5ff24e9f8d12cfd601ad6ff6a553276e46b1"
+    },
+    {
+      "path": "scripts/verify_fixed_context.py",
+      "bytes": 3322,
+      "sha256": "f4a121efbcfb49df97ffd3cff877b902b7e7917178f499cc2b2d7e4736457671"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "bytes": 82,
+      "sha256": "654bfaf32087e18e3e19338a8126a9b4b344a05c953bd0b322f0b83ecc0ea465"
+    },
+    {
+      "path": "tests/test_colab.py",
+      "bytes": 7416,
+      "sha256": "e8eb32e8e4489c0c2fa14e62c363c0ca137d8b99bb3196c31af06b32e3719560"
+    },
+    {
+      "path": "tests/test_context.py",
+      "bytes": 4594,
+      "sha256": "96eb14e43f5d1e6788599b9d5caffeece3883dae3fac1b5b0b56b1d776287689"
+    },
+    {
+      "path": "tests/test_finetuning.py",
+      "bytes": 2788,
+      "sha256": "142caf498074bfbf81d61902ab775996553ee280f1aed5bdede64a60eced9131"
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "bytes": 9279,
+      "sha256": "1b9d44181ba9d12bead535080b18339efb1f53751ed2e6219ec62022f03e36e4"
+    },
+    {
+      "path": "tests/test_real_physiology.py",
+      "bytes": 944,
+      "sha256": "d7fd43eccd39b904840d859c446701579a9f39ff9a23e6f03d9a9ab6801cb6e4"
+    }
+  ],
+  "publication_status": "not pushed; target account write access required"
+}

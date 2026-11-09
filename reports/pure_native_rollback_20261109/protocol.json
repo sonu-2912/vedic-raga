@@ -1,0 +1,73 @@
+{
+  "initial_checkpoint_sha256": "f0082aff0511c40d8dff89fc03bbea965b416db55a0f771701efaa38f490c548",
+  "seed": 81128,
+  "head_lr": 0.0006,
+  "head_epochs_max": 100,
+  "head_min_epochs": 35,
+  "head_patience": 20,
+  "head_minutes_per_recipe": 10,
+  "mirror_common_weight": 1.0,
+  "recipes": [
+    {
+      "name": "coarse128_common1.05",
+      "head_width": 128,
+      "common_boost": 1.05
+    },
+    {
+      "name": "coarse128_common1.2",
+      "head_width": 128,
+      "common_boost": 1.2
+    },
+    {
+      "name": "coarse256_common1.05",
+      "head_width": 256,
+      "common_boost": 1.05
+    },
+    {
+      "name": "coarse256_common1.2",
+      "head_width": 256,
+      "common_boost": 1.2
+    }
+  ],
+  "full_epochs_max": 4,
+  "full_minutes": 65,
+  "full_backbone_lr": 1e-05,
+  "full_classifier_lr": 3e-05,
+  "selection": "Same prospective happy/surprise/neutral recovery and disgust/aggregate retention gates as the previous run; max .5accuracy+.5macroF1 among eligible. Complete all head recipes and full-network phase before freezing at most one candidate.",
+  "test_gate": "Same6561testfaces. Strict accuracy/macroF1 gains over current58.3448%/.555367. No reduction in current macroP/R or disgustP/R/F1 (retain37/79disgust correct). Happy/surprise/neutral recall recover at least81.5897%/73.8382%/58.5448%. No alternate testcandidate; if any condition fails, app/PPT unchanged.",
+  "method": "Validation-only checkpoint-rollback ablation within the SAME native FusDenseNet. For each final student/EMA, restore retained native feature parameters/buffers from the better compact warm-up; optionally restore its classifier too. Keep newly learned native residual modules unchanged. No external encoder, inference probability mixture, new labels, gradients, normalization fitting or test information.",
+  "limits": "Validation and test are historically reused; exploratory engineering, not fresh identity-disjoint confirmation. Full/head epochs not equivalent. No80%or reliable webcam/clinical guarantee.",
+  "class_view_normalization": "Raw common factor2/(1+lambda), mirror2lambda/(1+lambda); pair sum2 preserves intended class boost. Previous invalid trial preserved separately.",
+  "head_weight_decay": 0.1,
+  "feature_dropout": 0.1,
+  "label_smoothing": 0.025,
+  "retention_weight": 0.25,
+  "full_min_epochs": 3,
+  "full_patience": 4,
+  "disclosure": "Pooling/head capacity/data augmentation/optimizer are joint engineering changes, not a causal equal-compute ablation. Val/test historically reused; no80% or webcam/clinical guarantee.",
+  "feature_std_floor": 0.05,
+  "timing_amendment": {
+    "declared_utc": "2026-11-08T17:02:49.023974+00:00",
+    "full_phase_started": false,
+    "test_accessed": false,
+    "reason": "Head epochs recorded716s and1655s wall intervals despite most epochs4-6s; cause unconfirmed. One head recipe ended at1epoch because wall budget elapsed. Preserve all original results and explicitly mark that recipe undertrained.",
+    "full_budget": "Use process CPU seconds divided by configured4threads; enforce minimum3completedepochs before time/patience stop; maximum6epochs unchanged. No training-loss, validation or test-gate change.",
+    "new_full_source_sha256": "36970b533fc0e0911a1ef9dfbf473cce5c9e27eb9c27c3af3fc18f219344e357"
+  },
+  "new_refinement_lr": 0.0001,
+  "happy_cost_multiplier": 1.25,
+  "surprise_cost_multiplier": 1.25,
+  "neutral_cost_multiplier": 1.0,
+  "condition": "Only if preceding native residual phase finishes with NO frozen/tested/eligible candidate. At mostone new tested candidate across all phases.",
+  "declared_utc": "2026-11-08T19:16:54.972756+00:00",
+  "rationale": "The final rejected compact checkpoint was used for continuation despite its earlier warm-up having better validation macroF1. Test whether feature-parameter drift or classifier drift explains loss of generalization. This is prospective exploratory checkpoint selection, not proof of a cause.",
+  "parent_run": "reports\\pure_residual_capacity_20261108",
+  "bn_run": "reports/pure_capacity_bn_20261108",
+  "epoch_offset": 259,
+  "candidates": [
+    "student_features",
+    "student_features_head",
+    "EMA_features",
+    "EMA_features_head"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "initial_checkpoint_sha256": "f0082aff0511c40d8dff89fc03bbea965b416db55a0f771701efaa38f490c548",
+  "seed": 81124,
+  "head_lr": 0.0006,
+  "head_epochs_max": 100,
+  "head_min_epochs": 35,
+  "head_patience": 20,
+  "head_minutes_per_recipe": 10,
+  "mirror_common_weight": 1.0,
+  "recipes": [
+    {
+      "name": "coarse128_common1.05",
+      "head_width": 128,
+      "common_boost": 1.05
+    },
+    {
+      "name": "coarse128_common1.2",
+      "head_width": 128,
+      "common_boost": 1.2
+    },
+    {
+      "name": "coarse256_common1.05",
+      "head_width": 256,
+      "common_boost": 1.05
+    },
+    {
+      "name": "coarse256_common1.2",
+      "head_width": 256,
+      "common_boost": 1.2
+    }
+  ],
+  "full_epochs_max": 6,
+  "full_minutes": 85,
+  "full_backbone_lr": 3e-05,
+  "full_classifier_lr": 5e-05,
+  "selection": "Same prospective happy/surprise/neutral recovery and disgust/aggregate retention gates as the previous run; max .5accuracy+.5macroF1 among eligible. Complete all head recipes and full-network phase before freezing at most one candidate.",
+  "test_gate": "Same6561testfaces. Strict accuracy/macroF1 gains over current58.3448%/.555367. No reduction in current macroP/R or disgustP/R/F1 (retain37/79disgust correct). Happy/surprise/neutral recall recover at least81.5897%/73.8382%/58.5448%. No alternate testcandidate; if any condition fails, app/PPT unchanged.",
+  "method": "Pure native FusDenseNet v9 capacity control: 3276 to1260 fixed differentiable spatial-region pooling, randomly initialized native128/256 MLP; TRAIN feature dropout, label smoothing and AdamW decay. Follow with mild geometric/photometric TRAIN augmentation and full native feature-path fine-tuning. TRAIN-only reference is the existing pure classifier, correct disgust-vs-rest probabilities; no external encoder or inference mixture.",
+  "limits": "Validation and test are historically reused; exploratory engineering, not fresh identity-disjoint confirmation. Full/head epochs not equivalent. No80%or reliable webcam/clinical guarantee.",
+  "class_view_normalization": "Raw common factor2/(1+lambda), mirror2lambda/(1+lambda); pair sum2 preserves intended class boost. Previous invalid trial preserved separately.",
+  "head_weight_decay": 0.1,
+  "feature_dropout": 0.1,
+  "label_smoothing": 0.025,
+  "retention_weight": 0.25,
+  "full_min_epochs": 3,
+  "full_patience": 4,
+  "disclosure": "Pooling/head capacity/data augmentation/optimizer are joint engineering changes, not a causal equal-compute ablation. Val/test historically reused; no80% or webcam/clinical guarantee.",
+  "feature_std_floor": 0.05,
+  "architecture": {
+    "version": 9,
+    "head_width": 128
+  },
+  "dataset_sha256": "9f3422c7a45b676c2965ef4fc5f3099932aa98fd13eaaa2c254f620a9894a6e9",
+  "manifest_sha256": "326eeabc6fca7fb119030aae617f0cacae3ab28ed3d948c7c00d23c5299e10c2",
+  "device": "cpu",
+  "threads": 4
+}

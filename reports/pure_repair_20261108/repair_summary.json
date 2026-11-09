@@ -1,0 +1,398 @@
+{
+  "method": "pure_coverage_repair",
+  "completed_new_epochs": 6,
+  "completed": true,
+  "decision": {
+    "eligible": false,
+    "test_evaluated": false,
+    "installed": false,
+    "reason": "No pure checkpoint passed the predeclared validation accuracy/F1/recall gate. App and PPT unchanged.",
+    "protected_artifacts_unchanged": true,
+    "new_epochs": 6
+  },
+  "deployed": false,
+  "external_encoder": false,
+  "teacher": false,
+  "baseline_test": {
+    "n": 6561,
+    "accuracy": 0.574150281969212,
+    "macro_precision": 0.5391905789239385,
+    "macro_recall": 0.5325106108129906,
+    "macro_f1": 0.5320404110907176,
+    "disgust_precision": 0.48333333333333334,
+    "disgust_recall": 0.3670886075949367,
+    "disgust_f1": 0.4172661870503597
+  },
+  "baseline_validation": {
+    "n": 3970,
+    "accuracy": 0.580352644836272,
+    "macro_precision": 0.5244524095520752,
+    "macro_recall": 0.5256540852978745,
+    "macro_f1": 0.5224833862973063,
+    "disgust_precision": 0.3333333333333333,
+    "disgust_recall": 0.28,
+    "disgust_f1": 0.30434782608695654
+  },
+  "best_observed_validation": {
+    "n": 3970,
+    "accuracy": 0.5763224181360201,
+    "macro_precision": 0.5349949527764609,
+    "macro_recall": 0.5176688812848177,
+    "macro_f1": 0.5239082201032439,
+    "disgust_precision": 0.35,
+    "disgust_recall": 0.28,
+    "disgust_f1": 0.3111111111111111
+  },
+  "best_observed_file": "validation_05_student.json",
+  "candidate_test": null,
+  "class_unit_CE_weights": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "old_loss_disgust_CE_mass": 0.024452021345496178,
+  "old_sampler_unique_fraction": 0.6263030251457261,
+  "regularizer_gradient_conflict_counts": {
+    "RDrop": 5,
+    "SupCon": 3
+  },
+  "audited_gradient_batches": 6,
+  "protected_artifacts_unchanged": {
+    "models/fusdense.pt": true,
+    "reports/emotion_evaluation.json": true,
+    "reports/latest_emotion_experiment.json": true,
+    "frontend/src/research/TrainingEvidence.jsx": true,
+    "output/RagaMoodSync_Research_Pure_FusDenseNet_Reviewed_v2.pptx": true,
+    "output/RagaMoodSync_Research.pptx": true
+  },
+  "history": [
+    {
+      "epoch": 126,
+      "phase": "full_network_pure_coverage_repair",
+      "loss": 0.6114661042888959,
+      "CE": 0.6114661042888959,
+      "accuracy": 0.7996279761904762,
+      "val_accuracy": 0.5795969773299748,
+      "val_macro_f1": 0.5206973878657054,
+      "val_disgust_recall": 0.26,
+      "val_disgust_f1": 0.2708333333333333,
+      "val_loss": 1.2041345834732056,
+      "selected_kind": "EMA",
+      "saved_new_best": false,
+      "sample_counts": [
+        4123,
+        2010,
+        3337,
+        6044,
+        4880,
+        2329,
+        4157
+      ],
+      "mean_class_CE": [
+        0.774218738079071,
+        0.3607042729854584,
+        0.9019303321838379,
+        0.29341161251068115,
+        0.7543202042579651,
+        0.44141945242881775,
+        0.7281226515769958
+      ],
+      "sampling_audit": {
+        "unique_training_faces": 23503,
+        "training_pool": 23503,
+        "natural_draws": 23520,
+        "natural_padding": 17,
+        "class_draws": [
+          4123,
+          2010,
+          3337,
+          6044,
+          4880,
+          2329,
+          4157
+        ],
+        "all_training_faces_covered": true,
+        "no_duplicate_indices_within_batch": true
+      },
+      "seconds": 851.9905834000092,
+      "cpu_seconds": 2104.625
+    },
+    {
+      "epoch": 127,
+      "phase": "full_network_pure_coverage_repair",
+      "loss": 0.5070731722882815,
+      "CE": 0.5070731722882815,
+      "accuracy": 0.8330729166666667,
+      "val_accuracy": 0.575566750629723,
+      "val_macro_f1": 0.5200195221854621,
+      "val_disgust_recall": 0.28,
+      "val_disgust_f1": 0.2828282828282828,
+      "val_loss": 1.241072654724121,
+      "selected_kind": "student",
+      "saved_new_best": false,
+      "sample_counts": [
+        4121,
+        2010,
+        3339,
+        6044,
+        4883,
+        2327,
+        4156
+      ],
+      "mean_class_CE": [
+        0.6242645978927612,
+        0.22656597197055817,
+        0.7727882862091064,
+        0.2636892795562744,
+        0.595268964767456,
+        0.38476142287254333,
+        0.6318603754043579
+      ],
+      "sampling_audit": {
+        "unique_training_faces": 23503,
+        "training_pool": 23503,
+        "natural_draws": 23520,
+        "natural_padding": 17,
+        "class_draws": [
+          4121,
+          2010,
+          3339,
+          6044,
+          4883,
+          2327,
+          4156
+        ],
+        "all_training_faces_covered": true,
+        "no_duplicate_indices_within_batch": true
+      },
+      "seconds": 438.5973254000128,
+      "cpu_seconds": 1171.203125
+    },
+    {
+      "epoch": 128,
+      "phase": "full_network_pure_coverage_repair",
+      "loss": 0.4791207571824392,
+      "CE": 0.4791207571824392,
+      "accuracy": 0.8398065476190476,
+      "val_accuracy": 0.5773299748110832,
+      "val_macro_f1": 0.5227080743143381,
+      "val_disgust_recall": 0.28,
+      "val_disgust_f1": 0.3010752688172043,
+      "val_loss": 1.2468842267990112,
+      "selected_kind": "EMA",
+      "saved_new_best": false,
+      "sample_counts": [
+        4123,
+        2012,
+        3340,
+        6043,
+        4878,
+        2329,
+        4155
+      ],
+      "mean_class_CE": [
+        0.5876474380493164,
+        0.19847862422466278,
+        0.7306554317474365,
+        0.2482130378484726,
+        0.5738224387168884,
+        0.36374548077583313,
+        0.5944491624832153
+      ],
+      "sampling_audit": {
+        "unique_training_faces": 23503,
+        "training_pool": 23503,
+        "natural_draws": 23520,
+        "natural_padding": 17,
+        "class_draws": [
+          4123,
+          2012,
+          3340,
+          6043,
+          4878,
+          2329,
+          4155
+        ],
+        "all_training_faces_covered": true,
+        "no_duplicate_indices_within_batch": true
+      },
+      "seconds": 641.2924911000009,
+      "cpu_seconds": 1235.3125
+    },
+    {
+      "epoch": 129,
+      "phase": "full_network_pure_coverage_repair",
+      "loss": 0.4585445245816594,
+      "CE": 0.4585445245816594,
+      "accuracy": 0.8478794642857143,
+      "val_accuracy": 0.5795969773299748,
+      "val_macro_f1": 0.524704365880013,
+      "val_disgust_recall": 0.28,
+      "val_disgust_f1": 0.3010752688172043,
+      "val_loss": 1.2547187805175781,
+      "selected_kind": "EMA",
+      "saved_new_best": false,
+      "sample_counts": [
+        4119,
+        2010,
+        3337,
+        6046,
+        4884,
+        2329,
+        4155
+      ],
+      "mean_class_CE": [
+        0.56382817029953,
+        0.1806359589099884,
+        0.7019767761230469,
+        0.2407519519329071,
+        0.5423592329025269,
+        0.33414244651794434,
+        0.581228494644165
+      ],
+      "sampling_audit": {
+        "unique_training_faces": 23503,
+        "training_pool": 23503,
+        "natural_draws": 23520,
+        "natural_padding": 17,
+        "class_draws": [
+          4119,
+          2010,
+          3337,
+          6046,
+          4884,
+          2329,
+          4155
+        ],
+        "all_training_faces_covered": true,
+        "no_duplicate_indices_within_batch": true
+      },
+      "seconds": 741.4914147999953,
+      "cpu_seconds": 1296.453125
+    },
+    {
+      "epoch": 130,
+      "phase": "full_network_pure_coverage_repair",
+      "loss": 0.4393151490816048,
+      "CE": 0.4393151490816048,
+      "accuracy": 0.8536458333333333,
+      "val_accuracy": 0.5763224181360201,
+      "val_macro_f1": 0.5239082201032439,
+      "val_disgust_recall": 0.28,
+      "val_disgust_f1": 0.3111111111111111,
+      "val_loss": 1.270477533340454,
+      "selected_kind": "student",
+      "saved_new_best": false,
+      "sample_counts": [
+        4123,
+        2010,
+        3337,
+        6045,
+        4880,
+        2328,
+        4157
+      ],
+      "mean_class_CE": [
+        0.5388059616088867,
+        0.15991225838661194,
+        0.6729722023010254,
+        0.23208461701869965,
+        0.5265799164772034,
+        0.3234736919403076,
+        0.5519492626190186
+      ],
+      "sampling_audit": {
+        "unique_training_faces": 23503,
+        "training_pool": 23503,
+        "natural_draws": 23520,
+        "natural_padding": 17,
+        "class_draws": [
+          4123,
+          2010,
+          3337,
+          6045,
+          4880,
+          2328,
+          4157
+        ],
+        "all_training_faces_covered": true,
+        "no_duplicate_indices_within_batch": true
+      },
+      "seconds": 601.8068322000036,
+      "cpu_seconds": 1224.078125
+    },
+    {
+      "epoch": 131,
+      "phase": "full_network_pure_coverage_repair",
+      "loss": 0.4297033429145813,
+      "CE": 0.4297033429145813,
+      "accuracy": 0.8589657738095238,
+      "val_accuracy": 0.575566750629723,
+      "val_macro_f1": 0.5224780897056313,
+      "val_disgust_recall": 0.28,
+      "val_disgust_f1": 0.3076923076923077,
+      "val_loss": 1.2755823135375977,
+      "selected_kind": "EMA",
+      "saved_new_best": false,
+      "sample_counts": [
+        4123,
+        2010,
+        3339,
+        6042,
+        4879,
+        2330,
+        4157
+      ],
+      "mean_class_CE": [
+        0.5208733677864075,
+        0.14243832230567932,
+        0.6509637832641602,
+        0.23099911212921143,
+        0.5192062258720398,
+        0.3037785291671753,
+        0.5547965168952942
+      ],
+      "sampling_audit": {
+        "unique_training_faces": 23503,
+        "training_pool": 23503,
+        "natural_draws": 23520,
+        "natural_padding": 17,
+        "class_draws": [
+          4123,
+          2010,
+          3339,
+          6042,
+          4879,
+          2330,
+          4157
+        ],
+        "all_training_faces_covered": true,
+        "no_duplicate_indices_within_batch": true
+      },
+      "seconds": 571.8707043000031,
+      "cpu_seconds": 1215.40625
+    }
+  ],
+  "protocol": {
+    "initial_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+    "seed": 81109,
+    "epochs_max": 12,
+    "min_epochs": 6,
+    "patience": 4,
+    "max_minutes": 105,
+    "backbone_lr": 2e-05,
+    "classifier_lr": 3e-05,
+    "validation_min_disgust_recall_gain": 0.08,
+    "test_min_disgust_recall_gain": 0.05,
+    "method": "Pure v4 full-path coverage repair: natural56 unique without replacement over all23503faces, plus4disgust/2angry/2sad TRAIN-only cycling extras each batch. Unit CE, no label smoothing, SupCon or RDrop. Original dropout.35; oldBNstats fixed. 50%raw/50%mild brightness-contrast jitter. No affine or horizontalflip.",
+    "selection": "Validation accuracy, macroF1 and disgustF1 strictly improve over baseline; disgustrecall increases at least8percentagepoints (28%to36%minimum). Max .4accuracy+.4macroF1+.2disgustF1, student or averaged-weight single network. Maxonefrozen testcandidate after training.",
+    "deployment": "Keep app/PPT unchanged unless the frozen pure candidate improves full same-set testaccuracy,macroF1,disgustF1 and improves disgustrecall at least5percentagepoints over baseline36.71%. No alternate testsearch. All seven test metrics and regressions reported.",
+    "inference": "One pure FusDenseNet network, single view, validation temperature only, no inference offsets/thresholds/hybrid/teacher/externalencoder.",
+    "limits": "Training-only six-batch gradient and perturbation diagnostics are exploratory; changes are not an isolated controlled ablation. Reused validation and historically inspected test are not fresh identity-disjoint confirmation. No orientation robustness,80%accuracy or clinical efficacy claim."
+  },
+  "limitation": "Perturbation/gradient tests are training-only diagnostics, not causal proof. Reused validation and historically inspected test are descriptive, not fresh identity-disjoint confirmation."
+}

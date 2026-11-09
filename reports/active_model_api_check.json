@@ -1,0 +1,50 @@
+{
+  "input": "Existing public NASA/scikit-image demo fixture; not the user photograph",
+  "response": {
+    "emotion": "happy",
+    "confidence": 0.9959600567817688,
+    "probabilities": {
+      "angry": 0.00020056222274433821,
+      "disgust": 0.00012278517533559352,
+      "fear": 0.0005406640702858567,
+      "happy": 0.9959600567817688,
+      "sad": 9.323363337898627e-05,
+      "surprise": 0.0012584658106788993,
+      "neutral": 0.0018242861842736602
+    },
+    "native_probabilities": {
+      "angry": 0.00020056222274433821,
+      "disgust": 0.00012278517533559352,
+      "fear": 0.0005406640702858567,
+      "happy": 0.9959600567817688,
+      "sad": 9.323363337898627e-05,
+      "surprise": 0.0012584658106788993,
+      "neutral": 0.0018242861842736602
+    },
+    "native_label": "happy",
+    "model": "fusdense",
+    "trained": true,
+    "face_box": [
+      177,
+      66,
+      95,
+      95
+    ],
+    "low_confidence": false,
+    "label_mapping": "FER2013 native labels",
+    "validation": "Project-trained model. Check matching evaluation provenance before interpreting performance.",
+    "held_out_evaluation": {
+      "n": 6561,
+      "accuracy": 0.5255296448712087,
+      "pilot": false,
+      "checkpoint_epoch": 39,
+      "macro_f1": 0.44916607283447024,
+      "checkpoint_sha256": "dbc4a9f9293fb4e1b28ae249958964cfe12e1b3b17a18f7e75bea77925b7a4ba"
+    },
+    "suggested_emotion": "happy",
+    "abstained": false,
+    "needs_confirmation": true,
+    "reason": "Expression suggestion requires your confirmation.",
+    "policy_source": "Class-specific validation evidence and conservative deployment thresholds; not a new classifier or mood measurement."
+  }
+}

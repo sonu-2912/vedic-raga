@@ -1,0 +1,22 @@
+{
+  "archive_bytes": 63252113,
+  "archive_sha256": "9f3422c7a45b676c2965ef4fc5f3099932aa98fd13eaaa2c254f620a9894a6e9",
+  "counts": {
+    "test/angry": 958,
+    "test/disgust": 111,
+    "test/fear": 1024,
+    "test/happy": 1774,
+    "test/neutral": 1233,
+    "test/sad": 1247,
+    "test/surprise": 831,
+    "train/angry": 3995,
+    "train/disgust": 436,
+    "train/fear": 4097,
+    "train/happy": 7215,
+    "train/neutral": 4965,
+    "train/sad": 4830,
+    "train/surprise": 3171
+  },
+  "images": 35887,
+  "declared_uncompressed_bytes": 56510189
+}

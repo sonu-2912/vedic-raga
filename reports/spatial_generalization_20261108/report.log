@@ -1,0 +1,51 @@
+{
+  "epochs": 6,
+  "qualified": true,
+  "deployed": true,
+  "active_accuracy": 0.5925925925925926,
+  "latest_test": {
+    "n": 6561,
+    "checkpoint_sha256": "a4ed3e54d3b863e6381a8de3ec16428020e58c6d006e48cdfbf72a03ee88c249",
+    "metrics": {
+      "accuracy": {
+        "baseline": 0.574150281969212,
+        "colab": 0.5925925925925926,
+        "difference": 0.01844231062338053
+      },
+      "macro_f1": {
+        "baseline": 0.5320404110907176,
+        "colab": 0.5530481857312455,
+        "difference": 0.021007774640527832
+      },
+      "disgust_recall": {
+        "baseline": 0.3670886075949367,
+        "colab": 0.43037974683544306,
+        "difference": 0.06329113924050633
+      },
+      "disgust_f1": {
+        "baseline": 0.4172661870503597,
+        "colab": 0.48226950354609927,
+        "difference": 0.06500331649573954
+      },
+      "macro_precision": {
+        "baseline": 0.5391905789239385,
+        "colab": 0.5627812784516171,
+        "difference": 0.02359069952767856
+      },
+      "macro_recall": {
+        "baseline": 0.5325106108129906,
+        "colab": 0.5526219138705115,
+        "difference": 0.020111303057520957
+      },
+      "disgust_precision": {
+        "baseline": 0.48333333333333334,
+        "colab": 0.5483870967741935,
+        "difference": 0.06505376344086017
+      }
+    },
+    "recommended_for_integration": true,
+    "rule": "Accuracy, macro F1 and disgust F1 increase, disgust recall does not decrease; engineering gate, not significance evidence",
+    "strict_all_metrics": false,
+    "limitation": "Descriptive comparison; do not tune further using this test result. GPU execution itself is not an architectural innovation."
+  }
+}

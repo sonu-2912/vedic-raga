@@ -1,0 +1,15 @@
+slides 13 charts 1 tables 1
+masters 1
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/udsvah03","index":8,"layout":{"id":"ly/14ra9krq","name":"Blank"},"backgroundColor":"rgba(246,245,239,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/oza1gfyh","kind":"textbox","position":{"left":64,"top":49,"width":1140,"height":65},"text":"FusDenseNet implementation and results","style":{"fontSize":40,"typeface":"Arial","color":"#223E34","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/1cfmhgne","kind":"textbox","position":{"left":64,"top":120,"width":1150,"height":48},"text":"CPU: 19 full-network + 30 head-only recorded epochs · selected index 39","style":{"fontSize":21,"typeface":"Arial","color":"#67786B","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/0b65obm9","kind":"textbox","position":{"left":1140,"top":675,"width":80,"height":20},"text":"09 / 13","style":{"fontSize":13,"typeface":"Arial","color":"#67786B","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/nex4jq5k","kind":"textbox","position":{"left":64,"top":654,"width":1050,"height":44},"text":"Figs 2–3, Eqs 3–9  ·  Actual project evidence  ·  HOG method: Dalal & Triggs, 2005","style":{"fontSize":12,"typeface":"Arial","color":"#67786B","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/mdonql4z","kind":"textbox","position":{"left":64,"top":185,"width":640,"height":100},"text":"223,776 parameters · spatial + global pooling\n3 fusion stages, cross-attention, dilation\n23,503 train / 3,970 validation","style":{"fontSize":23,"typeface":"Arial","color":"#223E34","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"ch/xkryl4na","kind":"chart","name":"Chart","position":{"left":64,"top":310,"width":610,"height":280},"chartType":"line","title":"FER2013 curves; final phase trains MLP only"},
+{"id":"im/psf21cve","kind":"image","position":{"left":755.83,"top":170,"width":408.33,"height":350}},
+{"id":"sh/bih4na5w","kind":"textbox","position":{"left":700,"top":530,"width":520,"height":90},"text":"Held-out n=6561, accuracy 52.55%\nMacro precision 0.4718, recall 0.4485\nMacro F1 0.4492","style":{"fontSize":21,"typeface":"Arial","color":"#A47546","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/ah8nu54b","kind":"textbox","position":{"left":64,"top":620,"width":1140,"height":30},"text":"Same-test accuracy: pilot 26.52% · HOG/SVM 41.47% · revised 52.55%.","style":{"fontSize":22,"typeface":"Arial","color":"#A47546","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0}
+]}
+

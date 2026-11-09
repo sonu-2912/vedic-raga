@@ -1,0 +1,9 @@
+file:///C:/Users/bindu/OneDrive/Desktop/VEDIC%20RAGA/reports/slides_build/edit_controlled_deck.mjs:19
+async function replaceImage(n,oldAlt,file){const l=await layout(n),el=l.elements.find(v=>v.kind==='image'&&v.alt===oldAlt);if(!el)throw Error('Image anchor missing');const target=p.resolve(el.id),data=await fs.readFile(path.join(root,'reports',file));target.replace({blob:data.buffer.slice(data.byteOffset,data.byteOffset+data.byteLength),contentType:file.endsWith('.png')?'image/png':'image/jpeg',alt:file,fit:'contain'});}
+                                                                                                                                        ^
+
+Error: Image anchor missing
+    at replaceImage (file:///C:/Users/bindu/OneDrive/Desktop/VEDIC%20RAGA/reports/slides_build/edit_controlled_deck.mjs:19:137)
+    at async file:///C:/Users/bindu/OneDrive/Desktop/VEDIC%20RAGA/reports/slides_build/edit_controlled_deck.mjs:32:1
+
+Node.js v24.22.1

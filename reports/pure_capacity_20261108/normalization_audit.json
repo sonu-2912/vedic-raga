@@ -1,0 +1,17 @@
+{
+  "fit_on": "47006 original/mirrored TRAIN feature views from23503 source images",
+  "unique_train_source_images": 23503,
+  "feature_width": 1260,
+  "std_floor": 0.05,
+  "features_below_std_floor": 172,
+  "class_weights": [
+    0.7903233766555786,
+    2.4912571907043457,
+    0.7835424542427063,
+    0.5823619961738586,
+    0.7121842503547668,
+    0.9381608963012695,
+    0.7021700143814087
+  ],
+  "original_parameter_count": 1828896
+}

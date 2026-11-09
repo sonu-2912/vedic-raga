@@ -1,0 +1,21 @@
+{
+  "dataset": "DENS ds003751; official OpenNeuro data",
+  "participants": "First 12 lexicographically ordered released participant folders; no score-based subject selection",
+  "task": "Participant-rated valence: low <=4, high >=6; intermediate ratings excluded",
+  "window": "Centered exactly 60s inside stimulus; no padding or cross-trial extension",
+  "timing": "EEGLAB event latencies are 1-based samples, checked against source ISO event time differences and header sampling rate",
+  "evaluation": "4x4 crossed participant/stimulus held-out folds; training excludes every held-out participant AND every held-out video ID",
+  "models": "Fixed fold-fitted StandardScaler + balanced LogisticRegression C=1; EEG, cardiac, fusion and training-majority baseline",
+  "teacher": null,
+  "game_data": false,
+  "licence": "dataset_description says CC0; README/LICENSE says ODbL/DbCL. Preserve both and use more protective attribution/share-alike conditions for derived data",
+  "access": "Public official repository/bucket, no credentials or signed EULA",
+  "partial_signal_integrity": "Exact HTTP byte range and local SHA256; no full-FDT MD5 verification claim",
+  "seed": 94,
+  "limitations": [
+    "Small 12-participant subset",
+    "Physiological and annotation artifacts remain possible",
+    "60s RR features are not five-minute clinical HRV",
+    "No facial FER labels, disgust target or raga-response outcomes"
+  ]
+}

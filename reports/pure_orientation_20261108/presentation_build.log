@@ -1,0 +1,23 @@
+Inspect result written to file: C:\Users\bindu\OneDrive - iitr.ac.in\VEDIC RAGA\reports\slides_orientation_repair\candidate.pptx.inspect.ndjson
+file:///C:/Users/bindu/.codex/plugins/cache/openai-primary-runtime/presentations/26.1104.12130/skills/presentations/container_tools/artifact_tool_utils.mjs:483
+  const error = new Error(`${message}${details ? `\n${details.slice(0, 8000)}` : ""}`, {
+                ^
+
+Error: chart-data-snapshot validator did not pass
+{"error": "Excel cannot preserve the literal chart's numeric precision", "error_category": "SnapshotError", "ok": false}
+    at processFailure (file:///C:/Users/bindu/.codex/plugins/cache/openai-primary-runtime/presentations/26.1104.12130/skills/presentations/container_tools/artifact_tool_utils.mjs:483:17)
+    at executeOptionalValidator (file:///C:/Users/bindu/.codex/plugins/cache/openai-primary-runtime/presentations/26.1104.12130/skills/presentations/container_tools/artifact_tool_utils.mjs:541:11)
+    at preparePortableChartData (file:///C:/Users/bindu/.codex/plugins/cache/openai-primary-runtime/presentations/26.1104.12130/skills/presentations/container_tools/artifact_tool_utils.mjs:746:22)
+    at async finalizePresentation (file:///C:/Users/bindu/.codex/plugins/cache/openai-primary-runtime/presentations/26.1104.12130/skills/presentations/container_tools/artifact_tool_utils.mjs:933:24)
+    at async file:///C:/Users/bindu/OneDrive%20-%20iitr.ac.in/VEDIC%20RAGA/reports/slides_nov7/edit_orientation_repair.mjs:53:28 {
+  code: 'PRESENTATION_VALIDATION_FAILED',
+  validator: 'chart-data-snapshot',
+  exitCode: 2,
+  signal: null,
+  stdout: '',
+  stderr: `{"error": "Excel cannot preserve the literal chart's numeric precision", "error_category": "SnapshotError", "ok": false}\r\n`,
+  report: undefined,
+  [cause]: undefined
+}
+
+Node.js v24.22.1

@@ -1,0 +1,19 @@
+{
+  "kind": "Engineering ranking sensitivity only, no user relevance labels",
+  "iks_on": [
+    "Asavari",
+    "Bhairav",
+    "Bhairavi",
+    "Bilaskhani Todi",
+    "Darbari Kanada",
+    "Gunkali"
+  ],
+  "iks_off": [
+    "Adana",
+    "Ahir Bhairav",
+    "Alhaiya Bilawal",
+    "Asavari",
+    "Bageshree",
+    "Bahar"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "completed_additional_epochs": 5,
+  "validation_improved": true,
+  "best_score": 0.5456310897128925,
+  "test_accessed": false,
+  "synthetic": false,
+  "parameters_trained": "Full emotion path, not frozen-feature MLP-only training"
+}

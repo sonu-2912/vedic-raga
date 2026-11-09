@@ -1,0 +1,26 @@
+{
+  "confirmed_mood_only": {
+    "goal": "balance",
+    "top_raga": "Jait"
+  },
+  "weather_only": {
+    "goal": "balance",
+    "top_raga": "Malshree"
+  },
+  "body_without_reference": {
+    "goal": "balance",
+    "top_raga": "Jait"
+  },
+  "body_without_hrv": {
+    "goal": "balance",
+    "top_raga": "Jait"
+  },
+  "body_with_reference": {
+    "goal": "calm",
+    "top_raga": "Chandrakauns"
+  },
+  "all_contexts": {
+    "goal": "calm",
+    "top_raga": "Chandrakauns"
+  }
+}

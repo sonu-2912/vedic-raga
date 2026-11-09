@@ -1,0 +1,10 @@
+{
+  "completed_additional_epochs": 6,
+  "validation_improved": false,
+  "test_accessed": false,
+  "external_encoder": false,
+  "teacher": false,
+  "stop_reason": "conditional_budget_reallocation_after_six_complete_epochs",
+  "elapsed_wall_seconds": 3847.8298788999964,
+  "synthetic": false
+}

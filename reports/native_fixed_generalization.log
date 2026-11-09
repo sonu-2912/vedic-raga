@@ -1,0 +1,12 @@
+{
+  "source": {
+    "file": "full_latest.pt",
+    "sha256": "5563b4d2ff1241cae088755dc301093916e37e17dc4bda4ca9ec3740cbba248b",
+    "kind": "EMA",
+    "selection": "Final completed epoch diagnostic only; rejected for deployment"
+  },
+  "train_accuracy": 0.7252265668212569,
+  "val_accuracy": 0.5801007556675063,
+  "train_minus_validation_gap": 0.14512581115375056,
+  "baseline_gap": 0.3366450887720963
+}

@@ -1,0 +1,45 @@
+{
+  "n": 6561,
+  "checkpoint_sha256": "286d783f9f8692148bbcd765e20a817f7b82c421f0d6bd14c22b00bbcb9acb80",
+  "metrics": {
+    "accuracy": {
+      "baseline": 0.574150281969212,
+      "colab": 0.572930955647005,
+      "difference": -0.0012193263222070039
+    },
+    "macro_f1": {
+      "baseline": 0.5320404110907176,
+      "colab": 0.5336855376876011,
+      "difference": 0.0016451265968834283
+    },
+    "disgust_recall": {
+      "baseline": 0.3670886075949367,
+      "colab": 0.35443037974683544,
+      "difference": -0.012658227848101278
+    },
+    "disgust_f1": {
+      "baseline": 0.4172661870503597,
+      "colab": 0.42748091603053434,
+      "difference": 0.010214728980174614
+    },
+    "macro_precision": {
+      "baseline": 0.5391905789239385,
+      "colab": 0.5458079227173034,
+      "difference": 0.0066173437933648716
+    },
+    "macro_recall": {
+      "baseline": 0.5325106108129906,
+      "colab": 0.5307938889533699,
+      "difference": -0.0017167218596206846
+    },
+    "disgust_precision": {
+      "baseline": 0.48333333333333334,
+      "colab": 0.5384615384615384,
+      "difference": 0.0551282051282051
+    }
+  },
+  "recommended_for_integration": false,
+  "rule": "Accuracy, macro F1 and disgust F1 increase; none of the seven declared aggregate/disgust metrics decreases; engineering gate, not significance evidence",
+  "strict_all_metrics": true,
+  "limitation": "Descriptive comparison; do not tune further using this test result. GPU execution itself is not an architectural innovation."
+}

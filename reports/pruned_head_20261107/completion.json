@@ -1,0 +1,9 @@
+{
+  "completed_additional_epochs": 10,
+  "validation_improved": false,
+  "best_score": 0.5427376267859443,
+  "test_accessed": false,
+  "synthetic": false,
+  "parameters_trained": "Pruned256-unit classifier only; backbone byte-identical",
+  "inference_architecture_change": "Only classifier width512\u2192256; original FusDenseNet mechanisms retained"
+}

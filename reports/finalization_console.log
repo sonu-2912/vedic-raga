@@ -1,0 +1,393 @@
+{"training_process":0,"stage":"waiting_for_training","updated":"2026-11-03T12:50:06.0739500+05:30"}
+{"training_process":0,"stage":"validation_calibration","updated":"2026-11-03T12:50:06.2001628+05:30"}
+{
+  "split": "validation only, same fixed split used for checkpoint selection",
+  "n": 3970,
+  "single_macro_f1": 0.39884926800737824,
+  "flip_macro_f1": 0.4003569422708549,
+  "flip_selection_rule": "Use two-view mean logits only if validation macro F1 improves by more than 0.002",
+  "horizontal_flip_tta": false,
+  "temperature": 0.7439993023872375,
+  "nll_before": 1.3043335676193237,
+  "nll_after": 1.2796293497085571,
+  "accuracy_unchanged_by_temperature": 0.5088161209068011,
+  "seconds": 28.311978799989447,
+  "limitations": "Calibration fitting and checkpoint selection reuse validation. Test is not read. No webcam-domain or independent calibration validation.",
+  "checkpoint_sha256": "04e2a0e288b071a576422ba5adbf02d8fad604e4f22747064eab6aa7f7e7f53e"
+}
+{"training_process":0,"stage":"final_fer_test_evaluation","updated":"2026-11-03T12:51:06.0376303+05:30"}
+{
+  "dataset": "data/private/fer2013-v1.zip",
+  "split": "test",
+  "n": 6561,
+  "duplicate_pixels_removed": 617,
+  "checkpoint_epoch": 16,
+  "checkpoint_sha256": "04e2a0e288b071a576422ba5adbf02d8fad604e4f22747064eab6aa7f7e7f53e",
+  "pilot": false,
+  "seconds": 24.882483099994715,
+  "synthetic": false,
+  "accuracy": 0.501295534217345,
+  "balanced_accuracy": 0.4115291529865773,
+  "architecture": {
+    "attention": true,
+    "dilated": true,
+    "version": 2
+  },
+  "classification_report": {
+    "angry": {
+      "precision": 0.3583650190114068,
+      "recall": 0.42454954954954954,
+      "f1-score": 0.388659793814433,
+      "support": 888.0
+    },
+    "disgust": {
+      "precision": 0.6666666666666666,
+      "recall": 0.02531645569620253,
+      "f1-score": 0.04878048780487805,
+      "support": 79.0
+    },
+    "fear": {
+      "precision": 0.2724014336917563,
+      "recall": 0.0824295010845987,
+      "f1-score": 0.12656119900083265,
+      "support": 922.0
+    },
+    "happy": {
+      "precision": 0.7137055837563452,
+      "recall": 0.8217416715371128,
+      "f1-score": 0.7639228470524314,
+      "support": 1711.0
+    },
+    "sad": {
+      "precision": 0.3415492957746479,
+      "recall": 0.32387312186978295,
+      "f1-score": 0.3324764353041988,
+      "support": 1198.0
+    },
+    "surprise": {
+      "precision": 0.5857142857142857,
+      "recall": 0.6351118760757315,
+      "f1-score": 0.6094137076796037,
+      "support": 581.0
+    },
+    "neutral": {
+      "precision": 0.4500335345405768,
+      "recall": 0.5676818950930627,
+      "f1-score": 0.5020576131687243,
+      "support": 1182.0
+    },
+    "accuracy": 0.501295534217345,
+    "macro avg": {
+      "precision": 0.48406225987938367,
+      "recall": 0.4115291529865773,
+      "f1-score": 0.39598172626072886,
+      "support": 6561.0
+    },
+    "weighted avg": {
+      "precision": 0.4762406452346733,
+      "recall": 0.501295534217345,
+      "f1-score": 0.4753167512042359,
+      "support": 6561.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      377,
+      1,
+      44,
+      88,
+      219,
+      29,
+      130
+    ],
+    [
+      47,
+      2,
+      3,
+      9,
+      14,
+      2,
+      2
+    ],
+    [
+      211,
+      0,
+      76,
+      93,
+      210,
+      147,
+      185
+    ],
+    [
+      87,
+      0,
+      22,
+      1406,
+      67,
+      37,
+      92
+    ],
+    [
+      221,
+      0,
+      47,
+      155,
+      388,
+      28,
+      359
+    ],
+    [
+      30,
+      0,
+      56,
+      59,
+      15,
+      369,
+      52
+    ],
+    [
+      79,
+      0,
+      31,
+      160,
+      223,
+      18,
+      671
+    ]
+  ],
+  "inference": {
+    "horizontal_flip_tta": false,
+    "temperature": 0.7439993023872375
+  },
+  "majority_class_baseline_accuracy": 0.26078341716201797,
+  "negative_log_likelihood": 1.2759158510294717,
+  "brier_score": 0.6087683780688545,
+  "expected_calibration_error_10_bins": 0.01637372674783579,
+  "reliability_bins": [
+    {
+      "lower": 0.0,
+      "upper": 0.1,
+      "n": 0,
+      "accuracy": null,
+      "confidence": null
+    },
+    {
+      "lower": 0.1,
+      "upper": 0.2,
+      "n": 7,
+      "accuracy": 0.14285714285714285,
+      "confidence": 0.19511060203824723
+    },
+    {
+      "lower": 0.2,
+      "upper": 0.30000000000000004,
+      "n": 1127,
+      "accuracy": 0.2795031055900621,
+      "confidence": 0.2664963669922887
+    },
+    {
+      "lower": 0.30000000000000004,
+      "upper": 0.4,
+      "n": 1992,
+      "accuracy": 0.34839357429718876,
+      "confidence": 0.34140746455534876
+    },
+    {
+      "lower": 0.4,
+      "upper": 0.5,
+      "n": 922,
+      "accuracy": 0.42950108459869846,
+      "confidence": 0.4462335273267907
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.6000000000000001,
+      "n": 588,
+      "accuracy": 0.5119047619047619,
+      "confidence": 0.5483924860046023
+    },
+    {
+      "lower": 0.6000000000000001,
+      "upper": 0.7000000000000001,
+      "n": 390,
+      "accuracy": 0.5923076923076923,
+      "confidence": 0.6465001847499456
+    },
+    {
+      "lower": 0.7000000000000001,
+      "upper": 0.8,
+      "n": 334,
+      "accuracy": 0.7215568862275449,
+      "confidence": 0.7490392750251793
+    },
+    {
+      "lower": 0.8,
+      "upper": 0.9,
+      "n": 345,
+      "accuracy": 0.8318840579710145,
+      "confidence": 0.8524386005125184
+    },
+    {
+      "lower": 0.9,
+      "upper": 1.0,
+      "n": 856,
+      "accuracy": 0.9614485981308412,
+      "confidence": 0.9663548141578647
+    }
+  ]
+}
+{"training_process":0,"stage":"automated_tests","updated":"2026-11-03T12:52:10.1137016+05:30"}
+......................                                                   [100%]
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:40
+  C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\starlette\testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_pipeline.py::test_signals_and_multimodal
+  C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+tests/test_pipeline.py::test_signals_and_multimodal
+tests/test_pipeline.py::test_signals_and_multimodal
+tests/test_pipeline.py::test_signals_and_multimodal
+tests/test_pipeline.py::test_signals_and_multimodal
+tests/test_pipeline.py::test_signals_and_multimodal
+tests/test_pipeline.py::test_signals_and_multimodal
+  C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+tests/test_pipeline.py::test_signals_and_multimodal
+tests/test_pipeline.py::test_signals_and_multimodal
+tests/test_pipeline.py::test_signals_and_multimodal
+tests/test_pipeline.py::test_signals_and_multimodal
+tests/test_pipeline.py::test_signals_and_multimodal
+tests/test_pipeline.py::test_signals_and_multimodal
+  C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+tests/test_pipeline.py::test_signals_and_multimodal
+  C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\matplotlib\_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\reports\pytest.xml -
+22 passed, 15 warnings in 40.26s
+{"training_process":0,"stage":"api_integration","updated":"2026-11-03T12:52:54.3688541+05:30"}
+{
+  "kind": "Actual integration test on one unlabeled public-domain portrait, with SYNTHETIC feedback",
+  "image_credit": "NASA Eileen Collins portrait via scikit-image. Public-domain status documented at https://scikit-image.org/docs/stable/api/skimage.data.html#skimage.data.astronaut",
+  "prediction": {
+    "emotion": "happy",
+    "confidence": 0.9973303079605103,
+    "probabilities": {
+      "angry": 0.0002462955890223384,
+      "disgust": 0.00040302969864569604,
+      "fear": 0.00046807783655822277,
+      "happy": 0.9973303079605103,
+      "sad": 0.00010384666529716924,
+      "surprise": 0.0004484406963456422,
+      "neutral": 0.0010000098263844848
+    },
+    "native_probabilities": {
+      "angry": 0.0002462955890223384,
+      "disgust": 0.00040302969864569604,
+      "fear": 0.00046807783655822277,
+      "happy": 0.9973303079605103,
+      "sad": 0.00010384666529716924,
+      "surprise": 0.0004484406963456422,
+      "neutral": 0.0010000098263844848
+    },
+    "native_label": "happy",
+    "model": "fusdense",
+    "trained": true,
+    "face_box": [
+      177,
+      66,
+      95,
+      95
+    ],
+    "low_confidence": false,
+    "label_mapping": "FER2013 native labels",
+    "validation": "Project-trained model. Check matching evaluation provenance before interpreting performance.",
+    "held_out_evaluation": {
+      "n": 6561,
+      "accuracy": 0.501295534217345,
+      "pilot": false,
+      "checkpoint_epoch": 16,
+      "macro_f1": 0.39598172626072886,
+      "checkpoint_sha256": "04e2a0e288b071a576422ba5adbf02d8fad604e4f22747064eab6aa7f7e7f53e"
+    }
+  },
+  "first_raga": "Dhani",
+  "score_before": 0.71125,
+  "score_after": 0.780221,
+  "feedback_records": 1,
+  "listening_records": 1,
+  "elapsed_seconds": 1.2337880000122823,
+  "classification_accuracy": null,
+  "reason": "No ground-truth emotion label; cannot estimate accuracy from this demonstration."
+}
+{"training_process":0,"stage":"measured_reports","updated":"2026-11-03T12:53:23.9142293+05:30"}
+{
+  "tests": 22,
+  "passed": 22,
+  "failures": 0,
+  "errors": 0,
+  "test_seconds": 40.264,
+  "original_repository_files": 55,
+  "original_repository_unchanged": true,
+  "reference_pdf_identical": true,
+  "python": "3.11.18",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "synthetic_emotion": {
+    "accuracy": 0.14285714285714285,
+    "macro_precision": 0.02040816326530612,
+    "macro_recall": 0.14285714285714285,
+    "macro_f1": 0.03571428571428571,
+    "parameters": 163744,
+    "seconds": 12.370635200000834
+  },
+  "real_fer2013_metrics": {
+    "n": 6561,
+    "accuracy": 0.501295534217345,
+    "macro_precision": 0.48406225987938367,
+    "macro_recall": 0.4115291529865773,
+    "macro_f1": 0.39598172626072886,
+    "pilot": false,
+    "parameters": 223776
+  },
+  "clinical_results": null,
+  "training": {
+    "epochs_completed": 17,
+    "selected_epoch": 16,
+    "train_count": 23503,
+    "val_count": 3970,
+    "seconds": 42548.62335009989,
+    "timing_note": "Epoch 5 includes an overnight interruption; summed wall time is not active CPU training duration. Continuation records aggregate process CPU seconds separately.",
+    "resume_provenance": {
+      "checkpoint_sha256": "0807e82e39b34893294c0cad1188c9d5c0d42161a303538ab11a731d7d2ab6ef",
+      "source_epoch": 5,
+      "history_offset": 5,
+      "optimizer": "AdamW restarted, not exact optimizer-state continuation"
+    }
+  },
+  "updated": "2026-11-03T12:53:41.774214"
+}
+{"training_process":0,"stage":"frontend_build","updated":"2026-11-03T12:53:43.1928283+05:30"}
+vite v6.4.2 building for production...
+transforming...
+✓ 33 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                            0.51 kB │ gzip:  0.35 kB
+dist/assets/ResearchStudio-C2bFGZ2c.css    6.71 kB │ gzip:  2.17 kB
+dist/assets/ListenerApp-C4OmQIil.css      21.26 kB │ gzip:  5.76 kB
+dist/assets/jsx-runtime-D_zvdyIk.js        0.73 kB │ gzip:  0.46 kB
+dist/assets/ResearchStudio-rVruy2cQ.js    22.70 kB │ gzip:  7.83 kB
+dist/assets/ListenerApp-DxWUAcJO.js       25.04 kB │ gzip:  8.34 kB
+dist/assets/index-CvpM77lW.js            187.18 kB │ gzip: 59.34 kB
+✓ built in 8.03s
+{"training_process":0,"stage":"powerpoint_build_and_validation","updated":"2026-11-03T12:53:55.7153500+05:30"}
+Inspect result written to file: C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\reports\slides_build\candidate.pptx.inspect.ndjson
+{"finalPath":"C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\output\\RagaMoodSync_Research_Updated.pptx","receiptPath":"C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\slides_build\\validation-fer-full.json","schemaVersion":"presentation-finalization.v1","finalSha256":"1130d63d18e55c47cb91d5b2622edb0fb8f94647824883b3977b9193e74d77f5","byteCount":205089,"packageIntegrity":{"chart_count":1,"claim_boundary":"Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.","finding_count":0,"findings":[],"notes_parts_skipped":13,"relationship_part_count":37,"slide_count":13,"status":"pass","exitCode":0,"findingCount":0,"warnings":[]},"presentationLayout":{"finding_count":0,"findings":[],"font_policy":{"checked_text_script_count":203,"native_font_rendering_verified":false,"observed_font_families":["Arial"],"observed_font_use_counts":{"Arial":203},"passed":true,"performed":true},"slide_count":13,"slide_size_in":[13.3333,7.5],"warning_count":0,"warnings":[],"exitCode":0,"findingCount":0,"fontPolicy":{"checked_text_script_count":203,"native_font_rendering_verified":false,"observed_font_families":["Arial"],"observed_font_use_counts":{"Arial":203},"passed":true,"performed":true}},"fontSelection":{"basis":"design","approvedFamilies":["Arial"],"scriptFonts":{},"referenceSha256":null,"referenceFontsVerifiedInEncodedText":false,"checked_text_script_count":203,"native_font_rendering_verified":false,"observed_font_families":["Arial"],"observed_font_use_counts":{"Arial":203},"passed":true,"performed":true},"firstPartyImport":{"performed":true,"passed":true,"slideCount":13,"sha256":"1130d63d18e55c47cb91d5b2622edb0fb8f94647824883b3977b9193e74d77f5","runtimeNodeModules":"C:/Users/bindu/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules","nodeExecutable":"C:\\Users\\bindu\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"},"nativeTableArithmetic":{"performed":true,"checked_column_count":0,"checks":[],"claim_boundary":"Displayed-value arithmetic with rounding tolerance; not source-data verification.","eligible_table_count":0,"finding_count":0,"findings":[],"native_table_count":4,"passed":true,"schema_version":"presentation-native-table-arithmetic.v1","skipped_tables":[{"reason":"no_numeric_amounts","slide":3,"table":1},{"reason":"no_numeric_amounts","slide":5,"table":1},{"reason":"no_numeric_amounts","slide":8,"table":1},{"reason":"no_numeric_amounts","slide":10,"table":1}],"slide_count":13,"warning_count":0,"warnings":[]},"nativeChartTitles":{"performed":true,"checks":[{"chart":1,"slide":9,"status":"present"}],"finding_count":0,"findings":[],"native_chart_count":1,"native_powerpoint_verified":false,"passed":true,"presentation_sha256":"1130d63d18e55c47cb91d5b2622edb0fb8f94647824883b3977b9193e74d77f5","schema_version":"presentation-native-chart-titles.v1","slide_count":13,"source_text_emitted":false,"unresolved_linked_title_count":0},"sourceDerivedPolicyFlags":["--expected-slide-size-emu","12192000,6858000","--validate-bullet-geometry","--validate-heading-fit","--require-native-table-slide","3","--require-native-table-slide","5","--require-native-table-slide","8","--require-native-table-slide","10","--cover-role","none","--expected-slide-count","13","--approved-font-family","Arial"],"nativeChartValidation":{"detectedOwnerSlides":[9],"detectedChartCount":1,"targetApplication":"portable","sourceChartOwnersExplicitlyDeclared":true,"validatorRan":true,"passed":true},"nativeQuantitativeCharts":{"report":{"claim_boundary":"OOXML/workbook structural validation only; source provenance and native PowerPoint opening remain separate checks.","expected_quantitative_chart_slides":[9],"failed_slide_count":0,"failed_slides":[],"formal_human_reviewed":false,"native_application_open_verified":false,"package_sha256":"1130d63d18e55c47cb91d5b2622edb0fb8f94647824883b3977b9193e74d77f5","passed":true,"results":[{"approved_source_figure_exception":false,"charts":[{"cache_reference_ranges_verified":true,"embedded_workbook_count":1,"embedded_workbook_sheet_count":1,"native_chart_types":["lineChart"],"numeric_cache_point_count":68,"series_formula_count":4,"workbook_numeric_cell_count":68}],"failure_codes":[],"native_chart_count":1,"raster_picture_count":1,"required_native_chart_count":1,"slide_number":9,"status":"passed"}],"schema_version":"owner-private.quantitative-chart-native-gate.v1","slide_count":13,"source_attachments_accessed":false,"validated_slide_count":1},"exitCode":0,"validatedSlideCount":1,"requiredOwnerSlides":[9],"approvedSourceFigureExceptionSlides":[]},"chartDataPackaging":{"conversion":"chart_data_snapshot","converted_chart_count":1,"converted_charts":[{"chart_part":"ppt/slides/charts/chart1.xml","owner_slide":9,"point_count":34,"series_count":2,"workbook_part":"ppt/embeddings/chart-data-snapshot-001.xlsx"}],"detected_chart_owner_slides":[9],"experimental":true,"input_sha256":"01ab772ed4993e1c8f5cdec41682395dcff124e5ba79ce2725addc5f6c651971","new_formulas_describe_snapshot_only":true,"output_bytes":205089,"output_sha256":"1130d63d18e55c47cb91d5b2622edb0fb8f94647824883b3977b9193e74d77f5","portable_chart_validation_passed":true,"portable_validated_owner_slides":[9],"preserved_existing_workbook_chart_count":0,"preserved_existing_workbook_charts":[],"schema_version":"experimental.literal-chart-workbook-snapshot.v1","source_formula_required_slides":[],"source_formulas_preserved":false,"source_workbook_preserved":false,"source_workbook_required_slides":[]}}
+{"training_process":0,"stage":"artifacts_built_pending_visual_review","updated":"2026-11-03T12:54:42.0926716+05:30"}

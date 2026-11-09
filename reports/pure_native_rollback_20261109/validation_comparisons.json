@@ -1,0 +1,50 @@
+[
+  {
+    "candidate": "student_features",
+    "eligible": false,
+    "accuracy": 0.4664987405541562,
+    "macro_f1": 0.4279441449438992,
+    "disgust_precision": 0.0417558886509636,
+    "disgust_recall": 0.78,
+    "disgust_f1": 0.07926829268292683,
+    "happy_recall": 0.7332695984703633,
+    "surprise_recall": 0.7142857142857143,
+    "neutral_recall": 0.299860529986053
+  },
+  {
+    "candidate": "student_features_head",
+    "eligible": false,
+    "accuracy": 0.5806045340050378,
+    "macro_f1": 0.5176022322550426,
+    "disgust_precision": 0.8,
+    "disgust_recall": 0.16,
+    "disgust_f1": 0.26666666666666666,
+    "happy_recall": 0.7934990439770554,
+    "surprise_recall": 0.7114285714285714,
+    "neutral_recall": 0.6345885634588564
+  },
+  {
+    "candidate": "EMA_features",
+    "eligible": false,
+    "accuracy": 0.47455919395465995,
+    "macro_f1": 0.4310302290988322,
+    "disgust_precision": 0.04566744730679157,
+    "disgust_recall": 0.78,
+    "disgust_f1": 0.08628318584070796,
+    "happy_recall": 0.7466539196940727,
+    "surprise_recall": 0.7171428571428572,
+    "neutral_recall": 0.30404463040446306
+  },
+  {
+    "candidate": "EMA_features_head",
+    "eligible": false,
+    "accuracy": 0.5821158690176322,
+    "macro_f1": 0.5190496262642557,
+    "disgust_precision": 0.8,
+    "disgust_recall": 0.16,
+    "disgust_f1": 0.26666666666666666,
+    "happy_recall": 0.7982791586998088,
+    "surprise_recall": 0.7114285714285714,
+    "neutral_recall": 0.6304044630404463
+  }
+]

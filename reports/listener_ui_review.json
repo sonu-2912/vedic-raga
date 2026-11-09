@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-03",
+  "production_build": "passed",
+  "browser_checks": [
+    "listener landing page",
+    "manual mood recommendations",
+    "save raga",
+    "saved collection persistence",
+    "raga detail and performance choices",
+    "player and external fallback",
+    "plain-language feedback persistence",
+    "collection search",
+    "photo selection and suggested mood",
+    "user correction before recommendations",
+    "desktop layout",
+    "390px mobile layout without horizontal overflow",
+    "separate research workspace"
+  ],
+  "technical_controls_on_listener_home": false,
+  "private_camera_used": false,
+  "isolated_test_rows": {
+    "feedback": 2,
+    "listening": 1,
+    "recommendations": 12
+  },
+  "test_profile_cleaned": true
+}

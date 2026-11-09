@@ -1,0 +1,12 @@
+QWOP_30s {"status": "evaluated", "n": 13, "participants": 12, "class_counts": {"Angry": 10, "Happy": 3}, "fusion_minus_eeg_macro_f1": 0.05294486215538846}
+CBAAD_30s {"status": "evaluated", "n": 13, "participants": 13, "class_counts": {"Bored": 9, "Stressed": 4}, "fusion_minus_eeg_macro_f1": 0.039449112978524714}
+QWOP_15s {"status": "evaluated", "n": 35, "participants": 24, "class_counts": {"Angry": 23, "Happy": 12}, "fusion_minus_eeg_macro_f1": 0.2273809523809523}
+CBAAD_15s {"status": "evaluated", "n": 35, "participants": 24, "class_counts": {"Bored": 20, "Stressed": 15}, "fusion_minus_eeg_macro_f1": -0.028851540616246507}
+QWOP_60s {"status": "insufficient", "n": 3, "reason": "Fewer than three participants in a class; no valid claim from this cohort"}
+CBAAD_60s {"status": "insufficient", "n": 1, "reason": "Fewer than three participants in a class; no valid claim from this cohort"}
+QWOP_30s_plus_offset {"status": "evaluated", "n": 13, "participants": 12, "class_counts": {"Angry": 10, "Happy": 3}, "fusion_minus_eeg_macro_f1": 0.27205513784461155}
+CBAAD_30s_plus_offset {"status": "evaluated", "n": 13, "participants": 13, "class_counts": {"Bored": 9, "Stressed": 4}, "fusion_minus_eeg_macro_f1": -0.07434640522875813}
+QWOP_15s_plus_offset {"status": "evaluated", "n": 34, "participants": 24, "class_counts": {"Angry": 22, "Happy": 12}, "fusion_minus_eeg_macro_f1": 0.09935064935064941}
+CBAAD_15s_plus_offset {"status": "evaluated", "n": 35, "participants": 24, "class_counts": {"Bored": 20, "Stressed": 15}, "fusion_minus_eeg_macro_f1": 0.05718954248366015}
+QWOP_60s_plus_offset {"status": "insufficient", "n": 3, "reason": "Fewer than three participants in a class; no valid claim from this cohort"}
+CBAAD_60s_plus_offset {"status": "insufficient", "n": 1, "reason": "Fewer than three participants in a class; no valid claim from this cohort"}

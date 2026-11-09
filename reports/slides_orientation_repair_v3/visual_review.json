@@ -1,0 +1,14 @@
+{
+  "slides": 13,
+  "all_rendered_slides_reviewed_by_agent": true,
+  "all_slides_reviewed_at_full_size": true,
+  "v3_changed_slides": [
+    11
+  ],
+  "v3_changed_slide_reviewed": true,
+  "other_v3_renders_identical_to_reviewed_v2": true,
+  "package_findings": 0,
+  "layout_findings": 0,
+  "native_powerpoint_open_verified": false,
+  "sha256": "ab70551273d5cf0c4df21abab2c2805ca8fe7d6a0a95cc4b9d6a157774615cdb"
+}

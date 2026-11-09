@@ -1,0 +1,8 @@
+{
+  "eligible": false,
+  "test_evaluated": false,
+  "installed": false,
+  "reason": "No pure checkpoint passed the predeclared validation accuracy/F1/recall gate. App and PPT unchanged.",
+  "protected_artifacts_unchanged": true,
+  "new_epochs": 6
+}

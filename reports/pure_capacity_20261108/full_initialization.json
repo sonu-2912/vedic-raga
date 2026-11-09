@@ -1,0 +1,21 @@
+{
+  "source_checkpoint_sha256": "8a8f8d88ae12570db58fa876cf285c2572be50baea9037753b87aff40b6d28a7",
+  "warm_classifier_used": true,
+  "recipe": {
+    "name": "coarse256_common1.2",
+    "head_width": 256,
+    "common_boost": 1.2
+  },
+  "all_emotion_path_parameters_trainable": true,
+  "batchnorm_running_statistics_frozen": true,
+  "external_encoder": false,
+  "reference": "Cached current pure classifier on TRAIN only; discarded at inference",
+  "retention_mode": "TRAIN-only same-current-pure correct disgust-vs-rest boundary; deterministic retention branch",
+  "augmentation": "Complementary mirrors plus mild affine/brightness/contrast; TRAIN only",
+  "source_hashes": {
+    "compact_fusdense.py": "4e8e628cd0be0605bacaa0a4325056b697185ac558cd84d2f73def87084360c5",
+    "models.py": "302a705e16fc80c59fc421e4d51249e30bdad7fddacb271910028b90891e568b",
+    "recall_recovery_common.py": "c67dccac9f512a55ebc7369e00e10c131fe78b503985ae8ead8c19f4c10382b4",
+    "train_compact_full.py": "36970b533fc0e0911a1ef9dfbf473cce5c9e27eb9c27c3af3fc18f219344e357"
+  }
+}

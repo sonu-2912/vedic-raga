@@ -1,0 +1,1045 @@
+
+=== PAGE 1 ===
+ORIGINAL RESEARCH
+RagaMoodSync: a deep learning framework for Hindustani Raga
+recommendations driven by facial emotions
+Yogesh Prabhakar Pingle 1,2 • Lakshmappa K. Ragha 1
+Received: 20 December 2024 / Accepted: 28 March 2025 / Published online: 20 April 2025
+/C211 Bharati Vidyapeeth’s Institute of Computer Applications and Management 2025
+Abstract RagaMoodSync presents an innovative frame-
+work for personalized music therapy through Hindustani
+Raga recommendations based on facial emotion recogni-
+tion. Utilizing a Fusion-DenseNet (FusDenseNet) archi-
+tecture with advanced multi-pooling for emotion detection,
+the system achieves high precision in identifying user
+moods. Integrated with a Focus Deep Collaborative Fil-
+tering (FDCF) recommendation system, RagaMoodSync
+delivers tailored raga suggestions that address emotional
+well-being and stress management. Validated with the
+FER2013 dataset, the framework demonstrates superior
+performance over existing approaches. By merging AI-
+driven emotion recognition with the therapeutic potential
+of Indian classical music, this system pioneers a novel
+intersection of technology and mental health care, offering
+a promising pathway for non-invasive emotional healing
+solutions.
+Keyword FusDenseNet /C1 RagaMoodSync /C1 Focus Deep
+Collaborative Filtering
+1 Introduction
+Human interaction is an essential part of daily life, where
+communication through words, tones, and emotions facil-
+itates the exchange of vast information. Among nonverbal
+communication methods, facial expressions play a signiﬁ-
+cant role as they convey emotions such as happiness,
+sadness, surprise, and neutrality, driven by variations in
+facial muscles [ 1, 2]. Emotion recognition has become a
+cornerstone in areas like face detection, pattern recogni-
+tion, and computer vision, with applications in surveil-
+lance, security, adaptive interfaces, and multimedia
+environments [3, 4]. Recognizing emotions involves a two-
+step process: identifying facial features and analyzing the
+emotions conveyed [ 5].
+Parallel to facial expression analysis, music has emerged
+as a universal medium for emotional communication.
+Attributes like tempo, pitch, and volume are key indicators
+of a song’s emotional tone. For instance, faster tempo and
+major keys often signify happiness, while slower tempo
+and minor keys convey sadness [ 6]. Music can inﬂuence
+mood and arousal, with research emphasizing its thera-
+peutic effects in reducing stress and managing cognitive
+disorders through applications like music therapy [ 7].
+North Indian Classical Music (NICM) stands out for its
+ability to evoke emotions, as ragas—a unique aspect of
+NICM—blend traditional Persian music and Vedic chant-
+ing. Ragas create speciﬁc emotional atmospheres, with
+components like alaap (slow, rhythmic-free introductions)
+and gat (faster sections with rhythmic cycles) enhancing
+emotional engagement [ 8, 9]. Recent studies have also
+& Yogesh Prabhakar Pingle
+yogesh.pingle@vcet.edu.in
+Lakshmappa K. Ragha
+lkragha@ternaengg.ac.in
+1 Department of Computer Engineering, Terna Engineering
+College, University of Mumbai, Mumbai, Maharashtra, India
+2 Department of Computer Science & Engineering (Data
+Science), Vidyavardhini’s College of Engineering &
+Technology, University of Mumbai, Mumbai, Maharashtra,
+India
+123
+Int. j. inf. tecnol. (June 2025) 17(5):2765–2778
+https://doi.org/10.1007/s41870-025-02531-y
+
+=== PAGE 2 ===
+demonstrated how emotional responses to NICM are
+shaped by its musical structure, highlighting the role of
+ragas in inducing both individual and cultural variations in
+emotional expression [ 2, 9].
+In recent years, artiﬁcial intelligence (AI) and deep
+learning (DL) techniques have revolutionized emotion
+recognition in both facial expressions and music. DL
+models like CNNs and GANs outperform traditional
+methods in identifying and categorizing emotions when
+trained on extensive datasets [10]. These technologies have
+led to advancements in music recommendation systems,
+such as Spotify and Apple Music, which classify music
+based on emotional impact [ 11, 12]. Researchers have also
+explored EEG-based studies to quantify neural responses to
+NICM, further validating its emotional inﬂuence [ 13].
+Sengupta et al. (2017) used EEG to examine the neural
+mechanisms of emotional responses during NICM appre-
+ciation, underscoring the role of ragas in emotion speciﬁ-
+cation [13].
+Emotion recognition has practical applications in
+enhancing human–computer interactions, automating
+music recommendation systems, and enabling smart ther-
+apeutic tools [ 14, 15]. Combining facial expression anal-
+ysis with music-based emotion detection promises
+advancements in personalized user experiences and mental
+health solutions, leveraging AI-driven insights. Recent
+studies have explored the integration of facial expression
+recognition with music emotion classiﬁcation for improved
+multimodal applications in various environments, includ-
+ing adaptive user interfaces and emotion-aware therapeutic
+systems [ 16, 17]. For example, Krishna et al. (2023)
+introduced a robust emotion detection system that combi-
+nes facial recognition and music recommendation algo-
+rithms, improving personalized music experiences [ 21].
+Similarly, Arkachaari et al. (2022) proposed a bi-sampling
+approach to classify musical moods, leveraging the emo-
+tional content of NICM for enhanced music recommen-
+dations in personalized settings [ 17].
+2 Related work
+Emotion recognition and music recommendation systems
+have seen signiﬁcant advancements with the integration of
+deep learning and AI technologies. Sarkar et al. [ 16] uti-
+lized Convolutional Neural Networks (CNNs) for emotion
+classiﬁcation in Indian classical music, achieving enhanced
+accuracy and feature extraction. However, the study faced
+limitations due to dataset inadequacies. Mathur et al. [ 1]
+highlighted the emotional responses evoked by Hindustani
+ragas, emphasizing the role of musical structure in inﬂu-
+encing emotions. Similarly, Valla et al. [ 2] examined the
+relationship between North Indian Classical Music (NICM)
+and emotional states, showing how cultural context impacts
+musical emotion experiences.
+Midya et al. [ 3] explored cultural differences in per-
+ceiving musical emotions, while Gulati et al. [ 4] investi-
+gated the disparity between perceived and induced
+emotions in Hindustani music. Research by Ravi and
+Govindaraj [5] further demonstrated the emotional impact
+of speciﬁc Carnatic ragas. On the technological front,
+Khalil et al. [ 8] reviewed deep learning approaches for
+speech emotion recognition, highlighting their applicability
+to music emotion detection. Micallef and Eerola [ 7]
+introduced an interactive system for real-time control of
+musical emotions, bridging the gap between AI and user-
+centered applications.
+Studies like Sengupta et al. [ 9] delved into the neural
+responses to Hindustani ragas using EEG, illustrating their
+potential in emotion quantiﬁcation. Nagarajan et al. [ 10]
+analyzed the immediate effects of Indian music on atten-
+tion and concentration, while Beier et al. [ 11] conducted
+cross-cultural studies to understand emotional responses to
+music. Advanced neural network architectures, such as
+those by Krishna et al. [ 21] and Arkachaari et al. [ 17],
+combined facial emotion recognition with music recom-
+mendation for personalized experiences. These studies
+underscore the potential of integrating music emotion
+analysis with therapeutic applications, making NICM a
+unique avenue for stress and emotion management.
+The use of deep learning techniques like transfer
+learning (Punuri et al. [ 24]) and attention-based models
+(Roy et al. [ 26]) has further enhanced the precision of
+facial emotion recognition systems. Recent works also
+address the challenges posed by distorted images (Her-
+nandez-Luquin et al. [ 27]) and low-resolution datasets
+(Bodavarapu and Srinivas [ 29]), offering robust solutions
+for real-world applications. Overall, the amalgamation of
+deep learning, cultural music insights, and therapeutic
+applications represents a promising interdisciplinary ﬁeld,
+paving the way for innovative tools like the Raga-
+MoodSync framework.
+The comparison with existing approaches is shown in
+Table 1.
+Despite the success of these models, most approaches
+lack integration of real-time emotion detection with per-
+sonalized music therapy, especially leveraging the thera-
+peutic aspects of Hindustani ragas. The proposed
+framework, RagaMoodSync, bridges this gap by combin-
+ing facial emotion recognition with dynamic music rec-
+ommendations [35].
+The paper by Krishna et al. [ 37] introduces a Mini
+Xception CNN-based emotion detection and music rec-
+ommendation system, contributing to advancements in
+emotion-based music systems, similar to Sharma and
+Sehgal’s [38] use of region-based CNNs and Harris Hawk
+2766 Int. j. inf. tecnol. (June 2025) 17(5):2765–2778
+123
+
+=== PAGE 3 ===
+Optimization for multi-class skin lesion classiﬁcation. Patil
+et al. [39] reﬁne deep learning models with their correction
+to the GAMe-BiLSTM approach for NSTEMI classiﬁca-
+tion, which complements Srinivas and Ganivada’s [ 40]
+work on modiﬁed inter-frame difference methods for
+moving object detection in videos. Jintanachaiwat and
+Siriborvornratanakul [41] contribute to improving machine
+learning-based systems with their vision-based image
+similarity measurement for image search, aligning with
+Kumar et al.’s [ 42] exploration of CNN-based device-free
+health monitoring systems using Wi-Fi signals. Similarly,
+Rusia and Singh [ 43] offer insights into facial expression
+recognition using CNNs, providing a perspective on
+avoiding overﬁtting, complementing advancements across
+these diverse ﬁelds.
+3 Proposed methodology
+The framework employs the following methodology algo-
+rithmically (see Fig. 1):
+1. Facial Emotion Recognition:
+o Utilize Fusion-DenseNet (FusDenseNet) with
+advanced multi-pooling to analyze facial
+expressions.
+o Apply preprocessing techniques including geo-
+metric transformations (horizontal reﬂection, ver-
+tical reﬂection, random rotation, and cropping) and
+hybrid denoising methods (Non-Local Means,
+Bilateral, and Gaussian ﬁlters).
+o Implement a cross-attention mechanism to capture
+relevant features and ensure robust emotion
+recognition.
+2. Emotion Classiﬁcation:
+o Use the FusDenseNet model to identify basic
+emotions such as happiness, sadness, and neutral-
+ity with high precision.
+o Enhance feature extraction using cross-dense
+connections.
+3. Music Recommendation:
+o Develop a Focus Deep Collaborative Filtering
+(FDCF) system to recommend Hindustani Raga
+music based on detected emotions.
+o Incorporate a neural focus network to dynamically
+learn user-speciﬁc preferences, moods, and musi-
+cal features (e.g., raga, tempo).
+4. Validation and Performance Metrics:
+o Validate the system using the FER2013 dataset.
+o Evaluate performance using metrics like recall,
+precision, and accuracy.
+5. System Deployment:
+o Design and integrate hardware components includ-
+ing RPI_ZERO with a codec card, display con-
+nector, 5 V power supply, and user-friendly
+switches for seamless delivery of therapeutic
+music.
+In this work, we propose a deep learning-based frame-
+work called RagaMoodSync for Hindustani Raga music
+recommendation, driven by facial emotion recognition.
+The goal is to enhance emotional well-being by recom-
+mending speciﬁc ragas based on the user’s mood, identiﬁed
+through facial expressions. The system integrates emotion
+Table 1 Comparison with existing approaches
+References Techniques Advantages Disadvantages
+Sarkar et al. [ 16] CNN Better accuracy and feature extraction Lack of data in this dataset
+Arkachaari et al.
+[17]
+Bi-sampling Suitable for real-time applications Low accuracy
+Nizar et al. [ 18] Neural networks Investigates correlations based on auditory
+stimuli
+Stress management not addressed
+Achar et al. [ 19] Depression Anxiety Stress Scales
+(DASS) 21
+Minimizes stress, anxiety, and depression
+effectively
+Processed with fewer samples
+John et al. [ 20] CNN High recognition rate, less time
+consumption
+Not developed for music processing
+applications
+Krishna et al.
+[21]
+DCNN High accuracy with fewer errors Needs improvement in multi-feature
+extraction
+Kulkarni et al.
+[22]
+AI Sophisticated and personalized music
+system
+Transparency and fairness need
+improvement
+Negret¸ et al. [ 23] CNN Reliable for real-time usage Time-consuming; needs better
+classiﬁcation
+Int. j. inf. tecnol. (June 2025) 17(5):2765–2778 2767
+123
+
+=== PAGE 4 ===
+recognition with a Musical Medical Illness Healing Elec-
+tronic Device designed for the non-invasive therapy of
+conditions like diabetes, thyroid disorders, and hyperten-
+sion, using the therapeutic effects of music.
+This study employed a multi-center, randomized con-
+trolled trial design. Participants received 30 min of Indian
+classical music therapy three times per week for a duration
+of eight weeks.
+In this work, we propose a novel framework, Raga-
+MoodSync, that integrates facial emotion recognition with
+a music recommendation system for Hindustani Raga
+music. The system aims to recommend suitable ragas based
+on the detected emotional state of the user, speciﬁcally
+targeting therapeutic applications for mental health condi-
+tions such as stress, anxiety, and emotional imbalances.
+The methodology consists of two primary components:
+Facial Emotion Recognition and Emotion-Based Music
+Recommendation (see Figs. 2, 3).
+3.1 Facial emotion recognition
+The ﬁrst step in the proposed system is to recognize the
+user’s emotional state through facial expressions. This is
+achieved by using an advanced deep learning model,
+Fusion-DenseNet (FusDenseNet) , which is designed to
+extract and analyze facial features with high precision.
+FusDenseNet is based on the concept of cross-dense
+connections, enhancing feature extraction through its
+multi-pooling architecture, which improves the recognition
+of subtle emotional cues in facial expressions.
+Fig. 1 Block diagram of face emotion based Hindustani music recommendation
+Fig. 2 FusDenseNet
+architecture for face emotion
+recognition
+2768 Int. j. inf. tecnol. (June 2025) 17(5):2765–2778
+123
+
+=== PAGE 5 ===
+Steps for Facial Emotion Recognition :
+1. Preprocessing and Geometric Data Augmentation :
+To enhance the robustness of the model and prevent
+overﬁtting, we apply various geometric transformations
+during the preprocessing stage. These include:
+s Horizontal Reﬂection : A mirror image is gener-
+ated along the y-axis.
+s Vertical Reﬂection : A mirror image is generated
+along the x-axis.
+s Random Rotation : The image is randomly
+rotated within a deﬁned range to simulate real-
+world variations.
+s Random Cropping : A random portion of the
+image is cropped, simulating changes in the focal
+point of the image.
+These augmentations generate synthetic data that is used
+to train the model, increasing its generalization ability.
+Denoising:
+A hybrid denoising technique is applied to eliminate
+noise from the facial images, combining the Non-Local
+Means, Bilateral, and Gaussian ﬁlters . This approach
+balances between preserving the image’s edges, restoring
+textures, and reducing noise, thus enhancing the input
+quality for the deep learning model.
+The Gaussian Filter is deﬁned by the equation:
+Gðx; yÞ¼
+1
+2pr2 expð/C0 x2 þ y2
+2r2 Þð 1Þ
+where r is the standard deviation, and (x,y) are the coor-
+dinates of the pixel in the image.
+The Bilateral Filter is used for edge-preserving
+denoising:
+Ifiltered pðÞ ¼ 1
+WP
+X
+q2NpðÞ
+expð/C0 IPðÞ /C0 IqðÞjj 2
+2r2
+r
+/C0 p /C0 qjj 2
+2r2
+r
+ð2Þ
+where I(p) is the pixel value at point p, and N(p)represents
+the neighbourhood of p.
+2. Cross-Attention Mapping
+The cross-attention mechanism captures the relationship
+between different features and enhances the model’s ability
+to focus on relevant information from diverse sources. The
+attention mapping is obtained using the following equation:
+B
+j ¼ AtðJj; conðJj; JkÞÞ ð 3Þ
+Bk ¼ AtðJk; con ðJj; JkÞÞ ð 4Þ
+Ah ¼ con ðcon ðJjjJkÞ; Bj /C14 Jj; Bk /C14 JkÞð 5Þ
+where, the point wise multiplication is denoted with /C14 , the
+input image is denoted with J, Ah denotes the cross
+attention feature map, con represents the concatenation
+operation, and the attention mapping is denoted with B.
+3. Cross Self-Attention
+For feature integration and considering the relationship
+between images or features, the cross-self-attention oper-
+ation is deﬁned as:
+h ¼
+X
+k
+gk /C12ð
+X
+j
+f iÞð 6Þ
+where:
+• gk and f i represent the features from different layers of
+the image or music data.
+• The attention mechanism uses a weight vector gk to
+combine information from different regions or
+modalities.
+The adaptive pixel-level weight vector between the
+source image and function F allows for ﬁne-grained feature
+integration. The weight vector is normalized using the
+following factor:
+x ¼ x ¼
+1ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ ﬃP
+i gijj 2
+q ð7Þ
+where:
+• x is the normalization factor that adjusts the contribu-
+tion of each feature during the cross-attention
+mechanism.
+• gi represents the feature values at the pixel level for
+each image or feature map.
+Fig. 3 Architecture of Fusion-
+DenseNet block
+Int. j. inf. tecnol. (June 2025) 17(5):2765–2778 2769
+123
+
+=== PAGE 6 ===
+4. Image Fusion with Structural Information
+The proposed approach captures both background
+details and structural information from various sources
+(e.g., infrared and visible images in cross-modal data
+fusion). The integration of these features results in a con-
+catenated image , which is formed by merging the feature
+maps from the different modalities:
+I
+concat ¼ concaðIinfrared ; IvisibleÞð 8Þ
+where:
+• Iconcat is the concatenated image combining features
+from both infrared and visible images.
+• Iinfrared ; Ivisible represent the respective feature maps
+from infrared and visible images.
+5. Mean Squared Error (MSE) Loss Function
+To optimize the model, we employ the Mean Squared
+Error (MSE) loss function, which measures the difference
+between the original and reconstructed images (or the
+output of the model). The MSE loss is computed as:
+LMSE ¼ 1
+N
+XN
+i¼1
+ðIorig /C0 IconcatÞ2 ð9Þ
+where:
+• Iorig is the original image.
+• Iconcat is the concatenated image.
+• N represents the number of pixels in the image.
+The height H and width W of the image are used to
+normalize the error in the loss function, ensuring the spatial
+dimensions are accounted for during training.
+6. Adaptive Pixel-Level Feature Integration
+During the fusion process, the adaptive pixel-level
+weight vector allows for ﬁne-grained control over how
+features are combined. This is particularly useful when the
+input data comes from different sources with different
+scales (e.g., infrared and visible images). The normaliza-
+tion of the pixel-level weight vector ensures that the con-
+tribution of each feature is balanced, and no single source
+dominates the fused feature map.
+The proposed methodology integrates advanced atten-
+tion mechanisms, normalization factors, and feature fusion
+techniques to create a robust model for both emotion
+recognition from facial images and personalized music
+recommendation.
+3.2 Emotion-based music recommendation
+Figure 4 the architecture of Focus Deep Collaborative
+Filtering (FDCF) recommendation system For the facial
+emotions of happiness and sadness, Hindustani music
+recommendations are provided using the Focus Deep
+Collaborative Filtering (FDCF) recommendation system.
+The FDCF model enhances traditional deep collaborative
+ﬁltering methods by integrating a focus mechanism, which
+prioritizes user-speciﬁc preferences and unique Hindustani
+music features such as raga, mood, and tempo. A neural
+focus network is utilized to dynamically learn the weight-
+ing of input parameters for accurate recommendations. The
+architecture of the FDCF recommendation system is shown
+in Fig. 4.
+The FDCF model integrates user preferences, emotional
+data, and Hindustani music features with a focus mecha-
+nism for personalized recommendations. This system
+considers both short-term preferences (e.g., recent lis-
+tening behavior) and long-term preferences (e.g., histor-
+ical interaction patterns) while dynamically fusing them for
+accurate predictions.
+1. Representation Learning
+The system encodes user preferences and music features
+in a low-dimensional embedding space:
+E ¼ W
+e /C14 xe þ be ð10Þ
+where:
+• We: Weight matrix.
+• xe:Input features (emotion, music, etc.).
+• be:Bias vector.
+2. Focus Mechanism
+A focus mechanism is used to compute the importance
+of user-speciﬁc features over generalized data. The focus
+score is calculated as:
+au ¼ softmaxðWf /C14 E; Pl; Ps½/C138 þ bf ð11Þ
+where:
+• Wf : Focus weight matrix.
+• Pl: Long-term preferences.
+• Ps: Short-term preferences.
+• bf : Bias vector.
+3. Dynamic Preference Vector
+User preferences are dynamically represented by inte-
+grating short-term and long-term preferences using a fusion
+coefﬁcient (b):
+Pd ¼ b /C14 Ps þð 1 /C0 bÞ/C14 PI ð12Þ
+The coefﬁcient b is determined through the focus
+mechanism.
+4. Matching Function Learning
+The interaction vector between emotion and Hindustani
+music features is computed as:
+Iv ¼ Me /C12 Mw ð13Þ
+where:
+• Me: Emotion-based latent features.
+2770 Int. j. inf. tecnol. (June 2025) 17(5):2765–2778
+123
+
+=== PAGE 7 ===
+• Mw: Music-based latent features.
+• /C12: Element-wise product.
+The multi-layered matching function integrates these
+features:
+y ¼ MLPð Pd ; Iv½/C138 Þ ð 14Þ
+The ﬁnal recommendation score is computed as:
+y
+^
+¼ r Wo /C14 y þ boðÞ ð 15Þ
+where:
+• Wo: Output weight matrix.
+• r: Activation function.
+Feature extraction and dense connectivity
+The deep network uses dense block layers with cross-
+connections to extract hierarchical features:
+• Shallow features capture user preferences.
+• Deep features capture interactions between music and
+emotions.
+The dense connections preserve middle-layer feature
+information, mitigating gradient issues and enhancing
+feature reuse.
+FDCF architecture with these key layers:
+1. Input Layer : Embedding for user preferences and
+music features.
+2. Focus Mechanism : Attention scores computed for
+preference prioritization.
+3. Interaction Layer : Interaction vector between emo-
+tion and music features.
+4. Dynamic Preference Layer : Combines short- and
+long-term preferences.
+5. MLP Layer : Multi-layered perception for matching
+functions.
+6. Output Layer : Final recommendation score.
+Fig. 4 The architecture of Focus Deep Collaborative Filter recommendation system
+Int. j. inf. tecnol. (June 2025) 17(5):2765–2778 2771
+123
+
+=== PAGE 8 ===
+4 FusDenseNet model integration
+The FusDenseNet architecture leverages the advantages of
+deep neural networks (DNNs) and attention-based mecha-
+nisms for enhanced feature extraction. Key beneﬁts of
+FusDenseNet include:
+• Improved feature extraction capability.
+• Robustness in handling complex data relationships.
+• Effective modeling of spatial relations in music feature
+attributes.
+Each layer in FusDenseNet is concatenated with the
+previous layer’s output, ensuring:
+Feature Reuse : Intermediate features are preserved and
+reused.
+Gradient Mitigation : Addresses vanishing gradient
+issues.
+Feature Propagation : Strengthens information ﬂow
+across layers.
+Dense connections enable the middle layer to retain
+essential features, contributing to robust and comprehen-
+sive representations of user preferences and music data.
+4.1 Dataset description
+The proposed system was validated using two datasets: the
+Facial Emotion Recognition 2013 (FER2013) dataset and a
+custom-created Hindustani Raga dataset. The FER2013
+dataset, widely used for emotion recognition tasks, com-
+prises over 34,000 labeled grayscale images representing
+various facial expressions such as happiness, sadness, and
+neutrality. This dataset has been instrumental in bench-
+marking state-of-the-art emotion recognition models and
+was introduced in [ 30]. Additionally, a Hindustani Raga
+dataset was speciﬁcally curated for this work, featuring 12
+ragas performed by professional musicians using instru-
+ments like the ﬂute, guitar, and harmonium. Emotional
+ratings were collected for each raga to map them to speciﬁc
+moods, such as happiness and sadness, following the
+methodology outlined in [ 1]. These datasets enabled a
+comprehensive evaluation of the proposed system’s per-
+formance in recognizing emotions and recommending
+therapeutic music.
+4.2 Performance metrics
+The performance of the proposed system is evaluated using
+metrics such as precision, recall, F-measure, speciﬁcity,
+True Positive Rate (TPR), False Positive Rate (FPR), False
+Rejection Rate (FRR), and Area Under the Curve (AUC).
+Accuracy measures the proportion of correct predictions
+relative to the total predictions and is calculated as the ratio
+of true positives and true negatives to the total number of
+instances. Precision focuses on the exactness of the clas-
+siﬁcation and is deﬁned as the ratio of true positives to the
+sum of true positives and false positives. Recall, also
+known as sensitivity, indicates the model’s ability to detect
+relevant data and is the ratio of true positives to the sum of
+true positives and false negatives. Speciﬁcity measures the
+system’s capability to correctly identify non-anomalous
+instances by calculating the ratio of true negatives to the
+sum of true negatives and false positives.
+The True Positive Rate (TPR) quantiﬁes the ability to
+correctly predict positive cases, while the False Positive
+Rate (FPR) measures the probability of misclassifying a
+negative instance as positive. The loss function evaluates
+the number of incorrect predictions and provides insights
+into model efﬁciency. Finally, the Receiver Operating
+Characteristic (ROC) curve visualizes the trade-off
+between TPR and FPR across different thresholds, with the
+Area Under the Curve (AUC) serving as a metric to assess
+the overall performance of the classiﬁcation model. A
+higher AUC indicates better system performance.
+4.3 Experimental results
+The experimental evaluation of the proposed music rec-
+ommendation system using the Facial Emotion Recogni-
+tion (FER) dataset is presented in this section. Key
+performance metrics, such as accuracy, precision, recall,
+F1-score, sensitivity, speciﬁcity, True Positive Rate (TPR),
+and False Positive Rate (FPR), are used for comparison
+with existing deep learning approaches, including Bi-di-
+rectional Long Short-Term Memory (BiLSTM), Long
+Short-Term Memory (LSTM), Generative Adversarial
+Networks (GAN), and AutoEncoders.
+Confusion Matrix
+The confusion matrix for the FER dataset is shown in
+Fig. 5, which provides a detailed visualization of the
+classiﬁcation performance of the proposed model.
+Accuracy and Loss Comparison
+Figure 6 illustrates the accuracy and loss comparison
+between the proposed approach and the existing methods
+by varying the number of epochs from 1 to 300. The pro-
+posed approach achieves higher accuracy and lower loss
+compared to BiLSTM, LSTM, GAN, and AutoEncoders.
+Key observations include:
+• The accuracy is below 0.9 for the ﬁrst 50 epochs and
+ﬂuctuates signiﬁcantly between 50 and 100 epochs.
+Beyond 100 epochs, the performance stabilizes.
+• The loss starts above 0.3 and minimizes steadily until
+100 epochs, with slight deviations up to 300 epochs.
+2772 Int. j. inf. tecnol. (June 2025) 17(5):2765–2778
+123
+
+=== PAGE 9 ===
+The proposed approach outperforms existing methods,
+achieving an accuracy of 0.9972, while BiLSTM, LSTM,
+GAN, and AutoEncoder achieve accuracies of 0.9554,
+0.944, 0.9657, and 0.9337, respectively. Detailed perfor-
+mance metrics are presented in Table 2.
+Performance Metrics
+Table 2 compares the proposed approach with existing
+methods across various metrics:
+Accuracy and Precision Performance
+Figure 7 shows the comparison of accuracy and preci-
+sion between the proposed and existing approaches. Key
+ﬁndings include:
+• The proposed approach achieves both precision and
+accuracy values above 0.95.
+• Existing approaches such as BiLSTM and GAN have
+precision values above 0.86 but remain lower than the
+proposed approach.
+Recall and Speciﬁcity Performance
+Figure 8 compares recall and speciﬁcity values for dif-
+ferent approaches:
+• Recall values for the proposed, BiLSTM, LSTM, GAN,
+and AutoEncoder approaches are 0.9906, 0.8302,
+0.787, 0.8517, and 0.7497, respectively.
+• Speciﬁcity is consistently higher than recall across all
+methods, with the proposed approach achieving the
+highest speciﬁcity of 0.9982.
+TPR and FPR Performance
+The True Positive Rate (TPR) and False Positive Rate
+(FPR) are compared in Fig. 9:
+• The proposed approach achieves the highest TPR
+(0.990) and the lowest FPR (0.001), indicating superior
+detection performance.
+• Existing methods, including BiLSTM, LSTM, and
+GAN, have TPRs between 0.7 and 0.9 and FPRs above
+0.020.
+ROC Curve Comparison.
+The Receiver Operating Characteristic (ROC) curve of
+the proposed approach is presented in Fig. 10. The curve
+demonstrates better performance compared to existing
+approaches due to efﬁcient feature learning and loss min-
+imization in the proposed model.
+Comparison with Latest Approaches
+Table 3 compares the performance of the proposed
+approach with recent state-of-the-art models, including
+EfﬁcientNet-XGBoost, CNN-3, Global Spectral Spatial
+Attention Network (GSSAN), Multi-Branch Deep Radial
+Basis Function Networks (MB-DRBFN), and Homoge-
+neous Ensemble CNN (HoE-CNN):
+Emotion-Based Music Recommendation.
+The system recommends ragas based on emotions
+(happy or sad). Recommendation scores are generated, and
+the highest-rated raga is played for one second to assess its
+impact on mood. Notably:
+• Faster rhythmic phases (e.g., the gat mode) enhance
+emotional transitions, such as from sad to happy.
+• Hindustani classical music demonstrates a signiﬁcant
+positive impact on mood compared to Western music,
+which may have adverse effects in some scenarios.
+This reinforces the efﬁcacy of Hindustani music in
+mood regulation, even in the presence of noise[ 1].
+Fig. 5 Confusion matrix of proposed music recommendation system
+with FER dataset
+Method Accuracy Precision F1-Score Recall Sensitivity Speciﬁcity TPR FPR
+Proposed 0.9972 0.9896 0.9901 0.990 0.9906 0.9982 0.990 0.001
+BiLSTM 0.9554 0.8639 0.8467 0.830 0.8302 0.9721 0.830 0.027
+LSTM 0.9440 0.7830 0.7857 0.787 0.7876 0.9655 0.787 0.034
+GAN 0.9657 0.8684 0.8600 0.851 0.8517 0.9788 0.851 0.021
+AutoEncoder 0.9337 0.7607 0.7552 0.749 0.7497 0.9592 0.749 0.040
+Int. j. inf. tecnol. (June 2025) 17(5):2765–2778 2773
+123
+
+=== PAGE 10 ===
+4.4 Computational complexity analysis
+The prediction error of the FusDenseNet and FDCF
+models is associated with computational complexity. High
+complexity may lead to overﬁtting, while low complexity
+can result in underﬁtting. The computational complexity of
+these models, expressed in terms of ﬂoating-point opera-
+tions (FLOPs), represents the training or prediction time.
+The model parameters and time complexity are calculated
+as follows:
+t
+tt ¼
+XD
+I¼1
+ðKl /C14 Cl/C0 1 /C14 ClÞð 16Þ
+• M: Length of the feature map.
+• Cl: Number of output channels in the Ith convolutional
+layer.
+• Kl: Convolutional kernel size.
+• D: Total number of convolutional layers.
+The complexity increases with the number of latent
+factors, which boosts recommendation performance. The
+time complexity for the FDCF recommendation approach
+is given as:
+O
+T ¼
+XL
+i¼1
+ðk /C14 dl /C14 dlþ1 þ dlÞð 17Þ
+4.5 Ablation study
+An ablation study was conducted to assess the signiﬁcance
+of each module in the proposed system. Fusion-DenseNet
+(FusDenseNet) serves as the baseline, and various modules
+were analyzed for their contribution to performance:
+• Model 1 : FusDenseNet baseline —used as the starting
+point, without advanced modules.
+• Model 2 : Integration of Cross Attention Mechanism
+for preserving information and modeling correspon-
+dence between image features.
+• Model 3 : Addition of Dilated Residual Dense Blocks
+(DRDB) to expand the receptive ﬁeld and extract richer
+contextual information.
+• Model 4: Full implementation of the FusDenseNet and
+FDCF, combining all advanced features.
+The results are presented in Table 5:
+Novelty of the Proposed Work
+The proposed RagaMoodSync framework introduces
+several novel contributions:
+• Fusion-DenseNet (FusDenseNet): Advanced multi-
+pooling architecture to enhance emotion detection
+precision.
+• Focus Deep Collaborative Filtering (FDCF): A novel
+recommendation model dynamically learning user
+preferences for Hindustani ragas.
+• Therapeutic Application: Integration with Musical
+Medical Illness Healing Devices to provide non-inva-
+sive therapy for mental health conditions such as stress
+and anxiety.
+Comparative Advantage: The system achieves supe-
+rior performance metrics (accuracy: 99.72%, precision:
+99.05%) compared to existing methods (BiLSTM: 95.54%,
+GAN: 96.57%) [ 36, 37]. The inclusion of advanced cross-
+attention mechanisms and adaptive pixel-level feature
+integration ensures robustness and scalability.
+Fig. 6 Accuracy and loss comparison with existing approaches by a varying number of epochs
+2774 Int. j. inf. tecnol. (June 2025) 17(5):2765–2778
+123
+
+=== PAGE 11 ===
+5 Conclusion
+In this paper, an enhanced FusDenseNet model with
+Multi-Pooling layers was developed to recognize emotions
+such as happiness, sadness, tensed/restless, and neutral
+from facial images. Following this, a novel Focus Deep
+Collaborative Filtering (FDCF) recommendation system
+was proposed, which recommends Hindustani ragas tai-
+lored to users’ emotional states. The advanced attention
+mechanism and feature preservation methods ensured
+superior performance compared to other deep learning
+methods.
+Key results achieved by the proposed FusDenseNet &
+FDCF system:
+Table 2 Comparison with existing approaches
+Reference Technique Dataset Results Limitations
+Sarkar et al. [ 16] CNN Custom NICM Improved accuracy Dataset inadequacy
+Arkachaari et al. [ 17] Bi-sampling NICM Suitable for real-time Low classiﬁcation accuracy
+Patel et al. [ 31] Spectrogram-based Western Music Robust feature extraction High preprocessing needs
+Sharma et al. [ 32] Ensemble Learning FER2013 Noise-resistant models Limited to basic emotions
+Verma et al. [ 33] Transfer Learning Multi-domain Leveraged pre-trained models Limited adaptability to NICM
+Gupta et al. [ 34] Multi-modal FER2013 ? Audio High accuracy via fusion Complex integration, resource heavy
+Fig. 7 Accuracy and Precision comparison with existing approaches
+Fig. 8 Recall and speciﬁcity comparison with existing approaches
+Int. j. inf. tecnol. (June 2025) 17(5):2765–2778 2775
+123
+
+=== PAGE 12 ===
+• Accuracy: 0.9982
+• Precision: 0.9905
+• Recall: 0.9912
+• Speciﬁcity: 0.9921
+• TPR: 0.9912
+• FPR: 0.0012
+The models effectively extract features from the FER
+dataset with minimal information loss. The recommenda-
+tion system demonstrated improved user mood manage-
+ment using Hindustani music, making it particularly
+relevant for medical applications aimed at enhancing
+patient well-being.
+Limitations:
+Despite its high accuracy, the computational complexity
+of the system remains a limitation due to the large number
+of fully connected layers in FusDenseNet and the increased
+time complexity of FDCF with additional latent factors.
+FutureWork:
+The RagaMoodSync framework opens numerous
+opportunities for advancement and innovation. Future work
+could focus on enhancing the system to recognize a broader
+range of emotional states, including complex and mixed
+emotions, to provide more tailored music recommenda-
+tions. Integration with wearable devices, such as EEG
+sensors or heart rate monitors, could enable a multi-modal
+approach to understanding user emotions more compre-
+hensively. Personalization can also be taken to the next
+Fig. 9 FPR and TPR comparison with existing approaches
+Fig. 10 ROC curve comparison with existing approaches
+Table 3 Performance comparison with latest approaches
+Method Accuracy Precision F1-Score Recall
+Proposed 0.9972 0.9896 0.9901 0.990
+E-XGBoost 0.7254 0.8100 0.8400 0.870
+CNN-3 0.7900 0.8000 0.8000 0.800
+GSSAN 0.6900 0.7700 0.7610 0.752
+MB-DRBFN 0.6800 NA NA NA
+HoE-CNN 0.7550 NA NA NA
+Table 5 Ablation study on FusDenseNet for recognizing facial
+emotion
+Methods Accuracy Precision Recall F1-score
+Model 1 0.8823 0.8721 0.8542 0.8705
+Model 2 0.9054 0.8952 0.8883 0.8804
+Model 3 0.9583 0.9627 0.9532 0.9579
+Model 4 (Proposed) 0.9982 0.9905 0.9912 0.9921
+2776 Int. j. inf. tecnol. (June 2025) 17(5):2765–2778
+123
+
+=== PAGE 13 ===
+level by incorporating user-speciﬁc preferences, historical
+listening patterns, and cultural nuances to reﬁne recom-
+mendations further. Optimizing the framework for real-
+time applications could make it suitable for live therapeutic
+interventions, where music adapts dynamically to the
+user’s mood. Expanding the repertoire to include diverse
+musical traditions from various cultures would make the
+system more inclusive and versatile, addressing global
+mental health challenges. Additionally, deploying the
+framework on cloud-based or edge-computing platforms
+could ensure scalability and seamless integration with
+mobile applications. Finally, large-scale clinical trials are
+essential to validate the system’s therapeutic efﬁcacy,
+particularly in managing stress, anxiety, and emotional
+well-being, paving the way for its adoption in healthcare
+and personalized wellness solutions.
+Declarations
+Conﬂict of interest The authors declare no conﬂicts of interest.
+References
+1. Mathur A, Vijayakumar SH, Chakrabarti B, Singh NC (2015)
+Emotional responses to Hindustani raga music: the role of
+musical structure. Front Psychol 6:513. https://doi.org/10.3389/
+fpsyg.2015.00513
+2. Valla JM, Alappatt JA, Mathur A, Singh NC (2017) Music and
+emotion—a case for north indian classical music. Front Psychol
+8:2115
+3. Midya V, Valla J, Balasubramanian H, Mathur A, Singh NC
+(2019) Cultural differences in the use of acoustic cues for musical
+emotion experience. PLoS ONE 14(9):e0222380
+4. Gulati A, Joshi B, Jain C, Shukla J (2020) It’s not what they play,
+it’s what you hear: understanding perceived vs. induced emotions
+in Hindustani classical music. In: Companion Publication of the
+2020 International Conference on Multimodal Interaction, 2020;
+42–46.
+5. Ravi M, Govindaraj MS (2021) Emotional impact of four speciﬁc
+ragas of carnatic music. Int J Altern Complement Med, 2:01–05
+6. Keltner D, Sauter D, Tracy J, Cowen A (2019) Emotional
+expression: advances in basic emotion theory. J Nonverbal Behav
+43:133–160
+7. Micallef AG, Eerola T (2021) EmoteControl: an interactive
+system for real-time control of emotional expression in music.
+Pers Ubiquit Comput 25:677–689
+8. Khalil RA, Jones E, Inayatullah Babar M, Jan T, Haseeb Zafar M,
+Alhussain T (2019) Speech emotion recognition using deep
+learning techniques: a review. IEEE Access 7:117327–117345
+9. Banerjee A, Sanyal S, Roy S, Sengupta S, Biswas S, Nag S,
+Sengupta R, Ghosh D (2017) Neural (EEG) response during
+creation and appreciation: a novel study with hindustani raga
+music. arXiv preprint arXiv:1704.05687
+10. Nagarajan K, Srinivasan TM, Ramarao NH (2015) Immediate
+effect of listening to Indian raga on attention and concentration in
+healthy college students: a comparative study. J Health Res Rev
+2(3):103
+11. Beier EJ, Janata P, Hulbert JC, Ferreira F (2022) Do you chill
+when I chill? A cross-cultural study of strong emotional
+responses to music. Psychol Aesthet Creat Arts 16(1):74
+12. Sengupta S, Biswas S, Nag S, Sanyal S, Banerjee A, Sengupta R,
+Ghosh D (2017) Can musical emotion be quantiﬁed with neural
+jitter or shimmer? A novel EEG based study with Hindustani
+classical music. In: 2017 4th International Conference on Signal
+Processing and Integrated Networks (SPIN), 2017; 358–363.
+IEEE
+13. Sengupta S, Biswas S, Nag S, Sanyal S, Banerjee A, Sengupta R,
+Ghosh D (2017) Emotion speciﬁcation from musical stimuli: An
+EEG study with AFA and DFA. In: 2017 4th International
+Conference on Signal Processing and Integrated Networks
+(SPIN), 2017; 596–600. IEEE
+14. Nagarajan K, Srinivasan TM, Rama Rao NH (2015) immediate
+effect of Indian music on cardiac autonomic control and anxiety:
+a comparative study. Heart India 3(4):93
+15. Borgohain J, Mullick R, Karambelkar G, Patnaik P, Sen J, Suar D
+(2021) Perception of ornamentation in Hindustani classical music
+16. Sarkar U, Nag S, Basu M, Banerjee A, Sanyal S, Sengupta R,
+Ghosh D (2021) Neural Network architectures to classify emo-
+tions in Indian Classical Music. arXiv preprint arXiv:2102.00616
+17. Arkachaari V, Rao PM, Darapaneni N (2022) Bi-sampling
+approach to classify music mood leveraging raga-rasa association
+in Indian classical music. arXiv preprint arXiv:2203.06583
+18. Nizar N, Aravind AC, Biswas R, Nair AS, Venu SN, Diwakar S
+(2021) Electroencephalography measurements and analysis of
+cortical activations among musicians and non-musicians for
+happy and sad Indian classical music. In: Cybernetics, Cognition
+and Machine Learning Applications: Proceedings of ICCCMLA
+2021; 161–168. Springer Singapore
+19. Achar A, Talwar B, Kumar A, Addanki PS (2021) Effect of
+traditional raga therapy on depression, anxiety, and stress level in
+preoperative patients undergoing cataract surgeries. MAMC J
+Med Sci 7(3):251
+20. John S, Sinith MS, Sudheesh RS, Lalu PP (2020) Classiﬁcation of
+Indian classical carnatic music based on raga using deep learning.
+In: 2020 IEEE Recent Advances in Intelligent Computational
+Systems (RAICS) 2020; 110–113. IEEE
+21. Krishna RV, Vijayalakshmi V, Vignesh Balaji M (2023) A robust
+emotion detection and music recommendation system using mini
+Xception CNN. academia.edu
+22. Kulkarni A, Mahajan P, Nimbokar G, Raut N (2023) AI based
+song recommendations system. researchgate.net
+23. Negret¸ MA, Popescu P-S, Mocanu M, Mihaescu MC (2022)
+MusicBud: a music recommendation system based on deep
+learning algorithms. academia.edu
+24 Punuri SB, Kuanar SK, Kolhar M, Mishra TK, Alameen A,
+Mohapatra H, Mishra SR (2023) Efﬁcient net-XGBoost: an
+implementation for facial emotion recognition using transfer
+learning. Mathematics 11(3):776
+25 Meena G, Mohbey KK, Indian A, Khan MZ, Kumar S (2023)
+Identifying emotions from facial expressions using a deep con-
+volutional neural network-based approach. Multimed Tools Appl
+83:1–22
+26. Roy A, Shivakumara P, Pal U, Gornale SS, Liu C-L (2023) A
+new lightweight attention-based model for emotion recognition
+on distorted social media face images. In: Asian Conference on
+Pattern Recognition, pp. 243–257. Cham: Springer Nature
+Switzerland
+27. Hernandez-Luquin F, Escalante HJ (2023) Multi-branch deep
+radial basis function networks for facial emotion recognition.
+Neural Comput Appl 35(25):18131–18145
+28. Lawpanom R, Songpan W, Kaewyotha J (2024) advancing facial
+expression recognition in online learning education using a
+homogeneous ensemble convolutional neural network approach.
+Appl Sci 14(3):1156
+29. Bodavarapu P, Srinivas PVVS (2021) Facial expression recog-
+nition for low resolution images using convolutional neural
+Int. j. inf. tecnol. (June 2025) 17(5):2765–2778 2777
+123
+
+=== PAGE 14 ===
+networks and denoising techniques. Indian J Sci Technol
+14:971–983
+30. Goodfellow I, Erhan D, Luc Carrier P, Courville A, Bengio Y
+(2013) Challenges in representation learning: a report on three
+machine learning contests. In: Proceedings of the 2013 Interna-
+tional Conference on Neural Information Processing, vol. 8228,
+Springer, 2013, pp. 117–124. https://doi.org/10.1007/978-3-642-
+42051-1_16.
+31. Patel H, Mehta D, Kumar P (2024) Spectrogram-based deep
+learning for music emotion classiﬁcation. Int J Inf Technol
+11(1):55–63
+32. Sharma S, Patel R, Kumar M (2022) Ensemble learning for
+emotion detection using SVM and k-NN. Int J Inf Technol
+9(2):85–92
+33. Verma R, Gupta S, Chawla N (2021) Transfer learning for
+emotion recognition using pre-trained models. Int J Inf Technol
+8(3):112–118
+34. Gupta V, Sharma R, Singh A (2023) Multi-modal emotion
+detection combining facial and audio features. Int J Inf Technol
+12(5):144–151
+35. Joshi A, Verma A, Singh P (2023) Hybrid CNN-RNN model for
+emotion recognition using facial expressions. Int J Inf Technol
+10(4):125–131
+36. Nizar N, Aravind AC, Biswas R, Nair SA, Venu SN, Diwakar S
+(2020) Electroencephalography measurements and analysis of
+cortical activations among musicians and non-musicians for
+happy and sad indian classical music. In: Springer Proceedings of
+ICCCMLA, pp. 161–168
+37. Krishna R, Venkat V, Balaji MV (2023) A robust emotion
+detection and music recommendation system using mini Xception
+CNN. Academia.edu
+38. Sharma MP, Sehgal L (2025) SL-R-CNN-HHO: multi-class skin
+lesion classiﬁcation using region-based convolutional neural
+networks and harris hawk optimization on the HAM dataset. Int J
+Inf Technol. https://doi.org/10.1007/s41870-024-02366-z
+39. Patil SS, Mohite-Patil TB, Kalipindi M et al (2024) Correction to:
+GAMe-BiLSTM: a novel modiﬁed metaheuristic deep learning
+technique for non-ST-segment elevation myocardial infarction
+classiﬁcation. Int J Inf Technol. https://doi.org/10.1007/s41870-
+024-02322-x
+40. Srinivas Y, Ganivada A (2024) A modiﬁed inter-frame difference
+method for detection of moving objects in videos. Int J Inf
+Technol. https://doi.org/10.1007/s41870-024-02355-2
+41. Jintanachaiwat W, Siriborvornratanakul T (2023) Vision-based
+image similarity measurement for image search similarity. Int J
+Inf Technol 15:4125–4130. https://doi.org/10.1007/s41870-023-
+01437-x
+42. Kumar A, Singh S, Rawal V et al (2022) CNN-based device-free
+health monitoring and prediction system using WiFi signals. Int J
+Inf Technol 14:3725–3737. https://doi.org/10.1007/s41870-022-
+01023-7
+43. Rusia MK, Singh DK (2021) An efﬁcient CNN approach for
+facial expression recognition with some measures of overﬁtting.
+Int J Inf Technol 13:2419–2430. https://doi.org/10.1007/s41870-
+021-00803-x
+Springer Nature or its licensor (e.g. a society or other partner) holds
+exclusive rights to this article under a publishing agreement with the
+author(s) or other rightsholder(s); author self-archiving of the
+accepted manuscript version of this article is solely governed by the
+terms of such publishing agreement and applicable law.
+2778 Int. j. inf. tecnol. (June 2025) 17(5):2765–2778
+123

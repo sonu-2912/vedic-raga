@@ -1,0 +1,51 @@
+{
+  "initial_checkpoint_sha256": "f0082aff0511c40d8dff89fc03bbea965b416db55a0f771701efaa38f490c548",
+  "seed": 81122,
+  "head_lr": 0.0001,
+  "head_epochs_max": 50,
+  "head_min_epochs": 12,
+  "head_patience": 10,
+  "head_minutes_per_recipe": 10,
+  "mirror_common_weight": 0.5,
+  "recipes": [
+    {
+      "name": "common1.3_retain0.2",
+      "common_boost": 1.3,
+      "retention_weight": 0.2
+    },
+    {
+      "name": "common1.3_retain1.0",
+      "common_boost": 1.3,
+      "retention_weight": 1.0
+    },
+    {
+      "name": "common1.6_retain0.2",
+      "common_boost": 1.6,
+      "retention_weight": 0.2
+    },
+    {
+      "name": "common1.6_retain1.0",
+      "common_boost": 1.6,
+      "retention_weight": 1.0
+    }
+  ],
+  "full_epochs_max": 3,
+  "full_minutes": 35,
+  "full_backbone_lr": 5e-06,
+  "full_classifier_lr": 1e-05,
+  "selection": "Recover happy/surprise/neutral validation recall to at least earlier pure floors; retain current disgust precision/recall/F1 and macroprecision/recall; strictly improve current validationaccuracy and macroF1. Max .5accuracy+.5macroF1 among eligible. All head and full-network stages complete before one frozen candidate.",
+  "test_gate": "Same6561testfaces. Strict accuracy/macroF1 gains over current58.3448%/.555367. No reduction in current macroP/R or disgustP/R/F1 (retain37/79disgust correct). Happy/surprise/neutral recall recover at least81.5897%/73.8382%/58.5448%. No alternate testcandidate; if any condition fails, app/PPT unchanged.",
+  "method": "Native pure-Fus classifier common-class cost recovery, original/mirrored TRAIN features. TRAIN-only same-current-classifier KL retention on correctly classified TRUEdisgust samples; reference discarded at inference. EMA weights are a single-network candidate, not probability fusion. Followed by bounded full-network recovery fine-tuning. No external encoder or inference hybrid.",
+  "limits": "Validation and test are historically reused; exploratory engineering, not fresh identity-disjoint confirmation. Full/head epochs not equivalent. No80%or reliable webcam/clinical guarantee.",
+  "class_view_normalization": "Raw common factor2/(1+lambda), mirror2lambda/(1+lambda); pair sum2 preserves intended class boost. Previous invalid trial preserved separately.",
+  "architecture": {
+    "attention": true,
+    "dilated": true,
+    "version": 4,
+    "head_width": 512
+  },
+  "dataset_sha256": "9f3422c7a45b676c2965ef4fc5f3099932aa98fd13eaaa2c254f620a9894a6e9",
+  "manifest_sha256": "326eeabc6fca7fb119030aae617f0cacae3ab28ed3d948c7c00d23c5299e10c2",
+  "device": "cpu",
+  "threads": 4
+}

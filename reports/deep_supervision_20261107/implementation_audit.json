@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-11-07T22:07:08.540153+05:30",
+  "scope": "Implementation audit after launch; not a claim that these additional receipt fields were predeclared before training",
+  "files": {
+    "scripts/train_deep_supervision.py": "dda41d4b06de6505dd88ec52cc994c11602b12513feb64e46d81442f509d61c1",
+    "scripts/train_consistency.py": "93a666e3729a63443217402eca4237540c37f6883919fbddfa25a6bbb0be725a",
+    "scripts/colab_common.py": "811170a47fae0122f4a204b31b3fa9d21586ba65bc05d8e85ec478aee89973b3",
+    "backend/models.py": "7040dc7aa45b82b045e787092858f1231095c25d2fef19bf62098b64b4748cfc",
+    "backend/datasets.py": "d51f941f29428b9703ac30e9a0a014f480fbcff350d79fd19f111a700240f59e"
+  },
+  "dropout_during_training": 0.4,
+  "augmentation": "horizontal flip; affine7degrees, translation.04, scale.95..1.05; brightness/contrast.15; half-batch MixUp Beta(.2,.2)",
+  "EMA": "min(.995,(1+updates)/(10+updates)), exact BN-buffer copies",
+  "batch_size": 64,
+  "split": "fixed23503/3970; no test in trainer"
+}

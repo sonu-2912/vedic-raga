@@ -1,0 +1,39 @@
+{
+  "initial_checkpoint_sha256": "f0082aff0511c40d8dff89fc03bbea965b416db55a0f771701efaa38f490c548",
+  "seed": 81129,
+  "head_lr": 0.0001,
+  "head_epochs_max": 60,
+  "head_min_epochs": 20,
+  "head_patience": 12,
+  "head_minutes_per_recipe": 10,
+  "mirror_common_weight": 1.0,
+  "recipes": [
+    {
+      "name": "fine384_best_verified",
+      "common_boost": 1.0,
+      "retention_weight": 0.5
+    }
+  ],
+  "full_epochs_max": 3,
+  "full_minutes": 35,
+  "full_backbone_lr": 5e-06,
+  "full_classifier_lr": 1e-05,
+  "selection": "Recover happy/surprise/neutral validation recall to at least earlier pure floors; retain current disgust precision/recall/F1 and macroprecision/recall; strictly improve current validationaccuracy and macroF1. Max .5accuracy+.5macroF1 among eligible. All head and full-network stages complete before one frozen candidate.",
+  "test_gate": "Same6561testfaces. Strict accuracy/macroF1 gains over current58.3448%/.555367. No reduction in current macroP/R or disgustP/R/F1 (retain37/79disgust correct). Happy/surprise/neutral recall recover at least81.5897%/73.8382%/58.5448%. No alternate testcandidate; if any condition fails, app/PPT unchanged.",
+  "method": "Moderate native MLP capacity control on the best VERIFIED pure active model. Keep all3276native4x4/fusion features and every backbone tensor. Prune512to384using class-balanced TRAIN activation/output contribution; compensate omitted neurons using their TRAIN mean. Native classifier training only, no external encoder or inference mixture. Correct-current-pure TRAIN disgust-vs-rest retention.",
+  "limits": "Validation and test are historically reused; exploratory engineering, not fresh identity-disjoint confirmation. Full/head epochs not equivalent. No80%or reliable webcam/clinical guarantee.",
+  "class_view_normalization": "Raw common factor2/(1+lambda), mirror2lambda/(1+lambda); pair sum2 preserves intended class boost. Previous invalid trial preserved separately.",
+  "head_width": 384,
+  "head_active_minutes": 12,
+  "head_weight_decay": 0.1,
+  "head_dropout": 0.35,
+  "feature_std_floor": 0.01,
+  "label_smoothing": 0.01,
+  "happy_cost_multiplier": 1.15,
+  "surprise_cost_multiplier": 1.2,
+  "neutral_cost_multiplier": 1.1,
+  "parent_run": "reports/pure_native_rollback_20261109",
+  "declared_utc": "2026-11-08T19:32:13.092664+00:00",
+  "condition": "Only after every preceding phase finishes with no new frozen/tested candidate; at mostone new test total.",
+  "rationale": "Fixed-checkpoint compact model TRAINaccuracy72.52%,validation58.01% versus verified92.08%/58.41% indicates excessive capacity/information reduction. Retain fine spatial features and use milder hidden-unit reduction rather than more full-network training. Joint engineering trial, not isolated ablation."
+}

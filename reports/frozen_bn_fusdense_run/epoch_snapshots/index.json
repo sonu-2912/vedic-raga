@@ -1,0 +1,10 @@
+[
+  {
+    "file": "reports\\frozen_bn_fusdense_run\\epoch_snapshots\\000-6aaf15b6469f.pt",
+    "sha256": "6aaf15b6469fbb4c6cd14ae3b2902c3c0636b21248123d24c4258daa2283033b"
+  },
+  {
+    "file": "reports\\frozen_bn_fusdense_run\\epoch_snapshots\\001-ed04571c5b83.pt",
+    "sha256": "ed04571c5b83d37409f5561c79f0b7cc7ef74951b0ae1aaec8ab94e5b92365c5"
+  }
+]

@@ -1,0 +1,1 @@
+Abandoned before any completed feature cache, training or evaluation result. Official224-pixel extraction cost was excessive on this CPU alongside full-network training. The112-pixel adapted experiment uses a new directory and discloses its preprocessing. No accuracy result was obtained here. Original logs, protocol and source retained.

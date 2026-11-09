@@ -1,0 +1,19 @@
+{
+  "source_checkpoint_sha256": "99720da30d4ab9b423ed640c2206d7babe5ec61d62bbab708c76b1d091d2bcc9",
+  "warm_classifier_used": true,
+  "recipe": {
+    "name": "common1.6_retain0.2",
+    "common_boost": 1.6,
+    "retention_weight": 0.2
+  },
+  "all_emotion_path_parameters_trainable": true,
+  "batchnorm_running_statistics_frozen": true,
+  "external_encoder": false,
+  "reference": "Cached current pure classifier on TRAIN only; discarded at inference",
+  "retention_mode": "Balanced disgust-vs-rest positives/negatives; deterministic student classifier avoids dropout mismatch",
+  "source_hashes": {
+    "models.py": "302a705e16fc80c59fc421e4d51249e30bdad7fddacb271910028b90891e568b",
+    "recall_recovery_common.py": "c67dccac9f512a55ebc7369e00e10c131fe78b503985ae8ead8c19f4c10382b4",
+    "train_recall_recovery_full.py": "ef3273777884d43810264440bd143c06502a91aaebcfeea09de32a6ed7f8168c"
+  }
+}

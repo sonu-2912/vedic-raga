@@ -1,0 +1,29 @@
+{
+  "n": 14,
+  "checkpoint_sha256": "fc7e503b60ca16fc05aab5ab647d2f1ce1601fcb76d316ebaf7357f7104dea08",
+  "metrics": {
+    "accuracy": {
+      "baseline": 0.0,
+      "colab": 0.14285714285714285,
+      "difference": 0.14285714285714285
+    },
+    "macro_f1": {
+      "baseline": 0.0,
+      "colab": 0.03571428571428571,
+      "difference": 0.03571428571428571
+    },
+    "disgust_recall": {
+      "baseline": 0.0,
+      "colab": 0.0,
+      "difference": 0.0
+    },
+    "disgust_f1": {
+      "baseline": 0.0,
+      "colab": 0.0,
+      "difference": 0.0
+    }
+  },
+  "recommended_for_integration": false,
+  "rule": "Accuracy, macro F1 and disgust F1 increase, disgust recall does not decrease; an engineering deployment check, not significance evidence",
+  "limitation": "Descriptive comparison; do not tune further using this test result. GPU execution itself is not an architectural innovation."
+}

@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-11-07T23:04:53.250946+05:30",
+  "scope": "Post-launch implementation audit, not predeclaration",
+  "trainer_sha256": "0d0a0519fcaf24d7eaa57b5829305928a75839ba6fff1082e4ec31c85f985d7e",
+  "teacher_cache": "Own baseline only, training features only, no foreign teacher",
+  "precision_checks": "All seven raw-validation floors",
+  "input_augmentation": "flip, affine7degrees/translate.04/scale.95..1.05, brightness/contrast.15",
+  "teacher_training_accuracy_diagnostic_only": 0.830106794834137
+}

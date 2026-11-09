@@ -1,0 +1,199 @@
+{
+  "emotion": "happy",
+  "target_bhava": "hasa",
+  "ranking_mode": "IKS + feedback cold-start heuristic (FDCF not trained for this user)",
+  "feedback_observations": 0,
+  "recommendations": [
+    {
+      "raga_name": "Dhani",
+      "primary_sthayi_bhava": "Hasa",
+      "secondary_sthayi_bhava": [
+        "Utsaha"
+      ],
+      "prahara": [
+        5,
+        6
+      ],
+      "ritu": "vasanta",
+      "youtube_links": {
+        "vocal": [
+          "https://www.youtube.com/watch?v=qZwNtm3F8Uo",
+          "https://www.youtube.com/watch?v=ZRLihUF1a40",
+          "https://www.youtube.com/watch?v=6iqOz2JL9AY",
+          "https://www.youtube.com/watch?v=v5_baUk8jBw",
+          "https://www.youtube.com/watch?v=PKUO-nqbABg"
+        ],
+        "instrumental": [
+          "https://www.youtube.com/watch?v=E0L02BVBwFI",
+          "https://www.youtube.com/watch?v=tW6RWP54Tsg"
+        ]
+      },
+      "id": 60,
+      "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+      "metadata_status": {
+        "raga_name": "source supplied, unverified",
+        "primary_sthayi_bhava": "source supplied, unverified",
+        "secondary_sthayi_bhava": "source supplied, unverified",
+        "prahara": "source supplied, unverified",
+        "ritu": "source supplied, unverified",
+        "youtube_links": "source supplied, unverified",
+        "thaat": "missing",
+        "aaroh": "missing",
+        "avaroh": "missing",
+        "vadi": "missing",
+        "samvadi": "missing"
+      },
+      "thaat": null,
+      "aaroh": null,
+      "avaroh": null,
+      "vadi": null,
+      "samvadi": null,
+      "score": 0.71125,
+      "components": {
+        "iks": 0.825,
+        "bhava": 1.0,
+        "short_preference": 0.0,
+        "long_preference": 0.0,
+        "beta": 0.5,
+        "physiology_adjustment": 0.0,
+        "weather_adjustment": 0.0,
+        "fdcf": null
+      },
+      "reason": "Target bhava: hasa; listening goal: balance. Metadata is source-supplied. Preference observations: 0."
+    },
+    {
+      "raga_name": "Pahadi",
+      "primary_sthayi_bhava": "Hasa",
+      "secondary_sthayi_bhava": [
+        "Rati"
+      ],
+      "prahara": [
+        4,
+        5,
+        6
+      ],
+      "ritu": "vasanta",
+      "youtube_links": {
+        "vocal": [
+          "https://www.youtube.com/watch?v=jPPr1KaqAhg",
+          "https://www.youtube.com/watch?v=O6MHjworfk8",
+          "https://www.youtube.com/watch?v=Qkue18syfrU"
+        ],
+        "instrumental": [
+          "https://www.youtube.com/watch?v=Di_6A8wr1b8",
+          "https://www.youtube.com/watch?v=N9RGCFNg3z0",
+          "https://www.youtube.com/watch?v=iLLiQKD-QKc",
+          "https://www.youtube.com/watch?v=EL4_hAoMHd0"
+        ]
+      },
+      "id": 18,
+      "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+      "metadata_status": {
+        "raga_name": "source supplied, unverified",
+        "primary_sthayi_bhava": "source supplied, unverified",
+        "secondary_sthayi_bhava": "source supplied, unverified",
+        "prahara": "source supplied, unverified",
+        "ritu": "source supplied, unverified",
+        "youtube_links": "source supplied, unverified",
+        "thaat": "missing",
+        "aaroh": "missing",
+        "avaroh": "missing",
+        "vadi": "missing",
+        "samvadi": "missing"
+      },
+      "thaat": null,
+      "aaroh": null,
+      "avaroh": null,
+      "vadi": null,
+      "samvadi": null,
+      "score": 0.71125,
+      "components": {
+        "iks": 0.825,
+        "bhava": 1.0,
+        "short_preference": 0.0,
+        "long_preference": 0.0,
+        "beta": 0.5,
+        "physiology_adjustment": 0.0,
+        "weather_adjustment": 0.0,
+        "fdcf": null
+      },
+      "reason": "Target bhava: hasa; listening goal: balance. Metadata is source-supplied. Preference observations: 0."
+    },
+    {
+      "raga_name": "Tilak Kamod",
+      "primary_sthayi_bhava": "Hasa",
+      "secondary_sthayi_bhava": [
+        "Rati"
+      ],
+      "prahara": [
+        5,
+        6
+      ],
+      "ritu": "vasanta",
+      "youtube_links": {
+        "vocal": [
+          "https://www.youtube.com/watch?v=wioUZhifTs4",
+          "https://www.youtube.com/watch?v=ZAU5ytweMAg"
+        ],
+        "instrumental": [
+          "https://www.youtube.com/watch?v=UNx_fYV81fM",
+          "https://www.youtube.com/watch?v=3Jiv_Q-wny8",
+          "https://www.youtube.com/watch?v=XYWRymdhSGE"
+        ]
+      },
+      "id": 70,
+      "metadata_provenance": "Raag Ratnakar supplied JSON; not independently musicologically verified",
+      "metadata_status": {
+        "raga_name": "source supplied, unverified",
+        "primary_sthayi_bhava": "source supplied, unverified",
+        "secondary_sthayi_bhava": "source supplied, unverified",
+        "prahara": "source supplied, unverified",
+        "ritu": "source supplied, unverified",
+        "youtube_links": "source supplied, unverified",
+        "thaat": "missing",
+        "aaroh": "missing",
+        "avaroh": "missing",
+        "vadi": "missing",
+        "samvadi": "missing"
+      },
+      "thaat": null,
+      "aaroh": null,
+      "avaroh": null,
+      "vadi": null,
+      "samvadi": null,
+      "score": 0.71125,
+      "components": {
+        "iks": 0.825,
+        "bhava": 1.0,
+        "short_preference": 0.0,
+        "long_preference": 0.0,
+        "beta": 0.5,
+        "physiology_adjustment": 0.0,
+        "weather_adjustment": 0.0,
+        "fdcf": null
+      },
+      "reason": "Target bhava: hasa; listening goal: balance. Metadata is source-supplied. Preference observations: 0."
+    }
+  ],
+  "modalities": {
+    "face_or_manual_emotion": true,
+    "physiology": false,
+    "weather": false,
+    "iks": true,
+    "preferences": false
+  },
+  "context": {
+    "emotion_source": "face_confirmed",
+    "requested_goal": "balance",
+    "effective_goal": "balance",
+    "weather": {
+      "available": false,
+      "season_tags": [],
+      "source": null
+    },
+    "physiology": null,
+    "priority": "Confirmed mood and explicit listening goal first; body reference policy and weather add experimental context. No emotion is inferred from weather or physiological features.",
+    "fusion_validation": "Rule-based engineering integration; no measured multimodal recognition or mood-improvement benefit."
+  },
+  "disclaimer": "Research prototype. Raga associations and inferred expressions do not establish therapeutic efficacy."
+}

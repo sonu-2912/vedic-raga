@@ -1,0 +1,9 @@
+{
+  "completed_additional_epochs": 6,
+  "validation_improved": false,
+  "best_score": 0.5077909035247192,
+  "test_accessed": false,
+  "synthetic": false,
+  "parameters_trained": "Full FusDenseNet plus disclosed high-resolution residual refinement",
+  "complete": true
+}

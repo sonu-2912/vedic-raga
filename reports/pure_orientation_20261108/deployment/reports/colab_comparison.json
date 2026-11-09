@@ -1,0 +1,46 @@
+{
+  "n": 6561,
+  "checkpoint_sha256": "f0082aff0511c40d8dff89fc03bbea965b416db55a0f771701efaa38f490c548",
+  "metrics": {
+    "accuracy": {
+      "baseline": 0.574150281969212,
+      "colab": 0.5834476451760402,
+      "difference": 0.009297363206828169
+    },
+    "macro_f1": {
+      "baseline": 0.5320404110907176,
+      "colab": 0.555367099062993,
+      "difference": 0.02332668797227533
+    },
+    "disgust_recall": {
+      "baseline": 0.3670886075949367,
+      "colab": 0.46835443037974683,
+      "difference": 0.10126582278481011
+    },
+    "disgust_f1": {
+      "baseline": 0.4172661870503597,
+      "colab": 0.4868421052631579,
+      "difference": 0.06957591821279818
+    },
+    "macro_precision": {
+      "baseline": 0.5391905789239385,
+      "colab": 0.5574717626824482,
+      "difference": 0.018281183758509734
+    },
+    "macro_recall": {
+      "baseline": 0.5325106108129906,
+      "colab": 0.5546504859140958,
+      "difference": 0.022139875101105266
+    },
+    "disgust_precision": {
+      "baseline": 0.48333333333333334,
+      "colab": 0.5068493150684932,
+      "difference": 0.02351598173515984
+    }
+  },
+  "recommended_for_integration": true,
+  "rule": "Accuracy, macro F1 and disgust F1 increase, disgust recall does not decrease; engineering gate, not significance evidence; strict positive disgust recall gain required",
+  "strict_all_metrics": false,
+  "require_disgust_recall_gain": true,
+  "limitation": "Descriptive comparison; do not tune further using this test result. GPU execution itself is not an architectural innovation."
+}

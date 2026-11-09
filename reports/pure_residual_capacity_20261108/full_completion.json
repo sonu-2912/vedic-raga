@@ -1,0 +1,7 @@
+{
+  "completed_full_epochs": 4,
+  "validation_improved": false,
+  "test_accessed": false,
+  "external_encoder": false,
+  "inference_hybrid": false
+}

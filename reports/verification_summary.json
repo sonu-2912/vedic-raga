@@ -1,0 +1,91 @@
+{
+  "tests": 41,
+  "passed": 41,
+  "failures": 0,
+  "test_seconds": 143.903,
+  "model_sha256": "9a733a87fc5ec0db544b74504d60ca9ea3d3c94c3648d85e61e5397ca10d43ed",
+  "original_repository_files": 55,
+  "original_repository_unchanged": true,
+  "facial_confusion_and_class_metrics_recomputed": true,
+  "all_test_errors_retained": true,
+  "controlled_raw_window_and_fold_audit": "pass",
+  "live_health": 200,
+  "live_emotion_and_recommendation_pipeline": 200,
+  "live_controlled_physiology": "evaluated",
+  "private_user_images_used": false,
+  "sensor_readings_claimed": false,
+  "real_fer2013_metrics": {
+    "n": 6561,
+    "accuracy": 0.5613473555860388,
+    "classification_report": {
+      "angry": {
+        "precision": 0.46958637469586373,
+        "recall": 0.4346846846846847,
+        "f1-score": 0.45146198830409356,
+        "support": 888.0
+      },
+      "disgust": {
+        "precision": 0.5588235294117647,
+        "recall": 0.24050632911392406,
+        "f1-score": 0.336283185840708,
+        "support": 79.0
+      },
+      "fear": {
+        "precision": 0.3948497854077253,
+        "recall": 0.39913232104121477,
+        "f1-score": 0.3969795037756203,
+        "support": 922.0
+      },
+      "happy": {
+        "precision": 0.7779005524861878,
+        "recall": 0.8229105786090006,
+        "f1-score": 0.7997727918205055,
+        "support": 1711.0
+      },
+      "sad": {
+        "precision": 0.46614872364039955,
+        "recall": 0.35058430717863104,
+        "f1-score": 0.4001905669366365,
+        "support": 1198.0
+      },
+      "surprise": {
+        "precision": 0.6928838951310862,
+        "recall": 0.6368330464716007,
+        "f1-score": 0.6636771300448431,
+        "support": 581.0
+      },
+      "neutral": {
+        "precision": 0.46596858638743455,
+        "recall": 0.6023688663282571,
+        "f1-score": 0.5254612546125461,
+        "support": 1182.0
+      },
+      "accuracy": 0.5613473555860388,
+      "macro avg": {
+        "precision": 0.5465944924514946,
+        "recall": 0.498145733346759,
+        "f1-score": 0.510546631619279,
+        "support": 6561.0
+      },
+      "weighted avg": {
+        "precision": 0.5590558893622244,
+        "recall": 0.5613473555860388,
+        "f1-score": 0.5560144614052175,
+        "support": 6561.0
+      }
+    },
+    "parameters": 1828896
+  },
+  "export_tests_passed": 41,
+  "github": {
+    "owner": "sonu-2912",
+    "name": "RagaMoodSync",
+    "url": "https://github.com/sonu-2912/RagaMoodSync",
+    "clone_url": "https://github.com/sonu-2912/RagaMoodSync.git",
+    "private": true,
+    "id": 1449391910,
+    "status": "pushed and remote branch verified",
+    "branch": "main",
+    "commit": "5bc6d4432cb9fbf2a24a34b716d7ae7765709429"
+  }
+}

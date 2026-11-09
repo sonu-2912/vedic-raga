@@ -1,0 +1,17 @@
+{
+  "tests": 60,
+  "passed": 60,
+  "failures": 0,
+  "test_seconds": 136.122,
+  "model_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "original_repository_files": 55,
+  "original_repository_unchanged": true,
+  "facial_confusion_and_class_metrics_recomputed": true,
+  "all_test_errors_retained": true,
+  "controlled_raw_window_and_fold_audit": "pass",
+  "live_health": 200,
+  "live_emotion_and_recommendation_pipeline": 200,
+  "live_controlled_physiology": "evaluated",
+  "private_user_images_used": false,
+  "sensor_readings_claimed": false
+}

@@ -1,0 +1,5 @@
+{
+  "status": "pending",
+  "reason": "Need at least six chronological feedback events per evaluable user, including held-out likes. No valid interaction dataset supplied.",
+  "events": 1
+}

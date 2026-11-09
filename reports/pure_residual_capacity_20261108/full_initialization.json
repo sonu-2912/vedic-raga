@@ -1,0 +1,23 @@
+{
+  "source_checkpoint_sha256": "f583dadf24f4cbc20da902778acf8ac901359ff178572ad0ae01f0ce68226a9a",
+  "warm_classifier_used": true,
+  "recipe": {
+    "name": "native_residual_capacity",
+    "head_width": 256,
+    "common_boost": 1.0,
+    "source_compact_recipe": "coarse256_common1.2"
+  },
+  "all_emotion_path_parameters_trainable": true,
+  "batchnorm_running_statistics_frozen": true,
+  "external_encoder": false,
+  "reference": "Cached current pure classifier on TRAIN only; discarded at inference",
+  "retention_mode": "TRAIN-only same-current-pure correct disgust-vs-rest boundary; deterministic retention branch",
+  "augmentation": "Complementary mirrors plus mild affine/brightness/contrast; TRAIN only",
+  "source_hashes": {
+    "compact_fusdense.py": "4e8e628cd0be0605bacaa0a4325056b697185ac558cd84d2f73def87084360c5",
+    "compact_residual_fusdense.py": "b89229b81c895f9afe3247cf0ae1580de28c9fb8f6649f58e75509e214b5e113",
+    "models.py": "302a705e16fc80c59fc421e4d51249e30bdad7fddacb271910028b90891e568b",
+    "recall_recovery_common.py": "c67dccac9f512a55ebc7369e00e10c131fe78b503985ae8ead8c19f4c10382b4",
+    "train_residual_capacity_full.py": "9d75262a553fc05078465b68192775d6893fdcb36f709fe3d7cdf705d0ecefca"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "reason": "Mirror downweighting reduced total common-class loss mass; normalization correction requires a new run before any test.",
+  "completed_classifier_epochs": 21,
+  "partial_next_epoch_discarded": true,
+  "test_evaluated": false,
+  "app_ppt_unchanged": true
+}

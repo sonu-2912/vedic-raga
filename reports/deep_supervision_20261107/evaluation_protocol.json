@@ -1,0 +1,8 @@
+{
+  "declared_before_test": true,
+  "strict_all_metrics": true,
+  "flip_selection": "Existing F1/accuracy/disgust F1 rule plus no lower raw validation accuracy, macro precision/recall/F1 or disgust precision/recall/F1",
+  "deployment": "Existing positive accuracy/macro F1/disgust F1 with nondecreasing disgust recall, plus nondecreasing macro precision/recall and disgust precision",
+  "test_accessed": false,
+  "no_test_candidate_search": true
+}

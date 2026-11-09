@@ -1,0 +1,14 @@
+[
+  {
+    "file": "reports\\real_improvement_run\\epoch_snapshots\\000-f738e678972f.pt",
+    "sha256": "f738e678972f1aa03aba5f3b8b476fa104d48ce7cbb5bff89172a5d64fa1d161"
+  },
+  {
+    "file": "reports\\real_improvement_run\\epoch_snapshots\\001-b5865950789a.pt",
+    "sha256": "b5865950789ac40009c4cb43e1d3d904a7e57c97a64a60f89d086acc9584b2a7"
+  },
+  {
+    "file": "reports\\real_improvement_run\\epoch_snapshots\\002-552f420005fe.pt",
+    "sha256": "552f420005fe3e306efc1c067eb285e2cc307d8b737256649eb04587b03b566e"
+  }
+]

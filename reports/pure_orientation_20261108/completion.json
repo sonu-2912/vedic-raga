@@ -1,0 +1,13 @@
+{
+  "completed_additional_epochs": 72,
+  "completed_head_epochs": 72,
+  "completed_full_epochs": 0,
+  "validation_improved": true,
+  "selected_head": "head512",
+  "test_accessed": false,
+  "external_encoder": false,
+  "teacher": false,
+  "synthetic": false,
+  "source_backbone_unchanged": true,
+  "reason": "Native FusDense classifier learned raw/mirror TRAIN representations; all inference features remain from the same pure network. Prior independent coverage run was not used as its backbone."
+}

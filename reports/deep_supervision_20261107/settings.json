@@ -1,0 +1,27 @@
+{
+  "initial_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "epochs_max": 12,
+  "patience": 5,
+  "max_minutes": 90,
+  "shortcut_dropout": 0.2,
+  "method": "Train-only companion on the588late fused features; higher late-path LR, lower early LR, MixUp on half batches, frozen BN refs, EMA/student validation. Inference architecture unchanged.",
+  "learning_rates": {
+    "early": 1e-05,
+    "late": 0.0002,
+    "classifier": 0.0001,
+    "companion": 0.001
+  },
+  "loss": "Main weighted smoothed CE +.25 companion CE; MixUp Beta(.2,.2) on half batches, all training faces retained; CE class weight power.25",
+  "selection": "Validation-only .35 accuracy+.65 macro F1; require no lower accuracy, macro precision/recall/F1 and disgust precision/recall/F1 than initial raw validation. Compare student and EMA.",
+  "test": "One frozen selected candidate only if validation improves; strict no regression across seven aggregate/disgust metrics before integration. Historical test remains previously inspected; no80% promise.",
+  "sources": [
+    "https://doi.org/10.1007/s41870-025-02531-y",
+    "https://proceedings.mlr.press/v38/lee15a.html"
+  ],
+  "assumptions": "Companion width128, feature slice588, LR groups and training recipe are project choices. No causal architecture claim, external teacher, FER+ label merge or new physiological metric.",
+  "dataset_sha256": "9f3422c7a45b676c2965ef4fc5f3099932aa98fd13eaaa2c254f620a9894a6e9",
+  "manifest_sha256": "326eeabc6fca7fb119030aae617f0cacae3ab28ed3d948c7c00d23c5299e10c2",
+  "threads": 4,
+  "seed": 312,
+  "device": "cpu"
+}

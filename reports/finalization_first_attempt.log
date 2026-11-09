@@ -1,0 +1,43 @@
+{"stage":"waiting_for_training","updated":"2026-11-03T11:07:38.7651432+05:30","training_process":15456}
+{"stage":"validation_calibration","updated":"2026-11-03T12:47:03.1423336+05:30","training_process":15456}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\scripts\calibrate_emotion.py", line 35, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\scripts\calibrate_emotion.py", line 23, in main
+    single_f1,flip_f1=score(logits),score(flip_logits)
+                      ^^^^^^^^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\scripts\calibrate_emotion.py", line 22, in <lambda>
+    score=lambda z:float(f1_score(labels,z.argmax(1),labels=list(range(7)),average='macro',zero_division=0))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\sklearn\metrics\_classification.py", line 1324, in f1_score
+    return fbeta_score(
+           ^^^^^^^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 189, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\sklearn\metrics\_classification.py", line 1517, in fbeta_score
+    _, _, f, _ = precision_recall_fscore_support(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 189, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\sklearn\metrics\_classification.py", line 1834, in precision_recall_fscore_support
+    MCM = multilabel_confusion_matrix(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 189, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\sklearn\metrics\_classification.py", line 545, in multilabel_confusion_matrix
+    labels = xp.asarray(labels, device=device_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\sklearn\utils\_array_api.py", line 395, in asarray
+    _check_device_cpu(device)
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\.venv\Lib\site-packages\sklearn\utils\_array_api.py", line 310, in _check_device_cpu
+    raise ValueError(f"Unsupported device for NumPy: {device!r}")
+ValueError: Unsupported device for NumPy: device(type='cpu')

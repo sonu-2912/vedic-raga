@@ -1,0 +1,19 @@
+{
+  "chosen": {
+    "run": "reports/direct_dense_head_long_20261108",
+    "score": 0.5402229861791384,
+    "validation_accuracy": 0.6027707808564232,
+    "validation_macro_f1": 0.5497485075755532,
+    "validation_disgust_recall": 0.34
+  },
+  "candidates": [
+    {
+      "run": "reports/direct_dense_head_long_20261108",
+      "score": 0.5402229861791384,
+      "validation_accuracy": 0.6027707808564232,
+      "validation_macro_f1": 0.5497485075755532,
+      "validation_disgust_recall": 0.34
+    }
+  ]
+}
+Completed training, at most one qualifying-candidate evaluation, conditional verified import and actual-results report.

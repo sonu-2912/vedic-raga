@@ -1,0 +1,10 @@
+{
+  "recipes": [
+    "v5 full-network spatial refinement",
+    "v4 FusDenseNet plus frozen ImageNet DenseNet121 residual classifier probe"
+  ],
+  "selection": "One highest-scoring qualifying validation candidate after both runs complete; no alternate test candidate. Four aggregate/disgust gain gate declared in both protocols before test.",
+  "excluded": "Translation TTA failed validation and is not a candidate",
+  "test": "Historically inspected full6561retainedfaces; no fresh/identity-disjoint confirmation.",
+  "timing": "Transfer added after v5epoch2; no test accessed for new experiments"
+}

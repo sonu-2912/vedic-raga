@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 189, in _run_module_as_main
+  File "<frozen runpy>", line 159, in _get_module_details
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\bindu\OneDrive - iitr.ac.in\VEDIC RAGA\scripts\train_dense_transfer_probe.py", line 49
+    z=F.adaptive_avg_pool2d(F.relu(trunk(transform(x.expand(-1,3,-1,-1))))),1).flatten(1);features.append(z.cpu());labels.append(y)
+                                                                             ^
+SyntaxError: unmatched ')'

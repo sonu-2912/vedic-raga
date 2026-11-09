@@ -1,0 +1,13 @@
+{
+  "single_view_only": true,
+  "require_disgust_recall_gain": true,
+  "recipes": [
+    "Pure v4class-paired SupCon/RDrop",
+    "Nativev8residualdense refinements within fusion blocks, same train losses"
+  ],
+  "one_frozen_candidate_after_all_training": true,
+  "test_accessed": false,
+  "deployment": "Prefer an improved pure model that beats its pure baseline on accuracy, macroF1, disgustrecall anddisgustF1. Formerhybrid is a separate comparator. If nonepasses, restore earlier evaluatedpurebaseline to honor explicit nohybriddefault; clearly disclose lackofnewgain.",
+  "budget": "V4completedcounts checked afterwallbudget/epochcap; nativev8max45minutes at completedepoch boundaries, maximum6epochs. Pauses count toward wallbudget.",
+  "limitation": "Highly reused validation and historically inspected full6561test, not fresh confirmatory evidence."
+}

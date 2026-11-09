@@ -1,0 +1,8 @@
+{
+  "decision_date": "2026-11-03 Asia/Kolkata",
+  "stage": "Before feature cohort construction or outer-fold scoring",
+  "addition": "Game-ID-only control with training-fold OneHotEncoder and fixed balanced LogisticRegression C=1",
+  "reason": "Source annotations visibly associate game identity with emotion label. This exploratory negative control checks task/context confounding; it is not a physiological model.",
+  "primary_protocol_changed": false,
+  "control_model_tuning": false
+}

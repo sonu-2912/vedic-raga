@@ -1,0 +1,36 @@
+{
+  "checkpoint_type": "<class 'dict'>",
+  "keys": [
+    "epoch",
+    "model_state_dict",
+    "optimizer_state_dict",
+    "val_acc",
+    "class_names"
+  ],
+  "classes": [
+    "adhbuta",
+    "Bhayanak",
+    "Bhibhatsa",
+    "Hasya",
+    "Karuna",
+    "Raudra",
+    "Shanta",
+    "Shringara",
+    "Veer"
+  ],
+  "metadata": {
+    "epoch": 28,
+    "val_acc": 93.42503438789547,
+    "class_names": [
+      "adhbuta",
+      "Bhayanak",
+      "Bhibhatsa",
+      "Hasya",
+      "Karuna",
+      "Raudra",
+      "Shanta",
+      "Shringara",
+      "Veer"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "dataset": "GamER official v1",
+  "tasks": {
+    "QWOP": [
+      "Angry",
+      "Happy"
+    ],
+    "CBAAD": [
+      "Bored",
+      "Stressed"
+    ]
+  },
+  "primary_minimum_seconds": 30,
+  "sensitivity_minimum_seconds": 15,
+  "evaluation": "Separate leave-one-participant-out classifiers within each constant game; fixed balanced LogisticRegression C=1; fold-fitted StandardScaler",
+  "controls": [
+    "Majority",
+    "Duration only",
+    "Game only (constant)"
+  ],
+  "no_game_identity_feature": true,
+  "minimum_participants_per_class": 3,
+  "seed": 91,
+  "selection": "No hyperparameter selection on these held-out scores",
+  "limitations": [
+    "Small cohorts and source psychologist labels",
+    "Short-window RR statistics are exploratory; conventional-duration HRV may not be estimable",
+    "EEG/ECG artifact and time-within-game confounding remain possible",
+    "Offset sign is not independently confirmed; both signs reported",
+    "No FER faces, disgust or raga response labels"
+  ]
+}

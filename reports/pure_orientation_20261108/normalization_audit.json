@@ -1,0 +1,27 @@
+{
+  "source_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "training_views": 47006,
+  "unique_source_faces": 23503,
+  "train_only_fit": true,
+  "class_weights": [
+    0.7903233766555786,
+    2.4912571907043457,
+    0.7835424542427063,
+    0.5823619961738586,
+    0.7121842503547668,
+    0.9381608963012695,
+    0.7021700143814087
+  ],
+  "normalized_CE_label_mass": [
+    0.14791429042816162,
+    0.04692414402961731,
+    0.1491943746805191,
+    0.2007344514131546,
+    0.16414307057857513,
+    0.12460560351610184,
+    0.1664840430021286
+  ],
+  "external_encoder": false,
+  "teacher": false,
+  "note": "Initialization/ranking copies only this same FusDense classifier. No teacher logits, distillation or external network."
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="53" time="139.726" timestamp="2026-11-07T21:56:33.417115+05:30" hostname="LAPTOP-HP-BINDU"><testcase classname="tests.test_colab" name="test_notebook_cells_are_valid_python_and_have_no_executed_results" time="0.037" /><testcase classname="tests.test_colab" name="test_fixed_split_checks_pixel_identity" time="0.802" /><testcase classname="tests.test_colab" name="test_cuda_request_fails_clearly_without_gpu" time="0.003" /><testcase classname="tests.test_colab" name="test_evaluated_run_cannot_continue_training" time="0.034" /><testcase classname="tests.test_colab" name="test_train_recover_evaluate_export_import_cpu" time="87.808"><failure message="subprocess.CalledProcessError: Command '['C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\.venv\\Scripts\\python.exe', '-m', 'scripts.colab_evaluate', '--data', 'C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\reports\\deep_supervision_20261107\\test_tmp_full\\colab-fixture0\\fixture.zip', '--run-dir', 'C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\reports\\deep_supervision_20261107\\test_tmp_full\\test_train_recover_evaluate_ex0\\run', '--baseline-report', 'C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\reports\\deep_supervision_20261107\\test_tmp_full\\colab-fixture0\\baseline.json', '--baseline-manifest', 'C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\reports\\deep_supervision_20261107\\test_tmp_full\\colab-fixture0\\baseline_manifest.json', '--device', 'cpu', '--threads', '2', '--batch-size', '32']' returned non-zero exit status 1.">colab_fixture = (WindowsPath('C:/Users/bindu/OneDrive - iitr.ac.in/VEDIC RAGA/reports/deep_supervision_20261107/test_tmp_full/colab-fi...eDrive - iitr.ac.in/VEDIC RAGA/reports/deep_supervision_20261107/test_tmp_full/colab-fixture0/baseline_manifest.json'))
+tmp_path = WindowsPath('C:/Users/bindu/OneDrive - iitr.ac.in/VEDIC RAGA/reports/deep_supervision_20261107/test_tmp_full/test_train_recover_evaluate_ex0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000228737C9350&gt;
+
+&gt;   ???
+
+C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\tests\test_colab.py:118: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+input = None, capture_output = True, timeout = 120, check = True
+popenargs = (['C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\.venv\\Scripts\\python.exe', '-m', 'scripts.colab_evaluate', '...ac.in\\VEDIC RAGA\\reports\\deep_supervision_20261107\\test_tmp_full\\colab-fixture0\\fixture.zip', '--run-dir', ...],)
+kwargs = {'cwd': WindowsPath('C:/Users/bindu/OneDrive - iitr.ac.in/VEDIC RAGA'), 'stderr': -1, 'stdout': -1, 'text': True}
+process = &lt;Popen: returncode: 1 args: ['C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC...&gt;
+stdout = ''
+stderr = 'Traceback (most recent call last):\n  File "&lt;frozen runpy&gt;", line 198, in _run_module_as_main\n  File "&lt;frozen runpy&gt;...n\']),\n                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\nKeyError: \'precision\'\n'
+retcode = 1
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output &amp; stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+&gt;               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\.venv\\Scripts\\python.exe', '-m', 'scripts.colab_evaluate', '--data', 'C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\reports\\deep_supervision_20261107\\test_tmp_full\\colab-fixture0\\fixture.zip', '--run-dir', 'C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\reports\\deep_supervision_20261107\\test_tmp_full\\test_train_recover_evaluate_ex0\\run', '--baseline-report', 'C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\reports\\deep_supervision_20261107\\test_tmp_full\\colab-fixture0\\baseline.json', '--baseline-manifest', 'C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\reports\\deep_supervision_20261107\\test_tmp_full\\colab-fixture0\\baseline_manifest.json', '--device', 'cpu', '--threads', '2', '--batch-size', '32']' returned non-zero exit status 1.
+
+.python\cpython-3.11.18-windows-x86_64-none\Lib\subprocess.py:571: CalledProcessError</failure></testcase><testcase classname="tests.test_colab" name="test_importer_rejects_traversal_before_writing" time="0.045" /><testcase classname="tests.test_consistency" name="test_wrong_teacher_returns_finite_zero_with_zero_gradient" time="0.010" /><testcase classname="tests.test_consistency" name="test_distillation_ignores_wrong_teacher_only_not_correct_examples" time="0.015" /><testcase classname="tests.test_consistency" name="test_ema_has_independent_parameters_and_copies_normalization_buffers" time="0.018" /><testcase classname="tests.test_consistency" name="test_training_teacher_indices_remain_aligned_after_shuffle" time="0.020" /><testcase classname="tests.test_context" name="test_weather_contribution_and_invalid_input" time="0.167" /><testcase classname="tests.test_context" name="test_body_demonstration_requires_explicit_opt_in" time="3.823" /><testcase classname="tests.test_context" name="test_missing_reference_retains_features_without_inference" time="0.120" /><testcase classname="tests.test_context" name="test_unsynchronized_and_mixed_signals_are_not_joint_evidence" time="0.002" /><testcase classname="tests.test_context" name="test_uncertain_neutral_is_not_called_at_ease" time="0.018" /><testcase classname="tests.test_context" name="test_city_lookup_parses_provider_without_network" time="0.002" /><testcase classname="tests.test_context" name="test_explicit_goal_overrides_automatic_body_goal" time="0.140" /><testcase classname="tests.test_deep_supervision" name="test_companion_gradient_reaches_fused_path_not_spatial_shortcuts" time="0.021" /><testcase classname="tests.test_deep_supervision" name="test_shortcut_dropout_keeps_fused_features_and_eval_is_unmodified" time="0.019" /><testcase classname="tests.test_deep_supervision" name="test_mixed_ce_preserves_both_supervised_targets_and_gradient" time="0.005" /><testcase classname="tests.test_deep_supervision" name="test_precision_regression_cannot_qualify_despite_higher_accuracy" time="0.001" /><testcase classname="tests.test_deep_supervision" name="test_strict_integration_retains_current_model_when_precision_regresses" time="0.005" /><testcase classname="tests.test_deep_supervision" name="test_real_fusdense_companion_updates_attention_without_inference_change" time="0.514" /><testcase classname="tests.test_experiment_provenance" name="test_experiment_cannot_claim_active_without_matching_weights[False]" time="0.469" /><testcase classname="tests.test_experiment_provenance" name="test_experiment_cannot_claim_active_without_matching_weights[True]" time="0.301" /><testcase classname="tests.test_finetuning" name="test_frozen_bn_keeps_references_but_learns_affine_and_keeps_dropout" time="0.033" /><testcase classname="tests.test_finetuning" name="test_spatial_upgrade_preserves_logits_then_learns_new_path" time="1.346" /><testcase classname="tests.test_finetuning" name="test_dense_spatial_upgrade_preserves_predictions_and_learns_new_features" time="0.916" /><testcase classname="tests.test_finetuning" name="test_optional_baseline_missing_reports_clean_error" time="0.029" /><testcase classname="tests.test_pipeline" name="test_catalog_counts_and_missing_metadata" time="0.111" /><testcase classname="tests.test_pipeline" name="test_feedback_personalization_and_persistence" time="0.365" /><testcase classname="tests.test_pipeline" name="test_dislike_lowers_score" time="0.178" /><testcase classname="tests.test_pipeline" name="test_listening_and_url_validation" time="0.107" /><testcase classname="tests.test_pipeline" name="test_invalid_recommendations[payload0]" time="0.065" /><testcase classname="tests.test_pipeline" name="test_invalid_recommendations[payload1]" time="0.063" /><testcase classname="tests.test_pipeline" name="test_invalid_recommendations[payload2]" time="0.055" /><testcase classname="tests.test_pipeline" name="test_invalid_recommendations[payload3]" time="0.064" /><testcase classname="tests.test_pipeline" name="test_invalid_feedback" time="0.088" /><testcase classname="tests.test_pipeline" name="test_signals_and_multimodal" time="0.315" /><testcase classname="tests.test_pipeline" name="test_hrv_known_values" time="0.003" /><testcase classname="tests.test_pipeline" name="test_signal_validation" time="0.074" /><testcase classname="tests.test_pipeline" name="test_image_validation" time="0.980" /><testcase classname="tests.test_pipeline" name="test_fusdense_forward_backward" time="0.441" /><testcase classname="tests.test_pipeline" name="test_fdcf_focus_and_gradient" time="0.040" /><testcase classname="tests.test_pipeline" name="test_fusdense_v2_spatial_classifier_and_attention_gradients" time="0.566" /><testcase classname="tests.test_pipeline" name="test_checkpoint_cache_refreshes_after_atomic_replacement" time="0.684" /><testcase classname="tests.test_pipeline" name="test_research_evidence_refuses_mismatched_metrics" time="0.472" /><testcase classname="tests.test_pipeline" name="test_shared_inference_flip_and_temperature" time="0.012" /><testcase classname="tests.test_pipeline" name="test_forget_profile" time="0.275" /><testcase classname="tests.test_pipeline" name="test_fer_zip_split_limit_and_images" time="0.146" /><testcase classname="tests.test_pipeline" name="test_fer_csv_official_usage_split" time="0.165" /><testcase classname="tests.test_real_physiology" name="test_recordings_need_duration_and_nonflat_data" time="4.800" /><testcase classname="tests.test_real_physiology" name="test_annotations_do_not_invent_seconds_or_labels" time="0.007" /></testsuite></testsuites>

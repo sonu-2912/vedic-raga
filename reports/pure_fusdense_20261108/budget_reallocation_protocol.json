@@ -1,0 +1,7 @@
+{
+  "declared_during_v4_epoch": 4,
+  "stop_after_completed_epochs": 6,
+  "reason": "Allocate bounded CPUtime to a native residual-dense backbone variant, rather than only loss-only continuation. Preserve all completed weights/reports; no partial next epoch may be counted.",
+  "next_recipe": "reports/pure_native_residual_20261108",
+  "test_accessed": false
+}

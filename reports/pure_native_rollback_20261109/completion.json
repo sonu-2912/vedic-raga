@@ -1,0 +1,11 @@
+{
+  "reported": true,
+  "performance_goal_achieved": false,
+  "app_model_ppt_unchanged": true,
+  "decision": {
+    "eligible": false,
+    "test_evaluated": false,
+    "installed": false,
+    "reason": "None of four same-network native parameter rollback candidates met every unchanged class/aggregate validation gate. App/PPT unchanged."
+  }
+}

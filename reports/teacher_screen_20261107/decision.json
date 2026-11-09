@@ -1,0 +1,8 @@
+{
+  "decision": "reject for distillation or app replacement",
+  "validation_accuracy": 0.4345088161209068,
+  "reason": "Below predeclared screen thresholds, poor cross-domain rare-class recognition, unknown foreign training overlap",
+  "test_accessed": false,
+  "used_to_train_fusdense": false,
+  "onnxruntime_installed": false
+}

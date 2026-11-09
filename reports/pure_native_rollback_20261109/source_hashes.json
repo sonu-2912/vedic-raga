@@ -1,0 +1,9 @@
+{
+  "colab_evaluate.py": "827753659834005c5d65d1d11906223e15c40ccd694f9ba1b8bc1d06b943237b",
+  "compact_fusdense.py": "4e8e628cd0be0605bacaa0a4325056b697185ac558cd84d2f73def87084360c5",
+  "compact_residual_fusdense.py": "b89229b81c895f9afe3247cf0ae1580de28c9fb8f6649f58e75509e214b5e113",
+  "models.py": "302a705e16fc80c59fc421e4d51249e30bdad7fddacb271910028b90891e568b",
+  "native_parameter_rollback.py": "a64d495a0f5de30749155fb02db48e971fffe65df8157aa0af2100019eff7f78",
+  "recall_recovery_common.py": "c67dccac9f512a55ebc7369e00e10c131fe78b503985ae8ead8c19f4c10382b4",
+  "run_native_rollback.py": "115140ef2fe9ef648e894108bb815a4b3f73a40d1e1e3361b0012cc63c105f32"
+}

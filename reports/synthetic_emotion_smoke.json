@@ -1,0 +1,160 @@
+{
+  "kind": "SYNTHETIC ENGINEERING TEST ONLY - artificial textures, not FER2013 or faces",
+  "seed": 42,
+  "train_n": 21,
+  "test_n": 14,
+  "steps": 16,
+  "seconds": 12.370635200000834,
+  "parameters": 163744,
+  "accuracy": 0.14285714285714285,
+  "macro_precision": 0.02040816326530612,
+  "macro_recall": 0.14285714285714285,
+  "macro_f1": 0.03571428571428571,
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ]
+  ],
+  "curves": [
+    {
+      "step": 1,
+      "loss": 1.9555140733718872,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 2,
+      "loss": 1.8973079919815063,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 3,
+      "loss": 1.8101896047592163,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 4,
+      "loss": 1.6716135740280151,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 5,
+      "loss": 1.4855586290359497,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 6,
+      "loss": 1.391313910484314,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 7,
+      "loss": 1.2193171977996826,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 8,
+      "loss": 1.0480566024780273,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 9,
+      "loss": 0.938764214515686,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 10,
+      "loss": 0.738270103931427,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 11,
+      "loss": 0.7249542474746704,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 12,
+      "loss": 0.47742539644241333,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 13,
+      "loss": 0.5177453756332397,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 14,
+      "loss": 0.5305086374282837,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 15,
+      "loss": 0.4826693832874298,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    },
+    {
+      "step": 16,
+      "loss": 0.39897653460502625,
+      "synthetic_holdout_accuracy": 0.1428571492433548
+    }
+  ]
+}

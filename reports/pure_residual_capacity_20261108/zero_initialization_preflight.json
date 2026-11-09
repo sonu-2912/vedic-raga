@@ -1,0 +1,9 @@
+{
+  "validation_faces": 64,
+  "maximum_logit_error": 0.0,
+  "argmax_equal": true,
+  "source_full_checkpoint_sha256": "f8611fd16402ab003ffbceec4a1d316f24f981b7f74aff7671d02aa22b72d179",
+  "source_kind": "EMA",
+  "parameters": 589456,
+  "test_images_read": false
+}

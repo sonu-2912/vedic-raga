@@ -1,0 +1,21 @@
+{
+  "report": "PURE_RECALL_RECOVERY_RESULTS.md",
+  "protected_artifacts_unchanged": true,
+  "decision": {
+    "eligible": false,
+    "test_evaluated": false,
+    "installed": false,
+    "reason": "No validation checkpoint recovered all requested classes while retaining disgust and aggregate metrics. App/PPT unchanged."
+  }
+}
+{
+  "report": "C:\\Users\\bindu\\OneDrive - iitr.ac.in\\VEDIC RAGA\\PURE_RECALL_RECOVERY_RESULTS.md",
+  "protected_unchanged": true,
+  "tests": {
+    "tests": 94.0,
+    "failures": 0.0,
+    "errors": 0.0,
+    "skipped": 0.0,
+    "time": 129.343
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "checkpoint_sha256": "9a733a87fc5ec0db544b74504d60ca9ea3d3c94c3648d85e61e5397ca10d43ed",
+  "split": "fixed validation only",
+  "n": 3970,
+  "minimum_confidence": 0.7,
+  "minimum_margin": 0.2,
+  "minimum_class_f1": 0.6,
+  "minimum_class_recall": 0.6,
+  "class_report": {
+    "angry": {
+      "precision": 0.4913294797687861,
+      "recall": 0.45454545454545453,
+      "f1-score": 0.4722222222222222,
+      "support": 561.0
+    },
+    "disgust": {
+      "precision": 0.5,
+      "recall": 0.22,
+      "f1-score": 0.3055555555555556,
+      "support": 50.0
+    },
+    "fear": {
+      "precision": 0.45549738219895286,
+      "recall": 0.46774193548387094,
+      "f1-score": 0.46153846153846156,
+      "support": 558.0
+    },
+    "happy": {
+      "precision": 0.7619047619047619,
+      "recall": 0.8260038240917782,
+      "f1-score": 0.7926605504587156,
+      "support": 1046.0
+    },
+    "sad": {
+      "precision": 0.46875,
+      "recall": 0.3488372093023256,
+      "f1-score": 0.4,
+      "support": 688.0
+    },
+    "surprise": {
+      "precision": 0.677115987460815,
+      "recall": 0.6171428571428571,
+      "f1-score": 0.6457399103139013,
+      "support": 350.0
+    },
+    "neutral": {
+      "precision": 0.48484848484848486,
+      "recall": 0.602510460251046,
+      "f1-score": 0.5373134328358209,
+      "support": 717.0
+    },
+    "accuracy": 0.5740554156171285,
+    "macro avg": {
+      "precision": 0.548492299454543,
+      "recall": 0.505254534402476,
+      "f1-score": 0.5164328761320968,
+      "support": 3970.0
+    },
+    "weighted avg": {
+      "precision": 0.5689880900799331,
+      "recall": 0.5740554156171285,
+      "f1-score": 0.5675865344372473,
+      "support": 3970.0
+    }
+  },
+  "eligible_classes": [
+    "happy",
+    "surprise"
+  ],
+  "limitation": "Operational abstention only; full unfiltered test metrics are reported separately."
+}

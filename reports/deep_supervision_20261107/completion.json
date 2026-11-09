@@ -1,0 +1,9 @@
+{
+  "completed_additional_epochs": 5,
+  "validation_improved": false,
+  "best_score": 0.5427376267859443,
+  "test_accessed": false,
+  "synthetic": false,
+  "parameters_trained": "Full emotion path plus training-only fused companion; no new inference parameters",
+  "budget_check": "Completed epoch boundaries; elapsed time can overshoot"
+}

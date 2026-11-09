@@ -1,0 +1,6 @@
+{
+  "train_accuracy": 0.9318810364634302,
+  "validation_accuracy": 0.5841309823677582,
+  "gap": 0.34775005409567206,
+  "deployed": false
+}

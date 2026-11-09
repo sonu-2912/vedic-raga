@@ -1,0 +1,5 @@
+{
+  "selected_run": "reports/consistency_long_20261107",
+  "source_best_sha256": "ffd96fba3f471e130055bc50c20b07a4b49f250d5729cd66fff21bda27fe472d",
+  "reason": "Validation selection ended before any new test. No source-run continuation or alternate candidate testing after test access."
+}

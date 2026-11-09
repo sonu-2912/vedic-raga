@@ -1,0 +1,18 @@
+{
+  "initial_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "method": "Frozen ImageNet1K DenseNet121 features add a trainable residual emotion head to unchanged FusDenseNet v4 logits. This is a hybrid project extension, not pure FusDenseNet or exact author reproduction.",
+  "train_counts": 23503,
+  "validation_count": 3970,
+  "epochs_max": 20,
+  "patience": 8,
+  "dropout": 0.5,
+  "learning_rate": 0.001,
+  "weight_decay": 0.01,
+  "CE_class_weight_power": 0.25,
+  "seed": 906,
+  "backbone_training": "Both feature extractors frozen; ONLY new LayerNorm/1024->128->7 residual head trained. No FER-pretrained teacher.",
+  "preprocessing": "CPU adaptation: grayscale replicated RGB, resize128/center112, official ImageNet mean/std. This differs from the source224-pixel recipe.",
+  "selection": "Same validation accuracy+disgust recall strict gains, macro/disgustF1 floors; .5accuracy+.3macroF1+.2disgustF1.",
+  "test": "No test opened; at most one final candidate will be frozen across this and the v5spatial run before one descriptive historically inspected-test evaluation.",
+  "disclosure": "Added after v5epoch2validation and failed translation screen, before any new test access. Validation repeatedly reused; not preregistered at project start or fresh confirmatory evidence."
+}

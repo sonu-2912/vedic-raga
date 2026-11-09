@@ -1,0 +1,25 @@
+[
+  {
+    "epoch": 154,
+    "recipe_epoch": 1,
+    "phase": "pure_capacity_head",
+    "recipe": "coarse128_common1.2",
+    "kind": "EMA",
+    "loss": 1.6906657011941184,
+    "CE": 1.4564949149391182,
+    "retention": 0.9366831360069006,
+    "accuracy": 0.47306726800833937,
+    "training_accuracy_kind": "Unmixed normalized TRAIN features, deterministic classifier",
+    "val_loss": 1.3296259641647339,
+    "val_accuracy": 0.48614609571788414,
+    "val_macro_f1": 0.4067379032290691,
+    "val_disgust_recall": 0.5,
+    "val_disgust_f1": 0.11467889908256881,
+    "val_happy_recall": 0.7782026768642447,
+    "val_surprise_recall": 0.6942857142857143,
+    "val_neutral_recall": 0.5634588563458857,
+    "feasibility_objective": -1.6409743232602523,
+    "eligible": false,
+    "seconds": 1655.342049400002
+  }
+]

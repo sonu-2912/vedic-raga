@@ -1,0 +1,7 @@
+{
+  "completed_additional_epochs": 2,
+  "best_macro_f1": 0.4569148743780119,
+  "test_accessed": false,
+  "synthetic": false,
+  "stop": "Two completed ordinary-BN epochs regressed on validation; redirected compute to frozen-BN recipe. Any partial next epoch discarded."
+}

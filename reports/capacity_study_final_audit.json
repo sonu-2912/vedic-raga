@@ -1,0 +1,61 @@
+{
+  "completed_at": "2026-11-09T01:19:30.315065+05:30",
+  "performance_goal_achieved": false,
+  "tests": {
+    "tests": 104.0,
+    "failures": 0.0,
+    "errors": 0.0,
+    "skipped": 0.0,
+    "time": 129.711
+  },
+  "original_files_unchanged": 55,
+  "protected_unchanged": {
+    "models/fusdense.pt": true,
+    "reports/emotion_evaluation.json": true,
+    "reports/latest_emotion_experiment.json": true,
+    "frontend/src/research/TrainingEvidence.jsx": true,
+    "backend/main.py": true,
+    "output/RagaMoodSync_Research_Pure_Orientation_Repair_Reviewed_v3.pptx": true,
+    "output/RagaMoodSync_Research.pptx": true,
+    "backend/models.py": true
+  },
+  "ppt_slides": 13,
+  "model_sha256": "f0082aff0511c40d8dff89fc03bbea965b416db55a0f771701efaa38f490c548",
+  "ppt_sha256": "ab70551273d5cf0c4df21abab2c2805ca8fe7d6a0a95cc4b9d6a157774615cdb",
+  "live_app_matches": true,
+  "new_test_evaluated": false,
+  "classifier_trial_epochs": 299,
+  "full_network_epochs": 10,
+  "decisions": {
+    "pure_capacity_20261108": {
+      "eligible": false,
+      "test_evaluated": false,
+      "installed": false,
+      "reason": "No compact pure FusDenseNet validation checkpoint recovered all requested classes while retaining disgust and aggregate metrics. App/PPT unchanged."
+    },
+    "pure_capacity_bn_20261108": {
+      "eligible": false,
+      "test_evaluated": false,
+      "installed": false,
+      "reason": "None of three TRAIN-only BN-recalibrated pure models passed every unchanged class and aggregate validation gate. App/PPT unchanged."
+    },
+    "pure_residual_capacity_20261108": {
+      "eligible": false,
+      "test_evaluated": false,
+      "installed": false,
+      "reason": "No native residual compact validation checkpoint recovered all requested classes while retaining disgust and aggregate metrics. App/PPT unchanged."
+    },
+    "pure_native_rollback_20261109": {
+      "eligible": false,
+      "test_evaluated": false,
+      "installed": false,
+      "reason": "None of four same-network native parameter rollback candidates met every unchanged class/aggregate validation gate. App/PPT unchanged."
+    },
+    "pure_fine_head_20261109": {
+      "eligible": false,
+      "test_evaluated": false,
+      "installed": false,
+      "reason": "No moderate fine-spatial native classifier checkpoint recovered all requested classes while retaining disgust and aggregate metrics. App/PPT unchanged."
+    }
+  }
+}

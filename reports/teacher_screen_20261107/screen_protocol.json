@@ -1,0 +1,12 @@
+{
+  "purpose": "Separate validation-only teacher feasibility, not FusDenseNet or clean benchmark result",
+  "teacher_must_exceed": "Before considering distillation: validation accuracy at least baseline+.02, macroF1 at least baseline+.02, disgust recall/F1 no lower. Training overlap remains unresolved and must be disclosed.",
+  "baseline": {
+    "accuracy": 0.580352644836272,
+    "macro_f1": 0.5224833862973063,
+    "disgust_recall": 0.28,
+    "disgust_f1": 0.30434782608695654
+  },
+  "test_accessed": false,
+  "not_an_app_replacement": true
+}

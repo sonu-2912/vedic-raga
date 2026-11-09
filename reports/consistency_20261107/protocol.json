@@ -1,0 +1,20 @@
+{
+  "initial_checkpoint_sha256": "9a733a87fc5ec0db544b74504d60ca9ea3d3c94c3648d85e61e5397ca10d43ed",
+  "split": "Fixed23503 training/3970 validation pixel-disjoint manifests; no test during training",
+  "method": "Full emotion-path gradient fine-tuning with training-only small affine/brightness/contrast augmentation, distinct backbone/head learning rates, cached training-only self-distillation and EMA. Architecture unchanged.",
+  "epochs_max": 8,
+  "patience": 4,
+  "max_minutes": 90,
+  "backbone_lr": 1e-05,
+  "classifier_lr": 5e-05,
+  "class_weight_power": 0.4,
+  "distill_weight": 0.15,
+  "distill_temperature": 2.0,
+  "EMA": "warm-start decay min(.995,(1+updates)/(10+updates)); batchnorm references fixed",
+  "loss": "Weighted CE label smoothing .02 for every training face. KL regularization only where the frozen teacher correctly labels a training face. No training example is excluded from CE.",
+  "dropout_during_training": 0.45,
+  "selection": "Validation-only score .4 accuracy+.6 macro F1, requiring accuracy,macro F1,disgust recall/F1 no lower than initial raw validation. Compare student and EMA each epoch.",
+  "test": "One frozen selected candidate only if validation improves; all6561 retained test faces/all7 labels/errors; historical test not fresh. No80% promise.",
+  "teacher": "Previously deployed project FusDenseNet; no external teacher model or new dataset",
+  "physiology": "No new aligned face/physiology data; no physiological performance improvement claimed."
+}

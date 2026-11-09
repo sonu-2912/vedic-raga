@@ -1,0 +1,93 @@
+{
+  "status": "not_evaluated",
+  "reason": "Only 2 of the predeclared 12 released participants had official .set dimensions matching their referenced float32 .fdt lengths. Insufficient for the planned participant-and-stimulus-held-out evaluation. No replacement participants or guessed channel/sample layouts were used. Signal acquisition stopped before usable ranges completed.",
+  "planned_participants": 12,
+  "dimension_consistent_participants": 2,
+  "planned_windows": 19,
+  "planned_signal_bytes": 150480000,
+  "excluded": [
+    {
+      "subject": "sub-mit007",
+      "reason": "Official header dimensions do not match referenced float32 FDT length",
+      "expected_bytes": 229048512,
+      "reference_bytes": 74643816
+    },
+    {
+      "subject": "sub-mit014",
+      "reason": "Official header dimensions do not match referenced float32 FDT length",
+      "expected_bytes": 218988528,
+      "reference_bytes": 74429688
+    },
+    {
+      "subject": "sub-mit017",
+      "reason": "Official header dimensions do not match referenced float32 FDT length",
+      "expected_bytes": 214150464,
+      "reference_bytes": 74591272
+    },
+    {
+      "subject": "sub-mit022",
+      "reason": "Official header dimensions do not match referenced float32 FDT length",
+      "expected_bytes": 217943088,
+      "reference_bytes": 74397672
+    },
+    {
+      "subject": "sub-mit023",
+      "reason": "Official header dimensions do not match referenced float32 FDT length",
+      "expected_bytes": 213766608,
+      "reference_bytes": 96318712
+    },
+    {
+      "subject": "sub-mit024",
+      "reason": "Official header dimensions do not match referenced float32 FDT length",
+      "expected_bytes": 229890672,
+      "reference_bytes": 96647144
+    },
+    {
+      "subject": "sub-mit032",
+      "reason": "Official header dimensions do not match referenced float32 FDT length",
+      "expected_bytes": 203113680,
+      "reference_bytes": 96188392
+    },
+    {
+      "subject": "sub-mit035",
+      "reason": "Official header dimensions do not match referenced float32 FDT length",
+      "expected_bytes": 241848816,
+      "reference_bytes": 96141312
+    },
+    {
+      "subject": "sub-mit039",
+      "reason": "Official header dimensions do not match referenced float32 FDT length",
+      "expected_bytes": 189509232,
+      "reference_bytes": 132643928
+    },
+    {
+      "subject": "sub-mit040",
+      "reason": "Official header dimensions do not match referenced float32 FDT length",
+      "expected_bytes": 211472976,
+      "reference_bytes": 133003624
+    }
+  ],
+  "synthetic": false,
+  "metrics": null,
+  "protocol": {
+    "dataset": "DENS ds003751; official OpenNeuro data",
+    "participants": "First 12 lexicographically ordered released participant folders; no score-based subject selection",
+    "task": "Participant-rated valence: low <=4, high >=6; intermediate ratings excluded",
+    "window": "Centered exactly 60s inside stimulus; no padding or cross-trial extension",
+    "timing": "EEGLAB event latencies are 1-based samples, checked against source ISO event time differences and header sampling rate",
+    "evaluation": "4x4 crossed participant/stimulus held-out folds; training excludes every held-out participant AND every held-out video ID",
+    "models": "Fixed fold-fitted StandardScaler + balanced LogisticRegression C=1; EEG, cardiac, fusion and training-majority baseline",
+    "teacher": null,
+    "game_data": false,
+    "licence": "dataset_description says CC0; README/LICENSE says ODbL/DbCL. Preserve both and use more protective attribution/share-alike conditions for derived data",
+    "access": "Public official repository/bucket, no credentials or signed EULA",
+    "partial_signal_integrity": "Exact HTTP byte range and local SHA256; no full-FDT MD5 verification claim",
+    "seed": 94,
+    "limitations": [
+      "Small 12-participant subset",
+      "Physiological and annotation artifacts remain possible",
+      "60s RR features are not five-minute clinical HRV",
+      "No facial FER labels, disgust target or raga-response outcomes"
+    ]
+  }
+}

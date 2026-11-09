@@ -1,0 +1,208 @@
+{
+  "selected": {
+    "name": "spatial_head_run",
+    "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\spatial_head_run\\best.pt",
+    "sha256": "8186e685fc29cb2813ca2be2285280e747ed2a52a22fa3b5bddab5b23f53aa97",
+    "accuracy": 0.5355163727959698,
+    "macro_f1": 0.4739888394154386,
+    "disgust_f1": 0.26373626373626374,
+    "disgust_recall": 0.24,
+    "epoch": 78,
+    "eligible": true,
+    "selection_score": 0.4214256954956449
+  },
+  "all_candidates": [
+    {
+      "name": "spatial_head_run",
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\spatial_head_run\\best.pt",
+      "sha256": "8186e685fc29cb2813ca2be2285280e747ed2a52a22fa3b5bddab5b23f53aa97",
+      "accuracy": 0.5355163727959698,
+      "macro_f1": 0.4739888394154386,
+      "disgust_f1": 0.26373626373626374,
+      "disgust_recall": 0.24,
+      "epoch": 78,
+      "eligible": true,
+      "selection_score": 0.4214256954956449
+    },
+    {
+      "name": "spatial_flip_head_run",
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\spatial_flip_head_run\\best.pt",
+      "sha256": "4cc7e9597ea4ee11e411ba9bf35c59f4504be3a4ee8fe9906040fb8bca61b765",
+      "accuracy": 0.5355163727959698,
+      "macro_f1": 0.4739888394154386,
+      "disgust_f1": 0.26373626373626374,
+      "disgust_recall": 0.24,
+      "epoch": 78,
+      "eligible": true,
+      "selection_score": 0.4214256954956449
+    },
+    {
+      "name": "spatial_disgust_head_run",
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\spatial_disgust_head_run\\best.pt",
+      "sha256": "6c45f8e9e02c159c95b247adbb484ba233b040d2d14c0b59ad0c2d12ff84bb8f",
+      "accuracy": 0.5355163727959698,
+      "macro_f1": 0.4739888394154386,
+      "disgust_f1": 0.26373626373626374,
+      "disgust_recall": 0.24,
+      "epoch": 78,
+      "eligible": true,
+      "selection_score": 0.4214256954956449
+    },
+    {
+      "name": "spatial_full_run",
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\spatial_full_run\\best.pt",
+      "sha256": "fb7de82c55ea4f4c98e9c38bee494c7a88c5ebdeec008bbb1a8f50aed1879ca5",
+      "accuracy": 0.5355163727959698,
+      "macro_f1": 0.4739888394154386,
+      "disgust_f1": 0.26373626373626374,
+      "disgust_recall": 0.24,
+      "epoch": 78,
+      "eligible": true,
+      "selection_score": 0.4214256954956449
+    },
+    {
+      "name": "spatial_full_run/000-29bf8466b3da",
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\spatial_full_run\\epoch_snapshots\\000-29bf8466b3da.pt",
+      "sha256": "29bf8466b3dad63149010d8780ce3b07306e422c863b4adef490039b8bc64962",
+      "accuracy": 0.5319899320602417,
+      "macro_f1": 0.46166667644646836,
+      "disgust_f1": 0.21176470588235294,
+      "disgust_recall": 0.18,
+      "epoch": 89,
+      "eligible": false,
+      "selection_score": 0.3991911838054395
+    },
+    {
+      "name": "spatial_full_run/001-4304785e3d5c",
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\spatial_full_run\\epoch_snapshots\\001-4304785e3d5c.pt",
+      "sha256": "4304785e3d5c09f251912e68f3d98b3adc1ff006393984112b9d2b6b581e717c",
+      "accuracy": 0.5375314950942993,
+      "macro_f1": 0.46790341925496853,
+      "disgust_f1": 0.24444444444444444,
+      "disgust_recall": 0.22,
+      "epoch": 90,
+      "eligible": true,
+      "selection_score": 0.41203867555233753
+    },
+    {
+      "name": "spatial_full_run/002-9f68cbeb88b7",
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\spatial_full_run\\epoch_snapshots\\002-9f68cbeb88b7.pt",
+      "sha256": "9f68cbeb88b7016c47b5cd35eca1e634e2bab664eb28da73e3dd0eda738f9623",
+      "accuracy": 0.5264483690261841,
+      "macro_f1": 0.4569925894509443,
+      "disgust_f1": 0.25862068965517243,
+      "disgust_recall": 0.3,
+      "epoch": 91,
+      "eligible": false,
+      "selection_score": 0.4073996145020013
+    },
+    {
+      "name": "spatial_full_run/003-7ce944c6cc93",
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\spatial_full_run\\epoch_snapshots\\003-7ce944c6cc93.pt",
+      "sha256": "7ce944c6cc9371fc9542600e3761b2749a749a42d696294f68d20f44e5d2c0f8",
+      "accuracy": 0.5234256982803345,
+      "macro_f1": 0.45783215701799806,
+      "disgust_f1": 0.25,
+      "disgust_recall": 0.28,
+      "epoch": 92,
+      "eligible": false,
+      "selection_score": 0.4058741177634986
+    },
+    {
+      "name": "spatial_full_run/004-04d9a52f247a",
+      "path": "C:\\Users\\bindu\\OneDrive\\Desktop\\VEDIC RAGA\\reports\\spatial_full_run\\epoch_snapshots\\004-04d9a52f247a.pt",
+      "sha256": "04d9a52f247a4e504b802e25630d25231e235b1c74d99cbdebc58a314c83d672",
+      "accuracy": 0.5324937105178833,
+      "macro_f1": 0.4645462834670923,
+      "disgust_f1": 0.26373626373626374,
+      "disgust_recall": 0.24,
+      "epoch": 93,
+      "eligible": true,
+      "selection_score": 0.41434377853438514
+    },
+    {
+      "name": "spatial_full_run/last_natural_bn",
+      "path": "reports\\spatial_full_run\\natural_bn_candidates\\last_natural_bn.pt",
+      "sha256": "ed2bda87c4695c0293d8b05568a76048ef4c4508f763470cfd04875c95e251e7",
+      "accuracy": 0.5297229219143577,
+      "macro_f1": 0.4591841826401903,
+      "disgust_f1": 0.23255813953488372,
+      "disgust_recall": 0.2,
+      "epoch": 93,
+      "eligible": true,
+      "selection_score": 0.4025276718638636
+    },
+    {
+      "name": "spatial_full_run/last3_average_natural_bn",
+      "path": "reports\\spatial_full_run\\natural_bn_candidates\\last3_average_natural_bn.pt",
+      "sha256": "499c298c113c796240618748c64b9f4434fa4e66593d07463c18cc8c385fd255",
+      "accuracy": 0.5335012594458438,
+      "macro_f1": 0.4599601801898408,
+      "disgust_f1": 0.21739130434782608,
+      "disgust_recall": 0.2,
+      "epoch": 93,
+      "eligible": false,
+      "selection_score": 0.39931796122933716
+    }
+  ],
+  "test_accessed": false,
+  "rule": ".75 validation macro F1 + .25 validation disgust F1, requiring accuracy/macro F1/disgust F1 no lower than initial raw validation",
+  "baseline_validation": {
+    "angry": {
+      "precision": 0.45664739884393063,
+      "recall": 0.42245989304812837,
+      "f1-score": 0.4388888888888889,
+      "support": 561.0
+    },
+    "disgust": {
+      "precision": 0.3103448275862069,
+      "recall": 0.18,
+      "f1-score": 0.22784810126582278,
+      "support": 50.0
+    },
+    "fear": {
+      "precision": 0.4117647058823529,
+      "recall": 0.2007168458781362,
+      "f1-score": 0.26987951807228916,
+      "support": 558.0
+    },
+    "happy": {
+      "precision": 0.7551569506726458,
+      "recall": 0.8049713193116634,
+      "f1-score": 0.7792688570106432,
+      "support": 1046.0
+    },
+    "sad": {
+      "precision": 0.3535714285714286,
+      "recall": 0.4316860465116279,
+      "f1-score": 0.3887434554973822,
+      "support": 688.0
+    },
+    "surprise": {
+      "precision": 0.5435294117647059,
+      "recall": 0.66,
+      "f1-score": 0.5961290322580645,
+      "support": 350.0
+    },
+    "neutral": {
+      "precision": 0.4805194805194805,
+      "recall": 0.5160390516039052,
+      "f1-score": 0.4976462676529926,
+      "support": 717.0
+    },
+    "accuracy": 0.528463476070529,
+    "macro avg": {
+      "precision": 0.473076314834393,
+      "recall": 0.4594104509076374,
+      "f1-score": 0.4569148743780119,
+      "support": 3970.0
+    },
+    "weighted avg": {
+      "precision": 0.521254461693691,
+      "recall": 0.528463476070529,
+      "f1-score": 0.5179420906365605,
+      "support": 3970.0
+    }
+  },
+  "limitation": "Repeated validation selection can overfit, especially the 50 disgust validation faces. Test historically inspected, not fresh."
+}

@@ -1,0 +1,121 @@
+{
+  "source_checkpoint_sha256": "9a733a87fc5ec0db544b74504d60ca9ea3d3c94c3648d85e61e5397ca10d43ed",
+  "training_n": 23503,
+  "training_inference": "Full unfiltered fixed training faces; mean original/flip logits, matching deployed inference argmax",
+  "training_classification_report": {
+    "angry": {
+      "precision": 0.7054289544235925,
+      "recall": 0.6419640134187252,
+      "f1-score": 0.672201820213955,
+      "support": 3279.0
+    },
+    "disgust": {
+      "precision": 0.9454545454545454,
+      "recall": 0.6303030303030303,
+      "f1-score": 0.7563636363636363,
+      "support": 330.0
+    },
+    "fear": {
+      "precision": 0.6323054331864905,
+      "recall": 0.6453836930455635,
+      "f1-score": 0.638777629431835,
+      "support": 3336.0
+    },
+    "happy": {
+      "precision": 0.8581995593327038,
+      "recall": 0.9029640668984932,
+      "f1-score": 0.8800129105139999,
+      "support": 6039.0
+    },
+    "sad": {
+      "precision": 0.7422486689633574,
+      "recall": 0.586924219910847,
+      "f1-score": 0.6555109943299682,
+      "support": 4038.0
+    },
+    "surprise": {
+      "precision": 0.8625882352941177,
+      "recall": 0.7877094972067039,
+      "f1-score": 0.8234501347708895,
+      "support": 2327.0
+    },
+    "neutral": {
+      "precision": 0.6344312523937189,
+      "recall": 0.7975445353875782,
+      "f1-score": 0.70669795221843,
+      "support": 4154.0
+    },
+    "accuracy": 0.7418201931668298,
+    "macro avg": {
+      "precision": 0.7686652355783609,
+      "recall": 0.713256150881563,
+      "f1-score": 0.7332878682632449,
+      "support": 23503.0
+    },
+    "weighted avg": {
+      "precision": 0.7470114443569863,
+      "recall": 0.7418201931668298,
+      "f1-score": 0.7402397591410387,
+      "support": 23503.0
+    }
+  },
+  "validation_classification_report": {
+    "angry": {
+      "precision": 0.4913294797687861,
+      "recall": 0.45454545454545453,
+      "f1-score": 0.4722222222222222,
+      "support": 561.0
+    },
+    "disgust": {
+      "precision": 0.5,
+      "recall": 0.22,
+      "f1-score": 0.3055555555555556,
+      "support": 50.0
+    },
+    "fear": {
+      "precision": 0.45549738219895286,
+      "recall": 0.46774193548387094,
+      "f1-score": 0.46153846153846156,
+      "support": 558.0
+    },
+    "happy": {
+      "precision": 0.7619047619047619,
+      "recall": 0.8260038240917782,
+      "f1-score": 0.7926605504587156,
+      "support": 1046.0
+    },
+    "sad": {
+      "precision": 0.46875,
+      "recall": 0.3488372093023256,
+      "f1-score": 0.4,
+      "support": 688.0
+    },
+    "surprise": {
+      "precision": 0.677115987460815,
+      "recall": 0.6171428571428571,
+      "f1-score": 0.6457399103139013,
+      "support": 350.0
+    },
+    "neutral": {
+      "precision": 0.48484848484848486,
+      "recall": 0.602510460251046,
+      "f1-score": 0.5373134328358209,
+      "support": 717.0
+    },
+    "accuracy": 0.5740554156171285,
+    "macro avg": {
+      "precision": 0.548492299454543,
+      "recall": 0.505254534402476,
+      "f1-score": 0.5164328761320968,
+      "support": 3970.0
+    },
+    "weighted avg": {
+      "precision": 0.5689880900799331,
+      "recall": 0.5740554156171285,
+      "f1-score": 0.5675865344372473,
+      "support": 3970.0
+    }
+  },
+  "validation_accuracy": 0.5740554156171285,
+  "interpretation": "The training/validation gap is evidence consistent with overfitting; it does not isolate any causal factor. Training scores are not validation/test performance."
+}

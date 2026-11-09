@@ -1,0 +1,9 @@
+{
+  "declared_utc": "2026-11-08T12:06:22.512573+00:00",
+  "observed_completed_epochs_at_declaration": 4,
+  "conditional_cap": 6,
+  "condition": "Only if no validation-qualified checkpoint exists after at least6complete epochs. If any qualifying checkpoint exists, retain original maximum12/105-minute budget.",
+  "reason": "Loss and sample-coverage corrections alone have not resolved held-out generalization; valNLL increased while train CE fell. Reserve CPU time for the predeclared orientation/native-classifier repair.",
+  "execution": "Preserve latest completed checkpoint/history, terminate only this exact training command after the completed-epoch boundary, discard any partial next epoch, record actualcounts. No test has been accessed.",
+  "limitation": "Validation-informed budget allocation, not a prospective isolated causal ablation or fresh benchmark."
+}

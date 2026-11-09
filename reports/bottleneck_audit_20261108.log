@@ -1,0 +1,14 @@
+cache keys ['source_sha256', 'manifest_sha256', 'features', 'labels']
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\bindu\OneDrive - iitr.ac.in\VEDIC RAGA\scripts\audit_emotion_bottlenecks.py", line 57, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\bindu\OneDrive - iitr.ac.in\VEDIC RAGA\scripts\audit_emotion_bottlenecks.py", line 24, in main
+    vl,vy=predictions(model,val,'cpu');vr=metrics(vl,vy);write_json(run/'validation_raw_evaluation.json',vr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bindu\OneDrive - iitr.ac.in\VEDIC RAGA\scripts\colab_common.py", line 95, in predictions
+    for x, y in DataLoader(ds, batch_size=batch_size, pin_memory=device.type == 'cuda'):
+                                                                 ^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'type'

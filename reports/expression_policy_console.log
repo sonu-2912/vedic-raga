@@ -1,0 +1,71 @@
+{
+  "checkpoint_sha256": "04e2a0e288b071a576422ba5adbf02d8fad604e4f22747064eab6aa7f7e7f53e",
+  "split": "fixed validation only",
+  "n": 3970,
+  "minimum_confidence": 0.7,
+  "minimum_margin": 0.2,
+  "minimum_class_f1": 0.6,
+  "minimum_class_recall": 0.6,
+  "eligible_classes": [
+    "happy",
+    "surprise"
+  ],
+  "class_report": {
+    "angry": {
+      "precision": 0.38548387096774195,
+      "recall": 0.42602495543672014,
+      "f1-score": 0.40474174428450466,
+      "support": 561.0
+    },
+    "disgust": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 50.0
+    },
+    "fear": {
+      "precision": 0.4076086956521739,
+      "recall": 0.13440860215053763,
+      "f1-score": 0.20215633423180593,
+      "support": 558.0
+    },
+    "happy": {
+      "precision": 0.7172470978441128,
+      "recall": 0.8269598470363289,
+      "f1-score": 0.7682060390763765,
+      "support": 1046.0
+    },
+    "sad": {
+      "precision": 0.3278443113772455,
+      "recall": 0.3183139534883721,
+      "f1-score": 0.3230088495575221,
+      "support": 688.0
+    },
+    "surprise": {
+      "precision": 0.5477855477855478,
+      "recall": 0.6714285714285714,
+      "f1-score": 0.6033376123234917,
+      "support": 350.0
+    },
+    "neutral": {
+      "precision": 0.44947735191637633,
+      "recall": 0.5397489539748954,
+      "f1-score": 0.49049429657794674,
+      "support": 717.0
+    },
+    "accuracy": 0.5088161209068011,
+    "macro avg": {
+      "precision": 0.4050638393633141,
+      "recall": 0.4166978405022036,
+      "f1-score": 0.39884926800737824,
+      "support": 3970.0
+    },
+    "weighted avg": {
+      "precision": 0.4870276215134224,
+      "recall": 0.5088161209068011,
+      "f1-score": 0.4857656255350201,
+      "support": 3970.0
+    }
+  },
+  "limitation": "Same validation partition used for checkpoint selection/calibration. Conservative operational abstention, not proof of recognition quality or multimodal improvement."
+}

@@ -1,0 +1,14 @@
+{
+  "completed_head_epochs": 54,
+  "validation_improved": false,
+  "selection": null,
+  "warm_recipe": {
+    "name": "common1.6_retain0.2",
+    "common_boost": 1.6,
+    "retention_weight": 0.2
+  },
+  "test_accessed": false,
+  "external_encoder": false,
+  "training_reference": "Current pure native classifier on TRAIN disgust examples only",
+  "inference_hybrid": false
+}

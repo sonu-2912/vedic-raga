@@ -1,0 +1,29 @@
+{
+  "tests": 18,
+  "passed": 18,
+  "failures": 0,
+  "errors": 0,
+  "test_seconds": 29.691,
+  "original_repository_files": 55,
+  "original_repository_unchanged": true,
+  "reference_pdf_identical": true,
+  "python": "3.11.18",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "synthetic_emotion": {
+    "accuracy": 0.14285714285714285,
+    "macro_precision": 0.02040816326530612,
+    "macro_recall": 0.14285714285714285,
+    "macro_f1": 0.03571428571428571,
+    "parameters": 163744,
+    "seconds": 12.370635200000834
+  },
+  "real_fer2013_metrics": {
+    "n": 1375,
+    "accuracy": 0.2581818181818182,
+    "macro_precision": 0.10546913800981385,
+    "macro_recall": 0.15809742745010816,
+    "macro_f1": 0.10322874436714465,
+    "pilot": true
+  },
+  "clinical_results": null
+}

@@ -1,0 +1,26 @@
+{
+  "ecg": {
+    "source": "synthetic sample",
+    "sample_data": true,
+    "method": "NeuroKit2 ecg peak detection",
+    "beats": 52,
+    "duration_seconds": 43.676,
+    "rmssd_ms": 8.653323061113573,
+    "sdnn_ms": 9.608492975222596,
+    "mean_hr_bpm": 70.06136093048814,
+    "quality": "Short-window time-domain estimates. No autonomic diagnosis or emotion inference. No ectopic-beat correction.",
+    "arousal_hint": null
+  },
+  "ppg": {
+    "source": "synthetic sample",
+    "sample_data": true,
+    "method": "NeuroKit2 ppg peak detection",
+    "beats": 51,
+    "duration_seconds": 43.015625,
+    "rmssd_ms": 58.207164332166506,
+    "sdnn_ms": 69.04577493945445,
+    "mean_hr_bpm": 69.74209952778787,
+    "quality": "Short-window time-domain estimates. No autonomic diagnosis or emotion inference. No ectopic-beat correction.",
+    "arousal_hint": null
+  }
+}

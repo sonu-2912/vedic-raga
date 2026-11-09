@@ -1,0 +1,11 @@
+{
+  "variant": "Project FusDenseNet v3: higher-resolution stem mean/max spatial shortcut; all original fusion/dense/attention/pooling paths retained",
+  "source_sha256": "dbc4a9f9293fb4e1b28ae249958964cfe12e1b3b17a18f7e75bea77925b7a4ba",
+  "initialization_contract_max_logit_difference": 7.152557373046875e-07,
+  "contract_fixture": "Random tensors test initialization equivalence only, not emotion performance",
+  "extra_classifier_features": 768,
+  "total_classifier_features": 1356,
+  "exact_paper_reproduction": false,
+  "parameters": 322080,
+  "output_sha256": "cbe5fee23128560dbba3acae788f0561efc00a35eb3bd16cd5e6aeb6e78ba4c1"
+}

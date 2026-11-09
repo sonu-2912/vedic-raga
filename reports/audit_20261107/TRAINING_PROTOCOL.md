@@ -1,0 +1,7 @@
+# Validation-only experiment, 7 November 2026
+
+Target 80% is aspirational, never a reported measurement. No fabricated scores, relabelled errors or leaked splits.
+
+Variant4 adds 1920 spatial features from the existing first dense blocks while retaining the complete paper-informed fusion/attention paths. Zero new classifier weights preserve version3 initial logits. Fixed 23503 training /3970 validation pixel manifest remains verified. Freeze backbone, fit normalization on training features only, fold it into the MLP. AdamW .001, class-weight power .5, at most60 head epochs, patience10. Select highest validation macro F1 subject to no lower validation accuracy, as in the existing trainer. Evaluate the selected candidate once on the historically inspected complete deduplicated test corpus. Keep all7 labels/all errors. Deploy only if accuracy, macro F1 and disgust F1 improve with no lower disgust recall. No 80% promise.
+
+Second predeclared candidate before any new test access: version4 spatial maps with512 hidden classifier units, initialized to exactly the active version3 predictions. CE weight power .25. Choose maximum validation accuracy subject to no lower initial validation macro F1 and disgust F1. At most60 head epochs, patience10, no validation training or normalization. Between these candidates choose highest validation accuracy that also improves macro/disgust F1 over the active model, then evaluate that one candidate once. If neither qualifies retain the deployed model and do not retune on test.

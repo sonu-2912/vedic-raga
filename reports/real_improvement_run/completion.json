@@ -1,0 +1,7 @@
+{
+  "completed_additional_epochs": 3,
+  "best_macro_f1": 0.40745701960620295,
+  "test_accessed": false,
+  "synthetic": false,
+  "stop": "Stopped after wall-clock budget exceeded; partially executed epoch 21 discarded; only completed epoch-boundary snapshots eligible"
+}

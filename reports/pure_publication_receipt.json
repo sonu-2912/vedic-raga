@@ -1,0 +1,51 @@
+{
+  "published_utc": "2026-11-08T11:03:28.198088+00:00",
+  "repository": "https://github.com/sonu-2912/RagaMoodSync",
+  "commit": "c6096fb29d1ccb6c6d12f9cb4b97215bdd1dff74",
+  "remote_main_verified": true,
+  "working_tree_clean": true,
+  "archive": "output/github/RagaMoodSync_GitHub_Ready_Pure.zip",
+  "archive_sha256": "676a8c0fcf95e22e1b3b51ded8d9cf2a900e3edc6ba88dc97a18d72e2e49c5da",
+  "archive_bytes": 8443160,
+  "verification": {
+    "tests": 78,
+    "passed": 78,
+    "failures": 0,
+    "seconds": 126.092,
+    "frontend_build": "pass",
+    "portable_checkpoint_sha256": "e1839d5832c3f5778c0a3fd635937579ab1c848f95e3662ed6e179dd1543fefc",
+    "source_weight_equality": "bit-identical tensors and identical inference settings",
+    "model_metric_recomputation": "pass; all 6561 source test predictions and seven-class confusion metrics",
+    "source_originals_unchanged": 55,
+    "private_dataset_or_feedback_exported": false,
+    "presentation_slides": 13,
+    "presentation_visual_review": "All 13 rendered slides reviewed; zero structural/layout findings",
+    "native_powerpoint_open_verified": false,
+    "new_candidate_deployed": false,
+    "new_candidate_test_available": false,
+    "new_full_network_epochs": 9,
+    "active_test_accuracy": 0.574150281969212,
+    "active_macro_f1": 0.5320404110907176,
+    "active_disgust_recall": 0.3670886075949367,
+    "model_variant": "Pure FusDenseNet v4 baseline restored; new v4/v8 trials failed combined validation checks",
+    "source_tests_passed": 78,
+    "source_tests_seconds": 127.312
+  },
+  "presentation_review": {
+    "slides": 13,
+    "all_rendered_slides_reviewed_by_agent": true,
+    "v2_changed_slides": [
+      11
+    ],
+    "v2_changed_slide_full_resolution_reviewed": true,
+    "other_v2_renders_identical_to_reviewed_v1": true,
+    "structural_findings": 0,
+    "layout_findings": 0,
+    "native_powerpoint_open_verified": false,
+    "sha256": "34f99700aee420df91b27b33471f10a8e20912cca11bc6acddc31890caa21b2c"
+  },
+  "live_health": 200,
+  "live_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "pure_default": true,
+  "new_model_gain_claimed": false
+}

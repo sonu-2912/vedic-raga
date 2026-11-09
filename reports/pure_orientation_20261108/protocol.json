@@ -1,0 +1,21 @@
+{
+  "initial_checkpoint_sha256": "8fc1713541e49bac8fc6ec4f10a5d5ba4ca9ff3860e227caeda3b7b67870a618",
+  "seed": 81119,
+  "widths": [
+    512,
+    256
+  ],
+  "epochs_max": 60,
+  "min_epochs": 15,
+  "patience": 10,
+  "max_minutes_per_head": 12,
+  "learning_rate": 0.0003,
+  "validation_min_disgust_recall_gain": 0.08,
+  "test_min_disgust_recall_gain": 0.05,
+  "condition": "Run ONLY if prior coverage run completes with no test evaluation. If any new candidate was tested, skip this stage, regardless of its test result. At most one tested candidate total.",
+  "method": "Learn the native pure FusDense classifier from both raw and mirrored TRAIN representations. Both views share the same original pure backbone, not an external feature encoder. sqrt-inverse-TRAIN-frequency CE weights; original and pruned256 heads; TRAIN-only normalization folded into the classifier Linear layer. No teacher logits, auxiliary losses, inference ensemble or logit thresholds.",
+  "selection": "Both head recipes complete before freezing at most one max-score validation-qualified pure candidate. Accuracy/macroF1/disgustF1 improve, disgust recall at least36%. Fresh full-network raw validation preflight before test. Max .4accuracy+.4macroF1+.2disgustF1.",
+  "deployment": "Require full same-set test accuracy/macroF1/disgustF1 gains and at least5percentagepoint disgustrecall gain. Otherwise keep app/PPT unchanged. No alternate test candidate.",
+  "disclosure": "Conditional second repair declared after3coverage validation epochs and TRAIN flip diagnostic, before any new test access. Frozen backbone and classifier-only epochs are distinct from independent coverage full-network epochs. Width/pruning/dropout/data changes are not a causal/equal-compute ablation.",
+  "limitation": "Highly reused validation/historically inspected test, not fresh identity-disjoint confirmation. Views are augmented TRAIN exposures, not new people. No80%/clinical/webcam-domain/physiology improvement claim."
+}

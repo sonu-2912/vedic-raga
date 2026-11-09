@@ -1,0 +1,5 @@
+{
+  "scripts/train_pure_native_residual.py": "159cd3141fe88828444f8459c8a53bc8e677a7d8d551fdca86374cb9d5a44ffc",
+  "scripts/train_pure_fusdense.py": "e1db14d406acccabf343332dfb864115876e129be2d9a55e4bd29c1a9b908b00",
+  "backend/models.py": "302a705e16fc80c59fc421e4d51249e30bdad7fddacb271910028b90891e568b"
+}

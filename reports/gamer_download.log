@@ -1,0 +1,13 @@
+Verified: video_offsets.csv
+Verified: emotion_annotation.csv
+data.zip: 50331648/919686572 bytes
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\scripts\download_gamer.py", line 30, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\bindu\OneDrive\Desktop\VEDIC RAGA\scripts\download_gamer.py", line 28, in main
+    if count!=item['size'] or digest.hexdigest()!=item['checksum'].split(':')[-1]:raise ValueError('Download integrity failure')
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Download integrity failure
