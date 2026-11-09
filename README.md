@@ -1,4 +1,4 @@
-# RagaMoodSync
+# Vedic-Raga
 
 Paper-informed facial-expression and Hindustani raga research app. Python3.11, PyTorch CPU, FastAPI, React/Vite and SQLite. Primary paper: https://doi.org/10.1007/s41870-025-02531-y . Exact author reproduction is not claimed.
 
